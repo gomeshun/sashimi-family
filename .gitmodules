@@ -1,0 +1,15 @@
+[submodule "sashimi-c"]
+	path = sashimi-c
+	url = git@github.com:gomeshun/sashimi-c.git
+[submodule "sashimi-si"]
+	path = sashimi-si
+	url = git@github.com:gomeshun/sashimi-si.git
+[submodule "sashimi-w"]
+	path = sashimi-w
+	url = git@github.com:gomeshun/sashimi-w.git
+[submodule "sashimi-f"]
+	path = sashimi-f
+	url = git@github.com:gomeshun/sashimi-f.git
+[submodule "itamae"]
+	path = itamae
+	url = git@github.com:gomeshun/itamae.git
