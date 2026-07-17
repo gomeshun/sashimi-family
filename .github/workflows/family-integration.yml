@@ -13,8 +13,6 @@ permissions:
 jobs:
   coinstall:
     runs-on: ubuntu-latest
-    env:
-      SASHIMI_F_CACHE_DIR: ${{ runner.temp }}/sashimi-f-power-cache
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,12 +22,19 @@ jobs:
           python-version: "3.11"
       - name: Create clean family environment
         run: uv venv --python 3.11 .venv-family
-      - name: Install ITAMAE and all SASHIMI variants
+      - name: Build ITAMAE and all SASHIMI wheels
         run: |
-          uv pip install --python .venv-family/bin/python \
-            ./itamae ./sashimi-c ./sashimi-si ./sashimi-w ./sashimi-f
+          uv build --wheel --out-dir dist-family ./itamae
+          uv build --wheel --out-dir dist-family ./sashimi-c
+          uv build --wheel --out-dir dist-family ./sashimi-si
+          uv build --wheel --out-dir dist-family ./sashimi-w
+          uv build --wheel --out-dir dist-family ./sashimi-f
+      - name: Install ITAMAE and all SASHIMI variants
+        run: uv pip install --python .venv-family/bin/python dist-family/*.whl
       - name: Verify co-installed legacy and opt-in APIs
         working-directory: ${{ runner.temp }}
+        env:
+          SASHIMI_F_CACHE_DIR: ${{ runner.temp }}/sashimi-f-power-cache
         run: |
           "$GITHUB_WORKSPACE/.venv-family/bin/python" - <<'PY'
           import importlib.util
