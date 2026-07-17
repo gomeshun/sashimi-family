@@ -11,12 +11,34 @@ permissions:
   contents: read
 
 jobs:
-  coinstall:
+  public-coinstall:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check out pinned public ITAMAE
+        uses: actions/checkout@v4
         with:
-          submodules: recursive
+          repository: gomeshun/itamae
+          ref: 476b2025913bc38c3d3e25a23424e7e2274873a8
+          path: .itamae
+      - name: Check out pinned public SASHIMI-C
+        uses: actions/checkout@v4
+        with:
+          repository: gomeshun/sashimi-c
+          ref: 9600b10c1747e61dc2c94d4507c4abb7da8111b2
+          path: .sashimi-c
+      - name: Check out pinned public SASHIMI-SI
+        uses: actions/checkout@v4
+        with:
+          repository: gomeshun/sashimi-si
+          ref: 94f3d4547a1c29c9ede87db503f41febe9005ca0
+          path: .sashimi-si
+      - name: Check out pinned public SASHIMI-W
+        uses: actions/checkout@v4
+        with:
+          repository: gomeshun/sashimi-w
+          ref: 8abc2c6439d06c43621e42b015441b0de9118e3b
+          path: .sashimi-w
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.11"
@@ -24,17 +46,14 @@ jobs:
         run: uv venv --python 3.11 .venv-family
       - name: Build ITAMAE and all SASHIMI wheels
         run: |
-          uv build --wheel --out-dir dist-family ./itamae
-          uv build --wheel --out-dir dist-family ./sashimi-c
-          uv build --wheel --out-dir dist-family ./sashimi-si
-          uv build --wheel --out-dir dist-family ./sashimi-w
-          uv build --wheel --out-dir dist-family ./sashimi-f
-      - name: Install ITAMAE and all SASHIMI variants
+          uv build --wheel --out-dir dist-family ./.itamae
+          uv build --wheel --out-dir dist-family ./.sashimi-c
+          uv build --wheel --out-dir dist-family ./.sashimi-si
+          uv build --wheel --out-dir dist-family ./.sashimi-w
+      - name: Install public ITAMAE and SASHIMI variants
         run: uv pip install --python .venv-family/bin/python dist-family/*.whl
       - name: Verify co-installed legacy and opt-in APIs
         working-directory: ${{ runner.temp }}
-        env:
-          SASHIMI_F_CACHE_DIR: ${{ runner.temp }}/sashimi-f-power-cache
         run: |
           "$GITHUB_WORKSPACE/.venv-family/bin/python" - <<'PY'
           import importlib.util
@@ -47,10 +66,6 @@ jobs:
           import sashimi_c_itamae
           import sashimi_c_itamae_migration
           import sashimi_c_itamae_variance
-          import sashimi_f
-          import sashimi_f_itamae
-          import sashimi_f_itamae_migration
-          import sashimi_f_itamae_variance
           import sashimi_si
           import sashimi_si_itamae
           import sashimi_si_itamae_migration
@@ -67,18 +82,11 @@ jobs:
           assert sashimi_si_itamae.subhalo_properties
           assert sashimi_w.subhalos
           assert sashimi_w_itamae.subhalos
-          assert sashimi_f.fdm_subhalo_properties
-          assert sashimi_f_itamae.fdm_subhalo_properties
-
-          fdm = sashimi_f_itamae.fdm_halo_model()
-          fdm.m_22 = 1.0
-          assert fdm.Pk.shape == fdm.Pk_cdm.shape
-
           assert importlib.util.find_spec("itamae_migration") is None
           assert importlib.util.find_spec("itamae_variance") is None
           assert importlib.util.find_spec("itamae_catalog_migration") is None
 
-          distributions = ("itamae", "sashimi-c", "sashimi-si", "sashimi-w", "sashimi-f")
+          distributions = ("itamae", "sashimi-c", "sashimi-si", "sashimi-w")
 
           def runtime_files(name):
               files = metadata.distribution(name).files or ()

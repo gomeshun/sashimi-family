@@ -51,10 +51,13 @@ they can be compared with q10 results.
 
 ## Family integration
 
-The family integration workflow installs ITAMAE and all four SASHIMI variants
-in one clean environment. It verifies that every legacy module and opt-in
-façade imports simultaneously and that the former generic migration-helper
-module names are absent.
+The public family integration workflow installs ITAMAE together with
+SASHIMI-C, SASHIMI-SI, and SASHIMI-W in one clean environment. Because
+SASHIMI-F is private, its own migration workflow repeats that check with all
+five wheels; this avoids granting a cross-repository private access token to
+the public family workflow. Both workflows verify that every relevant legacy
+module and opt-in façade imports simultaneously and that the former generic
+migration-helper module names are absent.
 
 For a local equivalent:
 
