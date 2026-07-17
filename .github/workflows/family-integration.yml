@@ -1,0 +1,91 @@
+name: family-integration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  coinstall:
+    runs-on: ubuntu-latest
+    env:
+      SASHIMI_F_CACHE_DIR: ${{ runner.temp }}/sashimi-f-power-cache
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.11"
+      - name: Create clean family environment
+        run: uv venv --python 3.11 .venv-family
+      - name: Install ITAMAE and all SASHIMI variants
+        run: |
+          uv pip install --python .venv-family/bin/python \
+            ./itamae ./sashimi-c ./sashimi-si ./sashimi-w ./sashimi-f
+      - name: Verify co-installed legacy and opt-in APIs
+        working-directory: ${{ runner.temp }}
+        run: |
+          "$GITHUB_WORKSPACE/.venv-family/bin/python" - <<'PY'
+          import importlib.util
+          import itertools
+          from importlib import metadata
+
+          import itamae
+          import sashimi_c
+          import sashimi_c_itamae_catalog
+          import sashimi_c_itamae
+          import sashimi_c_itamae_migration
+          import sashimi_c_itamae_variance
+          import sashimi_f
+          import sashimi_f_itamae
+          import sashimi_f_itamae_migration
+          import sashimi_f_itamae_variance
+          import sashimi_si
+          import sashimi_si_itamae
+          import sashimi_si_itamae_migration
+          import sashimi_si_itamae_variance
+          import sashimi_w
+          import sashimi_w_itamae
+          import sashimi_w_itamae_migration
+          import sashimi_w_itamae_variance
+
+          assert itamae.__version__ == "0.1.0a4"
+          assert sashimi_c.subhalo_properties
+          assert sashimi_c_itamae.subhalo_properties
+          assert sashimi_si.subhalo_properties
+          assert sashimi_si_itamae.subhalo_properties
+          assert sashimi_w.subhalos
+          assert sashimi_w_itamae.subhalos
+          assert sashimi_f.fdm_subhalo_properties
+          assert sashimi_f_itamae.fdm_subhalo_properties
+
+          fdm = sashimi_f_itamae.fdm_halo_model()
+          fdm.m_22 = 1.0
+          assert fdm.Pk.shape == fdm.Pk_cdm.shape
+
+          assert importlib.util.find_spec("itamae_migration") is None
+          assert importlib.util.find_spec("itamae_variance") is None
+          assert importlib.util.find_spec("itamae_catalog_migration") is None
+
+          distributions = ("itamae", "sashimi-c", "sashimi-si", "sashimi-w", "sashimi-f")
+
+          def runtime_files(name):
+              files = metadata.distribution(name).files or ()
+              return {
+                  str(path)
+                  for path in files
+                  if ".dist-info/" not in str(path)
+                  and not str(path).endswith(".dist-info")
+              }
+
+          installed = {name: runtime_files(name) for name in distributions}
+          for left, right in itertools.combinations(distributions, 2):
+              overlap = installed[left] & installed[right]
+              assert not overlap, f"{left} and {right} overwrite: {sorted(overlap)}"
+          PY
