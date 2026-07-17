@@ -62,9 +62,13 @@ migration-helper module names are absent.
 For a local equivalent:
 
 ```bash
-uv venv .venv-family
-uv pip install --python .venv-family/bin/python \
-  ./itamae ./sashimi-c ./sashimi-si ./sashimi-w ./sashimi-f
+uv venv --python 3.11 .venv-family
+uv build --wheel --out-dir dist-family ./itamae
+uv build --wheel --out-dir dist-family ./sashimi-c
+uv build --wheel --out-dir dist-family ./sashimi-si
+uv build --wheel --out-dir dist-family ./sashimi-w
+uv build --wheel --out-dir dist-family ./sashimi-f
+uv pip install --python .venv-family/bin/python dist-family/*.whl
 ```
 
 Run each submodule's own test suite as well; the family smoke test detects
