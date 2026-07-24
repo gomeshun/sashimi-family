@@ -49,6 +49,30 @@ magnitude even when the numerical half-mode scale is matched. Existing
 q5-calibrated constraints therefore require a complete analysis rerun before
 they can be compared with q10 results.
 
+Within either power convention, SASHIMI-W's `legacy` mode remains a complete
+reproduction path, including historical signed weights and reuse of the final
+redshift's virial-mass grid. The `consistent` mode removes both behaviors with
+the monotonic moving-boundary derivative and a per-redshift mass grid. Signed
+legacy tuples remain available, but the nonnegative weighted-catalog contract
+rejects them instead of clipping or silently renormalizing them.
+
+## Visual migration demonstrations
+
+Each variant contains an executed `itamae_migration_demo.ipynb`:
+
+| Variant | Comparison shown |
+| --- | --- |
+| [SASHIMI-C](sashimi-c/itamae_migration_demo.ipynb) | true old, migrated legacy, and consistent CDM catalogs |
+| [SASHIMI-SI](sashimi-si/itamae_migration_demo.ipynb) | corrected public SI model and both migration labels |
+| [SASHIMI-W](sashimi-w/itamae_migration_demo.ipynb) | published legacy q5, consistent q5, and explicit q10 |
+| [SASHIMI-F](sashimi-f/itamae_migration_demo.ipynb) | true old, migrated legacy, and corrected FDM mode |
+
+They show the old tuple API beside the named weighted-catalog API, and compare
+subhalo mass functions, accumulated satellite counts, and representative
+catalog content. Before a migrated legacy curve is used as the old baseline,
+the corresponding test suite compares it directly with the true old
+implementation at catalog and derived-observable level.
+
 ## Family integration
 
 The public family integration workflow installs ITAMAE together with
