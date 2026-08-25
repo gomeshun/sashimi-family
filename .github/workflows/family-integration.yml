@@ -16,16 +16,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate compatibility manifest
-        run: python scripts/check_compatibility.py
-      - name: Load compatibility revisions
+        run: python3 scripts/check_compatibility.py
+      - name: Load public compatibility revisions
         id: compatibility
         run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import tomllib
           from pathlib import Path
 
           manifest = tomllib.loads(Path("compatibility.toml").read_text())
-          for name in ("itamae", "sashimi-c", "sashimi-si", "sashimi-w", "sashimi-f"):
+          for name in ("itamae", "sashimi-c", "sashimi-si", "sashimi-w"):
               entry = manifest[name]
               key = name.replace("-", "_")
               print(f"{key}_repo={entry['repo']}")
@@ -55,6 +55,17 @@ jobs:
           repository: ${{ steps.compatibility.outputs.sashimi_w_repo }}
           ref: ${{ steps.compatibility.outputs.sashimi_w_ref }}
           path: .sashimi-w
+      - name: Verify checked out compatibility revisions
+        env:
+          ITAMAE_REF: ${{ steps.compatibility.outputs.itamae_ref }}
+          SASHIMI_C_REF: ${{ steps.compatibility.outputs.sashimi_c_ref }}
+          SASHIMI_SI_REF: ${{ steps.compatibility.outputs.sashimi_si_ref }}
+          SASHIMI_W_REF: ${{ steps.compatibility.outputs.sashimi_w_ref }}
+        run: |
+          test "$(git -C .itamae rev-parse HEAD)" = "$ITAMAE_REF"
+          test "$(git -C .sashimi-c rev-parse HEAD)" = "$SASHIMI_C_REF"
+          test "$(git -C .sashimi-si rev-parse HEAD)" = "$SASHIMI_SI_REF"
+          test "$(git -C .sashimi-w rev-parse HEAD)" = "$SASHIMI_W_REF"
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.11"

@@ -29,7 +29,7 @@ ITAMAE and SASHIMI revisions tested together. The validation script compares
 each recorded SHA with the corresponding committed submodule gitlink:
 
 ```bash
-python scripts/check_compatibility.py
+python3 scripts/check_compatibility.py
 ```
 
 Update a family revision by moving the submodule, recording its full SHA in the
