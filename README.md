@@ -114,3 +114,6 @@ uv pip install --python .venv-family/bin/python dist-family/*.whl
 Run each submodule's own test suite as well; the family smoke test detects
 cross-package conflicts and does not replace variant-specific physics
 regressions.
+
+Golden fixture provenance and regeneration rules are documented in
+[docs/golden-fixture-policy.md](docs/golden-fixture-policy.md).
