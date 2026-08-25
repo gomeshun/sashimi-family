@@ -9,19 +9,19 @@ ref = "a557a0d975b284c9fc3fe9697746e4847783653b"
 [sashimi-c]
 repo = "gomeshun/sashimi-c"
 path = "sashimi-c"
-ref = "7676dda063c068fe1301d0fe303b3fd915fa6d16"
+ref = "9f6713b686805645da459e99522e2049e7dea793"
 
 [sashimi-si]
 repo = "gomeshun/sashimi-si"
 path = "sashimi-si"
-ref = "c09192cde71902a976ca2a5e1d57901438264e28"
+ref = "179d52dcb149db268031ab0aed516ceb224cd033"
 
 [sashimi-w]
 repo = "gomeshun/sashimi-w"
 path = "sashimi-w"
-ref = "16ce6fb7f3507927706d7206fc06817b020b2206"
+ref = "8c935894f635ebbe28efa359ab391a29a3f04968"
 
 [sashimi-f]
 repo = "gomeshun/sashimi-f"
 path = "sashimi-f"
-ref = "55227c4cbf1b4f170869b035cf9d2860e1e7d8e5"
+ref = "b96562c472f0b7761f46f13253b075e94488e56c"
