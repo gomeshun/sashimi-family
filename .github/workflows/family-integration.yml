@@ -15,29 +15,45 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate compatibility manifest
+        run: python scripts/check_compatibility.py
+      - name: Load compatibility revisions
+        id: compatibility
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import tomllib
+          from pathlib import Path
+
+          manifest = tomllib.loads(Path("compatibility.toml").read_text())
+          for name in ("itamae", "sashimi-c", "sashimi-si", "sashimi-w", "sashimi-f"):
+              entry = manifest[name]
+              key = name.replace("-", "_")
+              print(f"{key}_repo={entry['repo']}")
+              print(f"{key}_ref={entry['ref']}")
+          PY
       - name: Check out pinned public ITAMAE
         uses: actions/checkout@v4
         with:
-          repository: gomeshun/itamae
-          ref: 476b2025913bc38c3d3e25a23424e7e2274873a8
+          repository: ${{ steps.compatibility.outputs.itamae_repo }}
+          ref: ${{ steps.compatibility.outputs.itamae_ref }}
           path: .itamae
       - name: Check out pinned public SASHIMI-C
         uses: actions/checkout@v4
         with:
-          repository: gomeshun/sashimi-c
-          ref: 9600b10c1747e61dc2c94d4507c4abb7da8111b2
+          repository: ${{ steps.compatibility.outputs.sashimi_c_repo }}
+          ref: ${{ steps.compatibility.outputs.sashimi_c_ref }}
           path: .sashimi-c
       - name: Check out pinned public SASHIMI-SI
         uses: actions/checkout@v4
         with:
-          repository: gomeshun/sashimi-si
-          ref: 94f3d4547a1c29c9ede87db503f41febe9005ca0
+          repository: ${{ steps.compatibility.outputs.sashimi_si_repo }}
+          ref: ${{ steps.compatibility.outputs.sashimi_si_ref }}
           path: .sashimi-si
       - name: Check out pinned public SASHIMI-W
         uses: actions/checkout@v4
         with:
-          repository: gomeshun/sashimi-w
-          ref: 8abc2c6439d06c43621e42b015441b0de9118e3b
+          repository: ${{ steps.compatibility.outputs.sashimi_w_repo }}
+          ref: ${{ steps.compatibility.outputs.sashimi_w_ref }}
           path: .sashimi-w
       - uses: astral-sh/setup-uv@v6
         with:

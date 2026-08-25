@@ -22,6 +22,22 @@ For an existing checkout:
 git submodule update --init --recursive
 ```
 
+## Compatibility revisions
+
+[`compatibility.toml`](compatibility.toml) is the authoritative record of the
+ITAMAE and SASHIMI revisions tested together. The validation script compares
+each recorded SHA with the corresponding committed submodule gitlink:
+
+```bash
+python scripts/check_compatibility.py
+```
+
+Update a family revision by moving the submodule, recording its full SHA in the
+manifest, and running the validator before changing the integration workflow.
+The public workflow reads its checkout repositories and revisions from this
+manifest. SASHIMI-F's private family workflow uses the same revision set for
+its five-wheel co-install check.
+
 ## ITAMAE migration
 
 Migration work is developed on the `itamae-migration` branch of each
@@ -80,7 +96,7 @@ SASHIMI-C, SASHIMI-SI, and SASHIMI-W in one clean environment. Because
 SASHIMI-F is private, its own migration workflow repeats that check with all
 five wheels; this avoids granting a cross-repository private access token to
 the public family workflow. Both workflows verify that every relevant legacy
-module and opt-in façade imports simultaneously and that the former generic
+module and opt-in facade imports simultaneously and that the former generic
 migration-helper module names are absent.
 
 For a local equivalent:
