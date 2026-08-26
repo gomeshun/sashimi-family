@@ -19,6 +19,9 @@ object uses the following fields:
 - `physics_modes`: every mode represented by the fixture
 - `mode_policy`: whether each mode is strict legacy reproduction or reviewed
   consistent physics
+- `constructor_parameters`: every non-default model-constructor argument needed
+   to rebuild the fixture
+- `cosmology`: the effective backend identifier and all cosmological parameters
 - `parameters_key` and `units_key` when those records are in the same JSON
 - `comparison`: tolerances and a short reason for them
 
@@ -45,6 +48,18 @@ in `mode_policy`.
    mode with the other.
 5. Run the variant regression suite, package smoke test, and family co-install
    check before committing the fixture.
+
+The `cosmology` block must include a backend identifier and explicit parameter
+values. When legacy and consistent modes use different effective backgrounds,
+record a backend identifier and dark-energy parameter for each mode. Do not
+leave values such as the WDM particle mass only in test code: put them in both
+`parameters` and `constructor_parameters` when the catalog call and model
+constructor use different argument sets.
+
+Every wheel and source distribution also embeds the exact source revision in a
+small runtime provenance module. Installed-package checks must read that value
+from the artifact itself; environment variables and a surrounding Git checkout
+are build-time inputs only and must not be required at runtime.
 
 SASHIMI-S currently keeps its 27-array expected sums in the migration test, so
 it uses `tests/golden/sidm_small_catalog_provenance.json` as the sidecar. This

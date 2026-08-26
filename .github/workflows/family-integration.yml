@@ -73,21 +73,38 @@ jobs:
         run: uv venv --python 3.11 .venv-family
       - name: Build ITAMAE and all SASHIMI wheels
         run: |
+          export ITAMAE_SOURCE_REVISION="$(git -C .itamae rev-parse HEAD)"
+          export SASHIMI_C_SOURCE_REVISION="$(git -C .sashimi-c rev-parse HEAD)"
+          export SASHIMI_SI_SOURCE_REVISION="$(git -C .sashimi-si rev-parse HEAD)"
+          export SASHIMI_W_SOURCE_REVISION="$(git -C .sashimi-w rev-parse HEAD)"
           uv build --wheel --out-dir dist-family ./.itamae
           uv build --wheel --out-dir dist-family ./.sashimi-c
           uv build --wheel --out-dir dist-family ./.sashimi-si
           uv build --wheel --out-dir dist-family ./.sashimi-w
+      - name: Verify embedded artifact source revisions
+        run: >-
+          python3 scripts/check_artifact_provenance.py
+          --directory dist-family
+          --manifest compatibility.toml
+          --packages itamae sashimi-c sashimi-si sashimi-w
       - name: Install public ITAMAE and SASHIMI variants
         run: uv pip install --python .venv-family/bin/python dist-family/*.whl
       - name: Verify co-installed legacy and opt-in APIs
         working-directory: ${{ runner.temp }}
+        env:
+          ITAMAE_REF: ${{ steps.compatibility.outputs.itamae_ref }}
+          SASHIMI_C_REF: ${{ steps.compatibility.outputs.sashimi_c_ref }}
+          SASHIMI_SI_REF: ${{ steps.compatibility.outputs.sashimi_si_ref }}
+          SASHIMI_W_REF: ${{ steps.compatibility.outputs.sashimi_w_ref }}
         run: |
           "$GITHUB_WORKSPACE/.venv-family/bin/python" - <<'PY'
           import importlib.util
           import itertools
+          import os
           from importlib import metadata
 
           import itamae
+          from itamae.provenance import source_revision
           import sashimi_c
           import sashimi_c_itamae_catalog
           import sashimi_c_itamae
@@ -103,6 +120,10 @@ jobs:
           import sashimi_w_itamae_variance
 
           assert itamae.__version__ == "0.1.0a4"
+          assert source_revision("itamae") == os.environ["ITAMAE_REF"]
+          assert source_revision("sashimi-c") == os.environ["SASHIMI_C_REF"]
+          assert source_revision("sashimi-si") == os.environ["SASHIMI_SI_REF"]
+          assert source_revision("sashimi-w") == os.environ["SASHIMI_W_REF"]
           assert sashimi_c.subhalo_properties
           assert sashimi_c_itamae.subhalo_properties
           assert sashimi_si.subhalo_properties

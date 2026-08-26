@@ -38,6 +38,20 @@ The public workflow reads its checkout repositories and revisions from this
 manifest. SASHIMI-F's private family workflow uses the same revision set for
 its five-wheel co-install check.
 
+Each wheel and source distribution embeds its exact source revision in a small
+runtime provenance module. Family CI checks that embedded value against the
+manifest before installing the wheels; installed-package provenance therefore
+does not depend on environment variables or an enclosing Git checkout.
+
+To check locally built artifacts directly:
+
+```bash
+python3 scripts/check_artifact_provenance.py \
+  --directory dist-family \
+  --manifest compatibility.toml \
+  --packages itamae sashimi-c sashimi-si sashimi-w sashimi-f
+```
+
 ## ITAMAE migration
 
 Migration work is developed on the `itamae-migration` branch of each
