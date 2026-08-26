@@ -50,9 +50,13 @@ def _check_artifact(artifact: Path, target: str, expected: str) -> None:
     text = _artifact_text(artifact, target)
     match = SOURCE_REVISION_PATTERN.fullmatch(text.strip())
     if match is None:
-        raise ValueError(f"{artifact.name} does not contain a valid embedded source revision")
+        raise ValueError(
+            f"{artifact.name} does not contain a valid embedded source revision"
+        )
     if match.group(1) != expected:
-        raise ValueError(f"{artifact.name} contains {match.group(1)}, expected {expected}")
+        raise ValueError(
+            f"{artifact.name} contains {match.group(1)}, expected {expected}"
+        )
 
 
 def main() -> int:
@@ -76,9 +80,13 @@ def main() -> int:
         wheels = sorted(args.directory.glob(f"{prefix}*.whl"))
         sdists = sorted(args.directory.glob(f"{prefix}*.tar.gz"))
         if len(wheels) != 1:
-            raise ValueError(f"Expected exactly one wheel for {package!r}; found {wheels}")
+            raise ValueError(
+                f"Expected exactly one wheel for {package!r}; found {wheels}"
+            )
         if args.require_sdist and len(sdists) != 1:
-            raise ValueError(f"Expected exactly one sdist for {package!r}; found {sdists}")
+            raise ValueError(
+                f"Expected exactly one sdist for {package!r}; found {sdists}"
+            )
         target = ARTIFACT_TARGETS[package]
         for artifact in [*wheels, *sdists]:
             _check_artifact(artifact, target, expected)
