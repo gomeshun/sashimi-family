@@ -67,6 +67,11 @@ submodule. The family-level policy is:
 - installable helper modules use variant-specific names so all SASHIMI wheels
   can coexist in one Python environment.
 
+The detailed migration plan is in [`migration_plan.md`](migration_plan.md), and
+its source-of-truth tracking issue is [#1](https://github.com/gomeshun/sashimi-family/issues/1).
+The migration roadmap is intentionally kept separate from new scientific feature
+development so that reproducibility, packaging, and release work can converge.
+
 SASHIMI-W additionally distinguishes two explicit power-spectrum conventions.
 `published-q5` reproduces the 2022 code, while `standard-t2-q10` applies the
 standard relation \(P_{\rm WDM}=T^2P_{\rm CDM}\). The choice is independent of
@@ -85,6 +90,46 @@ redshift's virial-mass grid. The `consistent` mode removes both behaviors with
 the monotonic moving-boundary derivative and a per-redshift mass grid. Signed
 legacy tuples remain available, but the nonnegative weighted-catalog contract
 rejects them instead of clipping or silently renormalizing them.
+
+## Scientific roadmap
+
+The post-migration development strategy is documented in
+[`docs/scientific-roadmap.md`](docs/scientific-roadmap.md) and tracked by
+[#18](https://github.com/gomeshun/sashimi-family/issues/18).
+
+The intended position of SASHIMI is a **fast, theory-driven, inference-ready
+subhalo population backend**. Relative to Galacticus, SatGen, and pyHalo, the
+project should emphasize accuracy per computational cost, deterministic weighted
+population predictions, extreme dynamic range, dark-matter-model scans, and
+clean interoperability with observation-facing tools.
+
+The main scientific hierarchy is:
+
+```text
+competitive benchmarks
+  -> radial spatial populations
+  -> conditional phase-space populations
+  -> reduced/orbit-conditioned tidal evolution
+  -> correlated host-to-host realizations
+  -> observation-facing adapters (pyHalo first)
+  -> optional baryonic host potentials
+  -> explicit orbit integration as an optional high-fidelity backend
+```
+
+In particular, the roadmap adds an explicit intermediate layer between simple
+radial modeling and full orbit integration. SASHIMI should first test whether
+compact orbital descriptors and calibrated response kernels can preserve the
+joint position/stripping/structure correlations needed by observables while
+retaining the speed advantage of the weighted-population approach.
+
+The first roadmap issues are:
+
+- [BENCH-01 #19](https://github.com/gomeshun/sashimi-family/issues/19): competitive scientific/performance benchmarks;
+- [PHASESPACE-01 #20](https://github.com/gomeshun/sashimi-family/issues/20): conditional phase-space population models;
+- [TIDE-01 #21](https://github.com/gomeshun/sashimi-family/issues/21): reduced orbit-conditioned tidal and structural evolution;
+- [SCATTER-01 #22](https://github.com/gomeshun/sashimi-family/issues/22): correlated host-to-host variance and realizations;
+- [INTEROP-01 #23](https://github.com/gomeshun/sashimi-family/issues/23): pyHalo interoperability;
+- [BARYON-01 #24](https://github.com/gomeshun/sashimi-family/issues/24): optional baryonic host potentials.
 
 ## Visual migration demonstrations
 
