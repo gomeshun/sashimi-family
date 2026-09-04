@@ -72,6 +72,21 @@ its source-of-truth tracking issue is [#1](https://github.com/gomeshun/sashimi-f
 The migration roadmap is intentionally kept separate from new scientific feature
 development so that reproducibility, packaging, and release work can converge.
 
+The [2026-09-04 migration review](docs/migration-status-2026-09-04.md) records
+the exact branch/PR/CI snapshot. C/SI already use `PopulationPipeline`; W/F still
+need execution integration. The compatibility manifest and provenance checks
+are implemented. Remaining immediate gates are distribution identity,
+candidate-family orchestration, child-PR CI coverage, and reconciliation of C's
+main/Picard work. A newer branch head does not replace a validated pin until its
+candidate checks pass. The review is historical evidence; `compatibility.toml`
+remains the only authoritative compatible revision set.
+
+The distribution rename is tracked in [ITAMAE #3](https://github.com/gomeshun/itamae/issues/3).
+Until it is resolved, use the reviewed source revisions or the explicit wheel
+set below. The unrelated PyPI distribution named `itamae` must not be used as
+the SASHIMI core; successful local-wheel co-installation does not by itself
+validate ordinary index dependency resolution.
+
 SASHIMI-W additionally distinguishes two explicit power-spectrum conventions.
 `published-q5` reproduces the 2022 code, while `standard-t2-q10` applies the
 standard relation \(P_{\rm WDM}=T^2P_{\rm CDM}\). The choice is independent of
@@ -133,7 +148,7 @@ The first roadmap issues are:
 
 ## Visual migration demonstrations
 
-Each variant contains an executed `itamae_migration_demo.ipynb`:
+Each variant contains an `itamae_migration_demo.ipynb`:
 
 | Variant | Comparison shown |
 | --- | --- |
@@ -141,6 +156,13 @@ Each variant contains an executed `itamae_migration_demo.ipynb`:
 | [SASHIMI-SI](sashimi-si/itamae_migration_demo.ipynb) | corrected public SI model and both migration labels |
 | [SASHIMI-W](sashimi-w/itamae_migration_demo.ipynb) | published legacy q5, consistent q5, and explicit q10 |
 | [SASHIMI-F](sashimi-f/itamae_migration_demo.ipynb) | true old, migrated legacy, and corrected FDM mode |
+
+At the reviewed revisions, C has execution counts for all eight non-empty code
+cells. SI, W, and F each contain one unexecuted non-empty code cell, with no
+saved error outputs. These saved states do not prove a fresh clean-kernel run.
+Full execution and a notebook-state CI gate remain tracked in
+[GOV-05 #6](https://github.com/gomeshun/sashimi-family/issues/6). F's separate
+structure-prior comparison notebook does not complete this migration-demo gate.
 
 They show the old tuple API beside the named weighted-catalog API, and compare
 subhalo mass functions, accumulated satellite counts, and representative

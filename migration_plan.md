@@ -92,8 +92,16 @@ coverage and family integration are stable.
 
 ## 3. Current implementation state
 
-As of the migration state reviewed in July/August 2026, the repositories have
-already progressed substantially beyond the initial adapter-only stage.
+Reviewed on **2026-09-04 UTC**. The repositories have progressed beyond the
+initial adapter-only stage. The dated [migration review](docs/migration-status-2026-09-04.md)
+records all remote branches, exact revisions, CI evidence, and remaining gates.
+It is an audit snapshot, not another compatibility manifest.
+
+The implemented baseline includes the manifest/gitlink validator, artifact
+provenance, and C/SI `PopulationPipeline` integration. W/F pipeline adoption,
+thin model composition, package identity, and release validation remain open.
+The historical task numbers below are retained for traceability; they do not
+imply that completed foundation work must be implemented again.
 
 ### 3.1 ITAMAE
 
@@ -114,6 +122,7 @@ branch contains, among other pieces:
 - exact moving-boundary derivative for ideal sharp-k filtering;
 - variance cache helpers;
 - radial-measure and initial orbit infrastructure;
+- `PopulationPipeline` stage execution, named survival views, and catalog assembly;
 - CI on supported Python versions and optional backend combinations.
 
 The ITAMAE public API is still provisional. Do not freeze or release it until
@@ -132,6 +141,13 @@ The C migration branch already contains:
 - golden regression fixture(s);
 - migration-specific CI and packaging.
 
+C already invokes `PopulationPipeline`, but initialization/evolution/survival
+callbacks still live in a large adapter. C-01 is decomposition and hardening,
+not first-time pipeline wiring. Separately, `main` gained the Picard table in
+PR #4 after the migration branch diverged. Reconcile the combined code and
+tests under [SYNC-C #26](https://github.com/gomeshun/sashimi-family/issues/26).
+PR #5 proposes a public solver-default change and is still open at this review.
+
 The established `sashimi_c` import remains the historical API and must remain
 unchanged until migration equivalence is proven and an explicit compatibility
 policy is adopted.
@@ -146,6 +162,10 @@ The SI migration branch already contains:
 - factorized ITAMAE weights and provenance metadata;
 - migrated shared background/NFW/variance/solver mechanisms;
 - regression tests and an executable comparison notebook.
+
+SI already invokes `PopulationPipeline` with separate CDM/SIDM survival views.
+SI-01 still needs explicit model/state composition. Its `legacy` reference is
+the corrected public SI implementation, not the earlier known-bad equations.
 
 SIDM cross sections, gravothermal evolution, SIDM profile response, and
 survival/disruption physics remain in SASHIMI-SI and must stay there.
@@ -182,8 +202,15 @@ The F migration branch already contains:
 - golden fixtures and invariants;
 - migration comparison notebook.
 
-Current SASHIMI-F still assigns NFW profiles and does not yet implement a
-soliton/core-halo relation. Do not pretend that profile migration is complete.
+F's migration head is six commits beyond the family pin. It adds parameterized
+`process_m_22.py` work and a legacy/consistent structure-prior comparison; its
+latest component regression reports 40 passes. This is partial PHY-F evidence:
+changing `physics_mode` together does not isolate the individual derivative and
+NFW-inversion changes. F still does not invoke `PopulationPipeline`.
+
+Current SASHIMI-F assigns tidally evolved NFW profiles. A new soliton/core-halo
+prescription is a separate scientific feature, not a prerequisite for migrating
+the existing NFW model. State that limitation explicitly in released results.
 
 ### 3.6 SASHIMI-family
 
@@ -192,10 +219,15 @@ repository. It includes the SASHIMI/ITAMAE repositories as submodules and has a
 family co-install workflow that builds wheels and checks for runtime-file
 collisions.
 
-The family workflow currently uses explicitly pinned commits. The pins are a
-reproducibility feature, but they must be synchronized with the intended
-migration heads. A green family CI result is only meaningful if the workflow is
-checking the exact revisions that are being declared compatible.
+`compatibility.toml` and its five committed gitlinks already agree. Public
+family CI is green for that exact set and covers ITAMAE/C/SI/W co-installation,
+not F or full cross-variant numerical regressions. F's last successful manual
+family run covers the older pinned F revision. Its latest regression is green,
+but its family job fails before building because it requires the candidate to
+equal the previously promoted manifest SHA.
+
+Keep the validated pins until candidate checks succeed. A migration branch head
+is not automatically a compatible or release-approved revision.
 
 ---
 
@@ -322,6 +354,18 @@ Until a repository's migration is regression-clean and accepted, continue to
 use its dedicated `itamae-migration` branch. Avoid mixing unrelated feature
 work into these branches.
 
+Small implementation PRs target `itamae-migration`; Draft umbrella PRs target
+`main`. Ensure their CI accepts both PR bases before relying on this workflow
+([GOV-07 #25](https://github.com/gomeshun/sashimi-family/issues/25)). The four
+variant workflows currently accept only `main` as a PR base. ITAMAE also needs
+an open migration umbrella before final integration; its foundation PR #2 is
+already merged and does not represent the current migration branch.
+
+Before release, compare both directions of `main...itamae-migration`. Reconcile
+reviewed main changes on a child branch and run the combined suites. Preserve
+historical reference SHA, solver, thresholds, and mode explicitly when main's
+defaults advance. A clean textual merge is not evidence of numerical parity.
+
 ### 5.2 Pinning ITAMAE
 
 Before ITAMAE is released as a normal versioned dependency, each SASHIMI
@@ -342,36 +386,42 @@ Recommended rule:
 
 ### 5.3 SASHIMI-family as compatibility manifest
 
-The family repository should become the authoritative record of a mutually
-compatible set of revisions.
+[`compatibility.toml`](compatibility.toml) is the implemented, authoritative
+compatibility manifest. Keep its schema and `repo`, `path`, and full `ref`
+fields; do not add a second persistent family revision set. Public CI already
+reads it and `scripts/check_compatibility.py` checks the committed gitlinks.
 
-Add or maintain a machine-readable manifest in a future PR, for example:
+GOV-03 remains open because component workflows still duplicate family state:
+C's co-install job pins an older SI revision. Component-local ITAMAE build pins
+and immutable fixture provenance are different responsibilities and must not
+be indiscriminately removed or rewritten.
 
-```toml
-[itamae]
-repo = "gomeshun/itamae"
-ref = "<sha>"
+### 5.3.1 Candidate validation before promotion
 
-[sashimi-c]
-repo = "gomeshun/sashimi-c"
-ref = "<sha>"
+Implement GOV-01/GOV-03 with three distinct checks:
 
-[sashimi-si]
-repo = "gomeshun/sashimi-si"
-ref = "<sha>"
+1. **Component regression:** test the proposed component with its exact declared
+   ITAMAE input, independently of parent promotion.
+2. **Candidate family:** check out an explicitly recorded family commit and
+   validate its manifest/gitlinks first. Copy its manifest to a temporary
+   effective manifest, overriding only the component under test with the exact
+   candidate SHA. Check out/build that set and compare embedded provenance
+   against the effective manifest. Record both the family commit and the full
+   effective set with the result. Never compare this temporary override against
+   the unchanged committed family gitlinks.
+3. **Promoted family:** update the canonical manifest and gitlinks together and
+   validate the exact committed set without overrides.
 
-[sashimi-w]
-repo = "gomeshun/sashimi-w"
-ref = "<sha>"
+Choose head-SHA or synthetic-merge-SHA validation explicitly per job. Checkout,
+artifact provenance, and assertions must all refer to the same chosen source;
+GitHub PR checkout can otherwise produce a synthetic merge SHA. A job must not
+require a new candidate to equal the old parent pin. Use explicit candidate
+inputs for coordinated multi-component changes, with every override recorded.
 
-[sashimi-f]
-repo = "gomeshun/sashimi-f"
-ref = "<sha>"
-```
-
-The exact filename may be `compatibility.toml` or similar. The family workflow
-should read from this one source rather than duplicating hard-coded SHAs in
-multiple places.
+For private F, execute the five-component check in an authorized private
+context; public parent CI is not evidence that F passed. Record the exact parent
+PR/commit used by that private run so changes to public components cannot reuse
+a stale all-family success.
 
 ### 5.4 Submodule policy
 
@@ -386,60 +436,75 @@ When updating family compatibility:
 Do not allow `.gitmodules`, gitlink revisions, a compatibility manifest, and CI
 pins to describe different states.
 
+`check_compatibility.py` reads committed `HEAD` gitlinks. Run it against the
+candidate commit after recording the paired manifest/gitlink changes; editing
+only the worktree manifest does not update what this checker compares.
+
+### 5.5 Distribution identity and release artifacts
+
+GOV-02 remains a release blocker. The tracked `itamae` distribution identity
+collides with an unrelated PyPI project; the Python import namespace can remain
+`itamae` after a distribution rename. Select and verify the replacement in
+[ITAMAE #3](https://github.com/gomeshun/itamae/issues/3). Until then use reviewed
+exact VCS sources or explicit built wheels, not an ambiguous index range.
+
+Rename consumers together: SI/W/F requirements, C's optional/test extras,
+uv source keys/locks, distribution metadata lookups, provenance distribution
+mapping, artifact filename prefixes, and CI install checks. A wheel's metadata
+does not inherit `[tool.uv.sources]`. A clean co-install with a pre-supplied core
+wheel is useful but does not prove ordinary index resolution is safe.
+
+REL-03 must build a wheel from an unpacked sdist outside the Git checkout,
+without injected source-revision variables, and verify retained provenance,
+build hooks, data files, and declared dependencies. Test the same artifacts
+that will be released, recording their hashes.
+
 ---
 
 ## 6. PR roadmap overview
 
-Implement the remaining migration in the following order. Do not start a later
-physics-extraction milestone while the earlier stabilization milestones are
-red.
+Use the following remaining critical path. Independent core/adapter work may
+proceed with a tested exact core input; package release and compatibility
+promotion remain gated on the relevant P0 checks. Do not let an unrelated
+research feature or stale historical task block the entire migration.
 
 ```text
-PR 0A  Fix SASHIMI-C CI
-PR 0B  Fix SASHIMI-F CI
-PR 0C  Synchronize family compatibility pins
-PR 0D  Add single-source compatibility manifest + CI consumption
-
-PR 1A  Freeze regression/metadata contracts across variants
-PR 1B  Consolidate test helpers and golden provenance conventions
-
-PR 2A  Extract generic C execution pipeline into ITAMAE protocols/mechanisms
-PR 2B  Thin SASHIMI-C migration adapter
-PR 2C  Reuse the C/common pipeline from SASHIMI-SI
-
-PR 3A  Stabilize generic power/variance interfaces for W/F
-PR 3B  Thin SASHIMI-W adapter
-PR 3C  Thin SASHIMI-F adapter
-
-PR 4A  Common profile/state-view abstractions
-PR 4B  SIDM structured state integration
-PR 4C  FDM soliton/core-halo integration when the scientific model is selected
-
-PR 5A  Spatial Level A/B integration
-PR 5B  Optional orbit-averaged research backend integration
-
-PR 6A  ITAMAE public-API freeze and prerelease preparation
-PR 6B  Versioned dependency migration and family release validation
+GOV-01/03/07  Repair candidate orchestration, duplicate family pins, child-PR CI
+GOV-02       Resolve distribution identity across all consumers/artifact tools
+SYNC-C       Reconcile main/Picard work with the migration reference
+CORE-01/02   Harden the existing pipeline and model/protocol contracts
+C/SI-01      Decompose already-connected adapters and preserve named state views
+W/F-01       Connect execution to the pipeline; retain explicit variance modes
+PHY-*        Validate existing migration differences, one correction at a time
+GOV-04/05/06 Synchronize docs, execute notebooks, settle F upstream policy
+REL-01..04   Freeze support/API; validate clean artifacts and exact family RC
+REL-05       Integrate components, validate final SHAs, promote manifest/gitlinks
 ```
 
-Each PR below includes an implementation contract.
+The original PR 0A and 0D foundations are implemented. PR 0B's old dependency
+source conflict is resolved, but GOV-01's orchestration failure remains.
+Profile abstractions needed to preserve existing states belong to CORE/SI work;
+new soliton, spatial, phase-space, orbit, and baryonic models belong to the
+separate [scientific roadmap](docs/scientific-roadmap.md), not the release gate.
 
 ---
 
 ## 7. Milestone 0: make the current migration trustworthy
 
-This milestone is blocking. Do not perform new model migration until all jobs in
-this milestone are green.
+These checks protect promotion/release. The dated statuses below supersede
+historical failure descriptions. Track remaining work in the linked GOV issues.
 
-### PR 0A — Fix current SASHIMI-C migration CI
+### PR 0A — SASHIMI-C migration CI (foundation completed)
 
 **Repository:** `gomeshun/sashimi-c`
 
 **Branch:** `itamae-migration`
 
-**Known current problem:** the migration workflow reaches the Ruff step and
-fails on formatting/import-order issues before running the regression suite.
-The observed issues are mechanical and autofixable, including:
+**Status:** the migration run at `4adc9af` is green. The original Ruff failure
+is resolved; do not repeat it as an open blocker. New child-PR trigger and
+main/Picard integration checks are tracked in #25/#26.
+
+**Historical problem:** the workflow stopped at Ruff before regressions, with:
 
 - unsorted `__all__` in `sashimi_c_itamae.py`;
 - import ordering in `sashimi_c_itamae_migration.py`;
@@ -465,15 +530,20 @@ The observed issues are mechanical and autofixable, including:
 - wheel/source build and clean import smoke tests pass;
 - golden outputs are unchanged.
 
-### PR 0B — Fix current SASHIMI-F migration CI
+### PR 0B — SASHIMI-F CI (source conflict resolved; orchestration open)
 
 **Repository:** `gomeshun/sashimi-f`
 
 **Branch:** `itamae-migration`
 
-**Known current problem:** CI installs ITAMAE both as a checked-out local source
-and as the VCS URL declared by the project, causing uv to reject conflicting
-URLs for the same package.
+**Status:** the source conflict is resolved by the existing single-source
+regression install. At `76b4880`, regression/lint/build/smoke pass (40 tests),
+while `family-coinstall` fails at `Verify current SASHIMI-F revision` before
+building. Implement Section 5.3.1 under
+[GOV-01](https://github.com/gomeshun/sashimi-f/issues/2).
+
+**Historical problem:** local and VCS sources once conflicted. Retain these
+single-source acceptance criteria while repairing candidate orchestration.
 
 **Required changes:**
 
@@ -504,18 +574,17 @@ URLs for the same package.
 
 **Required changes:**
 
-1. update the pinned revisions used by family integration to the intended
-   migration heads after PR 0A/0B are green;
+1. validate a proposed revision set with candidate-family CI before promotion;
 2. include SASHIMI-F in the same compatibility policy even if visibility or
    repository permissions require a separate/private CI path;
 3. update submodule gitlinks to the same revisions;
-4. verify that the family test builds the exact current migration code, not an
-   older commit;
+4. verify that family CI builds the exact declared set; record any difference
+   from development heads without treating that difference alone as an error;
 5. keep the runtime-file overlap assertion.
 
-**Important:** SASHIMI-W has had code-level changes after an older family pin,
-including separation of exact legacy behavior from corrected WDM physics. A
-family test using the older pin does not validate the current W migration.
+**Current status:** ITAMAE/C/SI/W heads equal their pins. F is six commits ahead
+and has not passed candidate-family validation. Retain its old pin pending that
+check; updating it first would reproduce GOV-01's circular promotion process.
 
 **Acceptance criteria:**
 
@@ -530,12 +599,16 @@ family test using the older pin does not validate the current W migration.
 
 **Repository:** `gomeshun/sashimi-family`
 
+**Status:** manifest, public CI consumption, gitlink validator, and artifact
+provenance checker are implemented. The remaining duplicated component-family
+pins and candidate workflow belong to GOV-03; this is not a new manifest task.
+
 **Goal:** eliminate SHA drift between documentation, workflow YAML, and
 submodule revisions.
 
 **Required changes:**
 
-1. add `compatibility.toml` (or an equivalently simple machine-readable file);
+1. maintain the existing `compatibility.toml` schema;
 2. record repository names and full commit SHAs for ITAMAE and each SASHIMI
    variant;
 3. modify the family workflow so checkout revisions are read from this manifest
@@ -599,7 +672,9 @@ common identifiers belong in ITAMAE; detailed physical provenance may live in
 
 ### PR 1B — Golden fixture provenance and testing policy
 
-Create one documented golden-fixture convention shared by C/SI/W/F.
+Maintain the implemented [golden-fixture policy](docs/golden-fixture-policy.md)
+shared by C/SI/W/F. Preserve generating revisions as historical provenance;
+new validation runs do not rewrite the original generation record.
 
 Each fixture must record or be accompanied by:
 
@@ -699,6 +774,10 @@ interfaces convenient.
 
 **Repository:** `gomeshun/itamae`
 
+**Status:** `PopulationPipeline`, `PopulationExecution`, accretion-batch
+concatenation and execution protocols already exist and are consumed by C/SI.
+CORE-01/02 cover their remaining robustness and composition work.
+
 Implement only generic pieces that are required to make the C migration adapter
 thin.
 
@@ -757,7 +836,8 @@ module should substantially shrink.
 
 **Repository:** `gomeshun/sashimi-si`
 
-After C is thin, migrate SI onto the same ITAMAE execution machinery.
+SI is already connected to the same executor. Refine its model composition in
+coordination with C and CORE-02; do not repeat the initial wiring step.
 
 SI-specific requirements:
 
@@ -956,7 +1036,9 @@ scientific interpretation, not forced numerical matching.
 
 ## 12. Milestone 4: profile and multi-state abstractions
 
-Do this only after the population/evolution migration is stable.
+Preserve the named states already used by C/SI during core migration. Broader
+profile families and new physical prescriptions are post-migration features;
+they do not block the first release of the existing models.
 
 ### PR 4A — Generic profile/state contracts in ITAMAE
 
@@ -1002,7 +1084,12 @@ Do not silently retrofit a soliton into historical SASHIMI-F legacy mode.
 
 ## 13. Milestone 5: spatial information
 
-Spatial migration is intentionally downstream of the non-spatial core.
+Spatial development is downstream of the non-spatial migration and is not a
+release prerequisite. Use the terminology in the September scientific roadmap:
+Level A is a radial measure, Level B conditional phase space, Level B+ reduced
+orbit-conditioned evolution, and Level C optional explicit orbit integration.
+The older "Level B local environment" wording denotes supporting queries,
+not a competing definition of Level B.
 
 ### 13.1 Level A — conditional radial measure
 
@@ -1025,7 +1112,7 @@ Metadata must identify:
 - host profile/backend;
 - spatial weight semantics.
 
-### 13.2 Level B — local environment
+### 13.2 Shared local-environment support for Levels A/B/B+
 
 Provide generic host-environment queries such as:
 
@@ -1040,11 +1127,12 @@ tdyn_local(r, z)
 Variant-specific radius-dependent stripping/disruption laws remain outside
 ITAMAE.
 
-### 13.3 Level C — orbit-averaged research backend
+### 13.3 Levels B/B+ and optional Level C
 
-Only after Levels A/B are validated, integrate the existing orbit scaffold for
-turning points, radial periods, radial kernels, and optional `(E,L)`/action-like
-transport.
+Validate conditional phase space and reduced orbit-conditioned evolution under
+family #20/#21 before requiring an explicit Level C backend. Existing turning
+points, radial periods, radial kernels, and `(E,L)` helpers are reusable
+mechanisms, not evidence of an end-to-end spatial population model.
 
 Conservation/normalization tests are mandatory. Do not make this backend part of
 the first stable ITAMAE API unless it is already required by production
@@ -1141,6 +1229,10 @@ Required checks should include:
 - wheel/sdist build;
 - clean import/smoke test;
 - no accidental import-time selection of the migrated path for legacy users.
+
+Run the applicable checks for child PRs targeting `itamae-migration` as well as
+umbrellas targeting `main`. Record the actual tested source SHA and distinguish
+component, candidate-family, and promoted-family results (Section 5.3.1).
 
 ### 15.3 SASHIMI-family
 
@@ -1371,18 +1463,24 @@ Relevant references/conventions:
 
 ## 22. Immediate next actions
 
-The next coding agent should **not** start a new physics migration. Execute these
-in order:
-
-1. fix SASHIMI-C migration CI so the regression suite actually runs;
-2. fix SASHIMI-F uv dependency-source conflict so the regression suite runs;
-3. rerun and confirm ITAMAE, C, SI, W, and F migration CI at the intended heads;
-4. update `sashimi-family` submodule revisions and family CI pins to exactly
-   those green heads;
-5. add a single-source compatibility manifest and a mismatch check;
-6. freeze common metadata/golden provenance conventions;
-7. only then begin thinning SASHIMI-C's migration layer into reusable ITAMAE
-   execution mechanisms.
+1. Fix child-PR coverage (#25) and F candidate orchestration (F #2), preserving
+   independent component regression and exact build provenance.
+2. Complete distribution identity (ITAMAE #3 and downstream GOV-02 issues) and
+   remove duplicated family pins (#4). Include C extras and artifact tooling.
+3. Reconcile C's reviewed main/Picard changes (#26), explicitly protecting the
+   historical solver/default reference before any new default is adopted.
+4. Harden the existing pipeline (ITAMAE #4/#5), decompose C/SI (#7/#8), and
+   connect W/F (#9/F #5). Use exact compatible inputs while work proceeds.
+5. Complete PHY-C/SI/W/F validation. Credit F's new comparison, but retain its
+   separate correction-ablation/backend/cutoff checks as unfinished work.
+6. Execute migration notebooks and verify saved state (#6), finish docs (#5)
+   and F upstream policy (F #4), then freeze API/support and validate artifacts.
+7. Validate candidate-family sets before manifest promotion. For final release,
+   freeze reviewed heads, integrate repositories in a recorded order, revalidate
+   resulting merge SHAs/artifacts, and update the parent manifest/gitlinks in
+   one commit. Cross-repository merges are sequential, not an atomic transaction.
+8. Keep new soliton/spatial/orbit/scatter/lensing/baryonic features under #18.
+   They must not indefinitely extend migration epic #1.
 
 After each step, update this document if the implementation reveals a different
 boundary or invalidates an assumption. The plan is a living execution contract,
