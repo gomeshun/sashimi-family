@@ -61,7 +61,7 @@ small runtime provenance module. Installed-package checks must read that value
 from the artifact itself; environment variables and a surrounding Git checkout
 are build-time inputs only and must not be required at runtime.
 
-SASHIMI-S currently keeps its 27-array expected sums in the migration test, so
+SASHIMI-SI currently keeps its 27-array expected sums in the migration test, so
 it uses `tests/golden/sidm_small_catalog_provenance.json` as the sidecar. This
 keeps the compact numerical regression readable while giving it the same
 provenance and regeneration contract as the JSON catalog fixtures.
