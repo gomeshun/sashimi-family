@@ -18,11 +18,11 @@ ARTIFACT_TARGETS = {
     "sashimi-f": "_sashimi_f_build_provenance.py",
 }
 ARTIFACT_PREFIXES = {
-    "itamae": "itamae-",
-    "sashimi-c": "sashimi_c-",
-    "sashimi-si": "sashimi_si-",
-    "sashimi-w": "sashimi_w-",
-    "sashimi-f": "sashimi_f-",
+    "itamae": ("sashimi_itamae-", "itamae-"),
+    "sashimi-c": ("sashimi_c-",),
+    "sashimi-si": ("sashimi_si-",),
+    "sashimi-w": ("sashimi_w-",),
+    "sashimi-f": ("sashimi_f-",),
 }
 
 
@@ -59,6 +59,17 @@ def _check_artifact(artifact: Path, target: str, expected: str) -> None:
         )
 
 
+def _matching_artifacts(directory: Path, prefixes: tuple[str, ...], suffix: str) -> list[Path]:
+    """Return artifacts matching any supported distribution filename prefix."""
+    return sorted(
+        {
+            artifact
+            for prefix in prefixes
+            for artifact in directory.glob(f"{prefix}*{suffix}")
+        }
+    )
+
+
 def main() -> int:
     """Check wheel artifacts and any available source distributions."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -76,9 +87,9 @@ def main() -> int:
         if not isinstance(entry, dict) or not isinstance(entry.get("ref"), str):
             raise ValueError(f"Manifest has no exact ref for {package!r}")
         expected = entry["ref"]
-        prefix = ARTIFACT_PREFIXES[package]
-        wheels = sorted(args.directory.glob(f"{prefix}*.whl"))
-        sdists = sorted(args.directory.glob(f"{prefix}*.tar.gz"))
+        prefixes = ARTIFACT_PREFIXES[package]
+        wheels = _matching_artifacts(args.directory, prefixes, ".whl")
+        sdists = _matching_artifacts(args.directory, prefixes, ".tar.gz")
         if len(wheels) != 1:
             raise ValueError(
                 f"Expected exactly one wheel for {package!r}; found {wheels}"
