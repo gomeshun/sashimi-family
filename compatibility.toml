@@ -4,24 +4,24 @@ schema = 1
 [itamae]
 repo = "gomeshun/itamae"
 path = "itamae"
-ref = "1c5b1ad67725671fd4dc1a2306d2731ba337e563"
+ref = "94a1bc54a02fc698204cf20e7c41b8e57df3e614"
 
 [sashimi-c]
 repo = "gomeshun/sashimi-c"
 path = "sashimi-c"
-ref = "4adc9af8ba14b7a3a5db39fdb55cb4fc7a5b1083"
+ref = "cf07aea2513b29c790c9e50d648f461ace5ea78e"
 
 [sashimi-si]
 repo = "gomeshun/sashimi-si"
 path = "sashimi-si"
-ref = "56b5e509fe9da206d28e6a0371fcfc300f18a919"
+ref = "cf1b19021315d16b29351a77b2306ad646f88265"
 
 [sashimi-w]
 repo = "gomeshun/sashimi-w"
 path = "sashimi-w"
-ref = "676386919f638a6f460a3ec50304384373e0d6fc"
+ref = "d234ae250f4343e465be483c5a960d12ea5d3dbf"
 
 [sashimi-f]
 repo = "gomeshun/sashimi-f"
 path = "sashimi-f"
-ref = "2091a50c32e41f76894f4e12a7b36650ea102aa6"
+ref = "fc4cd832acf4b4ae4b7ff02691d326e63945dc6d"
