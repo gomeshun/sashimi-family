@@ -9,7 +9,7 @@ ref = "8bd6d135003e91b6ca2717655df250c8f808cd24"
 [sashimi-c]
 repo = "gomeshun/sashimi-c"
 path = "sashimi-c"
-ref = "9334d14622a0d66082375ea9b66ce21a6d8f1ad2"
+ref = "adbf9b5c49eda8978fd13948a6f006a6c0a9ca1b"
 
 [sashimi-si]
 repo = "gomeshun/sashimi-si"
