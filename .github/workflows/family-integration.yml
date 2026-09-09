@@ -120,6 +120,14 @@ jobs:
           import sashimi_w_itamae_variance
 
           assert itamae.__version__ == "0.1.0a4"
+          assert metadata.version("sashimi-itamae") == itamae.__version__
+          try:
+              metadata.version("itamae")
+          except metadata.PackageNotFoundError:
+              pass
+          else:
+              raise AssertionError("unrelated PyPI itamae distribution is installed")
+
           assert source_revision("itamae") == os.environ["ITAMAE_REF"]
           assert source_revision("sashimi-c") == os.environ["SASHIMI_C_REF"]
           assert source_revision("sashimi-si") == os.environ["SASHIMI_SI_REF"]
@@ -134,7 +142,7 @@ jobs:
           assert importlib.util.find_spec("itamae_variance") is None
           assert importlib.util.find_spec("itamae_catalog_migration") is None
 
-          distributions = ("itamae", "sashimi-c", "sashimi-si", "sashimi-w")
+          distributions = ("sashimi-itamae", "sashimi-c", "sashimi-si", "sashimi-w")
 
           def runtime_files(name):
               files = metadata.distribution(name).files or ()
