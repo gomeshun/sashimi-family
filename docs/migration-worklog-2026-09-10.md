@@ -220,3 +220,57 @@ nodes, four host nodes) was interrupted after several minutes with no result.
 The stack was in repeatedly evaluated top-hat concentration integrals inside
 the historical odeint RHS. This is not a successful convergence/survival test.
 The small, previously frozen q5/q10 catalog is the structural regression input.
+
+## Common ODE contract, W standard API and F execution
+
+ITAMAE PR #19 head `a601177e7996f6798b9a1f1d109bc6b2837d9cc6` passed all
+132 tests, quality checks, the complete Python 3.11–3.13/backend matrix, build
+and walkthrough before migration merge. It adds explicit odeint/LSODA with
+SciPy's own tolerance defaults, while preserving the existing RK45 default.
+The same-environment direct odeint results are bitwise equal in both time
+directions. Eighteen new boundary cases failed before the change.
+
+W PR #6 head `a5359a55c31d190e000552ed160181d8787e872b` uses explicit WDM
+components and canonical stage arrays. Its tuple output derives from the
+primary execution result; independent population/concentration factors are
+retained without division. The 39 existing tests plus a new analytical
+half-mass and batching case pass. Every declared CI passed before migration
+merge. W PR #7 head `2ddaac5576e9a50c164d58419e481580d04f2879` then removed
+runtime legacy branches, made Subhalos available through the standard import,
+and added calculation-specification metadata. The unused historical sharp-k
+initialization was removed; the separate top-hat concentration calibration
+remains. All 35 standard-API tests and all declared CI passed before migration
+merge. Frozen A/B fixtures and tolerances are unchanged.
+
+W's four-cell usage notebook executes outside the source tree, and the separate
+two-cell science notebook compares B/C and finite-difference derivatives. Both
+ran in fresh kernels and plots were inspected. The first science execution
+failed because Hatch's editable force-included modules lived in site-packages;
+the scientific runner now starts in an explicit validation bundle. This did
+not alter numerical calculations.
+
+The W observable-count decision is pending: historical N_sat includes destroyed
+nodes and drops the first histogram bin. For a constructed population with
+weights 2,3,5 and only the middle node destroyed, it returns 8 rather than the
+surviving total 7 (all-node total 10). The proposed separation is surviving
+weights for current-time distributions/counts and generation weights for
+accretion-time distributions, with correct cumulative totals and propagation
+of profile_change. No such policy was adopted without a user answer.
+
+F PR #14 head `a44f2cb` connects its named catalog to shared execution and
+separates concentration weights. Existing exporter tests caught a missing
+factor in process_m_22 and its analysis consumer; the consumers now retain the
+complete weight. All 42 local physical/exporter tests and ten effective-manifest
+tests pass. Private CI is in progress and enumerates coordinated core/C/SI/W
+inputs before building and numerically checking the five-package combination.
+Independent F A/B patches and full-C evidence stay in F's private repository.
+The three isolated corrections affect native derivative scaling, the selected
+growth derivative and exact NFW inversion. The latter changes one flag in a
+constructed full-catalog threshold test and correctly resolves both sides of
+c_t=0.77 in an analytic test. These are numerical checks, not a replacement for
+the still-pending cutoff/backend/accretion/convergence science.
+
+The current work is still not release-ready: F standard API/legacy removal,
+user decisions for SI total cross section and W counts, remaining observable
+inputs and scientific convergence, rights/version documentation, final exact
+artifact matrix and the recorded parent candidate remain open.
