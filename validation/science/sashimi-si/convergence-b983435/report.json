@@ -1,0 +1,484 @@
+{
+  "variant": "sashimi-si",
+  "source_revisions": {
+    "sashimi-si": "b9834354d565046a782d84285476f0f60c4248f8",
+    "itamae": "c2d7b9afb9773bc8cb5b2ee142d70d95cc3afe3b"
+  },
+  "script_sha256": "05a580faf27239087b7c22c1711799abd913fac875f896b16441b49fd8cb1817",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.1.0a4"
+  },
+  "interpretation": "One variable at a time; finite-grid sensitivity, not a continuum truth or recalibration.",
+  "rows": [
+    {
+      "label": "baseline",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.7347155699972063,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.025040721512215453,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.1335263954629946
+          },
+          "nodes": 336,
+          "file": "baseline-cdm_reference.npz",
+          "sha256": "d036c32dff82245c6629635b8a53f1faa8520415715ed959561cc15c3416b68a"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.025040721512215453,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.3236682249012897
+          },
+          "nodes": 336,
+          "file": "baseline-sidm.npz",
+          "sha256": "1ba7589feb48d55f49468e9763cc6c027d932ec34d6baf68e517e0a2c0e07288"
+        }
+      }
+    },
+    {
+      "label": "N_ma-32",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 32,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.035541457007639,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8385.786185140074,
+            "bound_mass_fraction": 0.02718486085578355,
+            "count_above_1e7": 241.70041855005618,
+            "mean_vmax_km_s": 2.2311590715565304
+          },
+          "nodes": 672,
+          "file": "N_ma-32-cdm_reference.npz",
+          "sha256": "a561365ec1dde6b7317f79a735d157ab46d1ab7ff35929cec0091095f63d5ac6"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8385.786185140074,
+            "bound_mass_fraction": 0.02718486085578355,
+            "count_above_1e7": 241.70041855005618,
+            "mean_vmax_km_s": 2.4330296642169635
+          },
+          "nodes": 672,
+          "file": "N_ma-32-sidm.npz",
+          "sha256": "9dd528fd6bc608bd8441e9de284925604e88831b9e5ea5c5adf84b5a71c73a4a"
+        }
+      }
+    },
+    {
+      "label": "N_ma-64",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 64,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 5.813313582912087,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8376.073609189578,
+            "bound_mass_fraction": 0.02832492364395492,
+            "count_above_1e7": 257.3436183742302,
+            "mean_vmax_km_s": 2.282136010689531
+          },
+          "nodes": 1344,
+          "file": "N_ma-64-cdm_reference.npz",
+          "sha256": "7f7c6cb1df7e3fa037835f546d17c603b67652b01bb440869c872b90950a6b38"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8376.073609189578,
+            "bound_mass_fraction": 0.02832492364395492,
+            "count_above_1e7": 257.3436183742302,
+            "mean_vmax_km_s": 2.490387749237944
+          },
+          "nodes": 1344,
+          "file": "N_ma-64-sidm.npz",
+          "sha256": "f2f164a3c225258b088bc7b374968db8ef255f7852927005760343c2e01127e9"
+        }
+      }
+    },
+    {
+      "label": "N_ma-128",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 128,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.764478677068837,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8371.304055844474,
+            "bound_mass_fraction": 0.028911047231670126,
+            "count_above_1e7": 272.1514384863043,
+            "mean_vmax_km_s": 2.308137134833512
+          },
+          "nodes": 2688,
+          "file": "N_ma-128-cdm_reference.npz",
+          "sha256": "16601257d1d72ef6709ece70309e4fc77847f2589072a821a53a79d11d917f7f"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8371.304055844474,
+            "bound_mass_fraction": 0.028911047231670126,
+            "count_above_1e7": 272.1514384863043,
+            "mean_vmax_km_s": 2.519475798535437
+          },
+          "nodes": 2688,
+          "file": "N_ma-128-sidm.npz",
+          "sha256": "7c1a7a54020a81b4bb2e65feaf11aa1d31ad1e072a7ed0a6722d39d10bbffdbe"
+        }
+      }
+    },
+    {
+      "label": "dz-0.125",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.125,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.382517975056544,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8896.429992616188,
+            "bound_mass_fraction": 0.030682022552799938,
+            "count_above_1e7": 236.30730207528904,
+            "mean_vmax_km_s": 2.1896392656839616
+          },
+          "nodes": 672,
+          "file": "dz-0.125-cdm_reference.npz",
+          "sha256": "59cf26f308baa7dd9172a20235aa80a5742378240d2f2765ad800099131e8053"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8896.429992616188,
+            "bound_mass_fraction": 0.030682022552799938,
+            "count_above_1e7": 236.30730207528904,
+            "mean_vmax_km_s": 2.382545599584962
+          },
+          "nodes": 672,
+          "file": "dz-0.125-sidm.npz",
+          "sha256": "29dea1b0effcaf14773bc59a7611904b7d0d71f8beb658b47f2716c1b6c5c302"
+        }
+      }
+    },
+    {
+      "label": "dz-0.0625",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.0625,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 4.21528850402683,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 9136.69338059167,
+            "bound_mass_fraction": 0.033864373702284296,
+            "count_above_1e7": 275.93616481163446,
+            "mean_vmax_km_s": 2.2162013282871573
+          },
+          "nodes": 1344,
+          "file": "dz-0.0625-cdm_reference.npz",
+          "sha256": "a640805f87e179409f48de67f854fc8cb00921c5b51f8e7f60f94b354819496b"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 9136.69338059167,
+            "bound_mass_fraction": 0.033864373702284296,
+            "count_above_1e7": 275.93616481163446,
+            "mean_vmax_km_s": 2.4096827901952045
+          },
+          "nodes": 1344,
+          "file": "dz-0.0625-sidm.npz",
+          "sha256": "ef4b3964850b5e1c49855ab4c5ef4797aaced6202f6b781c365fe0d9600f508b"
+        }
+      }
+    },
+    {
+      "label": "dz-0.03125",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.03125,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 5.143715977901593,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 9316.152701173309,
+            "bound_mass_fraction": 0.0355509349110325,
+            "count_above_1e7": 297.267031423768,
+            "mean_vmax_km_s": 2.221176234774082
+          },
+          "nodes": 2736,
+          "file": "dz-0.03125-cdm_reference.npz",
+          "sha256": "f958794e10f52db9b4078463ef908ac246b315cd36e523655fa95d4fa860c624"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 9316.152701173309,
+            "bound_mass_fraction": 0.0355509349110325,
+            "count_above_1e7": 297.267031423768,
+            "mean_vmax_km_s": 2.4142375189614103
+          },
+          "nodes": 2736,
+          "file": "dz-0.03125-sidm.npz",
+          "sha256": "147bc939ed1332ea68360554cc862e70fd99ca9630d171f42f92434bdf3ec267"
+        }
+      }
+    },
+    {
+      "label": "N_herm-5",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 5,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.5938748569460586,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.02504072151221545,
+            "count_above_1e7": 216.71907506435716,
+            "mean_vmax_km_s": 2.1335264877262645
+          },
+          "nodes": 560,
+          "file": "N_herm-5-cdm_reference.npz",
+          "sha256": "5ffe771997657467bf13461a5ebf90c6dc988981cdac73e0f7641793b56e0eda"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8358.127133635808,
+            "bound_mass_fraction": 0.02498912488346354,
+            "count_above_1e7": 215.96878439478007,
+            "mean_vmax_km_s": 2.332637671497416
+          },
+          "nodes": 560,
+          "file": "N_herm-5-sidm.npz",
+          "sha256": "82ba301edadf22a6a7d3bca37fda80f4a9ea7e04c54ef8b12094a84d083e8f78"
+        }
+      }
+    },
+    {
+      "label": "N_herm-7",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 7,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.5949130989611149,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.025040721512215453,
+            "count_above_1e7": 216.71907506435718,
+            "mean_vmax_km_s": 2.133526487734049
+          },
+          "nodes": 784,
+          "file": "N_herm-7-cdm_reference.npz",
+          "sha256": "35ce84d4da20693a80a25961f184af6ed507a32d76ab597cd1ec7e8ab64801f3"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8368.809289257228,
+            "bound_mass_fraction": 0.02502917823136667,
+            "count_above_1e7": 216.65590060298138,
+            "mean_vmax_km_s": 2.343541939186808
+          },
+          "nodes": 784,
+          "file": "N_herm-7-sidm.npz",
+          "sha256": "6ac2715f36166f3a9c5a91feb111c8f3550e187083acd9ac41b6b5e38f43d88f"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-16",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 16,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.42844150704331696,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8400.106319736093,
+            "bound_mass_fraction": 0.02502142900460582,
+            "count_above_1e7": 216.54887396953208,
+            "mean_vmax_km_s": 2.1336100375944294
+          },
+          "nodes": 336,
+          "file": "N_hermNa-16-cdm_reference.npz",
+          "sha256": "d8c7d918fde78ab84250de5f38f51d234481097aaa602926fe99dc4979f0c5df"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8400.106319736093,
+            "bound_mass_fraction": 0.02502142900460582,
+            "count_above_1e7": 216.54887396953208,
+            "mean_vmax_km_s": 2.3237538571337515
+          },
+          "nodes": 336,
+          "file": "N_hermNa-16-sidm.npz",
+          "sha256": "1e7aff2c3e17283727b31a5b9a7b099e489d3533360781504e3e81bc7d96a7cd"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-32",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 32,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.7451296319486573,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8404.390132639299,
+            "bound_mass_fraction": 0.025025354926796792,
+            "count_above_1e7": 216.58047292009567,
+            "mean_vmax_km_s": 2.13343498009523
+          },
+          "nodes": 336,
+          "file": "N_hermNa-32-cdm_reference.npz",
+          "sha256": "c621694fce29ca611f26a057e0b8cf595eb54dd7586ff04cc9bddebcf0a56733"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8404.390132639299,
+            "bound_mass_fraction": 0.025025354926796792,
+            "count_above_1e7": 216.58047292009567,
+            "mean_vmax_km_s": 2.3235793303908174
+          },
+          "nodes": 336,
+          "file": "N_hermNa-32-sidm.npz",
+          "sha256": "e9566314b4ed4d0a6fe19cd5a07b3c7ccc2ee4f08b6ac24d788572bf2cd350e3"
+        }
+      }
+    }
+  ],
+  "failure": {
+    "case": "N_hermNa-64",
+    "exception": "ValueError: Non-finite EPS accretion kernel inside its active mass domain.",
+    "continuation": "../convergence-fine-a233326/report.json",
+    "detail": "sashimi-si/validation/eps-zero-gap/failure.json"
+  }
+}

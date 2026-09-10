@@ -414,3 +414,91 @@ of a new low-mass prescription. C/F boost input implementation is in progress.
 ## Remaining scientific decisions received
 
 The user adopted SI total cross section, F native direct top-hat, and W survivor-based observables after independent review. The W accretion display describes the same current survivors by accretion mass, confirmed against C/F. See [adoption record](adoption-2026-09-10.md) for exact scope and hashes of the received evidence. These three questions are no longer pending; implementation and verification continue.
+
+## Adopted numerical contracts and observables: completed review units
+
+C boost PR #18 (3fefa3426c33945ce4af63a472812ac6f9e4517c), private F boost
+PR #21 (84e6cd8257712e7f33a106fae5e3194681eb91e8), core profile/window input
+PR #25 (c2d7b9afb9773bc8cb5b2ee142d70d95cc3afe3b), SI total-cross-section
+PR #12 (efa37c2a84e3c7a80e6436df48f3ff9232e3a232), W surviving-observable
+PR #13 (09322feb1e348f40fa93d0514f42dd02171a7282), and private F direct-native
+variance PR #22 (692587cf2a626b425f656573d5b64567c3387904) all passed their
+complete CI and merged into migration. The authorized boost approximation is
+explicit, warned, counted and recorded; the default rejects incomplete inputs.
+W's accretion display describes current survivors. Native F sigma and derivative
+now use the same direct integral and cache/query order is invariant. F raw
+reference data and scientific patches remain in its private repository.
+
+The F direct-native wheel and source archive were built at exact 692587c. The
+sdist rebuilt without source-revision injection outside its repository, and
+25 copied boost/direct-variance tests passed against installed artifacts. Both
+F notebooks ran in fresh kernels (3 science cells, 4 usage cells); all figures
+were inspected. Full F regression passed 75 tests before the next adapter unit.
+
+SI stage-unit PR #13 (b9834354d565046a782d84285476f0f60c4248f8) passed all
+Python 3.11–3.13 CI and merged. Intermediate shared states now use km/s, just
+like the named catalog, with explicit conversions into SI-owned history kernels.
+The real NFW stage identity failed before the fix; 38 migration and 20 established
+physics tests passed afterward at unchanged reference tolerances.
+
+## Controlled C/SI science and the normalized EPS limit
+
+`scripts/check_population_convergence.py` saves complete catalogs for one-variable
+sweeps. The original script bytes remain `validation/science/population-convergence-v1.py`.
+The source SHA and actual script hash accompany every report. Public C/SI data
+are under `validation/science`; these files are candidate validation, not the
+parent's authoritative compatibility set.
+
+C and SI now have mass grids through 500 points, redshift steps through .005,
+concentration orders 3/5/7, host orders through 200, and direct ODE/tight-ODE
+comparisons. At the representative M0=1e12 Msun, zmax=3, log-mass range 6–10,
+ct_th=.77, changing dz=.01 to .005 changes count by about .26% and bound mass
+fraction by .75–.77%. This is a finite-grid sensitivity with the other settings
+held fixed, not an error guarantee. At dz=.25, N_ma=16, the default perturbative
+solver differs from direct ODE by about 3.8% in bound mass fraction. Solver and
+physical defaults remain fixed; these limitations require explicit review.
+
+The SI sweep initially failed at host order 64 because the finite auxiliary
+redshift search assigned an exactly zero barrier gap to 57 active nodes. Their
+raw Hermite weights were 5.54e-49 to 3.42e-39. The existing nonfinite guard raised;
+that failure is preserved. SI PR #14 (a233326f9be6c6436e368272adc42e56546ae571)
+uses the analytic finite limit of the normalized Yang kernel, without clipping
+or deleting weights. Seven new before-failing tests and all 45 migration tests
+pass. All Python CI passed and the PR merged. Orders 64 and 200 subsequently
+completed without warnings. C/F audits identified their remaining `nan_to_num`
+paths at the same boundary; repairs are being reviewed separately.
+
+`scripts/check_si_states.py` compares weak/default/strong interaction states and
+C structure on identical accretion nodes. At sigma0/m=1e-8 cm2/g, paired weights
+agree exactly and profile differences are below 4.7e-8; the maximum rc/rs is
+4.6e-5. The strong case remains finite and has fewer valid SIDM survivors. The
+native C/SI density difference is about 2.2% on these nodes. Matching background
+density and each node's M200 NFW normalization reduces structure differences to
+2.3e-15; tidal bound masses agree exactly. This diagnoses different concentration-
+scatter/mass normalization conventions, not a reason to change either product's
+calibration or equate their full population distributions.
+
+## Current decisions and remaining work
+
+A new F accretion-grid decision is pending. The existing F EPS calculation uses
+the final redshift's virial-mass array at every time. A private controlled probe
+changes only that array to the per-redshift conversion in both EPS and its
+log-mass integral. At m22=.1/1/10, surviving counts decrease .23–.26%, bound mass
+fractions decrease .85–1.51%, and individual weights differ by up to 3.06%.
+The user has been asked whether to adopt this repair or retain the documented
+limitation. No dependent product change is made before the reply.
+
+Private F variance-snapshot PR #23 prevents changing an adapter's values through
+later mutations of its source model and binds integrated cache identity to
+particle mass and actual spectrum arrays. Local tests pass (78 total). The first
+CI found only last-bit literal boost-reference differences in unchanged arithmetic;
+CI now runs the frozen pre-loader method bitwise on identical population arrays.
+Original fixtures and full-catalog tolerances remain unchanged. Final CI is pending.
+
+Remaining release preparation still includes F cutoff/backend and population
+convergence evidence, completed C/F EPS contracts, final scientific notebooks
+and review documentation, release-candidate versions and distribution dependencies,
+exact wheel/sdist verification across Python 3.11–3.13, full five-package private
+CI, and the parent manifest/gitlink candidate plus no-override verification.
+This work is not yet release-ready. Main, publication, tags and visibility remain
+outside this preparation step.
