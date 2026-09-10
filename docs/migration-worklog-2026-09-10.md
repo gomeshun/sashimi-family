@@ -410,3 +410,7 @@ without importing ITAMAE. Its full input/environment/export provenance is in
 `validation/references/sashimi-c/A-boost-zero-width.json` and the corresponding
 fixture. This preserves a historical numerical boundary result, not calibration
 of a new low-mass prescription. C/F boost input implementation is in progress.
+
+## Remaining scientific decisions received
+
+The user adopted SI total cross section, F native direct top-hat, and W survivor-based observables after independent review. The W accretion display describes the same current survivors by accretion mass, confirmed against C/F. See [adoption record](adoption-2026-09-10.md) for exact scope and hashes of the received evidence. These three questions are no longer pending; implementation and verification continue.
