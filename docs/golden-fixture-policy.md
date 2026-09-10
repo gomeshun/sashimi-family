@@ -1,5 +1,12 @@
 # Golden Fixture Policy
 
+The governing execution plan is [sashimi-migration-goal.md](../sashimi-migration-goal.md).
+This document specifies fixture provenance, not a separate migration roadmap.
+Existing `legacy`/`consistent` fields describe historical fixtures; they do not
+require production mode selectors or old runtime implementations to remain.
+New fixtures follow the plan's independent A/B/C comparison and schema migration
+rules while preserving original generation records.
+
 Golden fixtures are compact, versioned regression records for the SASHIMI
 migration boundary. They protect published legacy behavior and reviewed
 corrected behavior without making a physics correction implicit.

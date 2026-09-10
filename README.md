@@ -54,57 +54,38 @@ python3 scripts/check_artifact_provenance.py \
 
 ## ITAMAE migration
 
-Migration work is developed on the `itamae-migration` branch of each
-submodule. The family-level policy is:
+[`sashimi-migration-goal.md`](sashimi-migration-goal.md) is the single execution
+plan for migration and release preparation, tracked by
+[epic #1](https://github.com/gomeshun/sashimi-family/issues/1). It combines the
+implementation requirements and the agreed development goal:
 
-- established SASHIMI public APIs retain their published behavior;
-- ITAMAE-backed APIs are separate, explicit opt-ins;
-- each variant continues to own its physical prescriptions and calibrations;
-- shared numerical mechanisms and weighted-catalog contracts come from a
-  reviewed, pinned public ITAMAE commit;
-- CI installs that public commit directly rather than exchanging repository
-  snapshots;
-- installable helper modules use variant-specific names so all SASHIMI wheels
-  can coexist in one Python environment.
+- retain each variant's physical prescriptions and existing calculated quantities;
+- use ITAMAE's shared execution, numerical mechanisms, catalogs and provenance;
+- make the migrated named-catalog API primary and remove production legacy paths;
+- preserve old-result reproduction in an independent, pinned validation workflow;
+- validate candidate wheel/sdist artifacts for all five distributions and stop
+  for peer review before publication.
 
-The detailed migration plan is in [`migration_plan.md`](migration_plan.md), and
-its source-of-truth tracking issue is [#1](https://github.com/gomeshun/sashimi-family/issues/1).
-The migration roadmap is intentionally kept separate from new scientific feature
-development so that reproducibility, packaging, and release work can converge.
+Implementation stays on `itamae-migration` or topic branches. Main integration
+and PyPI publication require a subsequent explicit user instruction. The
+user-authorized publication of this consolidated plan to the parent main is a
+documentation change, not permission to merge component implementations.
 
-The [2026-09-04 migration review](docs/migration-status-2026-09-04.md) records
-the exact branch/PR/CI snapshot. C/SI already use `PopulationPipeline`; W/F still
-need execution integration. The compatibility manifest and provenance checks
-are implemented. Remaining immediate gates are distribution identity,
-candidate-family orchestration, child-PR CI coverage, and reconciliation of C's
-main/Picard work. A newer branch head does not replace a validated pin until its
-candidate checks pass. The review is historical evidence; `compatibility.toml`
-remains the only authoritative compatible revision set.
+The [2026-09-04 review](docs/migration-status-2026-09-04.md) is historical evidence,
+not current task status. The goal records a later dated checkpoint and requires
+checking current code/CI before work; `compatibility.toml` remains the only
+persistent compatible revision set.
 
-The distribution rename is tracked in [ITAMAE #3](https://github.com/gomeshun/itamae/issues/3).
-Until it is resolved, use the reviewed source revisions or the explicit wheel
-set below. The unrelated PyPI distribution named `itamae` must not be used as
-the SASHIMI core; successful local-wheel co-installation does not by itself
-validate ordinary index dependency resolution.
+The core distribution is named `sashimi-itamae`, while its Python import remains
+`itamae`. Do not install the unrelated PyPI distribution named `itamae` as the
+SASHIMI core. Local-wheel validation does not prove public-index resolution.
 
-SASHIMI-W additionally distinguishes two explicit power-spectrum conventions.
-`published-q5` reproduces the 2022 code, while `standard-t2-q10` applies the
-standard relation \(P_{\rm WDM}=T^2P_{\rm CDM}\). The choice is independent of
-the migration's growth, unit, and mass-coordinate corrections; it must not be
-changed implicitly by selecting another physics mode.
-
-The q10 convention remains an explicit validation path rather than a new
-default: it changes the EPS derivative and full-catalog abundance by orders of
-magnitude even when the numerical half-mode scale is matched. Existing
-q5-calibrated constraints therefore require a complete analysis rerun before
-they can be compared with q10 results.
-
-Within either power convention, SASHIMI-W's `legacy` mode remains a complete
-reproduction path, including historical signed weights and reuse of the final
-redshift's virial-mass grid. The `consistent` mode removes both behaviors with
-the monotonic moving-boundary derivative and a per-redshift mass grid. Signed
-legacy tuples remain available, but the nonnegative weighted-catalog contract
-rejects them instead of clipping or silently renormalizing them.
+The existing migration implementation still has legacy/opt-in APIs and separate
+physics modes. These are the starting point, not the target release contract.
+WDM's `published-q5` and `standard-t2-q10` remain explicit physical choices,
+independent of the numerical corrections; removing legacy mode must not silently
+change that choice. Historical signed weights belong to the independent
+reference and cannot be clipped or silently relabeled as nonnegative counts.
 
 ## Scientific roadmap
 

@@ -8,7 +8,7 @@ validation of the final combined branches and artifacts.
 This is a dated audit of remote branch tips, PRs/issues, source, and CI. It is
 not a second compatibility manifest or a claim that all experimental branches
 have been scientifically validated. Active implementation guidance is in
-[migration_plan.md](../migration_plan.md) and [epic #1](https://github.com/gomeshun/sashimi-family/issues/1).
+[sashimi-migration-goal.md](../sashimi-migration-goal.md) and [epic #1](https://github.com/gomeshun/sashimi-family/issues/1).
 
 ## Compatible revisions versus development heads
 
@@ -48,8 +48,9 @@ checks; it did not rerun the expensive production science analyses.
 
 ### 1. Historical tasks were being presented as current blockers
 
-`migration_plan.md` still asked the next agent to fix C Ruff, resolve F's old
-duplicate-source install, create the manifest, and first wire C/SI execution.
+The historical implementation plan still asked the next agent to fix C Ruff,
+resolve F's old duplicate-source install, create the manifest, and first wire
+C/SI execution.
 The current code already implements those steps. The plan now distinguishes
 completed foundations from CORE-01/02, C-01/SI-01 decomposition and W-01/F-01
 pipeline work. The four old umbrella descriptions also understated their scope
@@ -218,4 +219,3 @@ C's verbosity PR #2 remain open on their respective bases.
 | `copilot/evaluate-numerical-integration` | [`0b04f72`](https://github.com/gomeshun/sashimi-f/commit/0b04f72ae474ea7e54ffd8154c4caf0c1d0a47f2) | 2 | 28 |
 | `itamae-migration` | [`76b4880`](https://github.com/gomeshun/sashimi-f/commit/76b4880496bd5d7c64def810cd3ab321f09f17c7) | 0 | 0 |
 | `main` | [`68d617e`](https://github.com/gomeshun/sashimi-f/commit/68d617e94d254054cf65bb9a92d6200fe1582dd8) | 0 | 28 |
-

@@ -2,7 +2,7 @@
 
 This document defines the post-migration scientific and competitive direction of the SASHIMI family.
 
-The ITAMAE migration remains governed by [migration_plan.md](../migration_plan.md) and the migration epic [#1](https://github.com/gomeshun/sashimi-family/issues/1). That work is intentionally focused on reproducibility, architecture, packaging, scientific validation of migration differences, and a coherent release.
+The ITAMAE migration remains governed by [sashimi-migration-goal.md](../sashimi-migration-goal.md) and the migration epic [#1](https://github.com/gomeshun/sashimi-family/issues/1). That work is intentionally focused on reproducibility, architecture, packaging, scientific validation of migration differences, and a coherent release.
 
 The roadmap here starts from that foundation. It is tracked by the scientific roadmap epic [#18](https://github.com/gomeshun/sashimi-family/issues/18).
 
