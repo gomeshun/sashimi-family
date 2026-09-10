@@ -121,7 +121,6 @@ jobs:
           import sashimi_w_itamae_migration
           import sashimi_w_itamae_variance
 
-          assert itamae.__version__ == "0.1.0a4"
           assert metadata.version("sashimi-itamae") == itamae.__version__
           try:
               metadata.version("itamae")

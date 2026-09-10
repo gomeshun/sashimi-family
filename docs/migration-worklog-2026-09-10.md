@@ -548,3 +548,33 @@ lock by non-yanked 1.6.1. The upload workflow is only an inactive documentation
 template outside .github/workflows. It registers no upload trigger. C/SI/W
 candidate version/dependency/CI metadata is being updated next; W gains Python
 3.12 coverage. Final artifacts and exact five-package verification remain open.
+
+### 2026-09-11: q10 adoption and review-candidate preparation
+
+Received the user's independent W power audit and adopted the existing-coefficient
+thermal q10 prescription (see adoption record). W e3017d9 removes q5 normal API
+selection with explicit errors, retains the existing amplitude-half scale, adds
+explicit power-half diagnostics and versions calculation/cache identities.
+All 21 arrays per mass at 0.5/2/5 keV are bitwise equal to fixed old q10 09322fe
+under core dfa083d and one unchanged environment. Full source exports, arrays,
+input/dependency records and original runner bytes are preserved at
+`validation/science/sashimi-w`; the editable distribution-metadata caveat is
+explicit. All 87 W tests pass; both notebooks execute and all figures were
+visually inspected. No CLASS rerun, coefficient fit or mass-limit inference.
+
+Core 0.2.0rc1 metadata is merged in migration dfa083d. W rc metadata merged at
+8a6cc66; F cutoff/EPS audit records merged at 8c03823. C/SI release metadata
+and scientific summaries are being finalized; F rc metadata expands regression
+and private coinstallation to Python 3.11–3.13. These are candidate preparation,
+not a completed recorded-family compatibility set or a public release.
+
+Post-EPS C (3a822be) and SI (31cfcad) catalogs at host-Hermite orders 64 and 200
+now complete without warnings. The full arrays remain bitwise equal to the
+prior successful calculation outputs; warnings/failures in the original sweep
+are preserved, and the new successful execution is a separate record.
+
+The user permits pausing at a safe boundary if unresolved decisions accumulate
+before sleep. Do not infer answers. F's accretion mass-grid adoption remains
+pending; its dependent implementation/final scientific comparison must wait.
+Continue already-authorized work independent of that decision, and retain exact
+source/process/restart state if a pause becomes necessary.
