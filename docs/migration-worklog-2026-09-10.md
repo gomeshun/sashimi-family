@@ -502,3 +502,49 @@ exact wheel/sdist verification across Python 3.11–3.13, full five-package priv
 CI, and the parent manifest/gitlink candidate plus no-override verification.
 This work is not yet release-ready. Main, publication, tags and visibility remain
 outside this preparation step.
+
+
+## EPS completion, cutoff/backend evidence and candidate metadata
+
+C PR #19 (3a822be2c5d83f5fa00a7ec49fc08d0fed40d505), SI PR #15
+(31cfcadf7ed275967679b460d1a7fe5c7643d6dc) and private F PR #24
+(0c5822bea88379503bc15ca507f70b9ba5213721) passed all CI and merged into
+migration. Normalized EPS limits are evaluated on active support; prescriptions
+1/2 use the zero reciprocal of the divergent lower-bound integral. Invalid
+active variance gaps fail; no weights are clipped. Local full tests: C 95,
+SI 49, F 92 followed by 15/15 focused EPS tests including its new matrix check
+(93 total in CI). All three variants' frozen-before summed rates agree bitwise
+at host orders 4/64/200 for each accretion prescription, with warnings removed.
+The script, original outputs and execution-provenance companions are preserved.
+
+C's first CI failed only literal boost-reference equality at up to 5.5e-16 in
+3.11/3.13. The source population regression remained within its unchanged gates.
+As for F, the boost refactor now runs its exact pre-loader method on identical
+current population arrays and requires bitwise equality. The old JSON literal
+fixture remains untouched; no tolerance was widened. Final C CI passed all
+8 checks. F snapshot PR #23 also passed and merged previously.
+
+Core PR #26 (6d0c74181afe067f87063e64e77565a9287d5de0) passed all 15 CI checks
+and merged. It rejects lossy complex/string/bool power inputs, malformed transfer
+shapes and product overflow. Fourteen tests failed before; all 309 core tests,
+Ruff/format and mypy pass. Supported real-valued calculations are unchanged.
+
+Private F cutoff/backend evidence at 0c5822b/core 6d0c741 is preserved with full
+arrays and hashes. The Nadler Eq. 8–10 transfer agrees with an independently
+written expression at 2.23e-16 absolute; its analytic ln-k derivative agrees
+with finite differences at 3.46e-10 absolute, including neighborhoods of five
+oscillatory nodes. Native derivatives remain negative. Colossus retains sign
+failures and yields negative diagnostic EPS rates; no clipping or exchangeable-
+backend claim is made. Low-resolution ITAMAE finite differences also show
+isolated very-low-mass sign failures that disappear in the finer sampled run.
+These are documented limits, with native direct top-hat kept as the product
+choice. Private F PR #25 carries the evidence. The per-redshift F mass-grid
+question remains pending and its product implementation is unchanged.
+
+Core candidate PR #27 at dfa083d0d46181c376947ac7b2da829facaf2e8b passed all
+15 CI checks. The agreed 0.2.0rc1 version, citation, changelog and wheelhouse
+installation agree. Existing yanked build 1.5.1 was replaced in the developer
+lock by non-yanked 1.6.1. The upload workflow is only an inactive documentation
+template outside .github/workflows. It registers no upload trigger. C/SI/W
+candidate version/dependency/CI metadata is being updated next; W gains Python
+3.12 coverage. Final artifacts and exact five-package verification remain open.
