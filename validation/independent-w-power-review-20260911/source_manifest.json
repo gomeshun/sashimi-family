@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-09-10T22:58:47.443412+09:00",
+  "repositories": {
+    "w-current": {
+      "source": "/home/gomesu/workspace/sashimi-family/sashimi-w",
+      "reference": "HEAD",
+      "revision": "09322feb1e348f40fa93d0514f42dd02171a7282",
+      "archive_sha256": "1308660d62d9530100e1267db575b3eee2448f5866686b7100481f64a4ac4120",
+      "source_status": ""
+    },
+    "w-upstream": {
+      "source": "/home/gomesu/workspace/sashimi-family/sashimi-w",
+      "reference": "upstream/main",
+      "revision": "99dfc3632eec0126080c0273ddf78f84fe09216c",
+      "archive_sha256": "728c6d07c835a4c8129a89c1e70b3ce74a633540b47340acebfc6fa5733a931e",
+      "source_status": ""
+    },
+    "itamae": {
+      "source": "/home/gomesu/workspace/sashimi-family/itamae",
+      "reference": "HEAD",
+      "revision": "c2d7b9afb9773bc8cb5b2ee142d70d95cc3afe3b",
+      "archive_sha256": "a0165543326ae06e61796f1e37b83e8756ab1fd6e9d2721ee20379777b972f4e",
+      "source_status": ""
+    }
+  }
+}

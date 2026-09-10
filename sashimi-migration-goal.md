@@ -1,5 +1,7 @@
 # SASHIMI migration・リリース準備の開発 goal
 
+更新（2026-09-11）：ユーザーから受領した独立調査に基づき、現行Viel係数の熱的WDMはq10へ統一し、q5を通常APIから廃止する。以下に残るq5/q10両選択肢の維持要件は、この追加判断で置き換える。旧q5の固定参照は保持し、旧指定・キャッシュを黙ってq10へ読み替えない。係数・宇宙論・他の処方や観測制限は同時変更しない。[採用記録](docs/adoption-2026-09-10.md)を参照。
+
 合意日：2026-09-10。以下は実装担当の agent に渡す開発プロンプトである。
 
 この文書は、旧実装計画と開発プロンプトを統合した、migration・リリース準備の唯一の実行計画である。README、[golden fixture policy](docs/golden-fixture-policy.md)、関連 Issue/PR に残る旧方針と矛盾する場合は、この文書を優先して関連記述を更新する。互換性確認済みの revision 集合は引き続き [compatibility.toml](compatibility.toml) を正とし、計画内に別の恒久的な revision 集合を作らない。[2026-09-04 の監査](docs/migration-status-2026-09-04.md) は歴史的記録、[科学開発ロードマップ](docs/scientific-roadmap.md) は今回の対象外の新機能を扱う。
