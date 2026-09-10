@@ -261,8 +261,9 @@ F PR #14 head `a44f2cb` connects its named catalog to shared execution and
 separates concentration weights. Existing exporter tests caught a missing
 factor in process_m_22 and its analysis consumer; the consumers now retain the
 complete weight. All 42 local physical/exporter tests and ten effective-manifest
-tests pass. Private CI is in progress and enumerates coordinated core/C/SI/W
-inputs before building and numerically checking the five-package combination.
+tests pass. All private CI checks passed and the PR merged to migration at
+`512502c384e40b9d58fc360b3ba83a26f456e64f`. The job enumerates coordinated
+core/C/SI/W inputs before building and numerically checking all five packages.
 Independent F A/B patches and full-C evidence stay in F's private repository.
 The three isolated corrections affect native derivative scaling, the selected
 growth derivative and exact NFW inversion. The latter changes one flag in a
@@ -274,3 +275,21 @@ The current work is still not release-ready: F standard API/legacy removal,
 user decisions for SI total cross section and W counts, remaining observable
 inputs and scientific convergence, rights/version documentation, final exact
 artifact matrix and the recorded parent candidate remain open.
+
+## W standard-product references and F standard API
+
+W clean standard-API product `2ddaac5` with ITAMAE `a601177` is recorded in
+separate q5/q10 C artifacts. Relative B/C differences remain within original
+limits (structure at most 7.75e-11; weights 9.94e-13), with exact survival masks.
+
+F standard API commit `fe4a603` replaces the old population runtime and dynamic
+migration inheritance with explicit standard classes. It exposes all existing
+observables and packages process_m_22. New metadata uses a calculation
+specification and preserves historical fixture identities. The physical
+choices and EPS mass convention remain unchanged. All 35 local tests pass,
+including the independent full B catalog at unchanged rtol=2e-11. Fresh installed
+usage and scientific notebooks pass; observable outputs, structure-prior export
+and three figures were checked. Candidate private CI is pending. The old-mode
+production campaign is explicitly historical and refuses use on the standard API.
+
+Remaining release requirements and both user questions above remain open.
