@@ -89,6 +89,8 @@ jobs:
           --packages itamae sashimi-c sashimi-si sashimi-w
       - name: Install public ITAMAE and SASHIMI variants
         run: uv pip install --python .venv-family/bin/python dist-family/*.whl
+      - name: Verify independent reference workflow boundaries
+        run: .venv-family/bin/python -m unittest discover -s tests
       - name: Verify co-installed legacy and opt-in APIs
         working-directory: ${{ runner.temp }}
         env:

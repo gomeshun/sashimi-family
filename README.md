@@ -80,6 +80,12 @@ The core distribution is named `sashimi-itamae`, while its Python import remains
 `itamae`. Do not install the unrelated PyPI distribution named `itamae` as the
 SASHIMI core. Local-wheel validation does not prove public-index resolution.
 
+The [independent reference workflow](validation/references/README.md) freezes
+old sources and keeps individual correction patches separate from product
+execution. The [current work record](docs/migration-worklog-2026-09-10.md)
+distinguishes completed review units from the remaining scientific and release
+checks; neither document replaces the compatibility manifest.
+
 The existing migration implementation still has legacy/opt-in APIs and separate
 physics modes. These are the starting point, not the target release contract.
 WDM's `published-q5` and `standard-t2-q10` remain explicit physical choices,
