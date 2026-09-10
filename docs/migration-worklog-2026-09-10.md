@@ -627,3 +627,31 @@ the merged migration head used by umbrella PR #28 is 6d8ee62. Both have Git tree
 The artifact summary correctly belongs to dfa083d and is not relabeled. Final
 source alignment must rebuild any newly selected merge-SHA artifact. The new
 umbrella CI succeeds and remains draft/open with auto-merge disabled.
+
+
+### Continuation: align merge identities and execute the private artifact CI
+
+Core is now checked out at migration merge 6d8ee62b65793df9b799977cbf1859b5233d4059,
+with new wheel/sdist and rebuild evidence. Its runtime payload is identical to
+the prior dfa083d artifact except embedded source identity. F PR #28 implements
+the prepared original/rebuilt all-five numerical CI, explicit PR-head selection,
+no build revision injection and the fixed parent runner input 97101de. The core
+CI/developer pin is the actual merge SHA; locked resolution is verified offline.
+
+PR head f6bad87 passed all seven checks and merged as
+3a34188347ccc6e795e6fb640f9db1870ff4383b. Both merge workflows pass; downloaded
+run 34503343420 proves the same resolved parent base and exact five sources for
+original/rebuilt catalogs, quantities, weights, serialization and provenance on
+Python 3.11–3.13. It is still candidate mode, not final no-override validation.
+
+The exact merged-source local family was rebuilt/assembled and all 634 installed
+tests passed again on each Python version. Original/rebuilt numerical smoke and
+updated standalone core/F checks pass. New immutable public summaries are under
+validation/artifacts/merged-candidate-packaging-20260911; private raw CI/local
+records and new artifacts are preserved in the ignored workspace locations in
+the updated handoff. The old artifact snapshot remains unchanged.
+
+F's scientific mass-grid decision has not been answered or applied. Its dependent
+final science/convergence and the atomic recorded-parent/public-private checks
+remain the stopping gates. No main merge, auto-merge, publication or visibility
+change occurred. The goal remains incomplete.

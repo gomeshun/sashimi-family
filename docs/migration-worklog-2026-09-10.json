@@ -884,7 +884,7 @@
   "checkpoint_2026_09_11": {
     "status": "decision pending; interim artifact checks passed",
     "handoff": "docs/HANDOFF_20260911.md",
-    "artifact_summary": "validation/artifacts/candidate-packaging-20260911/summary.json",
+    "artifact_summary": "validation/artifacts/merged-candidate-packaging-20260911/summary.json",
     "pending": [
       "F per-redshift virial mass-grid adoption",
       "F dependent final science/convergence",
@@ -901,6 +901,8 @@
       "3.11",
       "3.12",
       "3.13"
-    ]
+    ],
+    "private_family_ci_merge": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+    "core_artifact_merge": "6d8ee62b65793df9b799977cbf1859b5233d4059"
   }
 }

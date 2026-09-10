@@ -14,9 +14,10 @@ then apply it with the manifest/gitlinks in one parent migration commit and run
 without overrides. Save the exact parent commit and CI evidence. This activates
 validation only and contains no publication operation.
 
-A corresponding private-F workflow draft is kept in its ignored local review
-artifacts, because public reports must not copy private implementation/inputs.
-Apply it in F before its final artifact build; point its family base at the
-parent branch containing the reusable scripts. The final validation dispatch
-must use the SAME recorded parent SHA and the workflow's promoted/no-override
-mode. Do not confuse candidate-mode success with this required final check.
+The corresponding private-F workflow is now implemented and executed by F PR
+#28 (merged source 3a34188347ccc6e795e6fb640f9db1870ff4383b). Its default parent
+base is the committed audited-runner input 97101de. Both original/rebuilt checks
+pass on Python 3.11–3.13; the fetched CI evidence verifies the exact inputs.
+This remains candidate mode. The final dispatch must still pass the SAME final
+recorded parent SHA and `family_mode=promoted`, which performs no overrides.
+See ../HANDOFF_20260911.md and the merged candidate artifact summary.
