@@ -379,3 +379,34 @@ shared controller owns numerical execution and errors. Existing regression
 suites and focused direct-odeint comparisons pass, including SI multi-output
 and all three variants' zero-evolution/Jacobian cases. Consumer CI is pending.
 Private F family CI names the coordinated C/SI/W inputs explicitly.
+
+
+## Confirmed scope decisions: boost approximation and W redshift resolution
+
+On 2026-09-10 the user explicitly approved exactly these two recommendations
+(relayed through the monitoring conversation):
+
+1. C/F higher-order annihilation boost keeps the historical undefined-table
+   zero approximation only through explicit opt-in. Default calls reject
+   incomplete tables. Warnings, invalid-point counts and provenance are
+   mandatory. Developing a new low-mass boundary prescription is outside this
+   preparation scope.
+2. W keeps its existing redshift-step default. The measured step dependence,
+   accuracy limits and convergence procedure must accompany peer review.
+   Improving the default step is not an added completion condition.
+
+These approvals do not apply to the three unanswered scientific decisions:
+SI total cross section, W observable counts and F native variance interpolation.
+No such prescription has been adopted while waiting.
+
+C/SI/F shared-ODE consumer PRs #17/#11/#20 all passed CI and merged to their
+migration branches. ITAMAE variance-boundary PR #24 (`cfaf4f5`) also passed
+all 15 CI checks and merged. Full local suites were ITAMAE 260, C 65, SI 29,
+W 44 and F 50; physical formulas and existing reference tolerances are unchanged.
+
+A frozen C A run at the old ordinary boost generator's `1e-5 Msun`, z=0
+zero-width resolved-mass grid gives exactly fsh=Bsh=0 and luminosity ratio=1,
+without importing ITAMAE. Its full input/environment/export provenance is in
+`validation/references/sashimi-c/A-boost-zero-width.json` and the corresponding
+fixture. This preserves a historical numerical boundary result, not calibration
+of a new low-mass prescription. C/F boost input implementation is in progress.
