@@ -349,3 +349,33 @@ checks and convergence, release versions/docs, exact wheel/sdist Python matrix,
 and the recorded parent candidate plus no-override family verification.
 Main, release tags, repository visibility and public package indexes remain
 unchanged. This work is not release-ready.
+
+## Redshift refinement and shared tidal controls
+
+The further W runs at dz=.025/.0125 completed on the detached clean sources
+specified above. For M0=1e12 Msun, WDM mass 2 keV, zmax=7, N_ma=16,
+N_herm=3 and N_hermNa=4, changing only dz=.1 to .0125 increases surviving
+catalog count by 4.940% (q5) / 5.000% (q10), and bound mass fraction by
+17.199% / 17.663%. These are finite-grid comparisons at fixed representative
+settings, not a measured error for all default settings or a continuum truth.
+The final .025 to .0125 step still changes count about .7% and mass fraction
+about 2.3%. `redshift-convergence.json` and the full configurations/catalogs
+record the evidence. The user has been asked whether to retain the current
+default with explicit accuracy limits or include changing the default step in
+this preparation. No step or quadrature rule has been changed pending reply.
+
+All five build-source identity fixes and the ITAMAE MIT license preparation
+passed their complete CI and merged to migration. ITAMAE PR #23, final source
+`e5c77cdf2832104752d641dd553902fc507885ba`, adds explicit LSODA options and
+explicit repeated-output support. Twenty-one initial cases failed before the
+extension; all 203 tests, quality checks and full Python/backend CI pass.
+Direct SciPy comparisons include both time directions, dense/banded Jacobians,
+repeated grids, zero evolution and failure controls. The default strict-grid,
+solver and tolerance contracts are preserved. The PR merged to migration.
+
+Consumer C/SI/F PRs now use that exact ITAMAE input. Their tidal equations,
+100 output times and original Jacobian argument order are preserved; the
+shared controller owns numerical execution and errors. Existing regression
+suites and focused direct-odeint comparisons pass, including SI multi-output
+and all three variants' zero-evolution/Jacobian cases. Consumer CI is pending.
+Private F family CI names the coordinated C/SI/W inputs explicitly.
