@@ -174,3 +174,49 @@ This is still an intermediate state. C auxiliary data and seeded MC, SI/W/F
 standard APIs, W/F execution stages, scientific limits/convergence, final
 artifact/source-external runs, rights notices and review handoff remain open.
 No authoritative parent compatibility revisions have been changed.
+
+## C runtime inputs and SI standard API / numerical evidence
+
+C PR #14 final head `c62c50b3e8e213cd193ec113420694a8050fd122` passed all eight
+checks after updating the standalone Picard workflow to Python 3.11 and its
+explicit ITAMAE input. It was merged into migration. Runtime PR #15
+`3ce4202f04dda1c9345a7be0f9cac892afbac20f` then passed 53 local tests and all
+eight CI checks before migration merge. External spectra use an explicit
+`data_dir`, then `SASHIMI_C_DATA_DIR`, then the user cache directory. Missing
+prompt-cusp spectra raise an error listing the required path; their scientific
+validation remains deferred by the user's explicit decision. C's Poisson MC
+now accepts a Generator or seed and does not consume global random state. It
+preserves the Poisson point-process law, but not the old seed sequence or
+random node ordering. Higher-order boost table preparation still needs review.
+
+SI PR #8 (`949ba4f957083304c74b1b8f2bbbd5836b134e7d`) restores original
+formation and CDM truncation gates in the SIDM weights, preserves shared node
+identity, and avoids evaluating invalid reversed-time SIDM histories. Two
+protection tests failed before the fix. Its active-domain EPS change removes
+17,580 nonfinite trial evaluations outside physical support in a 30-mass /
+200-host-node audit; no active nonfinite value was encountered. A/B changes
+are independently isolated. All supported Python and walkthrough CI passed.
+
+SI PR #9 final head `6ccb3e6ab2fde504542dc8363ca4f5135c997165` replaces the
+legacy runtime with explicit physical kernels and the primary paired catalog.
+The migration mode argument is removed; old fixtures remain historical.
+SI's rounded gravitational constant is retained and recorded rather than
+silently borrowing C's different constant. Fresh usage and science notebooks
+execute. A Python 3.12 CI density discrepancy of 5.0414e-12 was investigated;
+the same dependency versions locally did not reproduce the platform difference.
+An independent 65-digit calculation did establish cancellation in the defining
+effective-cross-section expression (up to 5.76e-11 on its interpolation nodes).
+The same expression is now evaluated as a positive integral on 20 <= a <= 703,
+with the original high-a asymptote retained. This numerical change is its own
+commit and independent B patch; no tolerance was widened. Final 36 tests,
+Python 3.11–3.13 CI, artifacts and walkthrough passed before migration merge.
+The total-cross-section formula question remains pending and was not changed.
+See `validation/references/sashimi-si/README.md` for A/B/C provenance and effects.
+
+## ODE adapter and W structural migration in progress
+
+A larger W audit (M0=1e12, zmax=7, dz=0.5, eight masses, three concentration
+nodes, four host nodes) was interrupted after several minutes with no result.
+The stack was in repeatedly evaluated top-hat concentration integrals inside
+the historical odeint RHS. This is not a successful convergence/survival test.
+The small, previously frozen q5/q10 catalog is the structural regression input.
