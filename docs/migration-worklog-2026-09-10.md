@@ -293,3 +293,59 @@ and three figures were checked. Candidate private CI is pending. The old-mode
 production campaign is explicitly historical and refuses use on the standard API.
 
 Remaining release requirements and both user questions above remain open.
+
+
+## Runtime boundaries, prepared histories and source-archive identity
+
+ITAMAE PR #20 (`d752306`) and W PR #8 (`186366a`) passed all declared CI before
+migration merge. Direct catalogs/NPZ, canonical units and native cosmology now
+reject invalid numerical inputs explicitly. W removes non-real formation
+trials before growth evaluation while retaining the same valid trials.
+
+F standard API PR #15 and seeded-realization PR #16 passed all private CI and
+merged. The standard import exposes the existing observables and packages the
+structure-prior helper. The native variance interpolation decision remains
+pending; independent exploratory evidence is preserved in private F PR #17,
+without adopting the proposed physical/numerical change.
+
+W PR #9 (`d5b7f17`) reuses one identical virial-mass evaluation per ODE call.
+All q5/q10 arrays and probes remain bitwise equal to `186366a`. Small-catalog
+single-run times changed from 30.56/47.55 seconds to 6.62/10.19 seconds.
+W PR #10 (`dcc4379`) then prepares fixed host-history coefficients once per
+population call. All q5/q10 arrays/probes remain bitwise equal, including the
+wider M0=1e12, zmax=7 case. That wider case changed from about 93 to 15 seconds.
+There is no persistent model/table cache, and both PRs passed all CI before
+migration merge. The top-hat-cache scratch prototype was not adopted.
+
+The ten-case coarse W convergence sweep completed on fixed sources. Increasing
+mass nodes from 16 to 32 changes bound mass fraction by about -11%; decreasing
+dz from .5 to .25 changes it by +63–65% and total count by +15–16%. Host and
+concentration quadrature effects are separately recorded. These coarse grids
+are not certified as converged. Further .1/.05 redshift, 64–500 mass-node and
+16–200 host-node runs use detached clean `dcc4379` plus ITAMAE `d752306` and a
+separate Python 3.11/NumPy 2.4.6/SciPy 1.17.1 environment. No default changed.
+
+The shared source-identity defect was reproduced independently in all five
+build hooks: source archives unpacked under unrelated Git state could inherit
+the enclosing HEAD. Each hook now preserves embedded archive identity,
+requires an exact package Git root, and rejects malformed/conflicting explicit
+revision overrides. Five new tests failed before each fix; seven pass after.
+Real sdist-to-wheel rebuilds without revision injection, both ordinary and
+inside unrelated Git repositories, succeed. Public evidence is under
+validation/artifacts/build-source-identity, using scripts/check_sdist_rebuild.py.
+These are intermediate build checks, not the final release-version matrix.
+C PR #16 and SI PR #10 merged after all CI. SI's first CI attempt found a missing
+setup.py in its outside-source test bundle; staging that build test input fixes
+it, and all supported Python jobs pass. ITAMAE and W hook PR CI is pending.
+F PR #18 (MIT/data attribution) and #19 (source identity) passed all private CI
+and merged. ITAMAE MIT/citation preparation is committed and locally verified;
+its candidate PR remains to be opened. The maintainer's public-release
+confirmation with Elisa is retained for the later publication stage.
+
+Remaining user decisions: SI total cross section, W observable counts and F
+native variance evaluation. Other remaining work includes shared numerical
+controls, remaining observable data/generators, scientific boundary/backend
+checks and convergence, release versions/docs, exact wheel/sdist Python matrix,
+and the recorded parent candidate plus no-override family verification.
+Main, release tags, repository visibility and public package indexes remain
+unchanged. This work is not release-ready.

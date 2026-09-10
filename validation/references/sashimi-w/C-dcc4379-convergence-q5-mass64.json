@@ -1,0 +1,72 @@
+{
+  "role": "C",
+  "constructor": {
+    "mass_wdm": 2.0,
+    "wdm_power_convention": "published-q5"
+  },
+  "method": "rs_rhos_calc",
+  "repository": "gomeshun/sashimi-w",
+  "source_revision": "dcc4379186174a016924d88b362fbe40d1ac8f88",
+  "module": "sashimi_w",
+  "class": "Subhalos",
+  "parameters": {
+    "M0": 1000000000000.0,
+    "N_herm": 3,
+    "N_hermNa": 4,
+    "N_ma": 64,
+    "dz": 0.5,
+    "logmamax": 10.0,
+    "logmamin": 5.0,
+    "profile_change": true,
+    "redshift": 0.0,
+    "sigmafac": 0.0,
+    "sigmalogc": 0.128,
+    "zmax": 7.0
+  },
+  "input_files": [
+    {
+      "path": "WMAP7_camb_matterpower_z0_extrapolated.dat",
+      "sha256": "417a0e8e9feafae8c6afb4b89e63aef80718c9641ae95994d25a6cd97438f8c9"
+    }
+  ],
+  "probes": [
+    {
+      "name": "growth",
+      "method": "growthD",
+      "args": [
+        [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          5.0
+        ]
+      ]
+    },
+    {
+      "name": "variance",
+      "method": "sigmaMz",
+      "args": [
+        [
+          10000000.0,
+          100000000.0,
+          1000000000.0
+        ],
+        1.0
+      ]
+    },
+    {
+      "name": "variance_derivative",
+      "method": "dsdm",
+      "args": [
+        [
+          10000000.0,
+          100000000.0,
+          1000000000.0
+        ],
+        1.0
+      ]
+    }
+  ],
+  "itamae_source_revision": "d752306e62bf295b7a96100b9cc022f8f9c61071"
+}
