@@ -1,2 +1,5 @@
 __pycache__/
 *.py[cod]
+
+# Local candidate archives; hashes and reproducible reports are committed.
+/review-artifacts/

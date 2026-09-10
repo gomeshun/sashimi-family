@@ -1,0 +1,144 @@
+[
+  {
+    "number": 1,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/1",
+    "updated_at": "2026-09-10T16:05:21Z",
+    "title": "[Epic] Complete migration and release preparation for peer review"
+  },
+  {
+    "number": 5,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/5",
+    "updated_at": "2026-09-10T16:05:23Z",
+    "title": "[P1][GOV-04] Synchronize migration documentation and umbrella PR descriptions with the current implementation"
+  },
+  {
+    "number": 6,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/6",
+    "updated_at": "2026-09-10T16:05:26Z",
+    "title": "[P1][GOV-05] Re-execute all migration notebooks and enforce executed-notebook CI checks"
+  },
+  {
+    "number": 7,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/7",
+    "updated_at": "2026-09-10T16:05:29Z",
+    "title": "[P1][C-01][SASHIMI-C] Decompose the migration adapter into explicit model components"
+  },
+  {
+    "number": 8,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/8",
+    "updated_at": "2026-09-10T16:05:32Z",
+    "title": "[P1][SI-01][SASHIMI-SI] Decompose the adapter into named state/view and model components"
+  },
+  {
+    "number": 9,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/9",
+    "updated_at": "2026-09-10T16:05:35Z",
+    "title": "[P1][W-01][SASHIMI-W] Migrate execution to PopulationPipeline and formalize the signed-weight boundary"
+  },
+  {
+    "number": 10,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/10",
+    "updated_at": "2026-09-10T16:05:38Z",
+    "title": "[P1][PHY-C][SASHIMI-C] Validate controlled corrections, solver convergence and prompt-cusp limits"
+  },
+  {
+    "number": 11,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/11",
+    "updated_at": "2026-09-10T16:05:41Z",
+    "title": "[P1][PHY-SI][SASHIMI-SI] Validate CDM reference, interaction limits, states and numerical stability"
+  },
+  {
+    "number": 12,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/12",
+    "updated_at": "2026-09-10T16:05:43Z",
+    "title": "[P1][PHY-W][SASHIMI-W] Validate isolated corrections and adopted q10 thermal-WDM specification"
+  },
+  {
+    "number": 13,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/13",
+    "updated_at": "2026-09-10T16:05:46Z",
+    "title": "[P1][REL-01] Freeze public API, import paths, Python support, optional dependencies, and version policy"
+  },
+  {
+    "number": 14,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/14",
+    "updated_at": "2026-09-10T16:05:49Z",
+    "title": "[P1][REL-02] Complete licenses, changelogs, citations, release notes, and executable README/tutorial examples"
+  },
+  {
+    "number": 15,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/15",
+    "updated_at": "2026-09-10T16:05:52Z",
+    "title": "[P1][REL-03] Build clean sdist/wheel artifacts and validate installation with the new ITAMAE distribution identity"
+  },
+  {
+    "number": 16,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/16",
+    "updated_at": "2026-09-10T16:05:54Z",
+    "title": "[P1][REL-04] Validate the exact release-candidate family matrix across public C/SI/W and private F"
+  },
+  {
+    "number": 17,
+    "url": "https://github.com/gomeshun/sashimi-family/issues/17",
+    "updated_at": "2026-09-10T16:05:57Z",
+    "title": "[P1][REL-05] Record the validated migration candidate atomically and prepare post-review integration"
+  },
+  {
+    "repo": "gomeshun/itamae",
+    "number": 4,
+    "url": "https://github.com/gomeshun/itamae/issues/4",
+    "updated_at": "2026-09-10T16:09:30Z"
+  },
+  {
+    "repo": "gomeshun/itamae",
+    "number": 5,
+    "url": "https://github.com/gomeshun/itamae/issues/5",
+    "updated_at": "2026-09-10T16:09:33Z"
+  },
+  {
+    "repo": "gomeshun/sashimi-f",
+    "number": 4,
+    "url": "https://github.com/gomeshun/sashimi-f/issues/4",
+    "updated_at": "2026-09-10T16:09:36Z"
+  },
+  {
+    "repo": "gomeshun/sashimi-f",
+    "number": 5,
+    "url": "https://github.com/gomeshun/sashimi-f/issues/5",
+    "updated_at": "2026-09-10T16:09:38Z"
+  },
+  {
+    "repo": "gomeshun/sashimi-f",
+    "number": 6,
+    "url": "https://github.com/gomeshun/sashimi-f/issues/6",
+    "updated_at": "2026-09-10T16:09:41Z"
+  },
+  {
+    "repo": "gomeshun/sashimi-c",
+    "number": 3,
+    "head": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+    "title": "ITAMAE migration: standard CDM API, explicit components and validated corrections",
+    "url": "https://github.com/gomeshun/sashimi-c/pull/3"
+  },
+  {
+    "repo": "gomeshun/sashimi-si",
+    "number": 2,
+    "head": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+    "title": "ITAMAE migration: standard SIDM API, explicit states and stable physics boundaries",
+    "url": "https://github.com/gomeshun/sashimi-si/pull/2"
+  },
+  {
+    "repo": "gomeshun/sashimi-w",
+    "number": 1,
+    "head": "0b3146678e68ea71735173e4effb313f872fb9b9",
+    "title": "ITAMAE migration: standard q10 thermal-WDM API and shared population execution",
+    "url": "https://github.com/gomeshun/sashimi-w/pull/1"
+  },
+  {
+    "repo": "gomeshun/sashimi-f",
+    "number": 1,
+    "head": "dc1b30574bf732f195b0777b6e64981d858d4c92",
+    "title": "ITAMAE migration: standard FDM API, explicit components and cutoff validation",
+    "url": "https://github.com/gomeshun/sashimi-f/pull/1"
+  }
+]

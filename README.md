@@ -32,8 +32,10 @@ each recorded SHA with the corresponding committed submodule gitlink:
 python3 scripts/check_compatibility.py
 ```
 
-Update a family revision by moving the submodule, recording its full SHA in the
-manifest, and running the validator before changing the integration workflow.
+First validate proposed revisions with an explicit temporary effective manifest.
+After the complete candidate set passes, commit the manifest and submodule
+gitlinks together on the migration branch, then run the validator against that
+committed HEAD without overrides. Main integration follows peer review.
 The public workflow reads its checkout repositories and revisions from this
 manifest. SASHIMI-F's private family workflow uses the same revision set for
 its five-wheel co-install check.
@@ -84,14 +86,26 @@ The [independent reference workflow](validation/references/README.md) freezes
 old sources and keeps individual correction patches separate from product
 execution. The [current work record](docs/migration-worklog-2026-09-10.md)
 distinguishes completed review units from the remaining scientific and release
-checks; neither document replaces the compatibility manifest.
+checks; neither document replaces the compatibility manifest. The
+[current handoff](docs/HANDOFF_20260911.md) records the pending F decision,
+exact candidate state, artifact locations and restart steps.
 
-The existing migration implementation still has legacy/opt-in APIs and separate
-physics modes. These are the starting point, not the target release contract.
-WDM's `published-q5` and `standard-t2-q10` remain explicit physical choices,
-independent of the numerical corrections; removing legacy mode must not silently
-change that choice. Historical signed weights belong to the independent
-reference and cannot be clipped or silently relabeled as nonnegative counts.
+The migration candidates now expose named catalogs through the standard
+`sashimi_c`, `sashimi_si`, `sashimi_w`, and `sashimi_f` imports. Production
+`physics_mode` selection has been removed; legacy calculations survive only in
+the frozen validation references. Following the
+[2026-09-11 adoption decision](docs/adoption-2026-09-10.md), the current Viel
+thermal-WDM model supports q10 only. `published-q5` raises an explicit error;
+historical q5 results and caches are not relabeled as q10. The default half-mode
+definition remains amplitude one-half (power one-quarter); power one-half is
+available as an explicit threshold. Historical signed weights remain in the
+independent reference and cannot be clipped or relabeled as nonnegative counts.
+
+Release preparation is still in progress. In particular, adoption of the FDM
+per-redshift virial-mass grid remains pending, and the final five-component
+candidate has not yet been recorded in `compatibility.toml`. The current
+work record separates component CI, temporary candidate checks, and the required
+final checks without overrides.
 
 ## Scientific roadmap
 
@@ -133,29 +147,26 @@ The first roadmap issues are:
 - [INTEROP-01 #23](https://github.com/gomeshun/sashimi-family/issues/23): pyHalo interoperability;
 - [BARYON-01 #24](https://github.com/gomeshun/sashimi-family/issues/24): optional baryonic host potentials.
 
-## Visual migration demonstrations
+## Usage and scientific comparisons
 
-Each variant contains an `itamae_migration_demo.ipynb`:
+Each variant separates the standard API walkthrough from the scientific
+comparison of frozen A/B references and the product:
 
-| Variant | Comparison shown |
-| --- | --- |
-| [SASHIMI-C](sashimi-c/itamae_migration_demo.ipynb) | true old, migrated legacy, and consistent CDM catalogs |
-| [SASHIMI-SI](sashimi-si/itamae_migration_demo.ipynb) | corrected public SI model and both migration labels |
-| [SASHIMI-W](sashimi-w/itamae_migration_demo.ipynb) | published legacy q5, consistent q5, and explicit q10 |
-| [SASHIMI-F](sashimi-f/itamae_migration_demo.ipynb) | true old, migrated legacy, and corrected FDM mode |
+| Variant | Usage | Scientific comparison |
+| --- | --- | --- |
+| C | [Walkthrough](sashimi-c/notebooks/usage_walkthrough.ipynb) | [Comparison](sashimi-c/notebooks/scientific_validation.ipynb) |
+| SI | [Walkthrough](sashimi-si/notebooks/usage_walkthrough.ipynb) | [Comparison](sashimi-si/notebooks/scientific_validation.ipynb) |
+| W | [Walkthrough](sashimi-w/notebooks/usage_walkthrough.ipynb) | [Comparison](sashimi-w/notebooks/scientific_validation.ipynb) |
+| F (private) | [Walkthrough](sashimi-f/notebooks/usage_walkthrough.ipynb) | [Comparison](sashimi-f/notebooks/scientific_validation.ipynb) |
 
-At the reviewed revisions, C has execution counts for all eight non-empty code
-cells. SI, W, and F each contain one unexecuted non-empty code cell, with no
-saved error outputs. These saved states do not prove a fresh clean-kernel run.
-Full execution and a notebook-state CI gate remain tracked in
-[GOV-05 #6](https://github.com/gomeshun/sashimi-family/issues/6). F's separate
-structure-prior comparison notebook does not complete this migration-demo gate.
-
-They show the old tuple API beside the named weighted-catalog API, and compare
-subhalo mass functions, accumulated satellite counts, and representative
-catalog content. Before a migrated legacy curve is used as the old baseline,
-the corresponding test suite compares it directly with the true old
-implementation at catalog and derived-observable level.
+The walkthrough CI executes a fresh kernel and checks the resulting notebook.
+Scientific comparisons retain the generation provenance of each reference,
+document individual corrections, and distinguish numerical agreement from
+scientific validation. C/SI include resolution and solver checks; SI includes
+state and weak-interaction limits; W records the q10 adoption with unchanged
+fixed-control arrays. F's final convergence evidence depends on the pending
+mass-grid decision. The root-level `itamae_migration_demo.ipynb` files are
+retained entry points to these standard-API examples.
 
 ## Family integration
 
@@ -163,9 +174,11 @@ The public family integration workflow installs ITAMAE together with
 SASHIMI-C, SASHIMI-SI, and SASHIMI-W in one clean environment. Because
 SASHIMI-F is private, its own migration workflow repeats that check with all
 five wheels; this avoids granting a cross-repository private access token to
-the public family workflow. Both workflows verify that every relevant legacy
-module and opt-in facade imports simultaneously and that the former generic
-migration-helper module names are absent.
+the public family workflow. The release goal requires standard-API calculations,
+named-catalog and observable checks, runtime-file non-collision, and exact
+artifact provenance. Successful checks on earlier recorded revisions do not
+certify the current migration candidates. Final public and private CI must use
+the same recorded parent commit without candidate overrides.
 
 For a local equivalent:
 

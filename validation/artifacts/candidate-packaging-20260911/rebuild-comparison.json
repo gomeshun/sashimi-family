@@ -1,0 +1,37 @@
+[
+  {
+    "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+    "original_sha256": "a456311ff8d36464a98ceb24284af4dccae9933f15708bc882030605bc93301e",
+    "rebuilt_sha256": "a456311ff8d36464a98ceb24284af4dccae9933f15708bc882030605bc93301e",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+    "original_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+    "rebuilt_sha256": "4b2d44f51e247c5fc364221ff4dff685898456bd7dcab1329a531d6d8d02827e",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+    "original_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+    "rebuilt_sha256": "d8e85c6dc2f5128e66f6ed942dc7d36894916f4887ca3df3e06f1cc55dc8d766",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+    "original_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+    "rebuilt_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "wheel": "sashimi_f-0.2.0rc1-py3-none-any.whl",
+    "original_sha256": "b91bab2085102d63922b3cfaaf1e73068e90edd4e6379bb363257e49831a99df",
+    "rebuilt_sha256": "b91bab2085102d63922b3cfaaf1e73068e90edd4e6379bb363257e49831a99df",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true
+  }
+]

@@ -578,3 +578,52 @@ before sleep. Do not infer answers. F's accretion mass-grid adoption remains
 pending; its dependent implementation/final scientific comparison must wait.
 Continue already-authorized work independent of that decision, and retain exact
 source/process/restart state if a pause becomes necessary.
+
+
+### 2026-09-11: exact installed artifacts and decision-wait handoff
+
+The candidate versions and metadata are merged in all components. Final current
+candidate SHAs are listed in `validation/artifacts/candidate-packaging-20260911/effective.toml`;
+this is a dated temporary effective manifest, not a replacement canonical set.
+C/SI/W notebooks and scientific summaries are complete at the current inputs.
+F's mass-grid adoption, dependent final scientific notebook/convergence and the
+recorded-parent public/private matrix remain open.
+
+Exact clean-source wheels and sdists were built without revision injection.
+Every unrelated-Git sdist rebuild preserves its runtime payload bitwise and
+retains equivalent package metadata. All standalone packages pass minimal
+Python 3.11 checks. Full installed regression on Python 3.11–3.13 passes 309
+core + 95 C + 49 SI + 87 W + 94 F = 634 tests per version. Original and rebuilt
+all-five environments pass standard-API physical catalogs, quantities, weights,
+serialization, exact provenance and runtime-file non-collision.
+
+The first F c90b002 sdist test collection failed because a test imported a
+checkout-only historical analysis runner. F PR #27 removes that dependency,
+retains inverse truth/tolerances and checks installed prior moments against an
+independent formula; no product formula changed. All seven child CI checks
+passed, followed by full installed tests at merged dc1b30574bf732f195b0777b6e64981d858d4c92.
+The unchanged four artifacts are reused by hash; final all-five smoke uses the
+new F wheel. Original failed results remain preserved.
+
+Updated family issues #1 and #5–#17, core #4/#5 and F #4/#5/#6 to current
+acceptance gates, archiving the superseded bodies in expandable history.
+Updated the four draft variant umbrellas and created core draft PR #28;
+none is merged into main or enabled for auto-merge. Public/private final-family
+workflow drafts are prepared but inactive until the appropriate candidate inputs
+and atomic parent recording are ready. The underlying smoke/rebuild scripts are
+locally verified; the pending workflow templates themselves have not run in CI.
+
+`docs/HANDOFF_20260911.md` records the pending F question, recommendation and
+controls, candidate branches/SHAs, local artifact locations, known limitations,
+canonical-source/rights policy and exact restart order. Public four-component
+archives and private F archives/full evidence are also preserved in ignored
+workspace directories so the handoff does not rely only on temporary files.
+The goal remains incomplete; main, tags, publication and F visibility are unchanged.
+
+
+Core SHA clarification: the tested artifact/component pin is topic head dfa083d;
+the merged migration head used by umbrella PR #28 is 6d8ee62. Both have Git tree
+1bf4f4bd4bdf74228041b711d4651056d66bedd1, but distinct embedded source identities.
+The artifact summary correctly belongs to dfa083d and is not relabeled. Final
+source alignment must rebuild any newly selected merge-SHA artifact. The new
+umbrella CI succeeds and remains draft/open with auto-merge disabled.

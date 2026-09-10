@@ -1,0 +1,27 @@
+["compatibility"]
+"schema" = 1
+
+["itamae"]
+"repo" = "gomeshun/itamae"
+"path" = "itamae"
+"ref" = "dfa083d0d46181c376947ac7b2da829facaf2e8b"
+
+["sashimi-c"]
+"repo" = "gomeshun/sashimi-c"
+"path" = "sashimi-c"
+"ref" = "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5"
+
+["sashimi-si"]
+"repo" = "gomeshun/sashimi-si"
+"path" = "sashimi-si"
+"ref" = "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5"
+
+["sashimi-w"]
+"repo" = "gomeshun/sashimi-w"
+"path" = "sashimi-w"
+"ref" = "0b3146678e68ea71735173e4effb313f872fb9b9"
+
+["sashimi-f"]
+"repo" = "gomeshun/sashimi-f"
+"path" = "sashimi-f"
+"ref" = "dc1b30574bf732f195b0777b6e64981d858d4c92"

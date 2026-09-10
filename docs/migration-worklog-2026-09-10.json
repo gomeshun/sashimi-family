@@ -880,5 +880,27 @@
         ]
       }
     }
+  },
+  "checkpoint_2026_09_11": {
+    "status": "decision pending; interim artifact checks passed",
+    "handoff": "docs/HANDOFF_20260911.md",
+    "artifact_summary": "validation/artifacts/candidate-packaging-20260911/summary.json",
+    "pending": [
+      "F per-redshift virial mass-grid adoption",
+      "F dependent final science/convergence",
+      "atomic recorded parent and no-override public/private verification"
+    ],
+    "test_counts_per_python": {
+      "itamae": 309,
+      "sashimi-c": 95,
+      "sashimi-si": 49,
+      "sashimi-w": 87,
+      "sashimi-f": 94
+    },
+    "supported_python": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ]
   }
 }
