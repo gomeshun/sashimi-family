@@ -699,3 +699,26 @@ locations named in the revised handoff. The prior handoff is an unchanged
 historical checkpoint. No scientific user decision remains pending. The
 candidate is now ready for atomic parent manifest/gitlink recording and the
 same-parent no-override public/private CI, before declaring review readiness.
+
+### Recorded family: release preparation complete, peer review pending
+
+Parent commit 8184e572c37af051011b85f1b797bfda6d7dfb7d records the manifest and
+all five gitlinks atomically and activates the prepared public family CI.
+Committed-HEAD validation passes. Parent draft PR #34 is open for review.
+Public run 34550691401 and private F dispatch 34550711351 both pass against
+that exact parent on Python 3.11–3.13. Downloaded private input records report
+family_mode=promoted, overrides={}, workflow source 98e1f91 and all five
+manifest sources exactly. The final audit checks recorded gitlinks, manifest,
+source and artifact hashes, every original/rebuilt smoke and reconstruction,
+plus the private component regression (104 tests per version). Original and
+rebuilt physical quantities agree. All raw evidence is preserved in the
+workspace, keeping F outputs private; the public summary is under
+validation/artifacts/recorded-family-20260911.
+
+The goal's migration-branch stopping point is reached: preparation is complete
+and awaiting peer review. C prompt-cusp scientific validation remains explicitly
+deferred by the user, finite-resolution/solver limits are documented, F Colossus
+remains experimental, and later coauthor/publication gates remain unperformed.
+Main integration, auto-merge, tags, uploads and visibility changes were not
+performed. This evidence/documentation update does not relabel the tested
+parent SHA or alter the validated component sources or existing CI runners.

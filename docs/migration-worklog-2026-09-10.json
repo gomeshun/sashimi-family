@@ -926,5 +926,17 @@
     },
     "regression_reuse": "unchanged public artifacts verified by SHA-256; F rerun on all three Python versions",
     "candidate_private_ci": 34549662699
+  },
+  "recorded_family_2026_09_11": {
+    "status": "release preparation complete; peer review pending",
+    "parent_sha": "8184e572c37af051011b85f1b797bfda6d7dfb7d",
+    "public_run": 34550691401,
+    "private_run": 34550711351,
+    "private_mode": "promoted",
+    "overrides": {},
+    "summary": "validation/artifacts/recorded-family-20260911/summary.json",
+    "parent_draft_pr": 34,
+    "main_integration": false,
+    "publication": false
   }
 }

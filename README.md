@@ -104,9 +104,11 @@ independent reference and cannot be clipped or relabeled as nonnegative counts.
 The user-approved FDM accretion correction now uses a virial-mass grid for
 each accretion redshift, with specification v3 and independent reference and
 convergence evidence. The validated five-component candidate is recorded in
-`compatibility.toml` together with all five gitlinks. Final checks against this
-recorded parent run without overrides in both public and private CI; their
-results and the review status are recorded in the current handoff.
+`compatibility.toml` together with all five gitlinks. Final checks against recorded parent
+`8184e572c37af051011b85f1b797bfda6d7dfb7d` passed without overrides in both
+public and private CI on Python 3.11–3.13. Migration-branch release preparation
+is complete and awaiting peer review. The current handoff records the exact
+evidence, artifacts and known limits.
 
 ## Scientific roadmap
 
