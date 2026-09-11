@@ -655,3 +655,47 @@ F's scientific mass-grid decision has not been answered or applied. Its dependen
 final science/convergence and the atomic recorded-parent/public-private checks
 remain the stopping gates. No main merge, auto-merge, publication or visibility
 change occurred. The goal remains incomplete.
+
+### Final continuation: user-approved F redshift accretion grid and candidate
+
+The user identified the last-redshift grid reuse as a likely known mistake and
+explicitly authorized correction. F PR #29 changes only the EPS mass argument
+and its logarithmic mass integration to per-accretion-redshift virial grids,
+versions calculation identity to v3, and rejects stale or mismatched prior
+output reuse. Independent patch 05 on frozen A and all five corrections together
+are preserved separately from every existing fixture. The new 0.1/1/10 B/C
+full-catalog controls pass the unchanged rtol=2e-11; maximum weight discrepancy
+is 8.08e-12. Pre/post structure and survival are bitwise equal; only weights and
+dependent quantities change. Preserved results report count shifts about
+-0.23 to -0.26 percent, mass-fraction shifts -0.85 to -1.51 percent, and maximum
+individual-weight change 3.06 percent.
+
+All 60 F population-resolution/solver catalogs completed, with every archived
+array/hash reopened for the summary, finite nonnegative weights, applicable
+bound-mass limits and zero RuntimeWarnings. Final one-variable mass/redshift
+changes in mass fraction reach about 0.28/0.87 percent; coarse perturbative/ODE
+differences remain about 3.9 percent. These do not prove joint continuum or
+physical calibration. The usage/science notebooks execute in clean kernels
+and all figures were inspected. New fixture editorial adoption labels were
+corrected with the original execution metadata preserved explicitly; source,
+patch and numerical-array identities were not relabeled.
+
+All seven PR checks passed at cf29c16 before migration merge
+98e1f91d3d0b55c8652518b507c0fec8044c2aff. Both merge-source workflows passed.
+F artifacts were rebuilt from this clean SHA. All 104 shipped F tests pass
+against installed wheels on Python 3.11–3.13. The unchanged public artifacts
+reuse their 540 tests per version by hash, giving 644 verified tests per
+version. New original/rebuilt all-five physical checks pass on all three
+versions; unrelated-Git rebuilds preserve runtime payload, metadata and source
+identity. Fresh minimal core+F installation passes. Candidate push CI
+34549662699 has downloaded/verified exact source inputs and original/rebuilt
+evidence. Core's final merge-source walkthrough 34493003890 is also preserved,
+with seven executed cells and two visually inspected figures.
+
+The final candidate summary is
+validation/artifacts/final-v3-candidate-20260911/summary.json. Public four-package
+artifacts and private F artifacts/full evidence are preserved in the workspace
+locations named in the revised handoff. The prior handoff is an unchanged
+historical checkpoint. No scientific user decision remains pending. The
+candidate is now ready for atomic parent manifest/gitlink recording and the
+same-parent no-override public/private CI, before declaring review readiness.

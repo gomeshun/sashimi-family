@@ -1,23 +1,24 @@
-# Pending final-family CI configuration
+# Recorded-family validation and release boundary
 
-`family-integration.yml.pending` is prepared for the final atomic parent
-manifest/gitlink change. It is inactive and has not been run as a GitHub job.
-It selects the exact PR head, tests Python 3.11–3.13, builds both artifact forms
-without revision injection, executes standard-API numerical smoke outside the
-source tree and verifies unrelated-Git sdist rebuilds. Its underlying scripts
-have passed the local artifact matrix; that is not execution evidence for this
-workflow template.
+The prepared final-family configuration is installed in
+`.github/workflows/family-integration.yml` with the atomic manifest/gitlink
+change. It selects the exact PR head, tests Python 3.11–3.13, builds both
+artifact forms without revision injection, executes standard-API physical
+calculations outside the source tree and verifies unrelated-Git sdist rebuilds.
 
-Do not install this template against the old authoritative component pins.
-After F scientific adoption, first verify a complete temporary candidate set;
-then apply it with the manifest/gitlinks in one parent migration commit and run
-without overrides. Save the exact parent commit and CI evidence. This activates
-validation only and contains no publication operation.
+F's scientific adoption and complete temporary-candidate verification are
+finished. The final recorded-family run must use the same exact parent commit
+in public CI and the private F workflow's `family_base_ref`, with
+`family_mode=promoted`. This mode applies no overrides. The resulting evidence
+and status belong in [the handoff](../HANDOFF_20260911.md).
 
-The corresponding private-F workflow is now implemented and executed by F PR
-#28 (merged source 3a34188347ccc6e795e6fb640f9db1870ff4383b). Its default parent
-base is the committed audited-runner input 97101de. Both original/rebuilt checks
-pass on Python 3.11–3.13; the fetched CI evidence verifies the exact inputs.
-This remains candidate mode. The final dispatch must still pass the SAME final
-recorded parent SHA and `family_mode=promoted`, which performs no overrides.
-See ../HANDOFF_20260911.md and the merged candidate artifact summary.
+Private F's default workflow remains a component/candidate check using base
+97101de, so an ordinary component push is not evidence of a recorded-family run.
+F PR #29 and merge-source candidate run 34549662699 passed all checks after
+the v3 accretion correction. [Candidate artifact evidence](../../validation/artifacts/final-v3-candidate-20260911/README.md)
+preserves the exact identities and hashes.
+
+Both active family workflows perform validation only. Publication examples in
+each component's `docs/release-workflow.yml.example` remain inactive. Main
+integration, release tags, PyPI/TestPyPI upload, index checks and F visibility
+changes are later explicitly authorized steps after peer review.

@@ -904,5 +904,27 @@
     ],
     "private_family_ci_merge": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
     "core_artifact_merge": "6d8ee62b65793df9b799977cbf1859b5233d4059"
+  },
+  "final_v3_candidate_2026_09_11": {
+    "status": "candidate validated; atomic recording and exact-parent CI",
+    "user_decisions_pending": [],
+    "artifact_summary": "validation/artifacts/final-v3-candidate-20260911/summary.json",
+    "fdm_specification": "sashimi-f:fdm:2026-09-11:v3",
+    "fdm_migration_source": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+    "fdm_full_catalog_controls": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "fdm_convergence_catalogs": 60,
+    "test_counts_per_python": {
+      "itamae": 309,
+      "sashimi-c": 95,
+      "sashimi-si": 49,
+      "sashimi-w": 87,
+      "sashimi-f": 104
+    },
+    "regression_reuse": "unchanged public artifacts verified by SHA-256; F rerun on all three Python versions",
+    "candidate_private_ci": 34549662699
   }
 }

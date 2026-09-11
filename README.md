@@ -87,8 +87,8 @@ old sources and keeps individual correction patches separate from product
 execution. The [current work record](docs/migration-worklog-2026-09-10.md)
 distinguishes completed review units from the remaining scientific and release
 checks; neither document replaces the compatibility manifest. The
-[current handoff](docs/HANDOFF_20260911.md) records the pending F decision,
-exact candidate state, artifact locations and restart steps.
+[current handoff](docs/HANDOFF_20260911.md) records the final candidate,
+artifact locations, scientific limits and review procedure.
 
 The migration candidates now expose named catalogs through the standard
 `sashimi_c`, `sashimi_si`, `sashimi_w`, and `sashimi_f` imports. Production
@@ -101,11 +101,12 @@ definition remains amplitude one-half (power one-quarter); power one-half is
 available as an explicit threshold. Historical signed weights remain in the
 independent reference and cannot be clipped or relabeled as nonnegative counts.
 
-Release preparation is still in progress. In particular, adoption of the FDM
-per-redshift virial-mass grid remains pending, and the final five-component
-candidate has not yet been recorded in `compatibility.toml`. The current
-work record separates component CI, temporary candidate checks, and the required
-final checks without overrides.
+The user-approved FDM accretion correction now uses a virial-mass grid for
+each accretion redshift, with specification v3 and independent reference and
+convergence evidence. The validated five-component candidate is recorded in
+`compatibility.toml` together with all five gitlinks. Final checks against this
+recorded parent run without overrides in both public and private CI; their
+results and the review status are recorded in the current handoff.
 
 ## Scientific roadmap
 
