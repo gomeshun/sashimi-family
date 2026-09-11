@@ -1,0 +1,442 @@
+{
+  "checked_at_utc": "2026-09-11T09:40:25.500409+00:00",
+  "scope": "standalone main maintenance; approved minor-updates branches; no main merge or release",
+  "repositories": [
+    {
+      "variant": "c",
+      "base_main": "e09571be7a1daaef343e97887e34449faf21db7b",
+      "head": "c8f80295e86f61dcf39ee3d427217d3ae12099ba",
+      "branch": "minor-updates",
+      "pull_request": "https://github.com/gomeshun/sashimi-c/pull/22",
+      "draft": true,
+      "tests_per_python": 36,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13"
+      ],
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585095528/job/103217350142",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:36:53Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585091888/job/103217340802",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:36:53Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585095528/job/103217350260",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:36:53Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:12Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585091888/job/103217340889",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:36:51Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585095528/job/103217350460",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:36:54Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:13Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585091888/job/103217341010",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:36:51Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585095528/job/103217350413",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:36:53Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/34585091888/job/103217341110",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:36:52Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        }
+      ],
+      "gate_passed": true,
+      "solver_mass_relative_max": 0.00016348156024625915,
+      "catalog_mass_relative_max": 0.0002751431883805111,
+      "reference_refinement_relative_max": 1.4246381851990009e-12,
+      "smooth_observable_relative_max": 8.6577279694606e-06,
+      "whole_catalog_speedup": 1.074523698398152,
+      "catalog_fallbacks": 0,
+      "source_and_test_log_hashes_verified": true,
+      "itamae_installed": false,
+      "worktree_clean": true
+    },
+    {
+      "variant": "si",
+      "base_main": "e17d3664dac677b604fd4ff02fb2af105a6937fa",
+      "head": "fecbd2c33c63d79124bde22bcd0172a434f4e0e6",
+      "branch": "minor-updates",
+      "pull_request": "https://github.com/gomeshun/sashimi-si/pull/18",
+      "draft": true,
+      "tests_per_python": 69,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13"
+      ],
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585106139/job/103217385904",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:37:01Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585097256/job/103217356153",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:36:55Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585106139/job/103217385952",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:37:01Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585097256/job/103217356312",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:36:55Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585106139/job/103217385895",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:37:02Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585097256/job/103217356361",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:36:55Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585106139/job/103217385729",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:37:02Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/34585097256/job/103217355966",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:36:54Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        }
+      ],
+      "gate_passed": true,
+      "solver_mass_relative_max": 0.0002842533796276747,
+      "catalog_mass_relative_max": 2.703029324357953e-05,
+      "reference_refinement_relative_max": 1.3905543383430086e-11,
+      "smooth_observable_relative_max": 6.088745322407918e-06,
+      "whole_catalog_speedup": 1.1379286329163372,
+      "catalog_fallbacks": 0,
+      "source_and_test_log_hashes_verified": true,
+      "itamae_installed": false,
+      "worktree_clean": true
+    },
+    {
+      "variant": "w",
+      "base_main": "99dfc3632eec0126080c0273ddf78f84fe09216c",
+      "head": "0a997abbf031b9630769b81d286b504a3c59bae3",
+      "branch": "minor-updates",
+      "pull_request": "https://github.com/gomeshun/sashimi-w/pull/17",
+      "draft": true,
+      "tests_per_python": 42,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13"
+      ],
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585108526/job/103217389881",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:37:17Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585104959/job/103217379404",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:37:00Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585108526/job/103217390042",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:37:18Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585104959/job/103217379512",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:37:01Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:44Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585108526/job/103217389673",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:37:15Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585104959/job/103217379481",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:37:00Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:45Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585108526/job/103217389985",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:37:17Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:37Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/34585104959/job/103217379265",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:37:00Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        }
+      ],
+      "gate_passed": true,
+      "solver_mass_relative_max": 0.0002668832334972171,
+      "catalog_mass_relative_max": 0.00044431252991450343,
+      "reference_refinement_relative_max": 3.1891893570445973e-09,
+      "smooth_observable_relative_max": 1.4960457900124982e-05,
+      "whole_catalog_speedup": 2.9206991482159297,
+      "catalog_fallbacks": 0,
+      "source_and_test_log_hashes_verified": true,
+      "itamae_installed": false,
+      "worktree_clean": true
+    },
+    {
+      "variant": "f",
+      "base_main": "68d617e94d254054cf65bb9a92d6200fe1582dd8",
+      "head": "013db646aa99a29da72f45ef6bf0b831558573a8",
+      "branch": "minor-updates",
+      "pull_request": "https://github.com/gomeshun/sashimi-f/pull/31",
+      "draft": true,
+      "tests_per_python": 65,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13"
+      ],
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585117316/job/103217416886",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:37:21Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585111567/job/103217399240",
+          "name": "pytest (3.10)",
+          "startedAt": "2026-09-11T09:37:19Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585117316/job/103217417241",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:37:28Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:55Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585111567/job/103217399442",
+          "name": "pytest (3.11)",
+          "startedAt": "2026-09-11T09:37:22Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:38:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585117316/job/103217417188",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:37:23Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585111567/job/103217399304",
+          "name": "pytest (3.12)",
+          "startedAt": "2026-09-11T09:37:17Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585117316/job/103217417087",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:37:16Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-11T09:37:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-f/actions/runs/34585111567/job/103217399444",
+          "name": "pytest (3.13)",
+          "startedAt": "2026-09-11T09:37:21Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        }
+      ],
+      "gate_passed": true,
+      "solver_mass_relative_max": 0.00016406051550232892,
+      "catalog_mass_relative_max": 0.000275165474258654,
+      "reference_refinement_relative_max": 1.4281908988778014e-12,
+      "smooth_observable_relative_max": 1.1719635391453837e-05,
+      "whole_catalog_speedup": 1.2150956424615742,
+      "catalog_fallbacks": 0,
+      "source_and_test_log_hashes_verified": true,
+      "itamae_installed": false,
+      "worktree_clean": true
+    }
+  ],
+  "parent_base": "1112d1c422368bde7cfacd7bb94398a3dc8d62de",
+  "parent_changes": "documentation only; migration manifest and gitlinks unchanged",
+  "raw_f_evidence": "kept only in the private sashimi-f repository",
+  "limits": [
+    "Finite numerical probes and speed measurements do not establish physical calibration.",
+    "Native WDM small-host history failures remain explicit.",
+    "C EPS/NFW maintenance, recursive boost calibration and downstream inference are excluded."
+  ]
+}
