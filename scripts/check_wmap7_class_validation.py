@@ -22,7 +22,7 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     # Select the recorded working source, not an unrelated installed W package.
-    sys.path[:0] = [str(root / "sashimi-w"), str(root / "itamae/src")]
+    sys.path[:0] = [str(root / "sashimi-w/src"), str(root / "itamae/src")]
     import sashimi_w
     from sashimi_w import Subhalos
 
@@ -31,7 +31,7 @@ def main():
         ["git", "-C", str(root / "sashimi-w"), "rev-parse", "HEAD"], text=True).strip()
     if actual_revision != provenance["w_revision"]:
         raise RuntimeError("Current W source differs from the recorded revision")
-    if Path(sashimi_w.__file__).resolve() != root / "sashimi-w/sashimi_w.py":
+    if Path(sashimi_w.__file__).resolve() != root / "sashimi-w/src/sashimi_w/__init__.py":
         raise RuntimeError("Imported unexpected SASHIMI-W source")
     result = dict(product_module=str(Path(sashimi_w.__file__).resolve()), checks=[],
                   physical_checks={}, background_warnings={}, spectrum_warnings={})

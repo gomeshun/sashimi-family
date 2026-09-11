@@ -36,7 +36,7 @@ def main():
         revisions[source.name] = subprocess.check_output(
             ["git", "-C", str(source), "rev-parse", "HEAD"], text=True
         ).strip()
-    sys.path.insert(0, str(sources[0]))
+    sys.path.insert(0, str(sources[0] / "src"))
     if args.variant == "sashimi-c":
         from sashimi_c import SubhaloProperties
     elif args.variant == "sashimi-si":

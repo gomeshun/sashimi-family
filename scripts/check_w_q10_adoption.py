@@ -45,7 +45,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="sashimi-w-q10-") as directory:
         with tarfile.open(fileobj=io.BytesIO(archive)) as handle:
             handle.extractall(directory, filter="data")
-        sys.path.insert(0, directory)
+        sys.path.insert(0, str(Path(directory) / "src" if (Path(directory) / "src").is_dir() else Path(directory)))
         from sashimi_w import Subhalos, Msolar
         import itamae
 

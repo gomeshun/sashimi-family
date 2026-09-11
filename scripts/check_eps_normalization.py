@@ -28,7 +28,7 @@ def main():
     if subprocess.check_output(['git', '-C', str(repo), 'diff', 'HEAD', '--', '*.py'], text=True):
         raise RuntimeError('Commit the implementation before scientific auditing.')
     args.output.mkdir(parents=True, exist_ok=False)
-    sys.path.insert(0, str(repo))
+    sys.path.insert(0, str(repo / "src"))
     if args.variant == 'c':
         from sashimi_c import SubhaloProperties
         model, filename = SubhaloProperties(), 'sashimi_c.py'

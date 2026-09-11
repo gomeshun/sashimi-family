@@ -46,7 +46,7 @@ def main():
         raise ValueError("Product worker requires comparison role C.")
     source = args.source.resolve()
     checked_revision(source, config["source_revision"])
-    sys.path.insert(0, str(source))
+    sys.path.insert(0, str(source / "src" if (source / "src").is_dir() else source))
     import itamae
 
     core = Path(itamae.__file__).resolve().parents[2]
@@ -54,7 +54,7 @@ def main():
     started = time.perf_counter()
     with warnings.catch_warnings(record=True) as observed:
         module = importlib.import_module(config["module"])
-        if Path(module.__file__).resolve().parent != source:
+        if not Path(module.__file__).resolve().is_relative_to(source):
             raise ValueError("Unexpected product import path.")
         warnings.simplefilter("always", RuntimeWarning)
         model = getattr(module, config["class"])(**config.get("constructor", {}))

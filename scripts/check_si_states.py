@@ -4,7 +4,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 for name in ["sashimi-c", "sashimi-si"]:
-    sys.path.insert(0, str(ROOT / name))
+    sys.path.insert(0, str(ROOT / name / "src"))
 from sashimi_si import SubhaloProperties, TidalStrippingSolver as SISolver
 from sashimi_si_itamae_components import SIDMAccretionSlices
 from sashimi_c import HaloModel as CHalo, TidalStrippingSolver as CSolver
