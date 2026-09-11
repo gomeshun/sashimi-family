@@ -4,6 +4,8 @@
 
 合意日：2026-09-10。以下は実装担当の agent に渡す開発プロンプトである。
 
+追加採用（2026-09-11）：Fの降着率・対数質量積分で最後の赤方偏移のvirial-mass配列を再利用する既知のミスについて、ユーザーが各降着赤方偏移への修正を明示承認した。独立B patch、仕様識別、全カタログ比較、F収束試験を更新する。既存の式・係数・宇宙論・solverは同時変更しない。
+
 この文書は、旧実装計画と開発プロンプトを統合した、migration・リリース準備の唯一の実行計画である。README、[golden fixture policy](docs/golden-fixture-policy.md)、関連 Issue/PR に残る旧方針と矛盾する場合は、この文書を優先して関連記述を更新する。互換性確認済みの revision 集合は引き続き [compatibility.toml](compatibility.toml) を正とし、計画内に別の恒久的な revision 集合を作らない。[2026-09-04 の監査](docs/migration-status-2026-09-04.md) は歴史的記録、[科学開発ロードマップ](docs/scientific-roadmap.md) は今回の対象外の新機能を扱う。
 
 ## 1. 目的と到達点
