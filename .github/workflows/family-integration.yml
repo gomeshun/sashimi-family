@@ -12,9 +12,20 @@ permissions:
 
 jobs:
   public-coinstall:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Record tested parent revision
+        run: |
+          mkdir -p family-validation
+          git rev-parse HEAD > family-validation/parent-revision.txt
+          cp compatibility.toml family-validation/compatibility.toml
       - name: Validate compatibility manifest
         run: python3 scripts/check_compatibility.py
       - name: Load public compatibility revisions
@@ -68,93 +79,60 @@ jobs:
           test "$(git -C .sashimi-w rev-parse HEAD)" = "$SASHIMI_W_REF"
       - uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
       - name: Create clean family environment
-        run: uv venv --python 3.11 .venv-family
+        run: uv venv --python "${{ matrix.python-version }}" .venv-family
       - name: Build ITAMAE and all SASHIMI wheels
         run: |
-          export ITAMAE_SOURCE_REVISION="$(git -C .itamae rev-parse HEAD)"
-          export SASHIMI_C_SOURCE_REVISION="$(git -C .sashimi-c rev-parse HEAD)"
-          export SASHIMI_SI_SOURCE_REVISION="$(git -C .sashimi-si rev-parse HEAD)"
-          export SASHIMI_W_SOURCE_REVISION="$(git -C .sashimi-w rev-parse HEAD)"
-          uv build --wheel --out-dir dist-family ./.itamae
-          uv build --wheel --out-dir dist-family ./.sashimi-c
-          uv build --wheel --out-dir dist-family ./.sashimi-si
-          uv build --wheel --out-dir dist-family ./.sashimi-w
+          uv build --out-dir dist-family ./.itamae
+          uv build --out-dir dist-family ./.sashimi-c
+          uv build --out-dir dist-family ./.sashimi-si
+          uv build --out-dir dist-family ./.sashimi-w
       - name: Verify embedded artifact source revisions
         run: >-
           python3 scripts/check_artifact_provenance.py
           --directory dist-family
           --manifest compatibility.toml
+          --require-sdist
           --packages itamae sashimi-c sashimi-si sashimi-w
       - name: Install public ITAMAE and SASHIMI variants
         run: uv pip install --python .venv-family/bin/python dist-family/*.whl
-      - name: Verify co-installed legacy and opt-in APIs
+      - name: Verify independent reference workflow boundaries
+        run: .venv-family/bin/python -m unittest discover -s tests
+      - name: Verify standard APIs and physical quantities outside source
         working-directory: ${{ runner.temp }}
-        env:
-          ITAMAE_REF: ${{ steps.compatibility.outputs.itamae_ref }}
-          SASHIMI_C_REF: ${{ steps.compatibility.outputs.sashimi_c_ref }}
-          SASHIMI_SI_REF: ${{ steps.compatibility.outputs.sashimi_si_ref }}
-          SASHIMI_W_REF: ${{ steps.compatibility.outputs.sashimi_w_ref }}
         run: |
-          "$GITHUB_WORKSPACE/.venv-family/bin/python" - <<'PY'
-          import importlib.util
-          import itertools
-          import os
-          from importlib import metadata
-
-          import itamae
-          from itamae.provenance import source_revision
-          import sashimi_c
-          import sashimi_c_itamae_catalog
-          import sashimi_c_itamae
-          import sashimi_c_itamae_migration
-          import sashimi_c_itamae_variance
-          import sashimi_si
-          import sashimi_si_itamae
-          import sashimi_si_itamae_migration
-          import sashimi_si_itamae_variance
-          import sashimi_w
-          import sashimi_w_itamae
-          import sashimi_w_itamae_migration
-          import sashimi_w_itamae_variance
-
-          assert itamae.__version__ == "0.1.0a4"
-          assert metadata.version("sashimi-itamae") == itamae.__version__
-          try:
-              metadata.version("itamae")
-          except metadata.PackageNotFoundError:
-              pass
-          else:
-              raise AssertionError("unrelated PyPI itamae distribution is installed")
-
-          assert source_revision("itamae") == os.environ["ITAMAE_REF"]
-          assert source_revision("sashimi-c") == os.environ["SASHIMI_C_REF"]
-          assert source_revision("sashimi-si") == os.environ["SASHIMI_SI_REF"]
-          assert source_revision("sashimi-w") == os.environ["SASHIMI_W_REF"]
-          assert sashimi_c.subhalo_properties
-          assert sashimi_c_itamae.subhalo_properties
-          assert sashimi_si.subhalo_properties
-          assert sashimi_si_itamae.subhalo_properties
-          assert sashimi_w.subhalos
-          assert sashimi_w_itamae.subhalos
-          assert importlib.util.find_spec("itamae_migration") is None
-          assert importlib.util.find_spec("itamae_variance") is None
-          assert importlib.util.find_spec("itamae_catalog_migration") is None
-
-          distributions = ("sashimi-itamae", "sashimi-c", "sashimi-si", "sashimi-w")
-
-          def runtime_files(name):
-              files = metadata.distribution(name).files or ()
-              return {
-                  str(path)
-                  for path in files
-                  if ".dist-info/" not in str(path)
-                  and not str(path).endswith(".dist-info")
-              }
-
-          installed = {name: runtime_files(name) for name in distributions}
-          for left, right in itertools.combinations(distributions, 2):
-              overlap = installed[left] & installed[right]
-              assert not overlap, f"{left} and {right} overwrite: {sorted(overlap)}"
-          PY
+          "$GITHUB_WORKSPACE/.venv-family/bin/python" -I \
+            "$GITHUB_WORKSPACE/scripts/smoke_installed_family.py" \
+            --manifest "$GITHUB_WORKSPACE/compatibility.toml" \
+            --output "$GITHUB_WORKSPACE/family-validation/original-smoke" \
+            --packages itamae sashimi-c sashimi-si sashimi-w
+      - name: Rebuild source archives without revision injection
+        run: |
+          .venv-family/bin/python - <<'PYCODE'
+          import pathlib, subprocess, sys, tomllib
+          manifest = tomllib.loads(pathlib.Path("compatibility.toml").read_text())
+          for package in ("itamae", "sashimi-c", "sashimi-si", "sashimi-w"):
+              name = "sashimi_itamae" if package == "itamae" else package.replace("-", "_")
+              archive, = pathlib.Path("dist-family").glob(name + "-*.tar.gz")
+              subprocess.run([sys.executable, "scripts/check_sdist_rebuild.py", "--package", package,
+                              "--archive", str(archive), "--expected-revision", manifest[package]["ref"],
+                              "--output", "family-validation/rebuilt/" + package], check=True)
+          PYCODE
+          uv venv --python "${{ matrix.python-version }}" .venv-rebuilt
+          uv pip install --python .venv-rebuilt/bin/python family-validation/rebuilt/*/*.whl
+      - name: Verify rebuilt artifacts outside source
+        working-directory: ${{ runner.temp }}
+        run: |
+          "$GITHUB_WORKSPACE/.venv-rebuilt/bin/python" -I \
+            "$GITHUB_WORKSPACE/scripts/smoke_installed_family.py" \
+            --manifest "$GITHUB_WORKSPACE/compatibility.toml" \
+            --output "$GITHUB_WORKSPACE/family-validation/rebuilt-smoke" \
+            --packages itamae sashimi-c sashimi-si sashimi-w
+      - name: Record artifact hashes
+        run: sha256sum dist-family/*.whl dist-family/*.tar.gz > family-validation/artifact-sha256.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-family-validation-${{ matrix.python-version }}
+          path: family-validation/

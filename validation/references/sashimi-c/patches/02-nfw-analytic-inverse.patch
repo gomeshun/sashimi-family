@@ -1,0 +1,28 @@
+--- a/sashimi_c.py
++++ b/sashimi_c.py
+@@ -3,6 +3,7 @@
+ from scipy import interpolate
+ from scipy import optimize
+ from scipy import special
++from mpmath import mp
+ from scipy.integrate import simpson
+ from scipy.integrate import odeint
+ from scipy.integrate import cumulative_trapezoid
+@@ -848,9 +849,14 @@
+             else:
+                 rs_z0[iz]   = rs_acc[iz]
+                 rhos_z0[iz] = rhos_acc[iz]
+-            ctemp         = np.linspace(0,100,1000)
+-            ftemp         = interp1d(self.fc(ctemp),ctemp,fill_value='extrapolate')
+-            ct_z0[iz]     = ftemp(m0/(4.*np.pi*rhos_z0[iz]*rs_z0[iz]**3))
++            enclosed      = m0/(4.*np.pi*rhos_z0[iz]*rs_z0[iz]**3)
++            # Analytic inverse with u=1/(1+c) in (0,1]:
++            # u=-W_0(-exp(-1-y)), hence c=-1/W_0(-exp(-1-y))-1.
++            # Evaluate the principal branch independently at 50-digit precision.
++            with mp.workdps(50):
++                exact_ct = [float(-1/mp.lambertw(-mp.exp(-1-mp.mpf(float(y))), 0)-1)
++                            for y in enclosed.reshape(-1)]
++            ct_z0[iz]     = np.asarray(exact_ct).reshape(enclosed.shape)
+             survive[iz]   = np.where(ct_z0[iz]>ct_th,1,0)
+             m0_matrix[iz] = m0*np.ones((N_herm,1))
+ 

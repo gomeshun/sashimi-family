@@ -1,6 +1,12 @@
 # SASHIMI migration・リリース準備の開発 goal
 
+レビュー修正完了（2026-09-11）：各 `usage_walkthrough.ipynb` を旧 `sample.ipynb` 相当の物理量・図を得られるITAMAE版へ改訂し、各repoを `src/`、`notebooks/`、`tests/`、`docs/` を中心とする構成へ整理した。C/SI/W/FのすべてでVmax–rmaxとsubhalo mass functionを表示し、5冊35コードセル・24図の実行と保存、全ノートブックCIの成功を確認した。最終wheel/sdistからPython 3.11–3.13それぞれ668件の回帰試験と全5者の実計算・再構築を検証し、親 `b6a22141faf2d191a49885d127464789514fd775` に対する公開・private CIが同じmanifest・overrideなしで成功した。検証済みの子変更は各migrationブランチへ統合済みで、再びピアレビュー待ちとする。[引き渡し](docs/HANDOFF_20260911.md) にソース・図・検証の対応を記録した。WMAP7でのVogel係数採用はユーザー判断により保留し、現行Viel係数・q10を維持する。以前のCI成功は当時のSHAに対する証拠として保存する。
+
+更新（2026-09-11）：ユーザーから受領した独立調査に基づき、現行Viel係数の熱的WDMはq10へ統一し、q5を通常APIから廃止する。以下に残るq5/q10両選択肢の維持要件は、この追加判断で置き換える。旧q5の固定参照は保持し、旧指定・キャッシュを黙ってq10へ読み替えない。係数・宇宙論・他の処方や観測制限は同時変更しない。[採用記録](docs/adoption-2026-09-10.md)を参照。
+
 合意日：2026-09-10。以下は実装担当の agent に渡す開発プロンプトである。
+
+追加採用（2026-09-11）：Fの降着率・対数質量積分で最後の赤方偏移のvirial-mass配列を再利用する既知のミスについて、ユーザーが各降着赤方偏移への修正を明示承認した。独立B patch、仕様識別、全カタログ比較、F収束試験を更新する。既存の式・係数・宇宙論・solverは同時変更しない。
 
 この文書は、旧実装計画と開発プロンプトを統合した、migration・リリース準備の唯一の実行計画である。README、[golden fixture policy](docs/golden-fixture-policy.md)、関連 Issue/PR に残る旧方針と矛盾する場合は、この文書を優先して関連記述を更新する。互換性確認済みの revision 集合は引き続き [compatibility.toml](compatibility.toml) を正とし、計画内に別の恒久的な revision 集合を作らない。[2026-09-04 の監査](docs/migration-status-2026-09-04.md) は歴史的記録、[科学開発ロードマップ](docs/scientific-roadmap.md) は今回の対象外の新機能を扱う。
 

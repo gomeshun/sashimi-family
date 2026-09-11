@@ -1,0 +1,10 @@
+{
+  "core_revision": "c2d7b9afb9773bc8cb5b2ee142d70d95cc3afe3b",
+  "python": "3.11.15",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.1.0a4"
+  },
+  "record": "Companion for the completed EPS audit; source, method and array hashes remain in the original report."
+}

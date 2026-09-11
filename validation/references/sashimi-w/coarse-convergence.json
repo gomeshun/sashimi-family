@@ -1,0 +1,121 @@
+{
+  "source_revision": "d5b7f173bc2c994f2ed311312734d57ffb4797bd",
+  "core_revision": "d752306e62bf295b7a96100b9cc022f8f9c61071",
+  "status": "coarse sweep complete; redshift refinement required",
+  "metrics": {
+    "q5": {
+      "base": {
+        "count_surviving": 12.099723335301316,
+        "bound_mass_fraction": 0.005005381028818666,
+        "count_above_1e7": 10.153046661111263,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0
+      },
+      "mass": {
+        "count_surviving": 12.046510071938103,
+        "bound_mass_fraction": 0.004456272320796635,
+        "count_above_1e7": 10.07583892890718,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0,
+        "relative_to_base": {
+          "count_surviving": -0.004397890917717251,
+          "bound_mass_fraction": -0.1097036778739755,
+          "count_above_1e7": -0.0076043905618802254
+        }
+      },
+      "redshift": {
+        "count_surviving": 13.937809264013504,
+        "bound_mass_fraction": 0.008162806698655939,
+        "count_above_1e7": 11.847994885807818,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0,
+        "relative_to_base": {
+          "count_surviving": 0.15191140142432147,
+          "bound_mass_fraction": 0.6308062566382615,
+          "count_above_1e7": 0.16693986359667146
+        }
+      },
+      "concentration": {
+        "count_surviving": 12.099723335301169,
+        "bound_mass_fraction": 0.005005381028818667,
+        "count_above_1e7": 10.153046661111263,
+        "destroyed_nodes": 71,
+        "removed_weight": 1.4469207401750113e-13,
+        "relative_to_base": {
+          "count_surviving": -1.2212453270876722e-14,
+          "bound_mass_fraction": 2.220446049250313e-16,
+          "count_above_1e7": 0.0
+        }
+      },
+      "host": {
+        "count_surviving": 12.088486292397619,
+        "bound_mass_fraction": 0.005028819345918924,
+        "count_above_1e7": 10.110618082257218,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0,
+        "relative_to_base": {
+          "count_surviving": -0.0009287024663542365,
+          "bound_mass_fraction": 0.004682623953163878,
+          "count_above_1e7": -0.004178901197859797
+        }
+      }
+    },
+    "q10": {
+      "base": {
+        "count_surviving": 2.994779711141783,
+        "bound_mass_fraction": 0.002072145007605432,
+        "count_above_1e7": 2.7675332194346214,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0
+      },
+      "mass": {
+        "count_surviving": 3.0150181562456098,
+        "bound_mass_fraction": 0.0018524009050389925,
+        "count_above_1e7": 2.784660595402601,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0,
+        "relative_to_base": {
+          "count_surviving": 0.006757907778168537,
+          "bound_mass_fraction": -0.10604668194547617,
+          "count_above_1e7": 0.006188679452049595
+        }
+      },
+      "redshift": {
+        "count_surviving": 3.463725201289977,
+        "bound_mass_fraction": 0.003420830090660736,
+        "count_above_1e7": 3.2396565210288526,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0,
+        "relative_to_base": {
+          "count_surviving": 0.15658764095520228,
+          "bound_mass_fraction": 0.6508642387985399,
+          "count_above_1e7": 0.17059354456120346
+        }
+      },
+      "concentration": {
+        "count_surviving": 2.9947797111415344,
+        "bound_mass_fraction": 0.0020721450076054307,
+        "count_above_1e7": 2.767533219434621,
+        "destroyed_nodes": 92,
+        "removed_weight": 2.486231922563361e-13,
+        "relative_to_base": {
+          "count_surviving": -8.304468224196171e-14,
+          "bound_mass_fraction": -6.661338147750939e-16,
+          "count_above_1e7": -1.1102230246251565e-16
+        }
+      },
+      "host": {
+        "count_surviving": 2.9794313965572594,
+        "bound_mass_fraction": 0.002069180465014437,
+        "count_above_1e7": 2.778750971933364,
+        "destroyed_nodes": 0,
+        "removed_weight": 0.0,
+        "relative_to_base": {
+          "count_surviving": -0.005125022894813203,
+          "bound_mass_fraction": -0.0014306636746531654,
+          "count_above_1e7": 0.004053339782867926
+        }
+      }
+    }
+  }
+}

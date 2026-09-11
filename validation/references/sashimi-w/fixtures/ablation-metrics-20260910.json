@@ -1,0 +1,213 @@
+{
+  "A": {
+    "signed_weight_sum": 0.02087594556068013,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.02087594556068013,
+    "minimum_c_t": 1.4492114962933345,
+    "maximum_c_t": 5.274189917371347
+  },
+  "sashimi-w-B-01-flat-background": {
+    "signed_weight_sum": 0.020025472042620944,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.020025472042620944,
+    "minimum_c_t": 1.4431459165433103,
+    "maximum_c_t": 5.237959130939839
+  },
+  "sashimi-w-B-02-normalized-growth": {
+    "signed_weight_sum": 0.020185113387523598,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.020185113387523598,
+    "minimum_c_t": 1.449120274885648,
+    "maximum_c_t": 5.273775355552646
+  },
+  "sashimi-w-B-03-variance-growth-square": {
+    "signed_weight_sum": 0.019572091290052943,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.019572091290052943,
+    "minimum_c_t": 1.4492114962933345,
+    "maximum_c_t": 5.274189917371347
+  },
+  "sashimi-w-B-04-physical-variance-mass": {
+    "signed_weight_sum": 0.009380455486642868,
+    "negative_weight_nodes": 4,
+    "surviving_signed_sum": 0.009380455486642868,
+    "minimum_c_t": 1.449328040599484,
+    "maximum_c_t": 5.274687043810945
+  },
+  "sashimi-w-B-05-physical-concentration-mass": {
+    "signed_weight_sum": 0.0210648750128591,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.0210648750128591,
+    "minimum_c_t": 1.4068027174667674,
+    "maximum_c_t": 4.687622858608905
+  },
+  "sashimi-w-B-06-redshift-accretion-grid": {
+    "signed_weight_sum": 0.021398788827408328,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.021398788827408328,
+    "minimum_c_t": 1.4492114962933345,
+    "maximum_c_t": 5.274189917371347
+  },
+  "sashimi-w-B-six": {
+    "signed_weight_sum": 0.010126284644495,
+    "negative_weight_nodes": 4,
+    "surviving_signed_sum": 0.010126284644495,
+    "minimum_c_t": 1.4009633280234737,
+    "maximum_c_t": 4.655683477049435
+  },
+  "sashimi-w-B-integral": {
+    "signed_weight_sum": 0.007714245760434804,
+    "negative_weight_nodes": 4,
+    "surviving_signed_sum": 0.007714245760434804,
+    "minimum_c_t": 1.4008775224096268,
+    "maximum_c_t": 4.655356730580796
+  },
+  "sashimi-w-B-derivative": {
+    "signed_weight_sum": 0.004954975036907276,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.004954975036907276,
+    "minimum_c_t": 1.4009633280234737,
+    "maximum_c_t": 4.655683477049435
+  },
+  "sashimi-w-B-continuous": {
+    "signed_weight_sum": 0.0039059500034426655,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.0039059500034426655,
+    "minimum_c_t": 1.4008775224096268,
+    "maximum_c_t": 4.655356730580796
+  },
+  "sashimi-w-B-inverse": {
+    "signed_weight_sum": 0.0039059500034426655,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.0039059500034426655,
+    "minimum_c_t": 1.4008745525754753,
+    "maximum_c_t": 4.655182844407657
+  },
+  "sashimi-w-B-quadrature": {
+    "signed_weight_sum": 0.00388924426045393,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.00388924426045393,
+    "minimum_c_t": 1.4008775224096268,
+    "maximum_c_t": 4.655356730580796
+  },
+  "sashimi-w-B-all-q5": {
+    "signed_weight_sum": 0.00388924426045393,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 0.00388924426045393,
+    "minimum_c_t": 1.4008745525754753,
+    "maximum_c_t": 4.655182844407657
+  },
+  "sashimi-w-B-all-q10": {
+    "signed_weight_sum": 2.341293228491032e-06,
+    "negative_weight_nodes": 0,
+    "surviving_signed_sum": 2.341293228491032e-06,
+    "minimum_c_t": 1.3459486171747985,
+    "maximum_c_t": 3.8069383980113214
+  },
+  "B-C-q5": {
+    "tuple_0": {
+      "max_absolute": 0.0,
+      "max_relative_nonzero": 0.0
+    },
+    "tuple_1": {
+      "max_absolute": 0.0,
+      "max_relative_nonzero": 0.0
+    },
+    "tuple_2": {
+      "max_absolute": 1.3322676295501878e-15,
+      "max_relative_nonzero": 5.268679449094571e-16
+    },
+    "tuple_3": {
+      "max_absolute": 4.9873299934333204e-18,
+      "max_relative_nonzero": 3.8889693923487165e-15
+    },
+    "tuple_4": {
+      "max_absolute": 0.0009048823267221451,
+      "max_relative_nonzero": 7.745470729291696e-11
+    },
+    "tuple_5": {
+      "max_absolute": 2.8675839480740706e-11,
+      "max_relative_nonzero": 3.3213273935146e-11
+    },
+    "tuple_6": {
+      "max_absolute": 2.915289537552823e-13,
+      "max_relative_nonzero": 2.590312543328546e-11
+    },
+    "tuple_7": {
+      "max_absolute": 1.6576073846863437e-11,
+      "max_relative_nonzero": 4.538591602043119e-12
+    },
+    "tuple_8": {
+      "max_absolute": 9.324138683375338e-18,
+      "max_relative_nonzero": 4.971315336597929e-13
+    },
+    "tuple_9": {
+      "different_masks": 0
+    },
+    "probe_growth": {
+      "max_absolute": 1.1102230246251565e-16,
+      "max_relative_nonzero": 2.570186596627769e-16
+    },
+    "probe_variance": {
+      "max_absolute": 4.440892098500626e-16,
+      "max_relative_nonzero": 2.8035475274251787e-16
+    },
+    "probe_variance_derivative": {
+      "max_absolute": 2.908056841006738e-26,
+      "max_relative_nonzero": 3.560066479969445e-15
+    }
+  },
+  "B-C-q10": {
+    "tuple_0": {
+      "max_absolute": 0.0,
+      "max_relative_nonzero": 0.0
+    },
+    "tuple_1": {
+      "max_absolute": 0.0,
+      "max_relative_nonzero": 0.0
+    },
+    "tuple_2": {
+      "max_absolute": 8.881784197001252e-16,
+      "max_relative_nonzero": 3.522725317931185e-16
+    },
+    "tuple_3": {
+      "max_absolute": 8.673617379884035e-19,
+      "max_relative_nonzero": 8.611442520374628e-16
+    },
+    "tuple_4": {
+      "max_absolute": 3.9033591747283936e-05,
+      "max_relative_nonzero": 3.2719115634939395e-12
+    },
+    "tuple_5": {
+      "max_absolute": 1.4850343177386094e-12,
+      "max_relative_nonzero": 1.403464494947325e-12
+    },
+    "tuple_6": {
+      "max_absolute": 7.89385917743246e-15,
+      "max_relative_nonzero": 1.0969827616382153e-12
+    },
+    "tuple_7": {
+      "max_absolute": 5.608846720406291e-13,
+      "max_relative_nonzero": 1.8172792667402576e-13
+    },
+    "tuple_8": {
+      "max_absolute": 2.752857078576476e-21,
+      "max_relative_nonzero": 9.934054639505661e-13
+    },
+    "tuple_9": {
+      "different_masks": 0
+    },
+    "probe_growth": {
+      "max_absolute": 1.1102230246251565e-16,
+      "max_relative_nonzero": 2.570186596627769e-16
+    },
+    "probe_variance": {
+      "max_absolute": 4.440892098500626e-16,
+      "max_relative_nonzero": 3.0509058252728013e-16
+    },
+    "probe_variance_derivative": {
+      "max_absolute": 2.8272774843121063e-27,
+      "max_relative_nonzero": 6.325401329582615e-15
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_sha256": "7dddbbc4e4e9ebd6f3b009f8c82388c9b2ae674cf00d94804e72cf49b565daa3",
+  "script_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "revision_environment_injected": false,
+  "source_revisions": [
+    {
+      "package": "sashimi-f",
+      "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+    }
+  ],
+  "artifacts": {
+    "sashimi_f-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+      "bytes": 70654
+    },
+    "sashimi_f-0.2.0rc1.tar.gz": {
+      "sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+      "bytes": 1064897
+    }
+  }
+}

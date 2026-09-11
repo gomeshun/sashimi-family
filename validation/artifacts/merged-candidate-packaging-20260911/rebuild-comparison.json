@@ -1,0 +1,37 @@
+[
+  {
+    "package": "itamae",
+    "original_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+    "rebuilt_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+    "runtime_payload_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "package": "sashimi-c",
+    "original_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+    "rebuilt_sha256": "4b2d44f51e247c5fc364221ff4dff685898456bd7dcab1329a531d6d8d02827e",
+    "runtime_payload_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "package": "sashimi-si",
+    "original_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+    "rebuilt_sha256": "d8e85c6dc2f5128e66f6ed942dc7d36894916f4887ca3df3e06f1cc55dc8d766",
+    "runtime_payload_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "package": "sashimi-w",
+    "original_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+    "rebuilt_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+    "runtime_payload_equal": true,
+    "metadata_equal": true
+  },
+  {
+    "package": "sashimi-f",
+    "original_sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+    "rebuilt_sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+    "runtime_payload_equal": true,
+    "metadata_equal": true
+  }
+]
