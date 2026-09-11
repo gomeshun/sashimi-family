@@ -1,0 +1,10 @@
+{
+  "comparison.json": {
+    "sha256": "51079c25a3c6bf960fd61f540e2b3dbd968d0a7d9fffd1918c799b9183c1e379",
+    "identical_on_independent_reanalysis": true
+  },
+  "spectra.npz": {
+    "sha256": "978b3dc27fc6bec0a03fbf1364ea81b0f53657215742ccd57fc7c70e3e9c712e",
+    "identical_on_independent_reanalysis": true
+  }
+}
