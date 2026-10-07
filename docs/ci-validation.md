@@ -78,3 +78,18 @@ artifact layout. New reports state the profile, exact artifact hashes and the
 Python versions actually used for each check. A standard run cannot be relabeled
 as three rebuilt-wheel runs or as a full installed-regression run. Historical
 reports and their source identities remain unchanged.
+
+## Verified rollout — October 7, 2026
+
+The workflow changes were integrated into each `itamae-migration` branch after
+component and notebook CI passed and prospective/actual merge trees matched the
+tested PR heads. Only the two workflow files changed in each component. Shared
+helper tests passed 14 cases; actionlint passed all changed workflows. Actual
+merge-push logs confirmed reuse of the identical validated tree in all five repos.
+
+Recorded parent `c35fa1d60639ff6ec6a21c36021bdbc92a9c6bf7` passed
+[public standard CI](https://github.com/gomeshun/sashimi-family/actions/runs/37582865239)
+and the private promoted full-family audit against the same parent, without
+overrides. The [evidence index](../validation/artifacts/ci-dedup-20261007/README.md)
+records actual profile coverage, artifact identities and reproduction commands.
+Earlier October 7 scientific-refresh results retain their original source SHAs.

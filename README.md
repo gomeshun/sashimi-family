@@ -176,31 +176,36 @@ retained entry points to these standard-API examples.
 
 ## Family integration
 
-The public family integration workflow installs ITAMAE together with
-SASHIMI-C, SASHIMI-SI, and SASHIMI-W in one clean environment. Because
-SASHIMI-F is private, its own migration workflow repeats that check with all
-five wheels; this avoids granting a cross-repository private access token to
-the public family workflow. The release goal requires standard-API calculations,
+The public family integration workflow builds ITAMAE together with
+SASHIMI-C, SASHIMI-SI, and SASHIMI-W once, then installs the same wheels into
+separate Python 3.11–3.13 environments. Because SASHIMI-F is private, its own
+migration workflow provides manually dispatched all-five family validation.
+The release goal requires standard-API calculations,
 named-catalog and observable checks, runtime-file non-collision, and exact
 artifact provenance. Successful checks on earlier recorded revisions do not
 certify the current migration candidates. Final public and private CI must use
 the same recorded parent commit without candidate overrides.
 
-For a local equivalent:
+The [CI policy](docs/ci-validation.md) defines relevant-change gating and the
+`standard` and `full` profiles. Component regression remains on all supported
+Python versions; routine family runs rebuild each source archive once and
+check standalone installation on Python 3.11. Manual `full` runs additionally
+execute the shipped regression suite and rebuilt wheels on all three versions.
+
+For a local standard run from a clean, recorded set, choose a fresh output path:
 
 ```bash
-uv venv --python 3.11 .venv-family
-uv build --wheel --out-dir dist-family ./itamae
-uv build --wheel --out-dir dist-family ./sashimi-c
-uv build --wheel --out-dir dist-family ./sashimi-si
-uv build --wheel --out-dir dist-family ./sashimi-w
-uv build --wheel --out-dir dist-family ./sashimi-f
-uv pip install --python .venv-family/bin/python dist-family/*.whl
+python3 scripts/check_compatibility.py
+uv run --no-project --python 3.11 python scripts/validate_family_artifacts.py \
+  --manifest compatibility.toml --source-root "$PWD" \
+  --output review-artifacts/local-standard --profile standard
 ```
 
-Run each submodule's own test suite as well; the family smoke test detects
-cross-package conflicts and does not replace variant-specific physics
-regressions.
+This local example requires access to all five sources. Use
+`--packages itamae sashimi-c sashimi-si sashimi-w` for the public subset.
+Use `--profile full` for an explicit release rehearsal. A routine local run
+does not need to repeat component regression already verified by CI; family
+integration remains a separate check for cross-package conflicts.
 
 Golden fixture provenance and regeneration rules are documented in
 [docs/golden-fixture-policy.md](docs/golden-fixture-policy.md).
