@@ -21,12 +21,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--source-root", type=Path,
+                        help="Directory containing the manifest's component paths")
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--packages", nargs="+", default=[
         "itamae", "sashimi-c", "sashimi-si", "sashimi-w", "sashimi-f"
     ])
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
+    source_root = args.source_root.resolve() if args.source_root else root
     manifest = tomllib.loads(args.manifest.read_text())
     output = args.output.resolve()
     if output.exists():
@@ -38,7 +41,7 @@ def main():
     records = []
     for package in args.packages:
         entry = manifest[package]
-        source = root / entry["path"]
+        source = source_root / entry["path"]
         actual = subprocess.check_output(
             ["git", "-C", str(source), "rev-parse", "HEAD"], text=True
         ).strip()

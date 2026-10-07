@@ -246,6 +246,8 @@ content-addressed cache key には power 内容・filter・質量 grid・宇宙�
 
 ### CI と完了前の必須検証
 
+2026-10-07の追加指示により、重複する実行を整理する。[CI実行方針](docs/ci-validation.md)に従い、通常のfamily検証では配布物を一度だけ作り、同じwheelをPython 3.11–3.13で実行する。sdist再構築・単独環境の確認は代表Pythonで行い、リリース候補・大きなpackaging変更は手動のfull検証で全Pythonの配布物回帰まで確認する。関連変更のない文書更新や、成功済みPRとGit treeが一致するmergeで重い確認を繰り返さない。過去の出力SHAを新しいcommitへ付け替えず、互換性集合を更新するときの同一親・overrideなしの公開/private確認は維持する。
+
 - ITAMAE：Ruff、format check、mypy、pytest/coverage、最小依存、Astropy/Colossus backend、Python matrix、build と clean artifact smoke。
 - 各 variant：migration lint、A/B/C と製品 golden、invariant、固定 ITAMAE 入力、build、clean install、最小数値計算。新 API と形式変換を検証し、旧 runtime import の共存を完了条件として残さない。
 - Family：正確な5者の組合せ、manifest/gitlink、catalog schema、runtime file 非衝突、provenance、各 variant の小カタログ・代表 observable。

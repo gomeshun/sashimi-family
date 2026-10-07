@@ -19,6 +19,139 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def read_json(path):
+    return json.loads(path.read_text())
+
+
+def quantities(report):
+    return {p: {k: v for k, v in values.items() if k != "archive_sha256"}
+            for p, values in report["results"].items()}
+
+
+def validate_coverage(report):
+    """Reduced rebuild frequency must not masquerade as three rebuilt runs."""
+    versions = ["3.11", "3.12", "3.13"]
+    assert report["status"] == "passed"
+    assert report["profile"] in ("standard", "full")
+    assert report["python_versions"] == versions
+    assert set(report["original"]) == set(versions)
+    rebuilt = versions if report["profile"] == "full" else versions[:1]
+    assert report["rebuilt_python_versions"] == rebuilt
+    assert set(report["rebuilt"]) == set(rebuilt)
+    assert report["standalone_python_version"] == "3.11"
+    assert set(report["installed_regression"]) == (set(versions) if report["profile"] == "full" else set())
+
+
+def audit_single_build(scope, directory, parent_sha, manifest, manifest_bytes, revisions, script_hashes):
+    """Audit the shared-artifact layout, while retaining the older layout below."""
+    read = read_json
+    run, jobs = read(directory / "run.json"), read(directory / "jobs.json")["jobs"]
+    assert run["status"] == "completed" and run["conclusion"] == "success"
+    assert run["head_sha"] == (parent_sha if scope == "public" else revisions["sashimi-f"])
+    assert jobs and all(j["status"] == "completed" and j["conclusion"] in ("success", "skipped") for j in jobs)
+    prefix = "public-family-validation" if scope == "public" else "family-validation-inputs"
+    base = directory / prefix
+    if scope == "public":
+        assert any(j["name"] == "public-coinstall" and j["conclusion"] == "success" for j in jobs)
+        assert (base / "parent-revision.txt").read_text().strip() == parent_sha
+        assert (base / "compatibility.toml").read_bytes() == manifest_bytes
+        effective = dict(family_base_ref=parent_sha, overrides={})
+        manifest_path = base / "compatibility.toml"
+    else:
+        assert any(j["name"] == "family-coinstall" and j["conclusion"] == "success" for j in jobs)
+        assert run["event"] == "workflow_dispatch"
+        effective = read(base / "effective.json")
+        assert effective["family_base_ref"] == parent_sha
+        assert effective["validation_mode"] == "promoted" and effective["overrides"] == {}
+        assert effective["effective_revisions"] == revisions
+        assert effective["workflow_source_ref"] == revisions["sashimi-f"]
+        assert tomllib.loads((base / "base.toml").read_text()) == manifest
+        assert tomllib.loads((base / "effective.toml").read_text()) == manifest
+        manifest_path = base / "effective.toml"
+    target_revisions = {p: r for p, r in revisions.items() if scope == "private" or p != "sashimi-f"}
+    artifacts = base / "artifacts"
+    report = read(artifacts / "validation.json")
+    assert report["schema"] == "sashimi-family:artifact-validation:v1"
+    validate_coverage(report)
+    assert report["source_revisions"] == target_revisions
+    assert report["manifest_sha256"] == digest(manifest_path)
+    assert report["script_sha256"] == script_hashes["scripts/validate_family_artifacts.py"]
+    build_path = artifacts / "build/build-report.json"
+    assert report["build_report_sha256"] == digest(build_path)
+    build = read(build_path)
+    assert build["script_sha256"] == script_hashes["scripts/build_candidate_artifacts.py"]
+    assert build["manifest_sha256"] == digest(manifest_path)
+    assert build["revision_environment_injected"] is False
+    assert {d["package"]: d["source_revision"] for d in build["source_revisions"]} == target_revisions
+    assert len(build["artifacts"]) == len(target_revisions) * 2
+    for name, value in build["artifacts"].items():
+        assert Path(name).name == name
+        assert digest(artifacts / "build/dist" / name) == value["sha256"]
+    result = dict(
+        layout="single-build", profile=report["profile"], run_id=run["id"], url=run["html_url"],
+        event=run["event"], workflow_head=run["head_sha"], conclusion=run["conclusion"],
+        run_record_sha256=digest(directory / "run.json"), validation_report_sha256=digest(artifacts / "validation.json"),
+        effective=effective, jobs=[dict(name=j["name"], conclusion=j["conclusion"]) for j in jobs],
+        original_artifacts_sha256={name: data["sha256"] for name, data in build["artifacts"].items()},
+        build_python=build["python"], rebuilds={}, python={}, standalone={},
+    )
+    for package, revision in target_revisions.items():
+        path = artifacts / "rebuilt" / package / "verification.json"
+        data = read(path)
+        assert data["source_revision"] == revision and data["revision_environment_injected"] is False
+        assert data["runtime_data_metadata_equal"] is True
+        assert data["result"] == "source identity preserved"
+        assert digest(path.parent / data["wheel"]) == data["wheel_sha256"]
+        assert data["original_wheel_sha256"] == build["artifacts"][data["wheel"]]["sha256"]
+        prefix = "sashimi_itamae" if package == "itamae" else package.replace("-", "_")
+        archive, = (name for name in build["artifacts"] if name.startswith(prefix + "-") and name.endswith(".tar.gz"))
+        assert data["archive_sha256"] == build["artifacts"][archive]["sha256"]
+        result["rebuilds"][package] = data
+
+    def smoke(path, expected, version, reported):
+        data = read(path)
+        assert data["python"].startswith(version + ".")
+        assert {p: v["source_revision"] for p, v in data["installations"].items()} == expected
+        assert data["manifest_sha256"] == digest(manifest_path)
+        assert data["script_sha256"] == script_hashes["scripts/smoke_installed_family.py"]
+        assert data["warnings"] == [] and reported["report_sha256"] == digest(path)
+        return data
+
+    for version in report["python_versions"]:
+        original = smoke(artifacts / f"original-{version}-smoke/report.json", target_revisions, version, report["original"][version])
+        item = dict(original=report["original"][version], rebuilt=None)
+        if version in report["rebuilt_python_versions"]:
+            rebuilt = smoke(artifacts / f"rebuilt-{version}-smoke/report.json", target_revisions, version, report["rebuilt"][version])
+            assert quantities(original) == quantities(rebuilt)
+            assert report["rebuilt"][version]["original_rebuilt_quantities_equal"] is True
+            item["rebuilt"] = report["rebuilt"][version]
+        if report["profile"] == "full":
+            path = artifacts / f"tests-{version}/report.json"
+            regression = read(path)
+            assert regression["manifest_sha256"] == digest(manifest_path)
+            assert regression["script_sha256"] == script_hashes["scripts/check_installed_candidate.py"]
+            counts = {}
+            for package in regression["packages"]:
+                name = package["package"]
+                assert package["exit_code"] == 0 and package["installation"]["source_revision"] == target_revisions[name]
+                xml_path = path.parent / name / "result.xml"
+                suites = [s.attrib for s in ET.parse(xml_path).getroot().iter("testsuite")]
+                assert suites and all(int(s[k]) == 0 for s in suites for k in ("failures", "errors", "skipped"))
+                counts[name] = sum(int(s["tests"]) for s in suites)
+            assert set(counts) == set(target_revisions)
+            expected = report["installed_regression"][version]
+            assert expected["counts"] == counts and expected["total"] == sum(counts.values())
+            assert expected["report_sha256"] == digest(path)
+            item["installed_regression"] = expected
+        result["python"][version] = item
+    assert set(report["standalone"]) == set(target_revisions)
+    for package in target_revisions:
+        expected = {p: r for p, r in target_revisions.items() if p in ("itamae", package)}
+        smoke(artifacts / f"standalone-{package}-smoke/report.json", expected, "3.11", report["standalone"][package])
+        result["standalone"][package] = report["standalone"][package]
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--parent-sha", required=True)
@@ -56,6 +189,11 @@ def main():
             ".github/workflows/family-integration.yml",
         )
     }
+    if subprocess.check_output(["git", "-C", str(root), "ls-tree", "--name-only", args.parent_sha,
+                                "scripts/validate_family_artifacts.py"], text=True).strip():
+        for path in ("scripts/validate_family_artifacts.py", "scripts/build_candidate_artifacts.py",
+                     "scripts/check_installed_candidate.py"):
+            script_hashes[path] = hashlib.sha256(committed(path)).hexdigest()
     report = dict(
         schema="sashimi-family:recorded-ci:v1",
         status="passed",
@@ -69,6 +207,12 @@ def main():
     for scope, directory in (
         ("public", args.public_evidence), ("private", args.private_evidence)
     ):
+        prefix = "public-family-validation" if scope == "public" else "family-validation-inputs"
+        if (directory / prefix / "artifacts/validation.json").exists():
+            report["schema"] = "sashimi-family:recorded-ci:v2"
+            report[scope] = audit_single_build(scope, directory, args.parent_sha, manifest,
+                                               manifest_bytes, revisions, script_hashes)
+            continue
         run = json.loads((directory / "run.json").read_text())
         jobs = json.loads((directory / "jobs.json").read_text())["jobs"]
         assert run["status"] == "completed" and run["conclusion"] == "success"

@@ -24,6 +24,26 @@ TARGETS = {
 REVISION = re.compile(r"SOURCE_REVISION\s*=\s*['\"]([0-9a-f]{40})['\"]")
 
 
+def compare_wheels(original, rebuilt):
+    """Compare installed contents, ignoring ZIP headers and the RECORD index."""
+    def contents(path):
+        with zipfile.ZipFile(path) as bundle:
+            names = [name for name in bundle.namelist() if not name.endswith("/")]
+            if len(names) != len(set(names)):
+                raise ValueError(f"Duplicate wheel members: {path}")
+            return {
+                name: bundle.read(name) for name in names
+                if not name.endswith(".dist-info/RECORD")
+            }
+
+    if contents(original) != contents(rebuilt):
+        raise ValueError("Rebuilt wheel runtime, data or metadata differs from original")
+    return {
+        "runtime_data_metadata_equal": True,
+        "original_wheel_sha256": hashlib.sha256(Path(original).read_bytes()).hexdigest(),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--package", required=True, choices=TARGETS)
@@ -31,6 +51,8 @@ def main():
     parser.add_argument("--expected-revision", required=True)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--offline", action="store_true")
+    parser.add_argument("--original-wheel", type=Path,
+                        help="Also require equal runtime, data and distribution metadata")
     args = parser.parse_args()
     if re.fullmatch("[0-9a-f]{40}", args.expected_revision) is None:
         parser.error("expected-revision must be a complete source SHA")
@@ -119,6 +141,8 @@ def main():
             "wheel_sha256": hashlib.sha256(wheel.read_bytes()).hexdigest(),
             "result": "source identity preserved",
         }
+        if args.original_wheel:
+            report.update(compare_wheels(args.original_wheel, wheel))
         (output / "verification.json").write_text(json.dumps(report, indent=2) + "\n")
         print(json.dumps(report))
 
