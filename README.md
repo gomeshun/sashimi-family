@@ -87,7 +87,7 @@ old sources and keeps individual correction patches separate from product
 execution. The [current work record](docs/migration-worklog-2026-09-10.md)
 distinguishes completed review units from the remaining scientific and release
 checks; neither document replaces the compatibility manifest. The
-[current handoff](docs/HANDOFF_20260911.md) records the final candidate,
+[current handoff](docs/HANDOFF_20261007.md) records the refreshed candidate,
 artifact locations, scientific limits and review procedure.
 
 The migration candidates now expose named catalogs through the standard
@@ -105,8 +105,11 @@ The user-approved FDM accretion correction now uses a virial-mass grid for
 each accretion redshift, with specification v3 and independent reference and
 convergence evidence. The validated five-component candidate is recorded in
 `compatibility.toml` together with all five gitlinks. Final checks against recorded parent
-`8184e572c37af051011b85f1b797bfda6d7dfb7d` passed without overrides in both
-public and private CI on Python 3.11–3.13. Migration-branch release preparation
+`39d793064836e0e36a9912d8a129f4bc03911f82` passed without overrides in both
+public and private CI on Python 3.11–3.13. The October 7 refresh includes the
+merged C Picard-state, W EPS/scatter-anchor and F saved-output safety fixes;
+all 718 installed tests pass on each Python version. The handoff explains old
+F output regeneration and W deterministic-scatter effects. Migration-branch release preparation
 is complete and awaiting peer review. The current handoff records the exact
 evidence, artifacts and known limits.
 

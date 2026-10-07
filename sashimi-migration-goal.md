@@ -1,5 +1,7 @@
 # SASHIMI migration・リリース準備の開発 goal
 
+互換性集合更新完了（2026-10-07）：C/W/Fのmigration統合済み修正（Picard表の状態保護、EPS安定化とz=1散乱基準、保存物identity保護）を親 `39d793064836e0e36a9912d8a129f4bc03911f82` のmanifest・gitlinksへ記録した。ITAMAE/SIは不変。全5者の新しい配布物でPython 3.11–3.13それぞれ718件、元/再構築wheelの実計算・保存読込、同一親に対する公開/private CIがoverrideなしで成功した。[最新引き渡し](docs/HANDOFF_20261007.md) にF旧保存物の再生成条件とWの数値変化を明記した。native APIの4件のdraft PRは今回の集合に含めず、main統合・公開前のピアレビュー待ちを維持する。以下の9月11日の記録は当時のSHAと結果として保存する。
+
 レビュー修正完了（2026-09-11）：各 `usage_walkthrough.ipynb` を旧 `sample.ipynb` 相当の物理量・図を得られるITAMAE版へ改訂し、各repoを `src/`、`notebooks/`、`tests/`、`docs/` を中心とする構成へ整理した。C/SI/W/FのすべてでVmax–rmaxとsubhalo mass functionを表示し、5冊35コードセル・24図の実行と保存、全ノートブックCIの成功を確認した。最終wheel/sdistからPython 3.11–3.13それぞれ668件の回帰試験と全5者の実計算・再構築を検証し、親 `b6a22141faf2d191a49885d127464789514fd775` に対する公開・private CIが同じmanifest・overrideなしで成功した。検証済みの子変更は各migrationブランチへ統合済みで、再びピアレビュー待ちとする。[引き渡し](docs/HANDOFF_20260911.md) にソース・図・検証の対応を記録した。WMAP7でのVogel係数採用はユーザー判断により保留し、現行Viel係数・q10を維持する。以前のCI成功は当時のSHAに対する証拠として保存する。
 
 更新（2026-09-11）：ユーザーから受領した独立調査に基づき、現行Viel係数の熱的WDMはq10へ統一し、q5を通常APIから廃止する。以下に残るq5/q10両選択肢の維持要件は、この追加判断で置き換える。旧q5の固定参照は保持し、旧指定・キャッシュを黙ってq10へ読み替えない。係数・宇宙論・他の処方や観測制限は同時変更しない。[採用記録](docs/adoption-2026-09-10.md)を参照。
