@@ -17,7 +17,9 @@ preceding commit. It skips expensive work only when relevant files are unchanged
 and the same workflow has a successful run at that preceding commit. Initial PRs
 compare against their base. A merge can reuse its successful PR check only when
 the entire Git tree matches a validated merge parent. Failed, pending or
-unavailable history runs the checks. Manual dispatch always runs them.
+unavailable history runs the checks. Manual dispatch always runs them, and its
+success cannot substitute for automatic-check history: it may run a different
+profile or skip the component jobs entirely.
 
 This uses a lightweight successful job rather than workflow-level path filters:
 PR-wide filters would still retrigger on documentation-only updates to a large

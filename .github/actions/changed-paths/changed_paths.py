@@ -44,7 +44,7 @@ def succeeded_before(revision, environment):
     token = environment.get("CI_READ_TOKEN", "")
     if not workflow or not repository or not token:
         return False
-    query = urllib.parse.urlencode(dict(head_sha=revision, status="success", per_page=1))
+    query = urllib.parse.urlencode(dict(head_sha=revision, status="success", per_page=100))
     url = (environment.get("GITHUB_API_URL", "https://api.github.com")
            + f"/repos/{repository}/actions/workflows/{urllib.parse.quote(workflow, safe='')}/runs?{query}")
     request = urllib.request.Request(url, headers={
@@ -54,7 +54,14 @@ def succeeded_before(revision, environment):
     try:
         with urllib.request.urlopen(request, timeout=15) as response:
             runs = json.load(response)["workflow_runs"]
-        return any(run["head_sha"] == revision and run["conclusion"] == "success" for run in runs)
+        # Dispatch may exercise a different job/profile (for example family
+        # integration with component regressions skipped), so it cannot prove
+        # that the automatic checks passed at this revision.
+        return any(
+            run["head_sha"] == revision and run["conclusion"] == "success"
+            and run.get("event") in {"push", "pull_request"}
+            for run in runs
+        )
     except (OSError, ValueError, KeyError, urllib.error.URLError):
         return False  # Uncertain history runs the checks rather than skipping them.
 

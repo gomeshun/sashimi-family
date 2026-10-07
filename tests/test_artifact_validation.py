@@ -1,6 +1,8 @@
 """Failure boundaries for shared artifact validation and CI change selection."""
 
 import importlib.util
+import io
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -65,6 +67,24 @@ class ArtifactValidationTests(unittest.TestCase):
     def test_docs_change_requires_a_successful_preceding_run(self):
         self.assertTrue(changes.needs_validation(["docs/notes.md"], ["src/**"], False))
         self.assertFalse(changes.needs_validation(["docs/notes.md"], ["src/**"], True))
+
+    def test_manual_family_success_cannot_stand_in_for_component_success(self):
+        revision = "a" * 40
+        environment = dict(GITHUB_WORKFLOW_REF="owner/repo/.github/workflows/test.yml@main",
+                           GITHUB_REPOSITORY="owner/repo", CI_READ_TOKEN="test-token")
+        manual = dict(head_sha=revision, conclusion="success", event="workflow_dispatch")
+        for runs, expected in (
+            ([manual], False),
+            ([manual, dict(manual, event="push", conclusion="failure")], False),
+            ([manual, dict(manual, event="pull_request", head_sha="b" * 40)], False),
+            ([manual, dict(manual, event="pull_request")], True),
+            ([dict(manual, event="push")], True),
+        ):
+            with self.subTest(runs=runs), mock.patch.object(
+                changes.urllib.request, "urlopen",
+                return_value=io.StringIO(json.dumps(dict(workflow_runs=runs))),
+            ):
+                self.assertEqual(changes.succeeded_before(revision, environment), expected)
 
     def test_source_data_and_workflow_changes_always_run(self):
         patterns = ["src/**", "*.py", ".github/workflows/test.yml"]
