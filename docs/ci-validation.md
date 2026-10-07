@@ -27,6 +27,16 @@ migration PR, and skipped required workflows can leave checks pending. The
 action needs only `contents: read` and `actions: read`; it never writes to GitHub.
 Outputs retain the original execution SHA when a check is reused.
 
+Rename detection includes both removed and added paths. Push and pull-request
+runs use different concurrency groups so one cannot cancel the other's check;
+superseded runs for the same ref can still be cancelled. Regression fixtures
+under `validation/` are relevant component inputs.
+
+Candidate jobs explicitly check out the PR head so source provenance identifies
+the reviewed candidate. Before integrating the CI cleanup PRs, compare the
+prospective merge tree with that tested head. If the trees differ, validate the
+combined candidate before merging; a passing head check alone is insufficient.
+
 Full walkthrough notebooks run when their code, data, packaging, execution
 scripts, notebook source or own workflow changes, or on manual dispatch. Tests
 and unrelated prose changes do not alone require rerunning a physical notebook.

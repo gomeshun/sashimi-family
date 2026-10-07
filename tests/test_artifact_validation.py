@@ -3,6 +3,7 @@
 import importlib.util
 import io
 import json
+import subprocess
 from pathlib import Path
 import tempfile
 import unittest
@@ -91,6 +92,27 @@ class ArtifactValidationTests(unittest.TestCase):
         for path in ("src/example/data/table.txt", "setup.py", ".github/workflows/test.yml"):
             self.assertTrue(changes.needs_validation([path], patterns, True))
         self.assertFalse(changes.matches("notebooks/archive/old.py", ["*.py"]))
+
+    def test_moving_a_watched_file_to_docs_still_requires_validation(self):
+        def git(*args):
+            return subprocess.check_output(["git", "-C", str(self.root), *args], text=True).strip()
+        git("init", "-q")
+        git("config", "user.name", "CI test")
+        git("config", "user.email", "ci-test@example.invalid")
+        (self.root / "src").mkdir()
+        (self.root / "src/module.py").write_text("VALUE = 1\n")
+        git("add", ".")
+        git("commit", "-qm", "original")
+        before = git("rev-parse", "HEAD")
+        (self.root / "docs").mkdir()
+        git("mv", "src/module.py", "docs/module.py")
+        git("commit", "-qm", "move out of watched directory")
+        after = git("rev-parse", "HEAD")
+        real_run = subprocess.run
+        with mock.patch.object(changes.subprocess, "run", side_effect=lambda *a, **kw: real_run(*a, **dict(kw, cwd=self.root))):
+            paths = changes.changed_paths(before, after)
+        self.assertEqual(set(paths), {"src/module.py", "docs/module.py"})
+        self.assertTrue(changes.needs_validation(paths, ["src/**"], True))
 
     def test_initial_event_compares_whole_pr_and_manual_event_forces_validation(self):
         pull = {"head": {"sha": "a" * 40}, "base": {"sha": "b" * 40}}

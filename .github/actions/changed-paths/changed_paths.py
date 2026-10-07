@@ -77,7 +77,9 @@ def changed_paths(before, after):
                                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             if fetched.returncode:
                 return None
-    output = subprocess.check_output(["git", "diff", "--name-only", "-z", before, after])
+    # Treat renames as removal plus addition so moving a module or fixture out
+    # of a watched directory still requires its checks.
+    output = subprocess.check_output(["git", "diff", "--no-renames", "--name-only", "-z", before, after])
     return output.decode("utf-8", errors="surrogateescape").rstrip("\0").split("\0") if output else []
 
 
