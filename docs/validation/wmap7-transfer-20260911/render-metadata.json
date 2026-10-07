@@ -1,0 +1,9 @@
+{
+  "matplotlib_version": "3.11.1",
+  "renderer_sha256": "1126798b35e9817c2b773213c6d620114b1b316029b2b71f89f3abbc01d8c129",
+  "source_comparison_sha256": "51079c25a3c6bf960fd61f540e2b3dbd968d0a7d9fffd1918c799b9183c1e379",
+  "output_sha256": {
+    "comparison.png": "54372da0221ca4c14cf42418131847e4b8ef28bee2e7d776f8014e0c0df12671",
+    "comparison.pdf": "f7170c83c7bed115af25bafbb6ae9e4bd85b83c04129696363e169bb8da17500"
+  }
+}

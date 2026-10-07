@@ -1,0 +1,20 @@
+{
+  "family_base_ref": "7d4e244f61929b3b670385bb20da9d816af4bffe",
+  "validation_mode": "candidate",
+  "candidate_package": "sashimi-f",
+  "workflow_source_ref": "dc1b30574bf732f195b0777b6e64981d858d4c92",
+  "overrides": {
+    "sashimi-f": "dc1b30574bf732f195b0777b6e64981d858d4c92",
+    "itamae": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+    "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+    "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+    "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+  },
+  "effective_revisions": {
+    "itamae": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+    "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+    "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+    "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+    "sashimi-f": "dc1b30574bf732f195b0777b6e64981d858d4c92"
+  }
+}

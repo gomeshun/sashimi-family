@@ -1,0 +1,438 @@
+{
+  "variant": "sashimi-si",
+  "source_revisions": {
+    "sashimi-si": "a233326f9be6c6436e368272adc42e56546ae571",
+    "itamae": "c2d7b9afb9773bc8cb5b2ee142d70d95cc3afe3b"
+  },
+  "script_sha256": "2bfaf493d6582732397fc004d11399fd5783062b0c44a810a72dd1ad70b47eae",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.1.0a4"
+  },
+  "interpretation": "One variable at a time; finite-grid sensitivity, not a continuum truth or recalibration.",
+  "rows": [
+    {
+      "label": "baseline",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.9713466260582209,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.025040721512215453,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.1335263954629946
+          },
+          "nodes": 336,
+          "file": "baseline-cdm_reference.npz",
+          "sha256": "1a5d9eab84ec8f21be9d14d086582c5ac682550215c906e46270b6b59bd22b43"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.025040721512215453,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.3236682249012897
+          },
+          "nodes": 336,
+          "file": "baseline-sidm.npz",
+          "sha256": "038d3a9331908e11be5f171c381ad34c62915d48009a68ad9f28f0af0f0da95e"
+        }
+      }
+    },
+    {
+      "label": "N_ma-256",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 256,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 4.6391907130600885,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8360.53809611725,
+            "bound_mass_fraction": 0.029206434001108426,
+            "count_above_1e7": 274.14907476454675,
+            "mean_vmax_km_s": 2.3216829060560387
+          },
+          "nodes": 5376,
+          "file": "N_ma-256-cdm_reference.npz",
+          "sha256": "4f9c00a732a18c19f63c7da6781e28791ed27a8abbfbb9deabe25371530c7c1e"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8360.53809611725,
+            "bound_mass_fraction": 0.029206434001108426,
+            "count_above_1e7": 274.14907476454675,
+            "mean_vmax_km_s": 2.5346163025671316
+          },
+          "nodes": 5376,
+          "file": "N_ma-256-sidm.npz",
+          "sha256": "2f8bf35ef33f2eb85c97bd8aac9568865ff69f3b728de2b8459056ec6b17fb7d"
+        }
+      }
+    },
+    {
+      "label": "N_ma-500",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 500,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 9.875485935946926,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8360.258825449868,
+            "bound_mass_fraction": 0.02935337801616965,
+            "count_above_1e7": 276.2987527183152,
+            "mean_vmax_km_s": 2.328083326052555
+          },
+          "nodes": 10500,
+          "file": "N_ma-500-cdm_reference.npz",
+          "sha256": "cfe254fe879a821359d58b98941dd4d973db4c036423e810654dcc4349d49747"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8360.258825449868,
+            "bound_mass_fraction": 0.02935337801616965,
+            "count_above_1e7": 276.2987527183152,
+            "mean_vmax_km_s": 2.541797708528018
+          },
+          "nodes": 10500,
+          "file": "N_ma-500-sidm.npz",
+          "sha256": "79249af401761f7282c17e21837dd43471f65c60c02bc8a8b08c8676239edd1b"
+        }
+      }
+    },
+    {
+      "label": "dz-0.015625",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.015625,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 12.076010462013073,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 9390.997695756028,
+            "bound_mass_fraction": 0.036416833001907685,
+            "count_above_1e7": 300.2501177071389,
+            "mean_vmax_km_s": 2.2258146948408473
+          },
+          "nodes": 5472,
+          "file": "dz-0.015625-cdm_reference.npz",
+          "sha256": "b275360bfc9413b03baba0fc92334ecc0876bbf545fe0bd68cd5362a26de36d3"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 9390.997695756028,
+            "bound_mass_fraction": 0.036416833001907685,
+            "count_above_1e7": 300.2501177071389,
+            "mean_vmax_km_s": 2.4188837392133684
+          },
+          "nodes": 5472,
+          "file": "dz-0.015625-sidm.npz",
+          "sha256": "6e53c7301f6cb2dcdc1a70c79e80badb7507b623e0491c690de9aa39c3cc920b"
+        }
+      }
+    },
+    {
+      "label": "dz-0.01",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.01,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 31.197350042057224,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 9443.251863518773,
+            "bound_mass_fraction": 0.036734490022069216,
+            "count_above_1e7": 304.5628827324811,
+            "mean_vmax_km_s": 2.2251148597775137
+          },
+          "nodes": 8592,
+          "file": "dz-0.01-cdm_reference.npz",
+          "sha256": "6506030fa94f4074c491f29ad1e1ded8484c51cd90783411bc1f2e1c6c4a3dbd"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 9443.251863518773,
+            "bound_mass_fraction": 0.036734490022069216,
+            "count_above_1e7": 304.5628827324811,
+            "mean_vmax_km_s": 2.418141970683155
+          },
+          "nodes": 8592,
+          "file": "dz-0.01-sidm.npz",
+          "sha256": "fa9081fa72efa04c6603e304ee51862a30ad6934aa29dc90a255a07fdf37a9ec"
+        }
+      }
+    },
+    {
+      "label": "dz-0.005",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.005,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 60.12714501703158,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 9467.874422315017,
+            "bound_mass_fraction": 0.037018961063235635,
+            "count_above_1e7": 305.20779152632247,
+            "mean_vmax_km_s": 2.2265932273570037
+          },
+          "nodes": 17184,
+          "file": "dz-0.005-cdm_reference.npz",
+          "sha256": "109b0b715181c7f8c2af25d4f44b1acfdbc33ce8853a47aa7e17e457794de8a3"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 9467.874422315017,
+            "bound_mass_fraction": 0.037018961063235635,
+            "count_above_1e7": 305.20779152632247,
+            "mean_vmax_km_s": 2.4196174662438175
+          },
+          "nodes": 17184,
+          "file": "dz-0.005-sidm.npz",
+          "sha256": "23bafa59aa21b7381b93aaa483db0d46591cb4da1f447f6649dc9a5b13b7881b"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-64",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 64,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 2.126464040018618,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8405.596746805159,
+            "bound_mass_fraction": 0.025034114010423967,
+            "count_above_1e7": 216.65536884354492,
+            "mean_vmax_km_s": 2.133579079457627
+          },
+          "nodes": 336,
+          "file": "N_hermNa-64-cdm_reference.npz",
+          "sha256": "105702a73dc5a1245467fe54f59051ec59f8e560b73de217e6780d729504b555"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8405.596746805159,
+            "bound_mass_fraction": 0.025034114010423967,
+            "count_above_1e7": 216.65536884354492,
+            "mean_vmax_km_s": 2.323720540137858
+          },
+          "nodes": 336,
+          "file": "N_hermNa-64-sidm.npz",
+          "sha256": "780d33a440d9d850a182a02b8a116305323c30ef59e96e0206393234328da20e"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-200",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 200,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.0588342580012977,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8405.949549276307,
+            "bound_mass_fraction": 0.0250348682526771,
+            "count_above_1e7": 216.66224278031268,
+            "mean_vmax_km_s": 2.1335585258481022
+          },
+          "nodes": 336,
+          "file": "N_hermNa-200-cdm_reference.npz",
+          "sha256": "f8e3049664193f8de32121964112ba3495c7cc0a82d2d3e3e5f2896c5d8b3af2"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8405.949549276307,
+            "bound_mass_fraction": 0.0250348682526771,
+            "count_above_1e7": 216.66224278031268,
+            "mean_vmax_km_s": 2.3236982883456143
+          },
+          "nodes": 336,
+          "file": "N_hermNa-200-sidm.npz",
+          "sha256": "f0641db1a1cb79297160b86d5cb44f6529e67d6ae40c496b80b8c4ff2916f2cc"
+        }
+      }
+    },
+    {
+      "label": "odeint",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "odeint"
+      },
+      "seconds": 4.110083949984983,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.02408393430770907,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.1130282186083504
+          },
+          "nodes": 336,
+          "file": "odeint-cdm_reference.npz",
+          "sha256": "773b6b87e9fb3aaf2c4699d94adbc70c690b0bead05174d2d11fb608dc17340c"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.02408393430770907,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.3033197357419515
+          },
+          "nodes": 336,
+          "file": "odeint-sidm.npz",
+          "sha256": "7e71573d1a8b10119c7b13ee91956271507382362ac8478f177b39df767a54e3"
+        }
+      }
+    },
+    {
+      "label": "odeint-tight",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "odeint",
+        "rtol": 1e-10,
+        "atol": 1e-08
+      },
+      "seconds": 1.7607654799940065,
+      "warnings": [],
+      "states": {
+        "cdm_reference": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.024083933982826385,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.1130282103291704
+          },
+          "nodes": 336,
+          "file": "odeint-tight-cdm_reference.npz",
+          "sha256": "088fc5efe02087e55b61a920381a755d542fbeb4a5c797d1ead9801f6cf4ece0"
+        },
+        "sidm": {
+          "metrics": {
+            "count": 8408.309364872981,
+            "bound_mass_fraction": 0.024083933982826385,
+            "count_above_1e7": 216.7190750643572,
+            "mean_vmax_km_s": 2.3033197266768926
+          },
+          "nodes": 336,
+          "file": "odeint-tight-sidm.npz",
+          "sha256": "59718d34b121f729de89fcc2154fcedc3a5777214895f477d94804e8f0b18265"
+        }
+      }
+    }
+  ]
+}

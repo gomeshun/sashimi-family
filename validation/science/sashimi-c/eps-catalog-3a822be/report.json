@@ -1,0 +1,109 @@
+{
+  "variant": "sashimi-c",
+  "source_revisions": {
+    "sashimi-c": "3a822be2c5d83f5fa00a7ec49fc08d0fed40d505",
+    "itamae": "dfa083d0d46181c376947ac7b2da829facaf2e8b"
+  },
+  "script_sha256": "2bfaf493d6582732397fc004d11399fd5783062b0c44a810a72dd1ad70b47eae",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.2.0rc1"
+  },
+  "interpretation": "One variable at a time; finite-grid sensitivity, not a continuum truth or recalibration.",
+  "rows": [
+    {
+      "label": "baseline",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.8669894689228386,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9744.067724642005,
+            "bound_mass_fraction": 0.029520206580550826,
+            "count_above_1e7": 242.707815795274,
+            "NFW_luminosity_sum": 9.357769563977593e+25
+          },
+          "nodes": 576,
+          "file": "baseline-default.npz",
+          "sha256": "8357b75a65f22ae81034e49caae41508a9da5fa06cf79430750dec755976776f"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-64",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 64,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.5008358559571207,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9742.538249716057,
+            "bound_mass_fraction": 0.029512775350427258,
+            "count_above_1e7": 242.66023490121086,
+            "NFW_luminosity_sum": 9.35592403268065e+25
+          },
+          "nodes": 576,
+          "file": "N_hermNa-64-default.npz",
+          "sha256": "e3c7cc4310359e10f4eeef1efcf15ae855910076e08ecb28420a17a27c0227c8"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-200",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 200,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.1672949760686606,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9742.979871323387,
+            "bound_mass_fraction": 0.029513883028382752,
+            "count_above_1e7": 242.66839063062505,
+            "NFW_luminosity_sum": 9.356187166335867e+25
+          },
+          "nodes": 576,
+          "file": "N_hermNa-200-default.npz",
+          "sha256": "5fb497198a0668f8548bc461d608be5a2033db5182606fb053b9d2a149dec4d7"
+        }
+      }
+    }
+  ]
+}

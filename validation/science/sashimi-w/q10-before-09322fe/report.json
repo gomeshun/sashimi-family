@@ -1,0 +1,650 @@
+{
+  "schema": "sashimi-w:q10-adoption-control:v1",
+  "source_revision": "09322feb1e348f40fa93d0514f42dd02171a7282",
+  "source_archive_sha256": "1308660d62d9530100e1267db575b3eee2448f5866686b7100481f64a4ac4120",
+  "itamae_source_revision": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.1.0a4"
+  },
+  "script_sha256": "7185f34a933c6da015733e9fb1a1990bb32f568cdd48d0133bf8b50505400328",
+  "parameters": {
+    "M0": 1000000000000.0,
+    "redshift": 0.0,
+    "dz": 0.25,
+    "zmax": 1.0,
+    "N_ma": 16,
+    "logmamin": 7.0,
+    "logmamax": 10.0,
+    "N_herm": 3,
+    "N_hermNa": 4
+  },
+  "rows": [
+    {
+      "mass_wdm_keV": 0.5,
+      "file": "q10-0.5keV.npz",
+      "sha256": "35dc115b0636b40680a54cd30ef4ed4bfa5b9b6d382a0c0525afa04bb963d890",
+      "metadata": {
+        "schema_version": "1.0",
+        "model_identifier": "sashimi-w:wdm:m_wdm_keV=0.5:power=standard-t2-q10:v1",
+        "backend_identifier": "array=numpy;cosmology=native-flatlcdm:Om=0.27:h=0.7;units=native-units:1.0",
+        "mass_wdm_keV": 0.5,
+        "wdm_power_convention": "standard-t2-q10",
+        "wdm_power_formula_role": "viel-transfer-amplitude-squared",
+        "wdm_power_q": 10.0,
+        "wdm_transfer_nu": 1.12,
+        "half_mode_definition": "T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25",
+        "half_mode_power_ratio": 0.25,
+        "half_mode_wavenumber_h_per_mpc": 4.31735112003542,
+        "cosmology_parameters": {
+          "omega_m0": 0.27,
+          "omega_lambda0": 0.73,
+          "h": 0.7
+        },
+        "growth_normalized_at_z0": true,
+        "variance_growth_power": 2,
+        "variance_mass_unit": "Msun",
+        "variance_power_units": {
+          "wavenumber": "1/Mpc",
+          "power": "Mpc^3",
+          "density": "Msun/Mpc^3"
+        },
+        "physical_to_filter_mass": "M_filter[Msun/h] = h * M_physical[Msun]",
+        "accretion_mass_redshift_mapping": "per-redshift-virial-mass-grid",
+        "population_weight_contract": "nonnegative-corrected-counts",
+        "unit_backend": "native-units:1.0",
+        "canonical_units": {
+          "mass": "Msun",
+          "length": "Mpc",
+          "density": "Msun/Mpc^3"
+        },
+        "tuple_units": {
+          "mass": "Msun",
+          "length": "kpc",
+          "density": "Msun/pc^3"
+        },
+        "tuple_weight_excludes_survival": true,
+        "calculation_parameters": {
+          "M0": 1000000000000.0,
+          "redshift": 0.0,
+          "dz": 0.25,
+          "zmax": 1.0,
+          "N_ma": 16,
+          "sigmalogc": 0.128,
+          "N_herm": 3,
+          "logmamin": 7.0,
+          "logmamax": 10.0,
+          "sigmafac": 0,
+          "N_hermNa": 4,
+          "profile_change": true
+        },
+        "survival": "strict c_t > 0.77",
+        "profile": "tidally-evolved NFW",
+        "concentration": "Ludlow-2016:100-mass-nodes:500-tophat-nodes",
+        "sashimi_variant": "sashimi-w",
+        "calculation_specification": "sashimi-w:wdm:2026-09-10:v1",
+        "provenance_schema": "itamae:calculation:v2",
+        "itamae_version": "0.2.0rc1",
+        "itamae_source_revision": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+        "sashimi_version": "0.1.0a1",
+        "sashimi_source_revision": "d4edc8feeb075d6b69e585d4f58c7e347af648a6",
+        "canonical_unit_schema": "1.0",
+        "variance_identifier": "integrated-variance:v3;power=(transfer-modified:base=(tabulated-power:v2;interpolation=linear;extrapolate=False;sha256=c143da88d0d748c1652909b048b32a7d42a972bbe92d0b277c012507ead3e051;source=(sashimi-w:WMAP7-camb:z=0;source-k-unit=h/Mpc;source-power-unit=(Mpc/h)^3;unit-conversion=canonical-Mpc));ratio=(sashimi-w:wdm-power-ratio:m_wdm_keV=0.5;alpha_Mpc=0.14921170294523159;nu=1.1200000000000001;convention=standard-t2-q10;formula-role=viel-transfer-amplitude-squared;q=10;half-mode=T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25;sigma8-normalization=1.8822404000576536));window=(window:sharp-k:v1);rho_mean=36722018530.027351;k=[6.9999999999999995e-13,6.99998922e+17];n_k=4097;filter_scale=6.0449698275617605;sharp-k=fixed-log-cells-and-spectrum-knots-gauss8;breakpoints-sha256=8d546f4dcfec7ed81264ca60077299726ba7b94419c7afe9f26aec415ba29aca;derivative_step=0.0001;growth=native-flatlcdm:Om=0.27:h=0.7;calculation=cpt-normalized-v1",
+        "power_identifier": "transfer-modified:base=(tabulated-power:v2;interpolation=linear;extrapolate=False;sha256=c143da88d0d748c1652909b048b32a7d42a972bbe92d0b277c012507ead3e051;source=(sashimi-w:WMAP7-camb:z=0;source-k-unit=h/Mpc;source-power-unit=(Mpc/h)^3;unit-conversion=canonical-Mpc));ratio=(sashimi-w:wdm-power-ratio:m_wdm_keV=0.5;alpha_Mpc=0.14921170294523159;nu=1.1200000000000001;convention=standard-t2-q10;formula-role=viel-transfer-amplitude-squared;q=10;half-mode=T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25;sigma8-normalization=1.8822404000576536)",
+        "solver_identifier": "itamae:odeint:scipy-default-tolerances:100-output-points",
+        "catalog_schema_version": "1.0",
+        "source_identifier": "sashimi-w:itamae-migration"
+      },
+      "warnings": [],
+      "count": 4.3015090364922547e-07,
+      "bound_mass_fraction": 2.612171039837246e-09,
+      "arrays": {
+        "mass": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64"
+        },
+        "k_h_per_Mpc": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64"
+        },
+        "redshift": {
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "power_ratio": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64"
+        },
+        "sigma": {
+          "shape": [
+            4,
+            81
+          ],
+          "dtype": "float64"
+        },
+        "derivative": {
+          "shape": [
+            4,
+            81
+          ],
+          "dtype": "float64"
+        },
+        "concentration": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64"
+        },
+        "half_mode": {
+          "shape": [],
+          "dtype": "float64"
+        },
+        "weight_final": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_m200_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_z_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_r_s_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_rho_s_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_m_bound": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_r_s": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_rho_s": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_c_t": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_survive": {
+          "shape": [
+            192
+          ],
+          "dtype": "bool"
+        },
+        "weight_weight_base": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "weight_weight_concentration": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "weight_weight_survival": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "mass_wdm_keV": 2.0,
+      "file": "q10-2keV.npz",
+      "sha256": "156141383ea0f3f337347d3ef75dc685bc3036b491756230429efb4ff829be85",
+      "metadata": {
+        "schema_version": "1.0",
+        "model_identifier": "sashimi-w:wdm:m_wdm_keV=2:power=standard-t2-q10:v1",
+        "backend_identifier": "array=numpy;cosmology=native-flatlcdm:Om=0.27:h=0.7;units=native-units:1.0",
+        "mass_wdm_keV": 2.0,
+        "wdm_power_convention": "standard-t2-q10",
+        "wdm_power_formula_role": "viel-transfer-amplitude-squared",
+        "wdm_power_q": 10.0,
+        "wdm_transfer_nu": 1.12,
+        "half_mode_definition": "T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25",
+        "half_mode_power_ratio": 0.25,
+        "half_mode_wavenumber_h_per_mpc": 20.114255416329843,
+        "cosmology_parameters": {
+          "omega_m0": 0.27,
+          "omega_lambda0": 0.73,
+          "h": 0.7
+        },
+        "growth_normalized_at_z0": true,
+        "variance_growth_power": 2,
+        "variance_mass_unit": "Msun",
+        "variance_power_units": {
+          "wavenumber": "1/Mpc",
+          "power": "Mpc^3",
+          "density": "Msun/Mpc^3"
+        },
+        "physical_to_filter_mass": "M_filter[Msun/h] = h * M_physical[Msun]",
+        "accretion_mass_redshift_mapping": "per-redshift-virial-mass-grid",
+        "population_weight_contract": "nonnegative-corrected-counts",
+        "unit_backend": "native-units:1.0",
+        "canonical_units": {
+          "mass": "Msun",
+          "length": "Mpc",
+          "density": "Msun/Mpc^3"
+        },
+        "tuple_units": {
+          "mass": "Msun",
+          "length": "kpc",
+          "density": "Msun/pc^3"
+        },
+        "tuple_weight_excludes_survival": true,
+        "calculation_parameters": {
+          "M0": 1000000000000.0,
+          "redshift": 0.0,
+          "dz": 0.25,
+          "zmax": 1.0,
+          "N_ma": 16,
+          "sigmalogc": 0.128,
+          "N_herm": 3,
+          "logmamin": 7.0,
+          "logmamax": 10.0,
+          "sigmafac": 0,
+          "N_hermNa": 4,
+          "profile_change": true
+        },
+        "survival": "strict c_t > 0.77",
+        "profile": "tidally-evolved NFW",
+        "concentration": "Ludlow-2016:100-mass-nodes:500-tophat-nodes",
+        "sashimi_variant": "sashimi-w",
+        "calculation_specification": "sashimi-w:wdm:2026-09-10:v1",
+        "provenance_schema": "itamae:calculation:v2",
+        "itamae_version": "0.2.0rc1",
+        "itamae_source_revision": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+        "sashimi_version": "0.1.0a1",
+        "sashimi_source_revision": "d4edc8feeb075d6b69e585d4f58c7e347af648a6",
+        "canonical_unit_schema": "1.0",
+        "variance_identifier": "integrated-variance:v3;power=(transfer-modified:base=(tabulated-power:v2;interpolation=linear;extrapolate=False;sha256=c143da88d0d748c1652909b048b32a7d42a972bbe92d0b277c012507ead3e051;source=(sashimi-w:WMAP7-camb:z=0;source-k-unit=h/Mpc;source-power-unit=(Mpc/h)^3;unit-conversion=canonical-Mpc));ratio=(sashimi-w:wdm-power-ratio:m_wdm_keV=2;alpha_Mpc=0.032027002715198302;nu=1.1200000000000001;convention=standard-t2-q10;formula-role=viel-transfer-amplitude-squared;q=10;half-mode=T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25;sigma8-normalization=1.8911785474776828));window=(window:sharp-k:v1);rho_mean=36722018530.027351;k=[6.9999999999999995e-13,6.99998922e+17];n_k=4097;filter_scale=6.0449698275617605;sharp-k=fixed-log-cells-and-spectrum-knots-gauss8;breakpoints-sha256=8d546f4dcfec7ed81264ca60077299726ba7b94419c7afe9f26aec415ba29aca;derivative_step=0.0001;growth=native-flatlcdm:Om=0.27:h=0.7;calculation=cpt-normalized-v1",
+        "power_identifier": "transfer-modified:base=(tabulated-power:v2;interpolation=linear;extrapolate=False;sha256=c143da88d0d748c1652909b048b32a7d42a972bbe92d0b277c012507ead3e051;source=(sashimi-w:WMAP7-camb:z=0;source-k-unit=h/Mpc;source-power-unit=(Mpc/h)^3;unit-conversion=canonical-Mpc));ratio=(sashimi-w:wdm-power-ratio:m_wdm_keV=2;alpha_Mpc=0.032027002715198302;nu=1.1200000000000001;convention=standard-t2-q10;formula-role=viel-transfer-amplitude-squared;q=10;half-mode=T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25;sigma8-normalization=1.8911785474776828)",
+        "solver_identifier": "itamae:odeint:scipy-default-tolerances:100-output-points",
+        "catalog_schema_version": "1.0",
+        "source_identifier": "sashimi-w:itamae-migration"
+      },
+      "warnings": [],
+      "count": 1.2421418704021492,
+      "bound_mass_fraction": 0.0022900792600091184,
+      "arrays": {
+        "mass": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64"
+        },
+        "k_h_per_Mpc": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64"
+        },
+        "redshift": {
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "power_ratio": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64"
+        },
+        "sigma": {
+          "shape": [
+            4,
+            81
+          ],
+          "dtype": "float64"
+        },
+        "derivative": {
+          "shape": [
+            4,
+            81
+          ],
+          "dtype": "float64"
+        },
+        "concentration": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64"
+        },
+        "half_mode": {
+          "shape": [],
+          "dtype": "float64"
+        },
+        "weight_final": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_m200_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_z_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_r_s_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_rho_s_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_m_bound": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_r_s": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_rho_s": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_c_t": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_survive": {
+          "shape": [
+            192
+          ],
+          "dtype": "bool"
+        },
+        "weight_weight_base": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "weight_weight_concentration": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "weight_weight_survival": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "mass_wdm_keV": 5.0,
+      "file": "q10-5keV.npz",
+      "sha256": "d9fc02612a8168d3746684dc55cacdf0943b5a32025a9dfc43827157fb511f28",
+      "metadata": {
+        "schema_version": "1.0",
+        "model_identifier": "sashimi-w:wdm:m_wdm_keV=5:power=standard-t2-q10:v1",
+        "backend_identifier": "array=numpy;cosmology=native-flatlcdm:Om=0.27:h=0.7;units=native-units:1.0",
+        "mass_wdm_keV": 5.0,
+        "wdm_power_convention": "standard-t2-q10",
+        "wdm_power_formula_role": "viel-transfer-amplitude-squared",
+        "wdm_power_q": 10.0,
+        "wdm_transfer_nu": 1.12,
+        "half_mode_definition": "T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25",
+        "half_mode_power_ratio": 0.25,
+        "half_mode_wavenumber_h_per_mpc": 55.6182564488748,
+        "cosmology_parameters": {
+          "omega_m0": 0.27,
+          "omega_lambda0": 0.73,
+          "h": 0.7
+        },
+        "growth_normalized_at_z0": true,
+        "variance_growth_power": 2,
+        "variance_mass_unit": "Msun",
+        "variance_power_units": {
+          "wavenumber": "1/Mpc",
+          "power": "Mpc^3",
+          "density": "Msun/Mpc^3"
+        },
+        "physical_to_filter_mass": "M_filter[Msun/h] = h * M_physical[Msun]",
+        "accretion_mass_redshift_mapping": "per-redshift-virial-mass-grid",
+        "population_weight_contract": "nonnegative-corrected-counts",
+        "unit_backend": "native-units:1.0",
+        "canonical_units": {
+          "mass": "Msun",
+          "length": "Mpc",
+          "density": "Msun/Mpc^3"
+        },
+        "tuple_units": {
+          "mass": "Msun",
+          "length": "kpc",
+          "density": "Msun/pc^3"
+        },
+        "tuple_weight_excludes_survival": true,
+        "calculation_parameters": {
+          "M0": 1000000000000.0,
+          "redshift": 0.0,
+          "dz": 0.25,
+          "zmax": 1.0,
+          "N_ma": 16,
+          "sigmalogc": 0.128,
+          "N_herm": 3,
+          "logmamin": 7.0,
+          "logmamax": 10.0,
+          "sigmafac": 0,
+          "N_hermNa": 4,
+          "profile_change": true
+        },
+        "survival": "strict c_t > 0.77",
+        "profile": "tidally-evolved NFW",
+        "concentration": "Ludlow-2016:100-mass-nodes:500-tophat-nodes",
+        "sashimi_variant": "sashimi-w",
+        "calculation_specification": "sashimi-w:wdm:2026-09-10:v1",
+        "provenance_schema": "itamae:calculation:v2",
+        "itamae_version": "0.2.0rc1",
+        "itamae_source_revision": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+        "sashimi_version": "0.1.0a1",
+        "sashimi_source_revision": "d4edc8feeb075d6b69e585d4f58c7e347af648a6",
+        "canonical_unit_schema": "1.0",
+        "variance_identifier": "integrated-variance:v3;power=(transfer-modified:base=(tabulated-power:v2;interpolation=linear;extrapolate=False;sha256=c143da88d0d748c1652909b048b32a7d42a972bbe92d0b277c012507ead3e051;source=(sashimi-w:WMAP7-camb:z=0;source-k-unit=h/Mpc;source-power-unit=(Mpc/h)^3;unit-conversion=canonical-Mpc));ratio=(sashimi-w:wdm-power-ratio:m_wdm_keV=5;alpha_Mpc=0.01158251541784929;nu=1.1200000000000001;convention=standard-t2-q10;formula-role=viel-transfer-amplitude-squared;q=10;half-mode=T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25;sigma8-normalization=1.891444341316308));window=(window:sharp-k:v1);rho_mean=36722018530.027351;k=[6.9999999999999995e-13,6.99998922e+17];n_k=4097;filter_scale=6.0449698275617605;sharp-k=fixed-log-cells-and-spectrum-knots-gauss8;breakpoints-sha256=8d546f4dcfec7ed81264ca60077299726ba7b94419c7afe9f26aec415ba29aca;derivative_step=0.0001;growth=native-flatlcdm:Om=0.27:h=0.7;calculation=cpt-normalized-v1",
+        "power_identifier": "transfer-modified:base=(tabulated-power:v2;interpolation=linear;extrapolate=False;sha256=c143da88d0d748c1652909b048b32a7d42a972bbe92d0b277c012507ead3e051;source=(sashimi-w:WMAP7-camb:z=0;source-k-unit=h/Mpc;source-power-unit=(Mpc/h)^3;unit-conversion=canonical-Mpc));ratio=(sashimi-w:wdm-power-ratio:m_wdm_keV=5;alpha_Mpc=0.01158251541784929;nu=1.1200000000000001;convention=standard-t2-q10;formula-role=viel-transfer-amplitude-squared;q=10;half-mode=T_WDM/T_CDM=0.5;P_WDM/P_CDM=0.25;sigma8-normalization=1.891444341316308)",
+        "solver_identifier": "itamae:odeint:scipy-default-tolerances:100-output-points",
+        "catalog_schema_version": "1.0",
+        "source_identifier": "sashimi-w:itamae-migration"
+      },
+      "warnings": [],
+      "count": 24.800867950552988,
+      "bound_mass_fraction": 0.011902715334411987,
+      "arrays": {
+        "mass": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64"
+        },
+        "k_h_per_Mpc": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64"
+        },
+        "redshift": {
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "power_ratio": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64"
+        },
+        "sigma": {
+          "shape": [
+            4,
+            81
+          ],
+          "dtype": "float64"
+        },
+        "derivative": {
+          "shape": [
+            4,
+            81
+          ],
+          "dtype": "float64"
+        },
+        "concentration": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64"
+        },
+        "half_mode": {
+          "shape": [],
+          "dtype": "float64"
+        },
+        "weight_final": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_m200_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_z_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_r_s_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_rho_s_acc": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_m_bound": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_r_s": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_rho_s": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_c_t": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "column_survive": {
+          "shape": [
+            192
+          ],
+          "dtype": "bool"
+        },
+        "weight_weight_base": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "weight_weight_concentration": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        },
+        "weight_weight_survival": {
+          "shape": [
+            192
+          ],
+          "dtype": "float64"
+        }
+      }
+    }
+  ]
+}

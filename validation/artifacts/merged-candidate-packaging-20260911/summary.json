@@ -1,0 +1,1645 @@
+{
+  "schema": "sashimi-family:artifact-candidate:v1",
+  "status": "candidate artifacts verified; F scientific decision and recorded-family verification pending",
+  "parent_base": "97101de1c1473af2ad813d0d7914afc364a4e863",
+  "canonical_manifest_updated": false,
+  "source_revisions": {
+    "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+    "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+    "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+    "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+    "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+  },
+  "tests": {
+    "3.11": [
+      {
+        "package": "itamae",
+        "tests": 309,
+        "installation": {
+          "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/itamae/__init__.py",
+          "version": "0.2.0rc1",
+          "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "numpy": "2.4.6",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "scipy": "1.17.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-c",
+        "tests": 95,
+        "installation": {
+          "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_c.py",
+          "version": "2.0.0rc1",
+          "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_c-2.0.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "numpy": "2.4.6",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "scipy": "1.17.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-si",
+        "tests": 49,
+        "installation": {
+          "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_si.py",
+          "version": "0.2.0rc1",
+          "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_si-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "numpy": "2.4.6",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "scipy": "1.17.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-w",
+        "tests": 87,
+        "installation": {
+          "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_w.py",
+          "version": "0.2.0rc1",
+          "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_w-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "numpy": "2.4.6",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "scipy": "1.17.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-f",
+        "tests": 94,
+        "installation": {
+          "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_f.py",
+          "version": "0.2.0rc1",
+          "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "numpy": "2.4.6",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "scipy": "1.17.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+        "result": "passed"
+      }
+    ],
+    "3.12": [
+      {
+        "package": "itamae",
+        "tests": 309,
+        "installation": {
+          "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/itamae/__init__.py",
+          "version": "0.2.0rc1",
+          "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-c",
+        "tests": 95,
+        "installation": {
+          "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_c.py",
+          "version": "2.0.0rc1",
+          "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_c-2.0.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-si",
+        "tests": 49,
+        "installation": {
+          "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_si.py",
+          "version": "0.2.0rc1",
+          "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_si-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-w",
+        "tests": 87,
+        "installation": {
+          "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_w.py",
+          "version": "0.2.0rc1",
+          "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_w-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-f",
+        "tests": 94,
+        "installation": {
+          "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_f.py",
+          "version": "0.2.0rc1",
+          "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+        "result": "passed"
+      }
+    ],
+    "3.13": [
+      {
+        "package": "itamae",
+        "tests": 309,
+        "installation": {
+          "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/itamae/__init__.py",
+          "version": "0.2.0rc1",
+          "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-c",
+        "tests": 95,
+        "installation": {
+          "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_c.py",
+          "version": "2.0.0rc1",
+          "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_c-2.0.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-si",
+        "tests": 49,
+        "installation": {
+          "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_si.py",
+          "version": "0.2.0rc1",
+          "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_si-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-w",
+        "tests": 87,
+        "installation": {
+          "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_w.py",
+          "version": "0.2.0rc1",
+          "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_w-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+        "result": "passed"
+      },
+      {
+        "package": "sashimi-f",
+        "tests": 94,
+        "installation": {
+          "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_f.py",
+          "version": "0.2.0rc1",
+          "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "cycler": "0.12.1",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "pyparsing": "3.3.2",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "contourpy": "1.3.3",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "setuptools": "84.0.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "matplotlib": "3.11.1",
+            "hypothesis": "6.168.0",
+            "pillow": "12.3.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "kiwisolver": "1.5.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1",
+            "fonttools": "4.65.0"
+          }
+        },
+        "sdist_sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+        "result": "passed"
+      }
+    ]
+  },
+  "local_physical_smoke": {
+    "3.11": {
+      "original": {
+        "result": "passed",
+        "report_sha256": "6c33ce76324099814a1aa0bca12ed81a83b0e225be1b2b3334c8556e5c87d24a",
+        "installations": {
+          "itamae": {
+            "version": "0.2.0rc1",
+            "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/itamae/__init__.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-c": {
+            "version": "2.0.0rc1",
+            "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_c.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_c-2.0.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-si": {
+            "version": "0.2.0rc1",
+            "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_si.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_si-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-w": {
+            "version": "0.2.0rc1",
+            "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_w.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_w-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-f": {
+            "version": "0.2.0rc1",
+            "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.11/lib/python3.11/site-packages/sashimi_f.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          }
+        },
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "catalogs": [
+          "c",
+          "si-cdm_reference",
+          "si-sidm",
+          "w",
+          "f"
+        ]
+      },
+      "rebuilt": {
+        "result": "passed",
+        "report_sha256": "dc785d0c19c40476e08edda31e4c5c65bb5d09acb71c22edd1dc183d04941f23",
+        "installations": {
+          "itamae": {
+            "version": "0.2.0rc1",
+            "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.11/lib/python3.11/site-packages/itamae/__init__.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-core-20260911/rebuilt/itamae/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-c": {
+            "version": "2.0.0rc1",
+            "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.11/lib/python3.11/site-packages/sashimi_c.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-c/sashimi_c-2.0.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-si": {
+            "version": "0.2.0rc1",
+            "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.11/lib/python3.11/site-packages/sashimi_si.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-si/sashimi_si-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-w": {
+            "version": "0.2.0rc1",
+            "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.11/lib/python3.11/site-packages/sashimi_w.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-w/sashimi_w-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-f": {
+            "version": "0.2.0rc1",
+            "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.11/lib/python3.11/site-packages/sashimi_f.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt/sashimi-f/sashimi_f-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          }
+        },
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "catalogs": [
+          "c",
+          "si-cdm_reference",
+          "si-sidm",
+          "w",
+          "f"
+        ]
+      }
+    },
+    "3.12": {
+      "original": {
+        "result": "passed",
+        "report_sha256": "3d42d02a058701d57c7aa50e60cb461f6dc4a8e1e31fdcdb66cf48f5b079d086",
+        "installations": {
+          "itamae": {
+            "version": "0.2.0rc1",
+            "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/itamae/__init__.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-c": {
+            "version": "2.0.0rc1",
+            "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_c.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_c-2.0.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-si": {
+            "version": "0.2.0rc1",
+            "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_si.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_si-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-w": {
+            "version": "0.2.0rc1",
+            "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_w.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_w-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-f": {
+            "version": "0.2.0rc1",
+            "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.12/lib/python3.12/site-packages/sashimi_f.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          }
+        },
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "catalogs": [
+          "c",
+          "si-cdm_reference",
+          "si-sidm",
+          "w",
+          "f"
+        ]
+      },
+      "rebuilt": {
+        "result": "passed",
+        "report_sha256": "421893124c9d701601bab942f0f8e408c68ea43fef3a5da9e5959fd46db0c103",
+        "installations": {
+          "itamae": {
+            "version": "0.2.0rc1",
+            "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.12/lib/python3.12/site-packages/itamae/__init__.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-core-20260911/rebuilt/itamae/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-c": {
+            "version": "2.0.0rc1",
+            "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.12/lib/python3.12/site-packages/sashimi_c.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-c/sashimi_c-2.0.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-si": {
+            "version": "0.2.0rc1",
+            "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.12/lib/python3.12/site-packages/sashimi_si.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-si/sashimi_si-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-w": {
+            "version": "0.2.0rc1",
+            "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.12/lib/python3.12/site-packages/sashimi_w.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-w/sashimi_w-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-f": {
+            "version": "0.2.0rc1",
+            "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.12/lib/python3.12/site-packages/sashimi_f.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt/sashimi-f/sashimi_f-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          }
+        },
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "catalogs": [
+          "c",
+          "si-cdm_reference",
+          "si-sidm",
+          "w",
+          "f"
+        ]
+      }
+    },
+    "3.13": {
+      "original": {
+        "result": "passed",
+        "report_sha256": "3a8a8f3a4b48e59ca0bc279558085e47b8b88cd2ca4dd23771538a57fbb84a3c",
+        "installations": {
+          "itamae": {
+            "version": "0.2.0rc1",
+            "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/itamae/__init__.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-c": {
+            "version": "2.0.0rc1",
+            "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_c.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_c-2.0.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-si": {
+            "version": "0.2.0rc1",
+            "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_si.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_si-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-w": {
+            "version": "0.2.0rc1",
+            "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_w.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_w-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-f": {
+            "version": "0.2.0rc1",
+            "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/family-3.13/lib/python3.13/site-packages/sashimi_f.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          }
+        },
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "catalogs": [
+          "c",
+          "si-cdm_reference",
+          "si-sidm",
+          "w",
+          "f"
+        ]
+      },
+      "rebuilt": {
+        "result": "passed",
+        "report_sha256": "089edcec8ba6f6336eb1c3b102da76f3ee3ae6dbd6202a9487ff5097f29b0096",
+        "installations": {
+          "itamae": {
+            "version": "0.2.0rc1",
+            "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.13/lib/python3.13/site-packages/itamae/__init__.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-core-20260911/rebuilt/itamae/sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-c": {
+            "version": "2.0.0rc1",
+            "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.13/lib/python3.13/site-packages/sashimi_c.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-c/sashimi_c-2.0.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-si": {
+            "version": "0.2.0rc1",
+            "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.13/lib/python3.13/site-packages/sashimi_si.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-si/sashimi_si-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-w": {
+            "version": "0.2.0rc1",
+            "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.13/lib/python3.13/site-packages/sashimi_w.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-20260911/rebuilt/sashimi-w/sashimi_w-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          },
+          "sashimi-f": {
+            "version": "0.2.0rc1",
+            "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+            "import_path": "/tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt-3.13/lib/python3.13/site-packages/sashimi_f.py",
+            "wheel_install": {
+              "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-merged-family-20260911/rebuilt/sashimi-f/sashimi_f-0.2.0rc1-py3-none-any.whl",
+              "archive_info": {}
+            }
+          }
+        },
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "catalogs": [
+          "c",
+          "si-cdm_reference",
+          "si-sidm",
+          "w",
+          "f"
+        ]
+      }
+    }
+  },
+  "private_ci": {
+    "3.11": {
+      "effective_manifest": {
+        "family_base_ref": "97101de1c1473af2ad813d0d7914afc364a4e863",
+        "validation_mode": "candidate",
+        "candidate_package": "sashimi-f",
+        "workflow_source_ref": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+        "overrides": {
+          "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+        },
+        "effective_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+        }
+      },
+      "smoke": {
+        "original-smoke": {
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "result": "passed",
+          "report_sha256": "b9d6af8a8a379b257ec9eff1d160a786d62465cb477c5fd6eba037b4ed7746df",
+          "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+          "source_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+          }
+        },
+        "rebuilt-smoke": {
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "result": "passed",
+          "report_sha256": "bb01c529be27b0295024f732e778cabc0861a06dba38491d4b3712216b60563c",
+          "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+          "source_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+          }
+        }
+      },
+      "rebuilds": {
+        "itamae": {
+          "package": "itamae",
+          "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "unrelated_parent_revision": "2be8b74e67010b76e204079b4812a241117a4799",
+          "revision_environment_injected": false,
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "archive_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+          "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+          "result": "source identity preserved"
+        },
+        "sashimi-c": {
+          "package": "sashimi-c",
+          "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "unrelated_parent_revision": "2be8b74e67010b76e204079b4812a241117a4799",
+          "revision_environment_injected": false,
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "archive_sha256": "42aca303ab2fd7325b5751c7c7ac189939df5d9020c366a655e24512ef3e1a10",
+          "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+          "wheel_sha256": "d6799a8d4e5db2c39b227dbf404d24800e552bbb1c303ea100f97e342714087f",
+          "result": "source identity preserved"
+        },
+        "sashimi-si": {
+          "package": "sashimi-si",
+          "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "unrelated_parent_revision": "ca5c7e32c34e6d6f7c596684b86b35a8118da57c",
+          "revision_environment_injected": false,
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "archive_sha256": "8e69242d228765da83a17e613d2647f1ccdca86ad55342127e525b2d6502d141",
+          "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "6e74100118e766d4076594f86d17063a173405904ef01ff7df5571dca70a3ba9",
+          "result": "source identity preserved"
+        },
+        "sashimi-w": {
+          "package": "sashimi-w",
+          "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "unrelated_parent_revision": "ca5c7e32c34e6d6f7c596684b86b35a8118da57c",
+          "revision_environment_injected": false,
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "archive_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+          "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+          "result": "source identity preserved"
+        },
+        "sashimi-f": {
+          "package": "sashimi-f",
+          "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "unrelated_parent_revision": "a0294b2927be43586f0488a45c4b162956604c7b",
+          "revision_environment_injected": false,
+          "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+          "archive_sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+          "wheel": "sashimi_f-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+          "result": "source identity preserved"
+        }
+      }
+    },
+    "3.12": {
+      "effective_manifest": {
+        "family_base_ref": "97101de1c1473af2ad813d0d7914afc364a4e863",
+        "validation_mode": "candidate",
+        "candidate_package": "sashimi-f",
+        "workflow_source_ref": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+        "overrides": {
+          "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+        },
+        "effective_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+        }
+      },
+      "smoke": {
+        "original-smoke": {
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "result": "passed",
+          "report_sha256": "d503e1cf89c6cd7c78ea77c5c6bd4af5f77195f671b0e84e3c34a75c32e32d7d",
+          "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+          "source_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+          }
+        },
+        "rebuilt-smoke": {
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "result": "passed",
+          "report_sha256": "278510f4aaf37a318e2a4521a515a769d378e58babc99a3054735bcc8df98f73",
+          "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+          "source_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+          }
+        }
+      },
+      "rebuilds": {
+        "itamae": {
+          "package": "itamae",
+          "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "unrelated_parent_revision": "62a260058ec47f52e2d67ccac5fa0d5e53b4e447",
+          "revision_environment_injected": false,
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "archive_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+          "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+          "result": "source identity preserved"
+        },
+        "sashimi-c": {
+          "package": "sashimi-c",
+          "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "unrelated_parent_revision": "d6c1d4967da6a433deb8e116fa77fbf4517269f2",
+          "revision_environment_injected": false,
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "archive_sha256": "0a650afc71c0f8953cc0f71cf854871dfd80d93e1a6c05993029ea8da69cb023",
+          "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+          "wheel_sha256": "f415f604f3bb376fbed6bb3be9cabc41601e15785a4ae04a5bdbcefa537a5fdf",
+          "result": "source identity preserved"
+        },
+        "sashimi-si": {
+          "package": "sashimi-si",
+          "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "unrelated_parent_revision": "d6c1d4967da6a433deb8e116fa77fbf4517269f2",
+          "revision_environment_injected": false,
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "archive_sha256": "36632ea66b37fdcf70c7a0d6f5b7316004cb5671a9386ce01aac0a0451240db7",
+          "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "c89f41048d62fc3fcf9ad11c5818e75f8cc563a8775e6da1e5341341f3974ea0",
+          "result": "source identity preserved"
+        },
+        "sashimi-w": {
+          "package": "sashimi-w",
+          "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "unrelated_parent_revision": "026f56c56b6a06ef919ae56f89d140c823dcbab8",
+          "revision_environment_injected": false,
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "archive_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+          "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+          "result": "source identity preserved"
+        },
+        "sashimi-f": {
+          "package": "sashimi-f",
+          "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "unrelated_parent_revision": "3bdf5533d3d7026df232ea8d1630dea79925010c",
+          "revision_environment_injected": false,
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "archive_sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+          "wheel": "sashimi_f-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+          "result": "source identity preserved"
+        }
+      }
+    },
+    "3.13": {
+      "effective_manifest": {
+        "family_base_ref": "97101de1c1473af2ad813d0d7914afc364a4e863",
+        "validation_mode": "candidate",
+        "candidate_package": "sashimi-f",
+        "workflow_source_ref": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+        "overrides": {
+          "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+        },
+        "effective_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+        }
+      },
+      "smoke": {
+        "original-smoke": {
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "result": "passed",
+          "report_sha256": "7f1f60d00c6b9efafdf36aadb7af392b4e8b0b8ee5c438c51ef846143447ce2c",
+          "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+          "source_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+          }
+        },
+        "rebuilt-smoke": {
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "result": "passed",
+          "report_sha256": "5747d83f86cd4a14ee736361258cdf551e688c02551d99d16820ab2df35e9068",
+          "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+          "source_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "3a34188347ccc6e795e6fb640f9db1870ff4383b"
+          }
+        }
+      },
+      "rebuilds": {
+        "itamae": {
+          "package": "itamae",
+          "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "unrelated_parent_revision": "834b803c9fb193aac636921350b754ae60ae6d7f",
+          "revision_environment_injected": false,
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "archive_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+          "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+          "result": "source identity preserved"
+        },
+        "sashimi-c": {
+          "package": "sashimi-c",
+          "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "unrelated_parent_revision": "2be8b74e67010b76e204079b4812a241117a4799",
+          "revision_environment_injected": false,
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "archive_sha256": "9a809fbf7a2d5dd1c859f1c446697fe204f717ad0b348305b34af22152c73bb6",
+          "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+          "wheel_sha256": "f6e2df5296f83a31dc7aa7f12dfeac4a6d325ce0702c27dae4dea648f0ad2311",
+          "result": "source identity preserved"
+        },
+        "sashimi-si": {
+          "package": "sashimi-si",
+          "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "unrelated_parent_revision": "2be8b74e67010b76e204079b4812a241117a4799",
+          "revision_environment_injected": false,
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "archive_sha256": "9076a6e8a69df7291fb194a6d3b87c34655bca6decc3ef69ae94fd9544e14632",
+          "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "cbfa63629419aec8dc93359ad7bf22680d96bb9de4ac43b41acda89fc06691c0",
+          "result": "source identity preserved"
+        },
+        "sashimi-w": {
+          "package": "sashimi-w",
+          "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "unrelated_parent_revision": "ca5c7e32c34e6d6f7c596684b86b35a8118da57c",
+          "revision_environment_injected": false,
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "archive_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+          "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+          "result": "source identity preserved"
+        },
+        "sashimi-f": {
+          "package": "sashimi-f",
+          "source_revision": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+          "unrelated_parent_revision": "a0294b2927be43586f0488a45c4b162956604c7b",
+          "revision_environment_injected": false,
+          "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]",
+          "archive_sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+          "wheel": "sashimi_f-0.2.0rc1-py3-none-any.whl",
+          "wheel_sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+          "result": "source identity preserved"
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "sashimi_c-2.0.0rc1-py3-none-any.whl": {
+      "sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+      "bytes": 103169
+    },
+    "sashimi_c-2.0.0rc1.tar.gz": {
+      "sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+      "bytes": 255572
+    },
+    "sashimi_f-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721",
+      "bytes": 70654
+    },
+    "sashimi_f-0.2.0rc1.tar.gz": {
+      "sha256": "fca4830c8d20522225321c2a18576f32f6ee35596d552e0adcd5a78eb8f80383",
+      "bytes": 1064897
+    },
+    "sashimi_itamae-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+      "bytes": 63200
+    },
+    "sashimi_itamae-0.2.0rc1.tar.gz": {
+      "sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+      "bytes": 187556
+    },
+    "sashimi_si-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+      "bytes": 29271
+    },
+    "sashimi_si-0.2.0rc1.tar.gz": {
+      "sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+      "bytes": 386359
+    },
+    "sashimi_w-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+      "bytes": 54517
+    },
+    "sashimi_w-0.2.0rc1.tar.gz": {
+      "sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+      "bytes": 336236
+    }
+  },
+  "changes_from_previous_candidate": {
+    "itamae": {
+      "runtime_identical_except_source_descriptor": true,
+      "previous_wheel_sha256": "a456311ff8d36464a98ceb24284af4dccae9933f15708bc882030605bc93301e",
+      "current_wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c"
+    },
+    "sashimi-f": {
+      "runtime_identical_except_source_descriptor": true,
+      "previous_wheel_sha256": "b91bab2085102d63922b3cfaaf1e73068e90edd4e6379bb363257e49831a99df",
+      "current_wheel_sha256": "1e57c5be57c84bedea2e266de279eb05bcff59fa3d08c7a1eeaf7a0adbd32721"
+    }
+  }
+}

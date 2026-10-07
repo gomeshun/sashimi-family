@@ -1,0 +1,44 @@
+{
+  "q5": {
+    "all_arrays_bitwise_equal": true,
+    "arrays": {
+      "tuple_0": true,
+      "tuple_1": true,
+      "tuple_2": true,
+      "tuple_3": true,
+      "tuple_4": true,
+      "tuple_5": true,
+      "tuple_6": true,
+      "tuple_7": true,
+      "tuple_8": true,
+      "tuple_9": true,
+      "probe_growth": true,
+      "probe_variance": true,
+      "probe_variance_derivative": true
+    },
+    "before_seconds": 30.559103356092237,
+    "after_seconds": 6.621010124916211,
+    "single_run_speedup": 4.615474494003883
+  },
+  "q10": {
+    "all_arrays_bitwise_equal": true,
+    "arrays": {
+      "tuple_0": true,
+      "tuple_1": true,
+      "tuple_2": true,
+      "tuple_3": true,
+      "tuple_4": true,
+      "tuple_5": true,
+      "tuple_6": true,
+      "tuple_7": true,
+      "tuple_8": true,
+      "tuple_9": true,
+      "probe_growth": true,
+      "probe_variance": true,
+      "probe_variance_derivative": true
+    },
+    "before_seconds": 47.55373306607362,
+    "after_seconds": 10.190931851044297,
+    "single_run_speedup": 4.666279174578195
+  }
+}

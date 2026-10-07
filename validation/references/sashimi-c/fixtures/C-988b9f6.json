@@ -1,0 +1,197 @@
+{
+  "schema": "sashimi-family:product-comparison:v1",
+  "role": "C",
+  "source_revision": "988b9f69f522ded9a644bd20a0746461e5638b27",
+  "itamae_source_revision": "970cda1bdf6f556993f07f4c1b6bcac02323dd9d",
+  "calculation": {
+    "role": "C",
+    "constructor": {},
+    "method": "subhalo_properties_calc",
+    "repository": "gomeshun/sashimi-c",
+    "source_revision": "988b9f69f522ded9a644bd20a0746461e5638b27",
+    "module": "sashimi_c_itamae",
+    "class": "subhalo_properties",
+    "parameters": {
+      "M0": 1000000000000.0,
+      "N_herm": 5,
+      "N_hermNa": 16,
+      "N_ma": 32,
+      "Na_model": 3,
+      "ct_th": 0.0,
+      "dz": 0.25,
+      "logmamax": 10.0,
+      "logmamin": 5.0,
+      "method": "pert2_shanks",
+      "profile_change": true,
+      "redshift": 0.0,
+      "sigmalogc": 0.128,
+      "zmax": 2.0
+    },
+    "input_files": [],
+    "probes": [
+      {
+        "name": "growth",
+        "method": "growthD",
+        "args": [
+          [
+            0.0,
+            0.5,
+            1.0,
+            2.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "name": "growth_derivative",
+        "method": "dDdz",
+        "args": [
+          [
+            0.0,
+            0.5,
+            1.0,
+            2.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "name": "variance",
+        "method": "sigmaMz",
+        "args": [
+          [
+            10000000.0,
+            100000000.0,
+            1000000000.0
+          ],
+          1.0
+        ]
+      },
+      {
+        "name": "variance_derivative",
+        "method": "dsdm",
+        "args": [
+          [
+            10000000.0,
+            100000000.0,
+            1000000000.0
+          ],
+          1.0
+        ]
+      }
+    ],
+    "itamae_source_revision": "970cda1bdf6f556993f07f4c1b6bcac02323dd9d"
+  },
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.1.0a4"
+  },
+  "worker_sha256": "75acac1307200f9a90c308891c016fad699ce894038175437dc9b9713efea383",
+  "wall_seconds": 0.44736820308025926,
+  "warnings": [],
+  "source_checkouts_clean": true,
+  "independent_process": true,
+  "arrays": {
+    "tuple_0": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_1": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_2": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_3": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_4": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_5": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_6": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_7": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_8": {
+      "shape": [
+        1280
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "tuple_9": {
+      "shape": [
+        1280
+      ],
+      "dtype": "bool",
+      "nonfinite": 0
+    },
+    "probe_growth": {
+      "shape": [
+        5
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "probe_growth_derivative": {
+      "shape": [
+        5
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "probe_variance": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "probe_variance_derivative": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    }
+  },
+  "artifact_sha256": "3961f6ea680b5ab3e8c1c53416a2a8d5f11ea282fe31039be6d0e18f69733366"
+}

@@ -1,0 +1,11 @@
+{
+  "package": "itamae",
+  "source_revision": "458b85d6679ab2d2ecab2d31dbe945255baf1811",
+  "unrelated_parent_revision": "0ae8be04633ce4237904d0ddfc47f53651967fcd",
+  "revision_environment_injected": false,
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "archive_sha256": "c9df389b4458b9c2180ab770f601acd11b9f5bc48f74086a1bb8d2b22c35460f",
+  "wheel": "sashimi_itamae-0.1.0a4-py3-none-any.whl",
+  "wheel_sha256": "c2fddb00ac4caee43eb3ecedf7841075cb510a761f2b232c154119efe30e8fe3",
+  "result": "source identity preserved"
+}

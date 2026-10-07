@@ -1,0 +1,185 @@
+[
+  {
+    "package": "itamae",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true,
+    "payload_files": 45,
+    "metadata": {
+      "Name": [
+        "sashimi-itamae"
+      ],
+      "Version": [
+        "0.2.0rc1"
+      ],
+      "Requires-Python": [
+        ">=3.11"
+      ],
+      "Requires-Dist": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "astropy>=6; extra == 'astropy'",
+        "colossus>=1.3; extra == 'colossus'",
+        "astropy>=6; extra == 'full'",
+        "colossus>=1.3; extra == 'full'"
+      ],
+      "License-Expression": [
+        "MIT"
+      ],
+      "License-File": [
+        "LICENSE"
+      ]
+    },
+    "source_wheel_sha256": "a456311ff8d36464a98ceb24284af4dccae9933f15708bc882030605bc93301e",
+    "rebuilt_wheel_sha256": "a456311ff8d36464a98ceb24284af4dccae9933f15708bc882030605bc93301e"
+  },
+  {
+    "package": "sashimi-w",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true,
+    "payload_files": 8,
+    "metadata": {
+      "Name": [
+        "sashimi-w"
+      ],
+      "Version": [
+        "0.2.0rc1"
+      ],
+      "Requires-Python": [
+        ">=3.11"
+      ],
+      "Requires-Dist": [
+        "numpy>=1.26",
+        "sashimi-itamae<0.3,>=0.2.0rc1",
+        "scipy>=1.11",
+        "astropy>=6; extra == 'astropy'",
+        "ipykernel>=6; extra == 'demo'",
+        "matplotlib>=3.8; extra == 'demo'",
+        "nbconvert>=7; extra == 'demo'",
+        "astropy>=6; extra == 'test'",
+        "hatchling>=1.27; extra == 'test'",
+        "pytest>=8; extra == 'test'"
+      ],
+      "License-Expression": [
+        "MIT"
+      ],
+      "License-File": [
+        "LICENSE"
+      ]
+    },
+    "source_wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+    "rebuilt_wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c"
+  },
+  {
+    "package": "sashimi-si",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true,
+    "payload_files": 8,
+    "metadata": {
+      "Name": [
+        "sashimi-si"
+      ],
+      "Version": [
+        "0.2.0rc1"
+      ],
+      "Requires-Python": [
+        ">=3.11"
+      ],
+      "Requires-Dist": [
+        "sashimi-itamae<0.3,>=0.2.0rc1",
+        "numexpr>=2.8",
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "tqdm>=4.66",
+        "ipykernel>=6; extra == \"demo\"",
+        "matplotlib>=3.8; extra == \"demo\"",
+        "nbconvert>=7; extra == \"demo\"",
+        "pytest>=8; extra == \"test\"",
+        "setuptools>=77; extra == \"test\""
+      ],
+      "License-Expression": [
+        "MIT"
+      ],
+      "License-File": [
+        "LICENSE"
+      ]
+    },
+    "source_wheel_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+    "rebuilt_wheel_sha256": "d8e85c6dc2f5128e66f6ed942dc7d36894916f4887ca3df3e06f1cc55dc8d766"
+  },
+  {
+    "package": "sashimi-c",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true,
+    "payload_files": 15,
+    "metadata": {
+      "Name": [
+        "sashimi-c"
+      ],
+      "Version": [
+        "2.0.0rc1"
+      ],
+      "Requires-Python": [
+        ">=3.11"
+      ],
+      "Requires-Dist": [
+        "sashimi-itamae<0.3,>=0.2.0rc1",
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "tqdm>=4.66",
+        "ipykernel>=6; extra == \"demo\"",
+        "matplotlib>=3.8; extra == \"demo\"",
+        "nbconvert>=7; extra == \"demo\"",
+        "pytest>=8; extra == \"test\"",
+        "setuptools>=77; extra == \"test\""
+      ],
+      "License-Expression": [
+        "MIT"
+      ],
+      "License-File": [
+        "LICENSE"
+      ]
+    },
+    "source_wheel_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+    "rebuilt_wheel_sha256": "4b2d44f51e247c5fc364221ff4dff685898456bd7dcab1329a531d6d8d02827e"
+  },
+  {
+    "package": "sashimi-f",
+    "runtime_payload_bitwise_equal": true,
+    "metadata_equal": true,
+    "payload_files": 12,
+    "metadata": {
+      "Name": [
+        "sashimi-f"
+      ],
+      "Version": [
+        "0.2.0rc1"
+      ],
+      "Requires-Python": [
+        ">=3.11"
+      ],
+      "Requires-Dist": [
+        "colossus",
+        "h5py",
+        "numpy",
+        "pandas",
+        "sashimi-itamae<0.3,>=0.2.0rc1",
+        "scipy",
+        "tqdm",
+        "ipykernel>=6; extra == 'demo'",
+        "matplotlib>=3.8; extra == 'demo'",
+        "nbconvert>=7; extra == 'demo'",
+        "hatchling>=1.27; extra == 'test'",
+        "pytest>=8; extra == 'test'"
+      ],
+      "License-Expression": [
+        "MIT"
+      ],
+      "License-File": [
+        "LICENSE",
+        "NOTICE.md"
+      ]
+    },
+    "source_wheel_sha256": "5b7b55a27a63304477539e0c22c45c06d12b5c77fafdb31189f1663712bca398",
+    "rebuilt_wheel_sha256": "5b7b55a27a63304477539e0c22c45c06d12b5c77fafdb31189f1663712bca398"
+  }
+]

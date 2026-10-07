@@ -1,0 +1,22 @@
+name: Check relevant changes
+description: Skip unchanged checks only after a successful run at the preceding commit
+inputs:
+  paths:
+    description: Newline-separated root filenames or directory globs that require validation
+    required: true
+  token:
+    description: Read-only token used to confirm the preceding workflow succeeded
+    default: ${{ github.token }}
+outputs:
+  changed:
+    description: Whether validation must run
+    value: ${{ steps.changes.outputs.changed }}
+runs:
+  using: composite
+  steps:
+    - id: changes
+      shell: bash
+      env:
+        CI_CHANGED_PATHS: ${{ inputs.paths }}
+        CI_READ_TOKEN: ${{ inputs.token }}
+      run: python3 "$GITHUB_ACTION_PATH/changed_paths.py"

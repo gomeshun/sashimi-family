@@ -1,0 +1,189 @@
+{
+  "variant": "c",
+  "base_revision": "3fefa3426c33945ce4af63a472812ac6f9e4517c",
+  "source_revision": "2cc0cd0c0ffd6a9b02c729897ebc1388ce4e399b",
+  "script_sha256": "ff68b6baf04ed79f4f9b70e961a49f4bca71c4ca60a2cab767c3b54c01d98e0f",
+  "before_method_sha256": "93c57c271747aeb815bd35890b56d385252d2633fffc866ef1c50666cd04426b",
+  "after_method_sha256": "58b94079ee2282dcf440ae61ec1fed0a6b4ddf68ed29e5444a3c4da9af6d2e7e",
+  "parameters": {
+    "host_mass": 1000000000000.0,
+    "redshifts": [
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5,
+      2.75,
+      3.0
+    ],
+    "masses": [
+      1000000.0,
+      1847849.7974222908,
+      3414548.873833601,
+      6309573.44480193,
+      11659144.011798311,
+      21544346.900318824,
+      39810717.05534969,
+      73564225.44596422,
+      135935639.08785242,
+      251188643.1509582,
+      464158883.3612773,
+      857695898.5908946,
+      1584893192.4611108,
+      2928644564.6252375,
+      5411695265.464648,
+      10000000000.0
+    ],
+    "m22": null
+  },
+  "rows": [
+    {
+      "prescription": 1,
+      "order": 4,
+      "warnings": {
+        "before": [
+          "divide by zero encountered in divide",
+          "divide by zero encountered in divide"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-1-order-4.npz",
+      "sha256": "f4ab24fccbccb76e644a2c695762a3d30cd7b5379150ae6eafbc36d80131b488"
+    },
+    {
+      "prescription": 1,
+      "order": 64,
+      "warnings": {
+        "before": [
+          "divide by zero encountered in divide",
+          "divide by zero encountered in divide",
+          "invalid value encountered in power"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-1-order-64.npz",
+      "sha256": "315a31421b7e85c53459c55ff567f501594d582f578915128d621ebbfe92da82"
+    },
+    {
+      "prescription": 1,
+      "order": 200,
+      "warnings": {
+        "before": [
+          "divide by zero encountered in divide",
+          "divide by zero encountered in divide",
+          "invalid value encountered in power"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-1-order-200.npz",
+      "sha256": "a6b3f33db3cadd9de813104021357812bfe02cbcac7ef79877a29f6d03fe6f28"
+    },
+    {
+      "prescription": 2,
+      "order": 4,
+      "warnings": {
+        "before": [
+          "divide by zero encountered in power",
+          "divide by zero encountered in divide"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-2-order-4.npz",
+      "sha256": "63e7d93dd4cef0b48b0fb75c58a6c656782e55b8c364ac0282cf471178b2dd9c"
+    },
+    {
+      "prescription": 2,
+      "order": 64,
+      "warnings": {
+        "before": [
+          "divide by zero encountered in power",
+          "divide by zero encountered in divide",
+          "invalid value encountered in power"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-2-order-64.npz",
+      "sha256": "63030ce2b64156a5f8f2ca281f1d7208b7c09a94ecba8ef6e958593f49491936"
+    },
+    {
+      "prescription": 2,
+      "order": 200,
+      "warnings": {
+        "before": [
+          "divide by zero encountered in power",
+          "divide by zero encountered in divide",
+          "invalid value encountered in power"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-2-order-200.npz",
+      "sha256": "b86147dfe08856c82edf2bdea0e53f306debc6dea5eb9036e27b085ed593d687"
+    },
+    {
+      "prescription": 3,
+      "order": 4,
+      "warnings": {
+        "before": [],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-3-order-4.npz",
+      "sha256": "6c97af74c51e01b6469974baf4c0b2865a836a01d8d5a3e1adbed4bf7e03b8d3"
+    },
+    {
+      "prescription": 3,
+      "order": 64,
+      "warnings": {
+        "before": [
+          "invalid value encountered in divide"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-3-order-64.npz",
+      "sha256": "5d18c48bb0c4c5d7074fdb3aa5fecccbb25fd95c51f6e3f1eaafcfcd697298da"
+    },
+    {
+      "prescription": 3,
+      "order": 200,
+      "warnings": {
+        "before": [
+          "invalid value encountered in divide"
+        ],
+        "after": []
+      },
+      "max_relative_change": 0.0,
+      "newly_nonzero_count": 0,
+      "max_absolute_change": 0.0,
+      "file": "prescription-3-order-200.npz",
+      "sha256": "258ff1fab7ff94b50c8605135003b8f8aa228c25a4a223c6dbc4598b4b93ef2b"
+    }
+  ]
+}
