@@ -21,6 +21,12 @@ def main():
     -----
     The reviewed spectra hash is verified before plotting. The figure displays z=0 ratios and absolute fit residuals at 1, 2 and 5 keV, plus the independent 2-keV numerical refinement. Vogel at 1 keV is labelled as extrapolation. Caption background values are those of the WMAP7-labelled input table. Plotting does not refit coefficients or demonstrate observational constraints.
 
+    The input header stores Omega_b=0.0469, Omega_m=0.27, h=0.7, n_s=0.95 and sigma8=0.82.
+    In particular Omega_b and n_s do not equal the Table 1 best-fit values in Komatsu et
+    al. The WMAP7 label supplies historical context; it does not establish that these five
+    inputs reproduce a published WMAP7 parameter column or recover the original CAMB
+    configuration.
+
     References
     ----------
 

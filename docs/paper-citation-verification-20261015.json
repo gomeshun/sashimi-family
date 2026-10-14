@@ -1,0 +1,438 @@
+{
+  "scope": "family",
+  "baseline": {
+    "root": "/home/gomesu/workspace/sashimi-family",
+    "head": "1327482cbdade795176251a73a37cd43a77c7d05",
+    "branch": "codex/migration-release-20260910",
+    "status": "",
+    "comparison_baseline": {}
+  },
+  "definitions": [
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "published_fits",
+      "line_before": 25,
+      "line_after": 25,
+      "source_url_before": "https://github.com/gomeshun/sashimi-family/blob/1327482cbdade795176251a73a37cd43a77c7d05/scripts/analyze_wmap7_class_validation.py#L25",
+      "references_before": [
+        "viel",
+        "vogel"
+      ],
+      "references_after": [
+        "viel",
+        "vogel"
+      ],
+      "baseline_mapping": {
+        "repo": "family",
+        "file": "scripts/analyze_wmap7_class_validation.py",
+        "name": "published_fits",
+        "status": "family integration support",
+        "original_definitions": []
+      },
+      "occurrences_before": [
+        {
+          "key": "viel",
+          "category": "derived",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "vogel",
+          "category": "printed",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "occurrences_after": [
+        {
+          "key": "viel",
+          "category": "derived",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "vogel",
+          "category": "printed",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "correction": "verified without edit",
+      "doc_after": "Evaluate the published thermal-WDM power ratios at a matched background.\n\nParameters\n----------\nmass : float\n    Thermal-relic particle mass in keV.\nk : array_like\n    Comoving wavenumber in h/Mpc.\nh : float\n    Dimensionless Hubble parameter.\nomega_dm : float\n    Physical dark-matter density Omega_dm*h**2.\n\nReturns\n-------\nratios : dict of numpy.ndarray\n    Viel2005_q10 and Vogel2023_q10 are power ratios; historical_q5 retains the old amplitude-as-power control.\n\nNotes\n-----\nThe Viel and Vogel--Abazajian coefficient sets must be kept together with their own\ndensity and shape conventions.\n\nThe Viel alpha uses Omega_dm, while Vogel uses omega_dm. Both alpha values have units Mpc/h. The Vogel spin-1/2 coefficient set includes nu=1.049 and is calibrated starting at 2 keV; evaluation at 1 keV is an extrapolation diagnostic. No coefficients are fitted to the CLASS outputs.\n\nReferences\n----------\n\n.. [cite-viel] Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).\n    https://arxiv.org/abs/astro-ph/0501562\n\n.. [cite-vogel] Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).\n    https://arxiv.org/abs/2210.10753"
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "published_fits.q",
+      "line_before": 63,
+      "line_after": 63,
+      "source_url_before": "https://github.com/gomeshun/sashimi-family/blob/1327482cbdade795176251a73a37cd43a77c7d05/scripts/analyze_wmap7_class_validation.py#L63",
+      "references_before": [
+        "viel",
+        "vogel"
+      ],
+      "references_after": [
+        "viel",
+        "vogel"
+      ],
+      "baseline_mapping": {
+        "repo": "family",
+        "file": "scripts/analyze_wmap7_class_validation.py",
+        "name": "published_fits.q",
+        "status": "family integration support",
+        "original_definitions": []
+      },
+      "occurrences_before": [
+        {
+          "key": "viel",
+          "category": "derived",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "vogel",
+          "category": "printed",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "occurrences_after": [
+        {
+          "key": "viel",
+          "category": "derived",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "vogel",
+          "category": "printed",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "correction": "verified without edit",
+      "doc_after": "Convert the selected published transfer shape into an amplitude or squared-power control.\n\nParameters\n----------\nalpha : float\n    Suppression scale in Mpc/h.\nnu : float\n    Dimensionless published shape exponent.\npower_exponent : float\n    10 for T**2; 5 reproduces the historical amplitude-as-power comparison.\n\nReturns\n-------\nratio : numpy.ndarray\n    Dimensionless suppression at the enclosing k grid.\n\nNotes\n-----\nThe Viel and Vogel--Abazajian coefficient sets must be kept together with their own\ndensity and shape conventions.\n\nSquaring the amplitude doubles the exponent. Numerical evaluation with log1p changes neither the coefficients nor the power convention.\n\nReferences\n----------\n\n.. [cite-viel] Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).\n    https://arxiv.org/abs/astro-ph/0501562\n\n.. [cite-vogel] Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).\n    https://arxiv.org/abs/2210.10753"
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_population_convergence.py",
+      "name": "main",
+      "line_before": 19,
+      "line_after": 19,
+      "source_url_before": "https://github.com/gomeshun/sashimi-family/blob/1327482cbdade795176251a73a37cd43a77c7d05/scripts/check_population_convergence.py#L19",
+      "references_before": [
+        "survival",
+        "structure"
+      ],
+      "references_after": [
+        "survival",
+        "structure"
+      ],
+      "baseline_mapping": {
+        "repo": "family",
+        "file": "scripts/check_population_convergence.py",
+        "name": "main",
+        "status": "family integration support",
+        "original_definitions": []
+      },
+      "occurrences_before": [
+        {
+          "key": "survival",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "structure",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "occurrences_after": [
+        {
+          "key": "survival",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "structure",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "correction": "docstring changed",
+      "doc_after": "Run controlled catalogue grid and solver variations around one frozen halo setup.\n\nNotes\n-----\nThe literature threshold rt/rs > 0.77 follows the Hayashi et al. disruption prescription\nadopted by Hiroshima et al. A caller-supplied threshold takes precedence in variants\nthat expose it (C and SI currently default to 0). This is a model selection rule; an\nexact-boundary test does not calibrate disruption physics.\n\nThe setup fixes M200=1e12 Msun at z=0 and the literature truncation cut ct>0.77, then varies one quadrature or solver control at a time. Finite nonnegative weights and a gross mass-increase bound are implementation sanity conditions; resolution differences measure finite-grid sensitivity, not model calibration. Output paths must be new, and source revisions and script hashes accompany every catalogue.\n\nReferences\n----------\n\n.. [cite-survival] Hayashi et al. (2003), The Structural Evolution of Substructure, Section 2.1.\n    https://arxiv.org/abs/astro-ph/0203004\n\n.. [cite-structure] Hiroshima, Ando & Ishiyama (2018), Modeling evolution of dark matter substructure and annihilation boost, Section II, Eqs. (4)-(9), (28), (34).\n    https://arxiv.org/abs/1803.07691"
+    },
+    {
+      "repo": "family",
+      "file": "scripts/plot_wmap7_class_validation.py",
+      "name": "main",
+      "line_before": 17,
+      "line_after": 17,
+      "source_url_before": "https://github.com/gomeshun/sashimi-family/blob/1327482cbdade795176251a73a37cd43a77c7d05/scripts/plot_wmap7_class_validation.py#L17",
+      "references_before": [
+        "viel",
+        "vogel",
+        "wmap"
+      ],
+      "references_after": [
+        "viel",
+        "vogel",
+        "wmap"
+      ],
+      "baseline_mapping": {
+        "repo": "family",
+        "file": "scripts/plot_wmap7_class_validation.py",
+        "name": "main",
+        "status": "family integration support",
+        "original_definitions": []
+      },
+      "occurrences_before": [
+        {
+          "key": "viel",
+          "category": "derived",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "vogel",
+          "category": "printed",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "wmap",
+          "category": "unresolved",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "occurrences_after": [
+        {
+          "key": "viel",
+          "category": "derived",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "vogel",
+          "category": "printed",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "wmap",
+          "category": "unresolved",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "correction": "docstring changed",
+      "doc_after": "Plot preserved CLASS power-ratio controls against fixed published transfer fits.\n\nNotes\n-----\nThe reviewed spectra hash is verified before plotting. The figure displays z=0 ratios and absolute fit residuals at 1, 2 and 5 keV, plus the independent 2-keV numerical refinement. Vogel at 1 keV is labelled as extrapolation. Caption background values are those of the WMAP7-labelled input table. Plotting does not refit coefficients or demonstrate observational constraints.\n\nThe input header stores Omega_b=0.0469, Omega_m=0.27, h=0.7, n_s=0.95 and sigma8=0.82.\nIn particular Omega_b and n_s do not equal the Table 1 best-fit values in Komatsu et\nal. The WMAP7 label supplies historical context; it does not establish that these five\ninputs reproduce a published WMAP7 parameter column or recover the original CAMB\nconfiguration.\n\nReferences\n----------\n\n.. [cite-viel] Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).\n    https://arxiv.org/abs/astro-ph/0501562\n\n.. [cite-vogel] Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).\n    https://arxiv.org/abs/2210.10753\n\n.. [cite-wmap] Komatsu et al. (2011), Seven-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Interpretation.\n    https://arxiv.org/abs/1001.4538"
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "Runner.__init__",
+      "line_before": 59,
+      "line_after": 59,
+      "source_url_before": "https://github.com/gomeshun/sashimi-family/blob/1327482cbdade795176251a73a37cd43a77c7d05/scripts/run_wmap7_class_validation.py#L59",
+      "references_before": [
+        "planck",
+        "cmb",
+        "neutrinos",
+        "wmap"
+      ],
+      "references_after": [
+        "planck",
+        "cmb",
+        "neutrinos",
+        "wmap"
+      ],
+      "baseline_mapping": {
+        "repo": "family",
+        "file": "scripts/run_wmap7_class_validation.py",
+        "name": "Runner.__init__",
+        "status": "family integration support",
+        "original_definitions": []
+      },
+      "occurrences_before": [
+        {
+          "key": "planck",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "cmb",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "neutrinos",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "wmap",
+          "category": "unresolved",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "occurrences_after": [
+        {
+          "key": "planck",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "cmb",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "neutrinos",
+          "category": "adopted",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        },
+        {
+          "key": "wmap",
+          "category": "unresolved",
+          "role": "analysis/validation support",
+          "qualification": "Use the source comparison and the definition's own Notes together."
+        }
+      ],
+      "correction": "docstring changed",
+      "doc_after": "Freeze a CLASS control cosmology and its source provenance before comparing WDM spectra.\n\nParameters\n----------\nargs : argparse.Namespace\n    Command-line output path, CLASS executable and CLASS source-manifest path.\n\nNotes\n-----\nThe first five stored CAMB-header values set Omega_b, Omega_m, h, n_s and the CDM sigma8 target. Additional controls tau=0.0544 and starting A_s=2.1e-9 are rounded Planck-2018 choices; T_cmb=2.7255 K follows Fixsen and N_ur=3.046 follows Mangano et al. All active neutrinos are treated as massless in this control. These additional settings do not reconstruct undocumented original CAMB inputs. The CDM normalization is subsequently matched once, then shared with WDM. Numerical hierarchy and integration settings are convergence controls.\n\nThe input header stores Omega_b=0.0469, Omega_m=0.27, h=0.7, n_s=0.95 and sigma8=0.82.\nIn particular Omega_b and n_s do not equal the Table 1 best-fit values in Komatsu et\nal. The WMAP7 label supplies historical context; it does not establish that these five\ninputs reproduce a published WMAP7 parameter column or recover the original CAMB\nconfiguration.\n\nReferences\n----------\n\n.. [cite-planck] Planck Collaboration (2020), Planck 2018 results. VI. Cosmological parameters, Table 2.\n    https://arxiv.org/abs/1807.06209\n\n.. [cite-cmb] Fixsen (2009), The Temperature of the Cosmic Microwave Background.\n    https://arxiv.org/abs/0911.1955\n\n.. [cite-neutrinos] Mangano et al. (2005), Relic neutrino decoupling including flavour oscillations.\n    https://arxiv.org/abs/hep-ph/0506164\n\n.. [cite-wmap] Komatsu et al. (2011), Seven-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Interpretation.\n    https://arxiv.org/abs/1001.4538"
+    }
+  ],
+  "sources": {
+    "planck": {
+      "key": "planck",
+      "title": "Planck Collaboration (2020), Planck 2018 results. VI. Cosmological parameters, Table 2.",
+      "identifier_url": "https://arxiv.org/abs/1807.06209",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/1807.06209",
+      "full_text_status": 200,
+      "source_version": "1807.06209v4 [astro-ph.CO] 9 Aug 2021",
+      "full_text_sha256": "8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "checked_at": "2026-10-14T22:51:52.560656+00:00",
+      "location": "Table 2, p.16 (TT,TE,EE+lowE+lensing column)",
+      "comparison_category": "adopted",
+      "manual_comparison": "H0=67.36, Omega_m=0.3153, omega_b=0.02237, tau=0.0544 and A_s=2.100e-9 support the rounded native/control inputs. Omega_b is obtained by dividing omega_b by h^2. The Colossus planck18 preset selects a different data combination; its name does not make it identical to the native parameter vector."
+    },
+    "wmap": {
+      "key": "wmap",
+      "title": "Komatsu et al. (2011), Seven-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Interpretation.",
+      "identifier_url": "https://arxiv.org/abs/1001.4538",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/1001.4538",
+      "full_text_status": 200,
+      "source_version": "1001.4538v3 [astro-ph.CO] 9 Nov 2010",
+      "full_text_sha256": "7a42d7958055ba8cda7bfeb456319e803f09231341e7aa1f1029b4093660d41d",
+      "checked_at": "2026-10-14T22:51:51.606084+00:00",
+      "location": "Table 1, p.3",
+      "comparison_category": "unresolved",
+      "manual_comparison": "The paper is real and reachable, but the input header (Omega_b=0.0469, Omega_m=0.27, h=0.7, n_s=0.95, sigma8=0.82) is not a literal Table 1 column. In particular 0.0469 and 0.95 are absent as the cited best-fit values. The WMAP7 label is contextual; exact table-generation parameters are not established by this citation."
+    },
+    "structure": {
+      "key": "structure",
+      "title": "Hiroshima, Ando & Ishiyama (2018), Modeling evolution of dark matter substructure and annihilation boost, Section II, Eqs. (5)-(9).",
+      "identifier_url": "https://arxiv.org/abs/1803.07691",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/1803.07691",
+      "full_text_status": 200,
+      "source_version": "1803.07691v2 [astro-ph.CO] 23 May 2018",
+      "full_text_sha256": "0c976eaea846dfb2f4de6d0d49fd3971ad3023606361057fbd3270e14540bf4b",
+      "checked_at": "2026-10-14T22:51:52.540001+00:00",
+      "location": "Section II, pp.2-3; Eqs. (4)-(9), (28), (34)",
+      "comparison_category": "adopted",
+      "manual_comparison": "The paper gives the concentration prescription, NFW speed/radius conversion and tidal structural response. Section II adopts scatter 0.13 dex; the disruption discussion and later selection factors use r_t/r_s=0.77. C/SI defaults allowing zero cutoff and all public 0.128-dex scatter defaults are explicit implementation choices, not literal copies of every population setting."
+    },
+    "survival": {
+      "key": "survival",
+      "title": "Hayashi et al. (2003), The Structural Evolution of Substructure.",
+      "identifier_url": "https://arxiv.org/abs/astro-ph/0203004",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/astro-ph/0203004",
+      "full_text_status": 200,
+      "source_version": "astro-ph/0203004v2 6 Dec 2002",
+      "full_text_sha256": "00dc1f22f6975bb5344b09c66d8f2e94e1f851817436c034503a587dd21d169d",
+      "checked_at": "2026-10-14T22:51:53.774341+00:00",
+      "location": "Section 2.1, p.3",
+      "comparison_category": "adopted",
+      "manual_comparison": "The approximately 0.77*r_s bound concerns instantaneously truncated isotropic NFW systems. Adopting it as a subhalo survival selection follows the later Hiroshima prescription; it is not a universal empirical disruption threshold. Tests at the exact boundary establish mask and inversion behavior only."
+    },
+    "viel": {
+      "key": "viel",
+      "title": "Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).",
+      "identifier_url": "https://arxiv.org/abs/astro-ph/0501562",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/astro-ph/0501562",
+      "full_text_status": 200,
+      "source_version": "astro-ph/0501562v2 1 Apr 2005",
+      "full_text_sha256": "71a230b271c6f86dffa31cf56d5154f65d7f82dea5e2571dfea3b4fbfa34c732",
+      "checked_at": "2026-10-14T22:51:53.854071+00:00",
+      "location": "Eqs. (6)-(7), p.3",
+      "comparison_category": "derived",
+      "manual_comparison": "The amplitude T=[1+(alpha*k)^(2*nu)]^(-5/nu), nu=1.12 and alpha=0.049*(m/keV)^-1.11*(Omega_WDM/0.25)^0.11*(h/0.7)^1.22 h^-1 Mpc are printed. The power ratio has exponent -10/nu by squaring. The paper states k<5 h/Mpc for this fit. A q5 power control is historical and does not reproduce the squared transfer law."
+    },
+    "vogel": {
+      "key": "vogel",
+      "title": "Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).",
+      "identifier_url": "https://arxiv.org/abs/2210.10753",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/2210.10753",
+      "full_text_status": 200,
+      "source_version": "2210.10753v2 [hep-ph] 12 Apr 2023",
+      "full_text_sha256": "bf2cfa6a059d36de6ba9a9130be4a346644110aa28d7ed690d4c739d62850cf0",
+      "checked_at": "2026-10-14T22:51:53.075483+00:00",
+      "location": "Eqs. (7)-(9), pp.3-5; Table II, p.6 (v2)",
+      "comparison_category": "printed",
+      "manual_comparison": "The amplitude definition, scale fit and spin-1/2 values a=0.0437, b=-1.188, nu=1.049, theta=2.012, eta=0.2463 are printed. Calibration uses 2,5,10,20,100 keV; the 1-keV comparison is extrapolation. The code correctly squares the amplitude for a power ratio."
+    },
+    "cmb": {
+      "key": "cmb",
+      "title": "Fixsen (2009), The Temperature of the Cosmic Microwave Background.",
+      "identifier_url": "https://arxiv.org/abs/0911.1955",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/0911.1955",
+      "full_text_status": 200,
+      "source_version": "0911.1955v2 [astro-ph.CO] 10 Nov 2009",
+      "full_text_sha256": "36cbaee69b8106ca45d007f46a2e002f9f593b67c310f6d808007a5c3d998f85",
+      "checked_at": "2026-10-14T22:51:51.553181+00:00",
+      "location": "Abstract, p.1",
+      "comparison_category": "adopted",
+      "manual_comparison": "The measured temperature is 2.72548 +/- 0.00057 K. The control input 2.7255 K is a rounded value. This supports the temperature choice only, not the recovery of every original CAMB setting."
+    },
+    "neutrinos": {
+      "key": "neutrinos",
+      "title": "Mangano et al. (2005), Relic neutrino decoupling including flavour oscillations.",
+      "identifier_url": "https://arxiv.org/abs/hep-ph/0506164",
+      "original_url_status": 200,
+      "full_text_url": "https://arxiv.org/pdf/hep-ph/0506164",
+      "full_text_status": 200,
+      "source_version": "hep-ph/0506164v1 16 Jun 2005",
+      "full_text_sha256": "772590e7cd198097ec833edd5a1090ee29ee5177a70dc259bc2801467032f3bd",
+      "checked_at": "2026-10-14T22:51:53.965691+00:00",
+      "location": "Abstract, p.1",
+      "comparison_category": "adopted",
+      "manual_comparison": "The paper reports N_eff=3.046 from non-instantaneous neutrino decoupling. The control puts that value into a massless-radiation setting. The all-massless treatment is a separate modelling choice, not a conclusion about neutrino masses in the cited paper."
+    }
+  },
+  "verification": {
+    "python_file_count": 42,
+    "historical_file_count": 18
+  },
+  "executable_ast_changed": false
+}

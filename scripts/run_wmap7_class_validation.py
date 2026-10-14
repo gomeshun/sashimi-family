@@ -68,6 +68,12 @@ class Runner:
         -----
         The first five stored CAMB-header values set Omega_b, Omega_m, h, n_s and the CDM sigma8 target. Additional controls tau=0.0544 and starting A_s=2.1e-9 are rounded Planck-2018 choices; T_cmb=2.7255 K follows Fixsen and N_ur=3.046 follows Mangano et al. All active neutrinos are treated as massless in this control. These additional settings do not reconstruct undocumented original CAMB inputs. The CDM normalization is subsequently matched once, then shared with WDM. Numerical hierarchy and integration settings are convergence controls.
 
+        The input header stores Omega_b=0.0469, Omega_m=0.27, h=0.7, n_s=0.95 and sigma8=0.82.
+        In particular Omega_b and n_s do not equal the Table 1 best-fit values in Komatsu et
+        al. The WMAP7 label supplies historical context; it does not establish that these five
+        inputs reproduce a published WMAP7 parameter column or recover the original CAMB
+        configuration.
+
         References
         ----------
 
