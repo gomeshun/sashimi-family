@@ -57,6 +57,32 @@ def omega_ncdm(folder):
 
 class Runner:
     def __init__(self, args):
+        r"""Freeze a CLASS control cosmology and its source provenance before comparing WDM spectra.
+
+        Parameters
+        ----------
+        args : argparse.Namespace
+            Command-line output path, CLASS executable and CLASS source-manifest path.
+
+        Notes
+        -----
+        The first five stored CAMB-header values set Omega_b, Omega_m, h, n_s and the CDM sigma8 target. Additional controls tau=0.0544 and starting A_s=2.1e-9 are rounded Planck-2018 choices; T_cmb=2.7255 K follows Fixsen and N_ur=3.046 follows Mangano et al. All active neutrinos are treated as massless in this control. These additional settings do not reconstruct undocumented original CAMB inputs. The CDM normalization is subsequently matched once, then shared with WDM. Numerical hierarchy and integration settings are convergence controls.
+
+        References
+        ----------
+
+        .. [cite-planck] Planck Collaboration (2020), Planck 2018 results. VI. Cosmological parameters, Table 2.
+            https://arxiv.org/abs/1807.06209
+
+        .. [cite-cmb] Fixsen (2009), The Temperature of the Cosmic Microwave Background.
+            https://arxiv.org/abs/0911.1955
+
+        .. [cite-neutrinos] Mangano et al. (2005), Relic neutrino decoupling including flavour oscillations.
+            https://arxiv.org/abs/hep-ph/0506164
+
+        .. [cite-wmap] Komatsu et al. (2011), Seven-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Interpretation.
+            https://arxiv.org/abs/1001.4538
+        """
         self.args = args
         self.output = args.output.resolve()
         self.output.mkdir(parents=True, exist_ok=True)

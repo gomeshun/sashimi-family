@@ -17,6 +17,26 @@ import numpy as np
 
 
 def main():
+    r"""Run controlled catalogue grid and solver variations around one frozen halo setup.
+
+    Notes
+    -----
+    The literature threshold rt/rs > 0.77 follows the Hayashi et al. disruption prescription
+    adopted by Hiroshima et al. A caller-supplied threshold takes precedence in variants
+    that expose it (C and SI currently default to 0). This is a model selection rule; an
+    exact-boundary test does not calibrate disruption physics.
+
+    The setup fixes M200=1e12 Msun at z=0 and the literature truncation cut ct>0.77, then varies one quadrature or solver control at a time. Finite nonnegative weights and a gross mass-increase bound are implementation sanity conditions; resolution differences measure finite-grid sensitivity, not model calibration. Output paths must be new, and source revisions and script hashes accompany every catalogue.
+
+    References
+    ----------
+
+    .. [cite-survival] Hayashi et al. (2003), The Structural Evolution of Substructure.
+        https://arxiv.org/abs/astro-ph/0203004
+
+    .. [cite-structure] Hiroshima, Ando & Ishiyama (2018), Modeling evolution of dark matter substructure and annihilation boost, Section II, Eqs. (5)-(9).
+        https://arxiv.org/abs/1803.07691
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--variant", choices=["sashimi-c", "sashimi-si", "sashimi-f"], required=True

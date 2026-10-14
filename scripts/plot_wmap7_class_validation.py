@@ -15,6 +15,24 @@ import numpy as np
 
 
 def main():
+    r"""Plot preserved CLASS power-ratio controls against fixed published transfer fits.
+
+    Notes
+    -----
+    The reviewed spectra hash is verified before plotting. The figure displays z=0 ratios and absolute fit residuals at 1, 2 and 5 keV, plus the independent 2-keV numerical refinement. Vogel at 1 keV is labelled as extrapolation. Caption background values are those of the WMAP7-labelled input table. Plotting does not refit coefficients or demonstrate observational constraints.
+
+    References
+    ----------
+
+    .. [cite-viel] Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).
+        https://arxiv.org/abs/astro-ph/0501562
+
+    .. [cite-vogel] Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).
+        https://arxiv.org/abs/2210.10753
+
+    .. [cite-wmap] Komatsu et al. (2011), Seven-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Interpretation.
+        https://arxiv.org/abs/1001.4538
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path)
     args = parser.parse_args()

@@ -23,23 +23,77 @@ def digest(path):
 
 
 def published_fits(mass, k, h, omega_dm):
-    """Return power ratios Q=T^2, with explicit matching cosmology.
+    r"""Evaluate the published thermal-WDM power ratios at a matched background.
 
-    Viel et al., Phys. Rev. D 71, 063534 (2005), Eqs. (4), (6), (7),
-    https://arxiv.org/abs/astro-ph/0501562: alpha uses Omega_WDM, not omega_WDM.
+    Parameters
+    ----------
+    mass : float
+        Thermal-relic particle mass in keV.
+    k : array_like
+        Comoving wavenumber in h/Mpc.
+    h : float
+        Dimensionless Hubble parameter.
+    omega_dm : float
+        Physical dark-matter density Omega_dm*h**2.
 
-    Vogel & Abazajian, Phys. Rev. D 108, 043520 (2023), Eqs. (7)-(9),
-    Table II, https://arxiv.org/abs/2210.10753 (v2): spin-1/2 thermal relic.
-    alpha uses omega_WDM=Omega_WDM*h^2. The published coefficient set must be
-    used together, including nu=1.049. Their mass calibration starts at 2 keV;
-    evaluating 1 keV below is an explicitly labeled extrapolation diagnostic.
-    Both alpha values are in h^-1 Mpc, paired with k in h/Mpc.
+    Returns
+    -------
+    ratios : dict of numpy.ndarray
+        Viel2005_q10 and Vogel2023_q10 are power ratios; historical_q5 retains the old amplitude-as-power control.
+
+    Notes
+    -----
+    The Viel and Vogel--Abazajian coefficient sets must be kept together with their own
+    density and shape conventions.
+
+    The Viel alpha uses Omega_dm, while Vogel uses omega_dm. Both alpha values have units Mpc/h. The Vogel spin-1/2 coefficient set includes nu=1.049 and is calibrated starting at 2 keV; evaluation at 1 keV is an extrapolation diagnostic. No coefficients are fitted to the CLASS outputs.
+
+    References
+    ----------
+
+    .. [cite-viel] Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).
+        https://arxiv.org/abs/astro-ph/0501562
+
+    .. [cite-vogel] Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).
+        https://arxiv.org/abs/2210.10753
     """
     old_alpha = 0.049 * mass**-1.11 * (omega_dm / h**2 / 0.25)**0.11 * (h / 0.7)**1.22
     new_alpha = 0.0437 * mass**-1.188 * (omega_dm / 0.12)**0.2463 * (h / 0.6736)**2.012
 
     def q(alpha, nu, power_exponent=10):
         # The literature fits a transfer amplitude; its square is a power ratio.
+        r"""Convert the selected published transfer shape into an amplitude or squared-power control.
+
+        Parameters
+        ----------
+        alpha : float
+            Suppression scale in Mpc/h.
+        nu : float
+            Dimensionless published shape exponent.
+        power_exponent : float
+            10 for T**2; 5 reproduces the historical amplitude-as-power comparison.
+
+        Returns
+        -------
+        ratio : numpy.ndarray
+            Dimensionless suppression at the enclosing k grid.
+
+        Notes
+        -----
+        The Viel and Vogel--Abazajian coefficient sets must be kept together with their own
+        density and shape conventions.
+
+        Squaring the amplitude doubles the exponent. Numerical evaluation with log1p changes neither the coefficients nor the power convention.
+
+        References
+        ----------
+
+        .. [cite-viel] Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).
+            https://arxiv.org/abs/astro-ph/0501562
+
+        .. [cite-vogel] Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).
+            https://arxiv.org/abs/2210.10753
+        """
         return np.exp(-power_exponent / nu * np.log1p((alpha * np.asarray(k))**(2 * nu)))
 
     return {
