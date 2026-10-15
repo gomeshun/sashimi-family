@@ -1,0 +1,78 @@
+{
+  "role": "C",
+  "constructor": {},
+  "method": "subhalo_properties_calc",
+  "repository": "gomeshun/sashimi-si",
+  "source_revision": "58701d5b69449480c4dd0d0cc8ea885f99e538c5",
+  "module": "sashimi_si",
+  "class": "SubhaloProperties",
+  "parameters": {
+    "M0": 1000000000000.0,
+    "redshift": 0.0,
+    "dz": 0.2,
+    "zmax": 2.0,
+    "N_ma": 12,
+    "sigmalogc": 0.128,
+    "N_herm": 2,
+    "logmamin": 9.0,
+    "logmamax": null,
+    "N_hermNa": 4,
+    "Na_model": 3,
+    "ct_th": 0.0,
+    "method": "pert2_shanks"
+  },
+  "input_files": [],
+  "probes": [
+    {
+      "name": "growth",
+      "method": "growthD",
+      "args": [
+        [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          5.0
+        ]
+      ]
+    },
+    {
+      "name": "growth_derivative",
+      "method": "dDdz",
+      "args": [
+        [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          5.0
+        ]
+      ]
+    },
+    {
+      "name": "variance",
+      "method": "sigmaMz",
+      "args": [
+        [
+          10000000.0,
+          100000000.0,
+          1000000000.0
+        ],
+        1.0
+      ]
+    },
+    {
+      "name": "variance_derivative",
+      "method": "dsdm",
+      "args": [
+        [
+          10000000.0,
+          100000000.0,
+          1000000000.0
+        ],
+        1.0
+      ]
+    }
+  ],
+  "itamae_source_revision": "5da8dbbbd88f3f45dd7d2fbe66f11203d9632fa7"
+}

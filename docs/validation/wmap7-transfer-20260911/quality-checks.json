@@ -1,0 +1,59 @@
+{
+  "product_module": "/home/gomesu/workspace/sashimi-family/sashimi-w/sashimi_w.py",
+  "checks": [
+    {
+      "mass_keV": 1,
+      "max_absolute_product_vs_independent_Viel_Q": 9.992007221626409e-16
+    },
+    {
+      "mass_keV": 2,
+      "max_absolute_product_vs_independent_Viel_Q": 9.992007221626409e-16
+    },
+    {
+      "mass_keV": 5,
+      "max_absolute_product_vs_independent_Viel_Q": 9.992007221626409e-16
+    }
+  ],
+  "physical_checks": {
+    "wdm_m1": {
+      "achieved_omega_wdm": 0.10931899999997707,
+      "matched_A_s": 2.3637375865030362e-09,
+      "relative_density_error": -2.0972112935169207e-13,
+      "sigma8_total_log": 0.819942
+    },
+    "wdm_m2": {
+      "achieved_omega_wdm": 0.10931899999997707,
+      "matched_A_s": 2.3637375865030362e-09,
+      "relative_density_error": -2.0972112935169207e-13,
+      "sigma8_total_log": 0.820024
+    },
+    "wdm_m2_fine": {
+      "achieved_omega_wdm": 0.10931899999997707,
+      "matched_A_s": 2.3637375865030362e-09,
+      "relative_density_error": -2.0972112935169207e-13,
+      "sigma8_total_log": 0.819976
+    },
+    "wdm_m5": {
+      "achieved_omega_wdm": 0.10931899999997707,
+      "matched_A_s": 2.3637375865030362e-09,
+      "relative_density_error": -2.0972112935169207e-13,
+      "sigma8_total_log": 0.820038
+    }
+  },
+  "background_warnings": {
+    "background_m1": [
+      "[WARNING: input line not used: 'z_pk=0, 99']",
+      "[WARNING: input line not used: 'P_k_max_h/Mpc=80']"
+    ],
+    "background_m2": [
+      "[WARNING: input line not used: 'z_pk=0, 99']",
+      "[WARNING: input line not used: 'P_k_max_h/Mpc=80']"
+    ],
+    "background_m5": [
+      "[WARNING: input line not used: 'z_pk=0, 99']",
+      "[WARNING: input line not used: 'P_k_max_h/Mpc=80']"
+    ]
+  },
+  "spectrum_warnings": {},
+  "all_checks_passed": true
+}

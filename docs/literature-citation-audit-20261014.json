@@ -1,0 +1,1771 @@
+{
+  "audit_started": "2026-10-14 UTC",
+  "audit_completed_at": "2026-10-14T15:03:15.542337+00:00",
+  "code_before_citation_edit": "e8fc3f5b038c8366a2e6ef99b269f3cf42fbe7f2",
+  "comparison_baseline": {
+    "kind": "family support scripts; no author-upstream baseline",
+    "sha": null
+  },
+  "active_definitions_inventoried": 96,
+  "changed_docstrings": 5,
+  "changed_with_local_references": 5,
+  "local_test_cases_passed": 14,
+  "executable_ast_differences": [],
+  "reference_files_changed": [],
+  "method": "Source-qualified AST inventory including private/nested definitions, existing-attribution and direct-literal screening, followed by primary-paper equation/table matching. Generic numerical controls and fixed regressions are not treated as empirical calibration. Inventory counts alone do not prove scientific correctness.",
+  "limits": [
+    "Active WMAP7/CLASS helpers cite Viel, Vogel, Planck, Fixsen and Mangano where they adopt numerical parameters. Initial A_s is a normalization starting value; matching the CDM sigma8 target is explicit.",
+    "The cosmology controls do not reconstruct undocumented original CAMB settings. Vogel coefficients in the comparison remain an external alternative curve, not an adopted production change.",
+    "The compatibility manifest and all five gitlinks retain the recorded family set. These independent candidate documentation edits do not promote a mixed family."
+  ],
+  "references": {
+    "cmb": [
+      "Fixsen (2009), The Temperature of the Cosmic Microwave Background.",
+      "https://arxiv.org/abs/0911.1955"
+    ],
+    "neutrinos": [
+      "Mangano et al. (2005), Relic neutrino decoupling including flavour oscillations.",
+      "https://arxiv.org/abs/hep-ph/0506164"
+    ],
+    "planck": [
+      "Planck Collaboration (2020), Planck 2018 results. VI. Cosmological parameters, Table 2.",
+      "https://arxiv.org/abs/1807.06209"
+    ],
+    "structure": [
+      "Hiroshima, Ando & Ishiyama (2018), Modeling evolution of dark matter substructure and annihilation boost, Section II, Eqs. (5)-(9).",
+      "https://arxiv.org/abs/1803.07691"
+    ],
+    "survival": [
+      "Hayashi et al. (2003), The Structural Evolution of Substructure.",
+      "https://arxiv.org/abs/astro-ph/0203004"
+    ],
+    "viel": [
+      "Viel et al. (2005), Constraining warm dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the Lyman-alpha forest, Eqs. (6)-(7).",
+      "https://arxiv.org/abs/astro-ph/0501562"
+    ],
+    "vogel": [
+      "Vogel & Abazajian (2023), Entering the Era of Measuring Sub-Galactic Dark Matter Structure: Accurate Transfer Functions for Axino, Gravitino & Sterile Neutrino Thermal Warm Dark Matter, Eqs. (7)-(9), Table II (v2).",
+      "https://arxiv.org/abs/2210.10753"
+    ],
+    "wmap": [
+      "Komatsu et al. (2011), Seven-Year Wilkinson Microwave Anisotropy Probe Observations: Cosmological Interpretation.",
+      "https://arxiv.org/abs/1001.4538"
+    ]
+  },
+  "definitions": [
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "revisions",
+      "kind": "FunctionDef",
+      "line": 16,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "matches",
+      "kind": "FunctionDef",
+      "line": 28,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "needs_validation",
+      "kind": "FunctionDef",
+      "line": 36,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "succeeded_before",
+      "kind": "FunctionDef",
+      "line": 40,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "changed_paths",
+      "kind": "FunctionDef",
+      "line": 69,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "validated_merge_parent",
+      "kind": "FunctionDef",
+      "line": 86,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 100,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 21,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "published_fits",
+      "kind": "FunctionDef",
+      "line": 25,
+      "archived": false,
+      "outcome": "local_paper_references_added_or_completed",
+      "reference_keys": [
+        "viel",
+        "vogel"
+      ],
+      "paper_urls": [
+        "https://arxiv.org/abs/2210.10753",
+        "https://arxiv.org/abs/astro-ph/0501562"
+      ]
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "fit_crossing",
+      "kind": "FunctionDef",
+      "line": 106,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "Analysis",
+      "kind": "ClassDef",
+      "line": 111,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 219,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "Analysis.__init__",
+      "kind": "FunctionDef",
+      "line": 112,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "Analysis.read",
+      "kind": "FunctionDef",
+      "line": 119,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "Analysis.ratio",
+      "kind": "FunctionDef",
+      "line": 138,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "Analysis.run",
+      "kind": "FunctionDef",
+      "line": 148,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "name": "published_fits.q",
+      "kind": "FunctionDef",
+      "line": 63,
+      "archived": false,
+      "outcome": "local_paper_references_added_or_completed",
+      "reference_keys": [
+        "viel",
+        "vogel"
+      ],
+      "paper_urls": [
+        "https://arxiv.org/abs/2210.10753",
+        "https://arxiv.org/abs/astro-ph/0501562"
+      ]
+    },
+    {
+      "repo": "family",
+      "file": "scripts/build_candidate_artifacts.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_artifact_provenance.py",
+      "name": "_artifact_text",
+      "kind": "FunctionDef",
+      "line": 29,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_artifact_provenance.py",
+      "name": "_check_artifact",
+      "kind": "FunctionDef",
+      "line": 48,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_artifact_provenance.py",
+      "name": "_matching_artifacts",
+      "kind": "FunctionDef",
+      "line": 62,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_artifact_provenance.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 73,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_compatibility.py",
+      "name": "committed_gitlink",
+      "kind": "FunctionDef",
+      "line": 24,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_compatibility.py",
+      "name": "gitmodules_entries",
+      "kind": "FunctionDef",
+      "line": 43,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_compatibility.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 70,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_eps_normalization.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 16,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_eps_normalization.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_installed_candidate.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_population_convergence.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 19,
+      "archived": false,
+      "outcome": "local_paper_references_added_or_completed",
+      "reference_keys": [
+        "survival",
+        "structure"
+      ],
+      "paper_urls": [
+        "https://arxiv.org/abs/1803.07691",
+        "https://arxiv.org/abs/astro-ph/0203004"
+      ]
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_sdist_rebuild.py",
+      "name": "compare_wheels",
+      "kind": "FunctionDef",
+      "line": 27,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_sdist_rebuild.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 47,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_sdist_rebuild.py",
+      "name": "main.git",
+      "kind": "FunctionDef",
+      "line": 68,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_sdist_rebuild.py",
+      "name": "compare_wheels.contents",
+      "kind": "FunctionDef",
+      "line": 29,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_si_states.py",
+      "name": "relative",
+      "kind": "FunctionDef",
+      "line": 27,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_si_states.py",
+      "name": "record",
+      "kind": "FunctionDef",
+      "line": 51,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_w_convergence.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 13,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_w_convergence.py",
+      "name": "verify",
+      "kind": "FunctionDef",
+      "line": 17,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_w_q10_adoption.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_wmap7_class_validation.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 18,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/plot_wmap7_class_validation.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 17,
+      "archived": false,
+      "outcome": "local_paper_references_added_or_completed",
+      "reference_keys": [
+        "viel",
+        "vogel",
+        "wmap"
+      ],
+      "paper_urls": [
+        "https://arxiv.org/abs/1001.4538",
+        "https://arxiv.org/abs/2210.10753",
+        "https://arxiv.org/abs/astro-ph/0501562"
+      ]
+    },
+    {
+      "repo": "family",
+      "file": "scripts/product_worker.py",
+      "name": "checked_revision",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/product_worker.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 38,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/reference_worker.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 24,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_reference.py",
+      "name": "sha256",
+      "kind": "FunctionDef",
+      "line": 22,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_reference.py",
+      "name": "run",
+      "kind": "FunctionDef",
+      "line": 26,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_reference.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 98,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 25,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "save_once",
+      "kind": "FunctionDef",
+      "line": 29,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "sigma8",
+      "kind": "FunctionDef",
+      "line": 38,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "omega_ncdm",
+      "kind": "FunctionDef",
+      "line": 45,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "Runner",
+      "kind": "ClassDef",
+      "line": 58,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "Runner.__init__",
+      "kind": "FunctionDef",
+      "line": 59,
+      "archived": false,
+      "outcome": "local_paper_references_added_or_completed",
+      "reference_keys": [
+        "planck",
+        "cmb",
+        "neutrinos",
+        "wmap"
+      ],
+      "paper_urls": [
+        "https://arxiv.org/abs/0911.1955",
+        "https://arxiv.org/abs/1001.4538",
+        "https://arxiv.org/abs/1807.06209",
+        "https://arxiv.org/abs/hep-ph/0506164"
+      ]
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "Runner.git_revision",
+      "kind": "FunctionDef",
+      "line": 126,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "Runner.run",
+      "kind": "FunctionDef",
+      "line": 129,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "name": "Runner.execute",
+      "kind": "FunctionDef",
+      "line": 172,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/smoke_installed_family.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 29,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_population_convergence.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 34,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 18,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "read_json",
+      "kind": "FunctionDef",
+      "line": 22,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "quantities",
+      "kind": "FunctionDef",
+      "line": 26,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "validate_coverage",
+      "kind": "FunctionDef",
+      "line": 31,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "audit_single_build",
+      "kind": "FunctionDef",
+      "line": 45,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 155,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "main.committed",
+      "kind": "FunctionDef",
+      "line": 164,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "name": "audit_single_build.smoke",
+      "kind": "FunctionDef",
+      "line": 111,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 27,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "read",
+      "kind": "FunctionDef",
+      "line": 31,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "physical_results",
+      "kind": "FunctionDef",
+      "line": 35,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "require_universal_wheels",
+      "kind": "FunctionDef",
+      "line": 42,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 52,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "main.run",
+      "kind": "FunctionDef",
+      "line": 78,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "main.install",
+      "kind": "FunctionDef",
+      "line": 117,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "name": "main.smoke",
+      "kind": "FunctionDef",
+      "line": 124,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "load",
+      "kind": "FunctionDef",
+      "line": 16,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests",
+      "kind": "ClassDef",
+      "line": 29,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.setUp",
+      "kind": "FunctionDef",
+      "line": 30,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.wheel",
+      "kind": "FunctionDef",
+      "line": 35,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_record_order_does_not_require_repeating_physics",
+      "kind": "FunctionDef",
+      "line": 50,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_missing_or_changed_runtime_data_metadata_is_rejected",
+      "kind": "FunctionDef",
+      "line": 55,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_native_wheel_cannot_use_single_universal_build_policy",
+      "kind": "FunctionDef",
+      "line": 63,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_docs_change_requires_a_successful_preceding_run",
+      "kind": "FunctionDef",
+      "line": 68,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_manual_family_success_cannot_stand_in_for_component_success",
+      "kind": "FunctionDef",
+      "line": 72,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_source_data_and_workflow_changes_always_run",
+      "kind": "FunctionDef",
+      "line": 90,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_moving_a_watched_file_to_docs_still_requires_validation",
+      "kind": "FunctionDef",
+      "line": 96,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_initial_event_compares_whole_pr_and_manual_event_forces_validation",
+      "kind": "FunctionDef",
+      "line": 117,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_merge_reuse_requires_both_identical_tree_and_success",
+      "kind": "FunctionDef",
+      "line": 123,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_reduced_rebuild_coverage_cannot_be_reported_as_full",
+      "kind": "FunctionDef",
+      "line": 135,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "name": "ArtifactValidationTests.test_moving_a_watched_file_to_docs_still_requires_validation.git",
+      "kind": "FunctionDef",
+      "line": 97,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests",
+      "kind": "ClassDef",
+      "line": 16,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.setUp",
+      "kind": "FunctionDef",
+      "line": 17,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.git",
+      "kind": "FunctionDef",
+      "line": 48,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.execute",
+      "kind": "FunctionDef",
+      "line": 51,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.test_export_ignores_later_worktree_source_and_data_edits",
+      "kind": "FunctionDef",
+      "line": 72,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.test_mismatched_input_hash_fails_before_model_execution",
+      "kind": "FunctionDef",
+      "line": 89,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.test_b_patch_content_is_verified_before_applying",
+      "kind": "FunctionDef",
+      "line": 96,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "name": "ReferenceWorkflowTests.test_a_cannot_apply_corrections",
+      "kind": "FunctionDef",
+      "line": 108,
+      "archived": false,
+      "outcome": "no_additional_paper_value_reference_identified",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/build_candidate_artifacts.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/check_installed_candidate.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/check_sdist_rebuild.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 27,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/check_sdist_rebuild.py",
+      "name": "main.git",
+      "kind": "FunctionDef",
+      "line": 46,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/initial-build-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/smoke_installed_family.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 29,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/build_candidate_artifacts.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/check_installed_candidate.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/check_sdist_rebuild.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 27,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/check_sdist_rebuild.py",
+      "name": "main.git",
+      "kind": "FunctionDef",
+      "line": 46,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/smoke_installed_family.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 29,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/references/sashimi-w/check_variance.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 21,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/population-convergence-v1.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 19,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-2cc0cd0/audit-script.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 16,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-2cc0cd0/audit-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-before/method-before.py",
+      "name": "Na_calc",
+      "kind": "FunctionDef",
+      "line": 1,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-catalog-3a822be/audit-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 19,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-si/eps-31cfcad/audit-script.py",
+      "name": "digest",
+      "kind": "FunctionDef",
+      "line": 16,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-si/eps-31cfcad/audit-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 20,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-si/eps-catalog-31cfcad/audit-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 19,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-w/q10-adopted-v2/audit-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-w/q10-before-09322fe/audit-script.py",
+      "name": "main",
+      "kind": "FunctionDef",
+      "line": 23,
+      "archived": true,
+      "outcome": "immutable_historical_evidence",
+      "reference_keys": [],
+      "paper_urls": []
+    }
+  ],
+  "source_identity_checks": [
+    {
+      "repo": "family",
+      "file": ".github/actions/changed-paths/changed_paths.py",
+      "source_before_sha256": "32db87f7f17c1c5f8944fbf0f7f7e6ec957355a56960040772276cbdca1df74c",
+      "source_after_sha256": "32db87f7f17c1c5f8944fbf0f7f7e6ec957355a56960040772276cbdca1df74c",
+      "executable_ast_sha256": "9932964e911cd6baaa48b00d35c54619931746adfa2779f5878443613efdacc5",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/analyze_wmap7_class_validation.py",
+      "source_before_sha256": "2b76caa8834943341ecdc20b2f2b9f65fe267a110f51926ffae264e208cb8f7f",
+      "source_after_sha256": "52d1d7a3f649127b6fa758c039daf5d745a8198beffd12dcaee065bc88c39231",
+      "executable_ast_sha256": "a9250113e57099d187324084ba6a3f51fc20db1224c1f50f49c3ff435a89af73",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/build_candidate_artifacts.py",
+      "source_before_sha256": "54a7f7cd24d44360ed98cb1b20733f0af2ad9fc6157f84cb8cd5aa75a971c29a",
+      "source_after_sha256": "54a7f7cd24d44360ed98cb1b20733f0af2ad9fc6157f84cb8cd5aa75a971c29a",
+      "executable_ast_sha256": "b02f62069161efd776dccaf3f482b52d54de7f9a4f1a76414eef2d51007d2b6a",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_artifact_provenance.py",
+      "source_before_sha256": "8aa59951458ba981cd91b0b0de90552c0b3b34466ccfb2975e53b159bb54fce8",
+      "source_after_sha256": "8aa59951458ba981cd91b0b0de90552c0b3b34466ccfb2975e53b159bb54fce8",
+      "executable_ast_sha256": "dd26d46a3536e34a387e1edef20ee51c8c9c2f2432eb4410a170678c25ddcce7",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_compatibility.py",
+      "source_before_sha256": "711d2398126f4df3069b410d90c7e88d0c7db85c4df6da870ba33665db84a9a3",
+      "source_after_sha256": "711d2398126f4df3069b410d90c7e88d0c7db85c4df6da870ba33665db84a9a3",
+      "executable_ast_sha256": "ad7af28171de67bea5177ec603d3f3053cf9977e2e578d2b7d904cdee540bde2",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_eps_normalization.py",
+      "source_before_sha256": "9fa6ee5a2cbc8009a74fdebf6ee4f48435e6406097a2bd25d7afacdd1f3aa40e",
+      "source_after_sha256": "9fa6ee5a2cbc8009a74fdebf6ee4f48435e6406097a2bd25d7afacdd1f3aa40e",
+      "executable_ast_sha256": "d6f4aba5b14073ae03d34a3609670d2f60e6a23ddc4065757209e740f9962080",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_installed_candidate.py",
+      "source_before_sha256": "b70cad2c60153c59fdad7b2ecd15b6a83bdcfd37d4188a6e9424026634489787",
+      "source_after_sha256": "b70cad2c60153c59fdad7b2ecd15b6a83bdcfd37d4188a6e9424026634489787",
+      "executable_ast_sha256": "b12328e722081b0b34c0040c0480e34729189a6eeb41ec1f0cf4fac3bc69b4ae",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_population_convergence.py",
+      "source_before_sha256": "38c9b4bf88f3c0c41aaa01e55b2d483b5fd82385bf1372ef67887fcfa10857ad",
+      "source_after_sha256": "241987bfa49739433050cc4a1f422bb7d82eb08746433451852d93ae8f5af622",
+      "executable_ast_sha256": "c4d35097101020d70b8f4326499b13140128e6abcdcc61e17393ff69ec3d1a2a",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_sdist_rebuild.py",
+      "source_before_sha256": "2c12c5d9f44594eb87e2e120eb7c03a574ab9bb2e70443078977febf2b39970f",
+      "source_after_sha256": "2c12c5d9f44594eb87e2e120eb7c03a574ab9bb2e70443078977febf2b39970f",
+      "executable_ast_sha256": "15322c7f02075c3f265da3b33642e62d904881098f7c37cc9bf251ef28b46cfb",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_si_states.py",
+      "source_before_sha256": "b922db279b48b71a12a3d25961a95b08aeba02a95c5f7df27306774396fe77bc",
+      "source_after_sha256": "b922db279b48b71a12a3d25961a95b08aeba02a95c5f7df27306774396fe77bc",
+      "executable_ast_sha256": "c070c94e4a7070f99b3f499bbf333da857753a39afefc56a546dc51dbcce9956",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_w_convergence.py",
+      "source_before_sha256": "26465358a73b571bea5ea987044c4c4456101a3da079b900e2640d89cf997890",
+      "source_after_sha256": "26465358a73b571bea5ea987044c4c4456101a3da079b900e2640d89cf997890",
+      "executable_ast_sha256": "cfa9525624f43e5315bdf0687b74990c9c74cc755c3dbece8956b92ed9a797c8",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_w_q10_adoption.py",
+      "source_before_sha256": "ade09c97ac1e05cba7074f76a60d8a20ae9c7e214e3a6792a0d3d38a3bb4c45d",
+      "source_after_sha256": "ade09c97ac1e05cba7074f76a60d8a20ae9c7e214e3a6792a0d3d38a3bb4c45d",
+      "executable_ast_sha256": "160487f02c7cfb61c8de88003d57f44db835d50dc4eb546ebc3f90698826c942",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/check_wmap7_class_validation.py",
+      "source_before_sha256": "0647972ee6fda744ad6928fb8dc319fdadd413393bca244fd5e5d210e8ce3f20",
+      "source_after_sha256": "0647972ee6fda744ad6928fb8dc319fdadd413393bca244fd5e5d210e8ce3f20",
+      "executable_ast_sha256": "1cec12ef3364bd8405a52d1df4f8df65e873a4faab8032922f425a227f3ac00f",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/plot_wmap7_class_validation.py",
+      "source_before_sha256": "1126798b35e9817c2b773213c6d620114b1b316029b2b71f89f3abbc01d8c129",
+      "source_after_sha256": "344f29c56614328528cd57b39d8057408516f414230549a76c47ae46e854e544",
+      "executable_ast_sha256": "cd6bd4bab5a37e4de11f0203367804986514c86a684500116d3b371cbe34fa01",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/product_worker.py",
+      "source_before_sha256": "5b1df2aacd2512fcc7f7ed1901df8b441b9eb0c56278abcb9294ca74eb0a2d84",
+      "source_after_sha256": "5b1df2aacd2512fcc7f7ed1901df8b441b9eb0c56278abcb9294ca74eb0a2d84",
+      "executable_ast_sha256": "45c5aa4970ee2b8b60d1806b9ca4f8c1842e12457f65573a20bab5c5d0257e1a",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/reference_worker.py",
+      "source_before_sha256": "f7f33a77b19117f17a5a6ca606c8507d8552e515cb325429c3961c235739798b",
+      "source_after_sha256": "f7f33a77b19117f17a5a6ca606c8507d8552e515cb325429c3961c235739798b",
+      "executable_ast_sha256": "afde5e67e910ecfd896c6150d29aff8d21c58d38d27d6360868eef227227bca2",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_reference.py",
+      "source_before_sha256": "bb22d3196573c224f1cb811f211fbf81844737c3b625812addf90ede96b34b85",
+      "source_after_sha256": "bb22d3196573c224f1cb811f211fbf81844737c3b625812addf90ede96b34b85",
+      "executable_ast_sha256": "3b0a902da8766a444f9f0934725f452765a64c853b16a23ff35830d9cdd98a88",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/run_wmap7_class_validation.py",
+      "source_before_sha256": "5d35c8590414b34fcd58fae0cc14d56b7c20598e124a6e4ba5f2767a1b1775c6",
+      "source_after_sha256": "d267a8a0f775902dd03ece641d08fa3577419bd66a84991663beecf7ec0e1c80",
+      "executable_ast_sha256": "4faceef6a510aaa95f72d9cf1e034e3e3f0c767a95714d9a3e45b7b794daa7bd",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/smoke_installed_family.py",
+      "source_before_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+      "source_after_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+      "executable_ast_sha256": "0280989e31beb82a9b5835b1836bc9c8dcd69479ff723cb168cfdc8a79ed3080",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_population_convergence.py",
+      "source_before_sha256": "412d44ef82e2b11cf2c4c842c55d7a1923ab4e9e500d3f5bb3a9551ce212f6e0",
+      "source_after_sha256": "412d44ef82e2b11cf2c4c842c55d7a1923ab4e9e500d3f5bb3a9551ce212f6e0",
+      "executable_ast_sha256": "171b81dd00d3a575c09430814975d204d26388222706fa6f75ec6272aa4d08f4",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/summarize_recorded_family.py",
+      "source_before_sha256": "dcb307ee96b623a14a4212a58b87976183dbdcf8ac77c09d2414d4d771310060",
+      "source_after_sha256": "dcb307ee96b623a14a4212a58b87976183dbdcf8ac77c09d2414d4d771310060",
+      "executable_ast_sha256": "422bcee40f1f7d983e222b6a327d1865a0078f24263ddf093f67150d6e2bc08c",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "scripts/validate_family_artifacts.py",
+      "source_before_sha256": "30f17bdc452354e7f318f5acc4fd55fe5dad26995b38284af5632e2d58661eeb",
+      "source_after_sha256": "30f17bdc452354e7f318f5acc4fd55fe5dad26995b38284af5632e2d58661eeb",
+      "executable_ast_sha256": "4eb71a42b096fea88343393aa8be6dcc4885e8274d68245849c2e947f5760dd7",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_artifact_validation.py",
+      "source_before_sha256": "96e7ebf23ec682a69ff1ce6d1b0be80d04858475599e2e4e71b7f3077c9aee6c",
+      "source_after_sha256": "96e7ebf23ec682a69ff1ce6d1b0be80d04858475599e2e4e71b7f3077c9aee6c",
+      "executable_ast_sha256": "70895a077a9deb4c01f7041b8e8399865b200b27dc5a36bf7b3e1708b79ff2d0",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "tests/test_reference_workflow.py",
+      "source_before_sha256": "68a9d8a80b458582d8ce2e9cf948b8ff59d27a26b4c28711f32d0ce6fb55e1ac",
+      "source_after_sha256": "68a9d8a80b458582d8ce2e9cf948b8ff59d27a26b4c28711f32d0ce6fb55e1ac",
+      "executable_ast_sha256": "1a007ecdf5e989289923c3456e556fd469b872f9e6cdcd32e0f8d4a75b974a32",
+      "executable_ast_equal": true,
+      "historical_archive": false
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/build_candidate_artifacts.py",
+      "source_before_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+      "source_after_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+      "executable_ast_sha256": "c0706c90b040271f38a37b421072fc38a0cd1f9c207dee248c3e8136351ad1f3",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/check_installed_candidate.py",
+      "source_before_sha256": "b70cad2c60153c59fdad7b2ecd15b6a83bdcfd37d4188a6e9424026634489787",
+      "source_after_sha256": "b70cad2c60153c59fdad7b2ecd15b6a83bdcfd37d4188a6e9424026634489787",
+      "executable_ast_sha256": "b12328e722081b0b34c0040c0480e34729189a6eeb41ec1f0cf4fac3bc69b4ae",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/check_sdist_rebuild.py",
+      "source_before_sha256": "0f1c20666068dda47f94601aa743258132900587f74af719f11a7b8a04d531ec",
+      "source_after_sha256": "0f1c20666068dda47f94601aa743258132900587f74af719f11a7b8a04d531ec",
+      "executable_ast_sha256": "60f1edd2a88b46c420c185766e64b4c7dc2ce0b9b2056359798c592a06434598",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/initial-build-script.py",
+      "source_before_sha256": "caaf584ecdd4f7cf5ab3be7d1b4dea5e1452293bbfd1a55e3d6d747db0dd73a4",
+      "source_after_sha256": "caaf584ecdd4f7cf5ab3be7d1b4dea5e1452293bbfd1a55e3d6d747db0dd73a4",
+      "executable_ast_sha256": "fbb7f92782280b7237dc377ab5d49cfed653bc811f8db3a67bb4450ba83173e0",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/candidate-packaging-20260911/smoke_installed_family.py",
+      "source_before_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+      "source_after_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+      "executable_ast_sha256": "0280989e31beb82a9b5835b1836bc9c8dcd69479ff723cb168cfdc8a79ed3080",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/build_candidate_artifacts.py",
+      "source_before_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+      "source_after_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+      "executable_ast_sha256": "c0706c90b040271f38a37b421072fc38a0cd1f9c207dee248c3e8136351ad1f3",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/check_installed_candidate.py",
+      "source_before_sha256": "b70cad2c60153c59fdad7b2ecd15b6a83bdcfd37d4188a6e9424026634489787",
+      "source_after_sha256": "b70cad2c60153c59fdad7b2ecd15b6a83bdcfd37d4188a6e9424026634489787",
+      "executable_ast_sha256": "b12328e722081b0b34c0040c0480e34729189a6eeb41ec1f0cf4fac3bc69b4ae",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/check_sdist_rebuild.py",
+      "source_before_sha256": "0f1c20666068dda47f94601aa743258132900587f74af719f11a7b8a04d531ec",
+      "source_after_sha256": "0f1c20666068dda47f94601aa743258132900587f74af719f11a7b8a04d531ec",
+      "executable_ast_sha256": "60f1edd2a88b46c420c185766e64b4c7dc2ce0b9b2056359798c592a06434598",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/artifacts/merged-candidate-packaging-20260911/smoke_installed_family.py",
+      "source_before_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+      "source_after_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+      "executable_ast_sha256": "0280989e31beb82a9b5835b1836bc9c8dcd69479ff723cb168cfdc8a79ed3080",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/references/sashimi-w/check_variance.py",
+      "source_before_sha256": "6b3c77ee42d2fb1244f009e44886f79191b29ed7c96c64914fb7baba8ceeaba3",
+      "source_after_sha256": "6b3c77ee42d2fb1244f009e44886f79191b29ed7c96c64914fb7baba8ceeaba3",
+      "executable_ast_sha256": "f750cbc895b90cf06056ed9f0af0e2d5e4fad5f0f038c562a5a8e680d70ea7a2",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/population-convergence-v1.py",
+      "source_before_sha256": "05a580faf27239087b7c22c1711799abd913fac875f896b16441b49fd8cb1817",
+      "source_after_sha256": "05a580faf27239087b7c22c1711799abd913fac875f896b16441b49fd8cb1817",
+      "executable_ast_sha256": "56240f989ba66965ace6e103de8d9a51acbcbcec184dbdd74a8c132aae33f25b",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-2cc0cd0/audit-script.py",
+      "source_before_sha256": "ff68b6baf04ed79f4f9b70e961a49f4bca71c4ca60a2cab767c3b54c01d98e0f",
+      "source_after_sha256": "ff68b6baf04ed79f4f9b70e961a49f4bca71c4ca60a2cab767c3b54c01d98e0f",
+      "executable_ast_sha256": "0748f6875dc29f056f6b78dc91463d8f4c3ff30c44fd93bc47091de3f990d8b8",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-before/method-before.py",
+      "source_before_sha256": "93c57c271747aeb815bd35890b56d385252d2633fffc866ef1c50666cd04426b",
+      "source_after_sha256": "93c57c271747aeb815bd35890b56d385252d2633fffc866ef1c50666cd04426b",
+      "executable_ast_sha256": "bdee51bb56d33eeeacaef8ddb4fa4898c7d6029d15ee398e5f4d77443b74b9a4",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-c/eps-catalog-3a822be/audit-script.py",
+      "source_before_sha256": "2bfaf493d6582732397fc004d11399fd5783062b0c44a810a72dd1ad70b47eae",
+      "source_after_sha256": "2bfaf493d6582732397fc004d11399fd5783062b0c44a810a72dd1ad70b47eae",
+      "executable_ast_sha256": "4038bf3c10b6ce24b98faefe07fcd949630f44e01e3fd56647cedf622a7b8855",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-si/eps-31cfcad/audit-script.py",
+      "source_before_sha256": "ff68b6baf04ed79f4f9b70e961a49f4bca71c4ca60a2cab767c3b54c01d98e0f",
+      "source_after_sha256": "ff68b6baf04ed79f4f9b70e961a49f4bca71c4ca60a2cab767c3b54c01d98e0f",
+      "executable_ast_sha256": "0748f6875dc29f056f6b78dc91463d8f4c3ff30c44fd93bc47091de3f990d8b8",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-si/eps-catalog-31cfcad/audit-script.py",
+      "source_before_sha256": "2bfaf493d6582732397fc004d11399fd5783062b0c44a810a72dd1ad70b47eae",
+      "source_after_sha256": "2bfaf493d6582732397fc004d11399fd5783062b0c44a810a72dd1ad70b47eae",
+      "executable_ast_sha256": "4038bf3c10b6ce24b98faefe07fcd949630f44e01e3fd56647cedf622a7b8855",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-w/q10-adopted-v2/audit-script.py",
+      "source_before_sha256": "7185f34a933c6da015733e9fb1a1990bb32f568cdd48d0133bf8b50505400328",
+      "source_after_sha256": "7185f34a933c6da015733e9fb1a1990bb32f568cdd48d0133bf8b50505400328",
+      "executable_ast_sha256": "a9d979650e32b4966ff488044ffbe898ba973c1d127de87a8723ef8cfb8075af",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    },
+    {
+      "repo": "family",
+      "file": "validation/science/sashimi-w/q10-before-09322fe/audit-script.py",
+      "source_before_sha256": "7185f34a933c6da015733e9fb1a1990bb32f568cdd48d0133bf8b50505400328",
+      "source_after_sha256": "7185f34a933c6da015733e9fb1a1990bb32f568cdd48d0133bf8b50505400328",
+      "executable_ast_sha256": "a9d979650e32b4966ff488044ffbe898ba973c1d127de87a8723ef8cfb8075af",
+      "executable_ast_equal": true,
+      "historical_archive": true
+    }
+  ]
+}

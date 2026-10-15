@@ -1,0 +1,11 @@
+--- a/sashimi_c.py
++++ b/sashimi_c.py
+@@ -65,7 +65,7 @@
+         self.Msun     = 1.
+         self.gram     = self.Msun/1.988e33
+         self.c        = 2.9979e10*self.cm/self.s
+-        self.G        = 6.6742e-8*self.cm**3/self.gram/self.s**2
++        self.G        = 4.30091e-9*self.Mpc*(self.km/self.s)**2/self.Msun
+ 
+ 
+ 

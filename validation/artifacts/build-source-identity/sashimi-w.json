@@ -1,0 +1,11 @@
+{
+  "package": "sashimi-w",
+  "source_revision": "45af8f9eedf91f75f5f0a07b33d018e44b1b3c0b",
+  "unrelated_parent_revision": "fd88d7f9cc22838dd9615e484a8fb275f1e9b43e",
+  "revision_environment_injected": false,
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "archive_sha256": "9c3c3f49d676989572604b4e707d9f821a3ecc7e1e753d3aef81cde05358b387",
+  "wheel": "sashimi_w-0.1.0a1-py3-none-any.whl",
+  "wheel_sha256": "d7582fc35c3caac6f839d2e9367f1e3fc0e91f3d78abca18fc76e47063e69476",
+  "result": "source identity preserved"
+}

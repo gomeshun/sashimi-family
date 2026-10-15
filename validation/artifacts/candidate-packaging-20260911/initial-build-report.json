@@ -1,0 +1,70 @@
+{
+  "manifest_sha256": "264e4a486d4fdbca4b9fac1697d335e3dc5b44b7055dcc47fd5b9acd954ede72",
+  "script_sha256": "caaf584ecdd4f7cf5ab3be7d1b4dea5e1452293bbfd1a55e3d6d747db0dd73a4",
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "revision_environment_injected": false,
+  "source_revisions": [
+    {
+      "package": "itamae",
+      "source_revision": "dfa083d0d46181c376947ac7b2da829facaf2e8b"
+    },
+    {
+      "package": "sashimi-c",
+      "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5"
+    },
+    {
+      "package": "sashimi-si",
+      "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5"
+    },
+    {
+      "package": "sashimi-w",
+      "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9"
+    },
+    {
+      "package": "sashimi-f",
+      "source_revision": "c90b002401b4cc21731aff7e6b8f719775720907"
+    }
+  ],
+  "artifacts": {
+    "sashimi_c-2.0.0rc1-py3-none-any.whl": {
+      "sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+      "bytes": 103169
+    },
+    "sashimi_c-2.0.0rc1.tar.gz": {
+      "sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+      "bytes": 255572
+    },
+    "sashimi_f-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "5b7b55a27a63304477539e0c22c45c06d12b5c77fafdb31189f1663712bca398",
+      "bytes": 70654
+    },
+    "sashimi_f-0.2.0rc1.tar.gz": {
+      "sha256": "af0ed65580e0833bbab824770dba7c86ded13a98760367f63d3b344d09e17db3",
+      "bytes": 1064205
+    },
+    "sashimi_itamae-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "a456311ff8d36464a98ceb24284af4dccae9933f15708bc882030605bc93301e",
+      "bytes": 63199
+    },
+    "sashimi_itamae-0.2.0rc1.tar.gz": {
+      "sha256": "14502b7ac43b601a46d3e873ba940292df5dad18cf2b1d5dea0a1aa0b5300f17",
+      "bytes": 187553
+    },
+    "sashimi_si-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+      "bytes": 29271
+    },
+    "sashimi_si-0.2.0rc1.tar.gz": {
+      "sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+      "bytes": 386359
+    },
+    "sashimi_w-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+      "bytes": 54517
+    },
+    "sashimi_w-0.2.0rc1.tar.gz": {
+      "sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+      "bytes": 336236
+    }
+  }
+}

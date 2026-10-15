@@ -1,0 +1,615 @@
+{
+  "schema": "sashimi-family:artifact-candidate:v2",
+  "status": "complete candidate; recorded-family verification follows",
+  "parent_base": "50d4a2c4de7970d4912ae3a1586e683b214755a9",
+  "source_revisions": {
+    "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+    "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+    "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+    "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+    "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+  },
+  "supported_python": [
+    "3.11",
+    "3.12",
+    "3.13"
+  ],
+  "manifest_sha256": "f5fa76b3cc1b32621596db5ea52f514a8fe7e7e0c2dd202f7eea026a0e97e9a0",
+  "driver_sha256": "e6cc3da91d2dece4731b11c1589f4a49a848e3209420489654e20daabc30def6",
+  "artifacts": {
+    "sashimi_c-2.0.0rc1-py3-none-any.whl": {
+      "sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+      "bytes": 103169
+    },
+    "sashimi_c-2.0.0rc1.tar.gz": {
+      "sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+      "bytes": 255572
+    },
+    "sashimi_f-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba",
+      "bytes": 71259
+    },
+    "sashimi_f-0.2.0rc1.tar.gz": {
+      "sha256": "ca0c652fbf17fdd0191c312e957d10db8a628e972553a09aa46693a6d4550187",
+      "bytes": 14974996
+    },
+    "sashimi_itamae-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+      "bytes": 63200
+    },
+    "sashimi_itamae-0.2.0rc1.tar.gz": {
+      "sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+      "bytes": 187556
+    },
+    "sashimi_si-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+      "bytes": 29271
+    },
+    "sashimi_si-0.2.0rc1.tar.gz": {
+      "sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+      "bytes": 386359
+    },
+    "sashimi_w-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+      "bytes": 54517
+    },
+    "sashimi_w-0.2.0rc1.tar.gz": {
+      "sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+      "bytes": 336236
+    }
+  },
+  "tests": {
+    "3.11": [
+      {
+        "package": "itamae",
+        "tests": 309,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c"
+      },
+      {
+        "package": "sashimi-c",
+        "tests": 95,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801"
+      },
+      {
+        "package": "sashimi-si",
+        "tests": 49,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43"
+      },
+      {
+        "package": "sashimi-w",
+        "tests": 87,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c"
+      },
+      {
+        "package": "sashimi-f",
+        "tests": 104,
+        "result": "passed",
+        "evidence": "new installed regression",
+        "report_sha256": "5ff82106494f5af8b6b75520deef8be5309fb87d42260b7b1a1cfc56515a8e10",
+        "installation": {
+          "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/original-3.11/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/original-3.11/lib/python3.11/site-packages/sashimi_f.py",
+          "version": "0.2.0rc1",
+          "source_revision": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "Pygments": "2.21.0",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "numpy": "2.4.6",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "hypothesis": "6.168.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "scipy": "1.17.1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1"
+          }
+        }
+      }
+    ],
+    "3.12": [
+      {
+        "package": "itamae",
+        "tests": 309,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c"
+      },
+      {
+        "package": "sashimi-c",
+        "tests": 95,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801"
+      },
+      {
+        "package": "sashimi-si",
+        "tests": 49,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43"
+      },
+      {
+        "package": "sashimi-w",
+        "tests": 87,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c"
+      },
+      {
+        "package": "sashimi-f",
+        "tests": 104,
+        "result": "passed",
+        "evidence": "new installed regression",
+        "report_sha256": "9b9abb20836ae7a48920c0a04eaeb53ffd7d152986dbc56e108a0f874439edd7",
+        "installation": {
+          "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/original-3.12/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/original-3.12/lib/python3.12/site-packages/sashimi_f.py",
+          "version": "0.2.0rc1",
+          "source_revision": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "hypothesis": "6.168.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1"
+          }
+        }
+      }
+    ],
+    "3.13": [
+      {
+        "package": "itamae",
+        "tests": 309,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c"
+      },
+      {
+        "package": "sashimi-c",
+        "tests": 95,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801"
+      },
+      {
+        "package": "sashimi-si",
+        "tests": 49,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43"
+      },
+      {
+        "package": "sashimi-w",
+        "tests": 87,
+        "result": "passed",
+        "evidence": "unchanged artifact; prior installed regression reused by SHA-256",
+        "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c"
+      },
+      {
+        "package": "sashimi-f",
+        "tests": 104,
+        "result": "passed",
+        "evidence": "new installed regression",
+        "report_sha256": "3a4698d612d407e9ec5f2406c94604067027a0c5cb46a499cc6bae88dca3a3bb",
+        "installation": {
+          "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+          "executable": "/tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/original-3.13/bin/python",
+          "module_path": "/tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/original-3.13/lib/python3.13/site-packages/sashimi_f.py",
+          "version": "0.2.0rc1",
+          "source_revision": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+          "wheel_install": {
+            "url": "file:///tmp/sashimi-migration-20260910/rc-packaging-v3-20260911/dist/sashimi_f-0.2.0rc1-py3-none-any.whl",
+            "archive_info": {}
+          },
+          "dependencies": {
+            "sashimi-si": "0.2.0rc1",
+            "h5py": "3.16.0",
+            "pytest-cov": "7.1.0",
+            "sortedcontainers": "2.4.0",
+            "mpmath": "1.4.1",
+            "numexpr": "2.14.2",
+            "numpy": "2.5.3",
+            "Pygments": "2.21.0",
+            "scipy": "1.18.1",
+            "pathspec": "1.1.1",
+            "python-dateutil": "2.9.0.post0",
+            "pytest": "9.1.1",
+            "packaging": "26.3",
+            "sashimi-w": "0.2.0rc1",
+            "astropy-iers-data": "0.2026.9.7.0.56.14",
+            "sashimi-c": "2.0.0rc1",
+            "coverage": "7.16.0",
+            "tomlkit": "0.15.1",
+            "pyerfa": "2.0.1.5",
+            "iniconfig": "2.3.0",
+            "pandas": "3.0.5",
+            "six": "1.17.0",
+            "colossus": "1.4.0",
+            "PyYAML": "6.0.3",
+            "hatchling": "1.32.0",
+            "hypothesis": "6.168.0",
+            "pluggy": "1.6.0",
+            "sashimi-f": "0.2.0rc1",
+            "trove-classifiers": "2026.6.1.19",
+            "sashimi-itamae": "0.2.0rc1",
+            "tqdm": "4.70.0",
+            "astropy": "8.0.1"
+          }
+        }
+      }
+    ]
+  },
+  "smoke": {
+    "3.11": {
+      "original": {
+        "result": "passed",
+        "report_sha256": "3776f8472f92b93f7d0425be12b983a5f59ac5e576c96f29f82be0c1e8240dba",
+        "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "source_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+        }
+      },
+      "rebuilt": {
+        "result": "passed",
+        "report_sha256": "97a5bdc55753c06d4cf22274a3cf14c7eb6e6505d63e4ea5d492e72608b58ce1",
+        "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "source_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+        }
+      }
+    },
+    "3.12": {
+      "original": {
+        "result": "passed",
+        "report_sha256": "b3323518005aca1a251c41eccbc825f33389e6313f35ac3df5b060b33db66869",
+        "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "source_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+        }
+      },
+      "rebuilt": {
+        "result": "passed",
+        "report_sha256": "27b603e25c04354860efb3e42fdceae03f3ddf9cecdf1f62d10ce06df0281989",
+        "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "source_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+        }
+      }
+    },
+    "3.13": {
+      "original": {
+        "result": "passed",
+        "report_sha256": "63d95b551d7dc7881fd5bbb3931a6b19719f665abb76426b19d2485110b245d6",
+        "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "source_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+        }
+      },
+      "rebuilt": {
+        "result": "passed",
+        "report_sha256": "d1787932f59042ed3344b0c9199bb847b6a353bd2341035c0708703655dc81ad",
+        "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+        "script_sha256": "3cfe5e9ad6e9c488934eba6bb5126a06b187d035b8651b880ee5190c2d2aee4c",
+        "source_revisions": {
+          "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+          "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+          "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+          "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+          "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+        }
+      }
+    }
+  },
+  "rebuilds": {
+    "itamae": {
+      "package": "itamae",
+      "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+      "unrelated_parent_revision": "ad6434798c400f41b1df2c6f7c4e4e4a23d1bb76",
+      "revision_environment_injected": false,
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "archive_sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+      "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+      "wheel_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+      "result": "source identity preserved"
+    },
+    "sashimi-c": {
+      "package": "sashimi-c",
+      "source_revision": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+      "unrelated_parent_revision": "ad6434798c400f41b1df2c6f7c4e4e4a23d1bb76",
+      "revision_environment_injected": false,
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "archive_sha256": "266b33fb3ea57ecd9c52ab2171710973fef5a198d9cbe7b8abb0247a98566275",
+      "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+      "wheel_sha256": "f8dbc32ccea7caedf18df53efb1e655c5e7092ce0d38e566b47af17051fbea42",
+      "result": "source identity preserved"
+    },
+    "sashimi-si": {
+      "package": "sashimi-si",
+      "source_revision": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+      "unrelated_parent_revision": "398bd3219ea898f02914a6762579e30ccfe802b7",
+      "revision_environment_injected": false,
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "archive_sha256": "be8cc6aeedc3b1c1bf9b8bb2f63e026ade5a4997eabb227b8d462bd3033748bc",
+      "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+      "wheel_sha256": "8e1c9c532e39ed2adf09143131d76dc59a60f8e1cc428b346b983dcf997115ab",
+      "result": "source identity preserved"
+    },
+    "sashimi-w": {
+      "package": "sashimi-w",
+      "source_revision": "0b3146678e68ea71735173e4effb313f872fb9b9",
+      "unrelated_parent_revision": "bde0167fa5905d469f7953bd50ba761c5915e281",
+      "revision_environment_injected": false,
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "archive_sha256": "361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c",
+      "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+      "wheel_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+      "result": "source identity preserved"
+    },
+    "sashimi-f": {
+      "package": "sashimi-f",
+      "source_revision": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+      "unrelated_parent_revision": "c6f1855ce21f6dd8d0140eeaa1a757c0e99466c6",
+      "revision_environment_injected": false,
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "archive_sha256": "ca0c652fbf17fdd0191c312e957d10db8a628e972553a09aa46693a6d4550187",
+      "wheel": "sashimi_f-0.2.0rc1-py3-none-any.whl",
+      "wheel_sha256": "4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba",
+      "result": "source identity preserved"
+    }
+  },
+  "candidate_ci": {
+    "run_id": 34549662699,
+    "url": "https://github.com/gomeshun/sashimi-f/actions/runs/34549662699",
+    "head_sha": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+    "conclusion": "success",
+    "mode": "candidate",
+    "python": {
+      "3.11": {
+        "effective_manifest": {
+          "family_base_ref": "97101de1c1473af2ad813d0d7914afc364a4e863",
+          "validation_mode": "candidate",
+          "candidate_package": "sashimi-f",
+          "workflow_source_ref": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+          "overrides": {
+            "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+          },
+          "effective_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+          }
+        },
+        "smoke": {
+          "original": {
+            "report_sha256": "80b13ddfad7220c336d58e77bf83a3d0d709c06f91c8c8fc86f1a20f5f14692b",
+            "result": "passed",
+            "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]"
+          },
+          "rebuilt": {
+            "report_sha256": "ec4375a4a201d857f2e5e5ee7ce65572c780eefb0c440dc4cea840531b126e29",
+            "result": "passed",
+            "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]"
+          }
+        },
+        "artifact_sha256": "ad5a9b6342cd1accdca9bf2f1011650f6e8be8ee60ed1cc4aef08ec29a3cc819  dist-family/sashimi_c-2.0.0rc1-py3-none-any.whl\n4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba  dist-family/sashimi_f-0.2.0rc1-py3-none-any.whl\nc952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c  dist-family/sashimi_itamae-0.2.0rc1-py3-none-any.whl\nd4c0ad553864f1ef808ffbb6431ab6e512e90580dea65a1b4f850e024b16cebf  dist-family/sashimi_si-0.2.0rc1-py3-none-any.whl\n6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c  dist-family/sashimi_w-0.2.0rc1-py3-none-any.whl\nace8f830776d7ec12b47397549ea52aae56bc45813106a99138788ab90c30780  dist-family/sashimi_c-2.0.0rc1.tar.gz\nca0c652fbf17fdd0191c312e957d10db8a628e972553a09aa46693a6d4550187  dist-family/sashimi_f-0.2.0rc1.tar.gz\n6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c  dist-family/sashimi_itamae-0.2.0rc1.tar.gz\n969be19f5d7e899f8aea363c55c44f2261a5ce8a57c9be739c8ee6b4244a8569  dist-family/sashimi_si-0.2.0rc1.tar.gz\n361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c  dist-family/sashimi_w-0.2.0rc1.tar.gz\n"
+      },
+      "3.12": {
+        "effective_manifest": {
+          "family_base_ref": "97101de1c1473af2ad813d0d7914afc364a4e863",
+          "validation_mode": "candidate",
+          "candidate_package": "sashimi-f",
+          "workflow_source_ref": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+          "overrides": {
+            "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+          },
+          "effective_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+          }
+        },
+        "smoke": {
+          "original": {
+            "report_sha256": "d11849f501c4ed452a1f43106a2e0f1aaeca8abb10d34d143f1dfe22aef09d73",
+            "result": "passed",
+            "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]"
+          },
+          "rebuilt": {
+            "report_sha256": "09ab38dd70bf259aaab17cdf5e115dda3cc4f5af4caf66e8d7a96a77e9f61e8f",
+            "result": "passed",
+            "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]"
+          }
+        },
+        "artifact_sha256": "b427c95335f82004ad5ef662e704c8265c3e9669ecab897543d0ff556e8f8158  dist-family/sashimi_c-2.0.0rc1-py3-none-any.whl\n4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba  dist-family/sashimi_f-0.2.0rc1-py3-none-any.whl\nc952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c  dist-family/sashimi_itamae-0.2.0rc1-py3-none-any.whl\n2d14288699974d3bb97cc8a400fb038756964f8c6a4ae24255174a9ef29fd467  dist-family/sashimi_si-0.2.0rc1-py3-none-any.whl\n6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c  dist-family/sashimi_w-0.2.0rc1-py3-none-any.whl\n26213922f3da02c3881e77f459fa81782d0768c35a56f9dbde79090fa102b3d5  dist-family/sashimi_c-2.0.0rc1.tar.gz\nca0c652fbf17fdd0191c312e957d10db8a628e972553a09aa46693a6d4550187  dist-family/sashimi_f-0.2.0rc1.tar.gz\n6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c  dist-family/sashimi_itamae-0.2.0rc1.tar.gz\n8404dc6ae5b0c987d4c137231cbcff5f596adfcf990ba16ee3f03f46b77223b4  dist-family/sashimi_si-0.2.0rc1.tar.gz\n361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c  dist-family/sashimi_w-0.2.0rc1.tar.gz\n"
+      },
+      "3.13": {
+        "effective_manifest": {
+          "family_base_ref": "97101de1c1473af2ad813d0d7914afc364a4e863",
+          "validation_mode": "candidate",
+          "candidate_package": "sashimi-f",
+          "workflow_source_ref": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+          "overrides": {
+            "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9"
+          },
+          "effective_revisions": {
+            "itamae": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+            "sashimi-c": "2caa94d990f034f17f8bdb32ca7d9c5ac0d50fd5",
+            "sashimi-si": "7cfbeb60fccd87150cf80a7b54c191eddf0a15a5",
+            "sashimi-w": "0b3146678e68ea71735173e4effb313f872fb9b9",
+            "sashimi-f": "98e1f91d3d0b55c8652518b507c0fec8044c2aff"
+          }
+        },
+        "smoke": {
+          "original": {
+            "report_sha256": "bd7e1cee6ce1bc606817c6bbc7c651154eee2286cb19debe8e7bb7959d95954a",
+            "result": "passed",
+            "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]"
+          },
+          "rebuilt": {
+            "report_sha256": "25b8b5282325ce5b98f4c2de5e3b5b891d53a6fd26dc86ffdce916680c926ae8",
+            "result": "passed",
+            "python": "3.13.15 (main, Sep  1 2026, 14:18:08) [Clang 22.1.3 ]"
+          }
+        },
+        "artifact_sha256": "e7c337e7d93ac6fac44bdaf3572c9d5e25eb487b5315b1323bd83c17de0b8709  dist-family/sashimi_c-2.0.0rc1-py3-none-any.whl\n4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba  dist-family/sashimi_f-0.2.0rc1-py3-none-any.whl\nc952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c  dist-family/sashimi_itamae-0.2.0rc1-py3-none-any.whl\n81dd2a096aaed379da43440ed53a3c77188fe173b8d9e27db7541ba82ed27163  dist-family/sashimi_si-0.2.0rc1-py3-none-any.whl\n6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c  dist-family/sashimi_w-0.2.0rc1-py3-none-any.whl\n1849a5939f9e1a983949f8198dca5e1f3465ed0f65b021e5cf67f6330a91628b  dist-family/sashimi_c-2.0.0rc1.tar.gz\nca0c652fbf17fdd0191c312e957d10db8a628e972553a09aa46693a6d4550187  dist-family/sashimi_f-0.2.0rc1.tar.gz\n6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c  dist-family/sashimi_itamae-0.2.0rc1.tar.gz\nf7448c0511a014e59fd1dc16f0f257fd85df8f563560ab17384f870863fe8002  dist-family/sashimi_si-0.2.0rc1.tar.gz\n361ca78778ecc45985ccf8239053c79a78af254e2322a2bb7287d98cf99a4b0c  dist-family/sashimi_w-0.2.0rc1.tar.gz\n"
+      }
+    }
+  },
+  "previous_public_regression": {
+    "path": "validation/artifacts/merged-candidate-packaging-20260911/summary.json",
+    "sha256": "488d8cb8624e09351b0a2608e7f42fd8fe4dfc996e78450c7da8718b15bc087d"
+  },
+  "rebuild_comparison": {
+    "itamae": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+      "rebuilt_sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c"
+    },
+    "sashimi-c": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "29d652aef60370e8d548b790ba6c776e5f2bf27249ae7dc43d3a1cc3f9537801",
+      "rebuilt_sha256": "f8dbc32ccea7caedf18df53efb1e655c5e7092ce0d38e566b47af17051fbea42"
+    },
+    "sashimi-si": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "9ba8c834f16a6113cc10c01dcbae7c9e1a87675061ba87dad50504f98cd9dc43",
+      "rebuilt_sha256": "8e1c9c532e39ed2adf09143131d76dc59a60f8e1cc428b346b983dcf997115ab"
+    },
+    "sashimi-w": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c",
+      "rebuilt_sha256": "6fce6a3b22b12fe26b8d31dcea224f73b226baca51ded7a46510ad421419561c"
+    },
+    "sashimi-f": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba",
+      "rebuilt_sha256": "4a3ae020c0d6403930b8aa6396e57b7964edd38f000d46340549823ba7d3e9ba"
+    }
+  },
+  "standalone_f": {
+    "result": "passed",
+    "report_sha256": "0eed339e33f68994db44ff89fbcd02dd9b4a9d16da47fc0d23abcbc76232d5c8",
+    "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]"
+  },
+  "core_walkthrough": {
+    "run_id": 34493003890,
+    "url": "https://github.com/gomeshun/itamae/actions/runs/34493003890",
+    "head_sha": "6d8ee62b65793df9b799977cbf1859b5233d4059",
+    "executed_cells": 7,
+    "notebook_sha256": "5f4a3876d302480544d18902faae00f9101014897e19ea28ba0cd9d73cbc175e",
+    "figures_visually_inspected": 2
+  }
+}

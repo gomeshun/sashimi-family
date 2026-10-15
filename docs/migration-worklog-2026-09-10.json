@@ -1,0 +1,942 @@
+{
+  "parent": "1112d1c422368bde7cfacd7bb94398a3dc8d62de",
+  "repositories": {
+    "itamae": {
+      "refs": {
+        "HEAD": "8bd6d135003e91b6ca2717655df250c8f808cd24",
+        "origin/main": "863cb0643c61ca4ea7458d7a221f48e5c5bfe515",
+        "origin/itamae-migration": "8bd6d135003e91b6ca2717655df250c8f808cd24"
+      },
+      "old_public_classes": {}
+    },
+    "sashimi-c": {
+      "refs": {
+        "HEAD": "adbf9b5c49eda8978fd13948a6f006a6c0a9ca1b",
+        "origin/main": "e09571be7a1daaef343e97887e34449faf21db7b",
+        "origin/itamae-migration": "adbf9b5c49eda8978fd13948a6f006a6c0a9ca1b"
+      },
+      "old_public_classes": {
+        "units_and_constants": [],
+        "cosmology": [
+          {
+            "name": "g",
+            "line": 88
+          },
+          {
+            "name": "Hubble",
+            "line": 92
+          },
+          {
+            "name": "rhocrit",
+            "line": 96
+          },
+          {
+            "name": "growthD",
+            "line": 100
+          },
+          {
+            "name": "dDdz",
+            "line": 108
+          }
+        ],
+        "halo_model": [
+          {
+            "name": "sigmaMz",
+            "line": 140
+          },
+          {
+            "name": "dsdm",
+            "line": 147
+          },
+          {
+            "name": "sigma_Ludlow",
+            "line": 154
+          },
+          {
+            "name": "dsdm_Ludlow",
+            "line": 160
+          },
+          {
+            "name": "deltac_func",
+            "line": 170
+          },
+          {
+            "name": "s_func",
+            "line": 174
+          },
+          {
+            "name": "fc",
+            "line": 178
+          },
+          {
+            "name": "Delc",
+            "line": 182
+          },
+          {
+            "name": "conc200",
+            "line": 186
+          },
+          {
+            "name": "Mvir_from_M200",
+            "line": 199
+          },
+          {
+            "name": "Mvir_from_M200_fit",
+            "line": 212
+          },
+          {
+            "name": "Mzi",
+            "line": 228
+          },
+          {
+            "name": "Mzzi",
+            "line": 236
+          },
+          {
+            "name": "dMdz",
+            "line": 246
+          }
+        ],
+        "TidalStrippingSolver": [
+          {
+            "name": "M0",
+            "line": 283
+          },
+          {
+            "name": "M0",
+            "line": 288
+          },
+          {
+            "name": "reset_interpolation",
+            "line": 298
+          },
+          {
+            "name": "Mzvir",
+            "line": 342
+          },
+          {
+            "name": "AMz",
+            "line": 348
+          },
+          {
+            "name": "zetaMz",
+            "line": 354
+          },
+          {
+            "name": "tdynz",
+            "line": 359
+          },
+          {
+            "name": "subhalo_mass_stripped_picard_table",
+            "line": 374
+          },
+          {
+            "name": "msolve",
+            "line": 379
+          },
+          {
+            "name": "subhalo_mass_stripped_odeint",
+            "line": 383
+          },
+          {
+            "name": "Phi",
+            "line": 390
+          },
+          {
+            "name": "subhalo_mass_stripped_pert0",
+            "line": 517
+          },
+          {
+            "name": "subhalo_mass_stripped_pert1",
+            "line": 523
+          },
+          {
+            "name": "subhalo_mass_stripped_pert2",
+            "line": 534
+          },
+          {
+            "name": "subhalo_mass_stripped_pert2_shanks",
+            "line": 549
+          },
+          {
+            "name": "subhalo_mass_stripped_pert3",
+            "line": 581
+          },
+          {
+            "name": "subhalo_mass_stripped",
+            "line": 601
+          }
+        ],
+        "subhalo_properties": [
+          {
+            "name": "Ffunc",
+            "line": 658
+          },
+          {
+            "name": "Gfunc",
+            "line": 663
+          },
+          {
+            "name": "Ffunc_Yang",
+            "line": 672
+          },
+          {
+            "name": "Na_calc",
+            "line": 678
+          },
+          {
+            "name": "subhalo_properties_calc",
+            "line": 756
+          }
+        ],
+        "subhalo_observables": [
+          {
+            "name": "mass_function",
+            "line": 1003
+          },
+          {
+            "name": "Nsat_Mpeak",
+            "line": 1036
+          },
+          {
+            "name": "Nsat_Vpeak",
+            "line": 1077
+          },
+          {
+            "name": "mass_fraction",
+            "line": 1118
+          },
+          {
+            "name": "annihilation_boost_factor",
+            "line": 1145
+          },
+          {
+            "name": "annihilation_boost_factor_prompt_cusps",
+            "line": 1231
+          },
+          {
+            "name": "subhalo_catalog_MC",
+            "line": 1342
+          }
+        ]
+      }
+    },
+    "sashimi-si": {
+      "refs": {
+        "HEAD": "cf1b19021315d16b29351a77b2306ad646f88265",
+        "origin/main": "e17d3664dac677b604fd4ff02fb2af105a6937fa",
+        "origin/itamae-migration": "cf1b19021315d16b29351a77b2306ad646f88265"
+      },
+      "old_public_classes": {
+        "units_and_constants": [],
+        "cosmology": [
+          {
+            "name": "g",
+            "line": 50
+          },
+          {
+            "name": "Hubble",
+            "line": 54
+          },
+          {
+            "name": "rhocrit",
+            "line": 58
+          },
+          {
+            "name": "growthD",
+            "line": 62
+          },
+          {
+            "name": "dDdz",
+            "line": 70
+          }
+        ],
+        "halo_model": [
+          {
+            "name": "xi",
+            "line": 90
+          },
+          {
+            "name": "sigmaMz",
+            "line": 94
+          },
+          {
+            "name": "deltac_func",
+            "line": 99
+          },
+          {
+            "name": "s_func",
+            "line": 103
+          },
+          {
+            "name": "fc",
+            "line": 107
+          },
+          {
+            "name": "Delc",
+            "line": 111
+          },
+          {
+            "name": "conc200",
+            "line": 115
+          },
+          {
+            "name": "Mvir_from_M200",
+            "line": 128
+          },
+          {
+            "name": "Mvir_from_M200_fit",
+            "line": 141
+          },
+          {
+            "name": "Mzi",
+            "line": 157
+          },
+          {
+            "name": "Mzzi",
+            "line": 165
+          },
+          {
+            "name": "dMdz",
+            "line": 175
+          },
+          {
+            "name": "dsdm",
+            "line": 187
+          },
+          {
+            "name": "dlogSdlogM",
+            "line": 196
+          }
+        ],
+        "SIDM_cross_section": [
+          {
+            "name": "dsigmadcostheta",
+            "line": 225
+          },
+          {
+            "name": "sigma_total",
+            "line": 251
+          },
+          {
+            "name": "sigma_viscosity",
+            "line": 271
+          },
+          {
+            "name": "sigma_eff_m_interpolate",
+            "line": 294
+          },
+          {
+            "name": "sigma_eff_m_interpolate_analytical",
+            "line": 332
+          }
+        ],
+        "SIDM_parametric_model": [
+          {
+            "name": "t_collapse",
+            "line": 415
+          },
+          {
+            "name": "dVmaxSIDMdtt",
+            "line": 439
+          },
+          {
+            "name": "dVmaxSIDMdtt_numexpr_optimized",
+            "line": 465
+          },
+          {
+            "name": "drmaxSIDMdtt",
+            "line": 492
+          },
+          {
+            "name": "drmaxSIDMdtt_numexpr_optimized",
+            "line": 519
+          },
+          {
+            "name": "get_Vmax0",
+            "line": 545
+          },
+          {
+            "name": "get_rmax0",
+            "line": 564
+          },
+          {
+            "name": "get_rhos",
+            "line": 583
+          },
+          {
+            "name": "get_rs",
+            "line": 602
+          },
+          {
+            "name": "get_rc",
+            "line": 621
+          },
+          {
+            "name": "master_function",
+            "line": 640
+          }
+        ],
+        "TidalStrippingSolver": [
+          {
+            "name": "M0",
+            "line": 714
+          },
+          {
+            "name": "M0",
+            "line": 719
+          },
+          {
+            "name": "reset_interpolation",
+            "line": 727
+          },
+          {
+            "name": "Mzvir",
+            "line": 771
+          },
+          {
+            "name": "AMz",
+            "line": 777
+          },
+          {
+            "name": "zetaMz",
+            "line": 783
+          },
+          {
+            "name": "tdynz",
+            "line": 788
+          },
+          {
+            "name": "msolve",
+            "line": 793
+          },
+          {
+            "name": "subhalo_mass_stripped_odeint",
+            "line": 797
+          },
+          {
+            "name": "Phi",
+            "line": 813
+          },
+          {
+            "name": "subhalo_mass_stripped_pert0",
+            "line": 940
+          },
+          {
+            "name": "subhalo_mass_stripped_pert1",
+            "line": 946
+          },
+          {
+            "name": "subhalo_mass_stripped_pert2",
+            "line": 957
+          },
+          {
+            "name": "subhalo_mass_stripped_pert2_shanks",
+            "line": 972
+          },
+          {
+            "name": "subhalo_mass_stripped_pert3",
+            "line": 1011
+          },
+          {
+            "name": "subhalo_mass_stripped",
+            "line": 1031
+          }
+        ],
+        "subhalo_properties": [
+          {
+            "name": "Ffunc",
+            "line": 1148
+          },
+          {
+            "name": "Gfunc",
+            "line": 1158
+          },
+          {
+            "name": "Ffunc_Yang",
+            "line": 1173
+          },
+          {
+            "name": "Na_calc",
+            "line": 1184
+          },
+          {
+            "name": "subhalo_properties_calc",
+            "line": 1269
+          }
+        ]
+      }
+    },
+    "sashimi-w": {
+      "refs": {
+        "HEAD": "d234ae250f4343e465be483c5a960d12ea5d3dbf",
+        "origin/main": "99dfc3632eec0126080c0273ddf78f84fe09216c",
+        "origin/itamae-migration": "d234ae250f4343e465be483c5a960d12ea5d3dbf"
+      },
+      "old_public_classes": {
+        "subhalos": [
+          {
+            "name": "dlnSigmadlnM_interp",
+            "line": 128
+          },
+          {
+            "name": "TopHat",
+            "line": 155
+          },
+          {
+            "name": "SigmaIntegrand",
+            "line": 158
+          },
+          {
+            "name": "integratePk_th",
+            "line": 164
+          },
+          {
+            "name": "linear_growth_factor",
+            "line": 185
+          },
+          {
+            "name": "conc200",
+            "line": 204
+          },
+          {
+            "name": "fc",
+            "line": 333
+          },
+          {
+            "name": "g",
+            "line": 336
+          },
+          {
+            "name": "rhocrit",
+            "line": 339
+          },
+          {
+            "name": "Mvir_from_M200",
+            "line": 342
+          },
+          {
+            "name": "Mvir_from_M200_fit",
+            "line": 354
+          },
+          {
+            "name": "growthD",
+            "line": 369
+          },
+          {
+            "name": "xi",
+            "line": 376
+          },
+          {
+            "name": "sigmaMz",
+            "line": 379
+          },
+          {
+            "name": "dOdz",
+            "line": 384
+          },
+          {
+            "name": "dDdz",
+            "line": 387
+          },
+          {
+            "name": "Mzi",
+            "line": 395
+          },
+          {
+            "name": "Mzzi",
+            "line": 402
+          },
+          {
+            "name": "Hz",
+            "line": 411
+          },
+          {
+            "name": "Omegaz",
+            "line": 414
+          },
+          {
+            "name": "Delc",
+            "line": 418
+          },
+          {
+            "name": "dMdz",
+            "line": 421
+          },
+          {
+            "name": "dsdm",
+            "line": 432
+          },
+          {
+            "name": "delc_Y11",
+            "line": 438
+          },
+          {
+            "name": "s_Y11",
+            "line": 447
+          },
+          {
+            "name": "Ffunc_Yang",
+            "line": 450
+          },
+          {
+            "name": "Na_calc",
+            "line": 455
+          },
+          {
+            "name": "rs_rhos_calc",
+            "line": 525
+          },
+          {
+            "name": "subhalo_distr",
+            "line": 647
+          },
+          {
+            "name": "N_sat",
+            "line": 675
+          },
+          {
+            "name": "N_sat_Vthres",
+            "line": 698
+          }
+        ]
+      }
+    },
+    "sashimi-f": {
+      "refs": {
+        "HEAD": "2e83e9ac97908f4a60a1cfd26a4a9e2f44ae3222",
+        "origin/main": "68d617e94d254054cf65bb9a92d6200fe1582dd8",
+        "origin/itamae-migration": "2e83e9ac97908f4a60a1cfd26a4a9e2f44ae3222"
+      },
+      "old_public_classes": {
+        "units_and_constants": [],
+        "cosmology": [
+          {
+            "name": "g",
+            "line": 140
+          },
+          {
+            "name": "Hubble",
+            "line": 144
+          },
+          {
+            "name": "rhocrit",
+            "line": 148
+          },
+          {
+            "name": "growthD",
+            "line": 152
+          },
+          {
+            "name": "dDdz",
+            "line": 160
+          }
+        ],
+        "halo_model": [
+          {
+            "name": "xi",
+            "line": 180
+          },
+          {
+            "name": "sigmaMz",
+            "line": 184
+          },
+          {
+            "name": "deltac_func",
+            "line": 190
+          },
+          {
+            "name": "s_func",
+            "line": 194
+          },
+          {
+            "name": "fc",
+            "line": 198
+          },
+          {
+            "name": "Delc",
+            "line": 210
+          },
+          {
+            "name": "conc200_CDM_correa15",
+            "line": 215
+          },
+          {
+            "name": "concvir_CDM_correa15",
+            "line": 245
+          },
+          {
+            "name": "Mvir_from_M200",
+            "line": 259
+          },
+          {
+            "name": "Mvir_from_M200_fit",
+            "line": 272
+          },
+          {
+            "name": "Mzi",
+            "line": 288
+          },
+          {
+            "name": "Mzzi",
+            "line": 296
+          },
+          {
+            "name": "dMdz",
+            "line": 306
+          },
+          {
+            "name": "dsdm",
+            "line": 318
+          }
+        ],
+        "fdm_halo_model": [
+          {
+            "name": "path",
+            "line": 365
+          },
+          {
+            "name": "transfer_identifier",
+            "line": 378
+          },
+          {
+            "name": "cdm_power_identifier",
+            "line": 384
+          },
+          {
+            "name": "power_cache_key",
+            "line": 393
+          },
+          {
+            "name": "ps_args",
+            "line": 409
+          },
+          {
+            "name": "m_22",
+            "line": 462
+          },
+          {
+            "name": "m_22",
+            "line": 470
+          },
+          {
+            "name": "reset_Pk",
+            "line": 547
+          },
+          {
+            "name": "reset_interp_sigmaTopHat",
+            "line": 597
+          },
+          {
+            "name": "T2_fdm",
+            "line": 602
+          },
+          {
+            "name": "sigma_TopHat",
+            "line": 673
+          },
+          {
+            "name": "dsdm_TopHat",
+            "line": 678
+          },
+          {
+            "name": "sigma_sharpk",
+            "line": 710
+          },
+          {
+            "name": "dsdm_sharpk",
+            "line": 741
+          },
+          {
+            "name": "sigma_colossus",
+            "line": 755
+          },
+          {
+            "name": "dsdm_colossus",
+            "line": 788
+          },
+          {
+            "name": "sigmaMz",
+            "line": 831
+          },
+          {
+            "name": "dsdm",
+            "line": 885
+          }
+        ],
+        "TidalStrippingSolver": [
+          {
+            "name": "M0",
+            "line": 959
+          },
+          {
+            "name": "M0",
+            "line": 964
+          },
+          {
+            "name": "reset_interpolation",
+            "line": 972
+          },
+          {
+            "name": "Mzvir",
+            "line": 1016
+          },
+          {
+            "name": "AMz",
+            "line": 1022
+          },
+          {
+            "name": "zetaMz",
+            "line": 1028
+          },
+          {
+            "name": "tdynz",
+            "line": 1033
+          },
+          {
+            "name": "msolve",
+            "line": 1038
+          },
+          {
+            "name": "subhalo_mass_stripped_odeint",
+            "line": 1042
+          },
+          {
+            "name": "Phi",
+            "line": 1049
+          },
+          {
+            "name": "subhalo_mass_stripped_pert0",
+            "line": 1176
+          },
+          {
+            "name": "subhalo_mass_stripped_pert1",
+            "line": 1182
+          },
+          {
+            "name": "subhalo_mass_stripped_pert2",
+            "line": 1193
+          },
+          {
+            "name": "subhalo_mass_stripped_pert2_shanks",
+            "line": 1208
+          },
+          {
+            "name": "subhalo_mass_stripped_pert3",
+            "line": 1240
+          },
+          {
+            "name": "subhalo_mass_stripped",
+            "line": 1260
+          }
+        ],
+        "fdm_subhalo_properties": [
+          {
+            "name": "Ffunc",
+            "line": 1337
+          },
+          {
+            "name": "Gfunc",
+            "line": 1342
+          },
+          {
+            "name": "Ffunc_Yang",
+            "line": 1351
+          },
+          {
+            "name": "Na_calc",
+            "line": 1357
+          },
+          {
+            "name": "subhalo_properties_calc",
+            "line": 1415
+          }
+        ],
+        "fdm_subhalo_observables": [
+          {
+            "name": "mass_function",
+            "line": 1665
+          },
+          {
+            "name": "Nsat_Mpeak",
+            "line": 1698
+          },
+          {
+            "name": "Nsat_Vpeak",
+            "line": 1739
+          },
+          {
+            "name": "mass_fraction",
+            "line": 1780
+          },
+          {
+            "name": "annihilation_boost_factor",
+            "line": 1807
+          },
+          {
+            "name": "subhalo_catalog_MC",
+            "line": 1893
+          }
+        ]
+      }
+    }
+  },
+  "checkpoint_2026_09_11": {
+    "status": "decision pending; interim artifact checks passed",
+    "handoff": "docs/HANDOFF_20260911.md",
+    "artifact_summary": "validation/artifacts/merged-candidate-packaging-20260911/summary.json",
+    "pending": [
+      "F per-redshift virial mass-grid adoption",
+      "F dependent final science/convergence",
+      "atomic recorded parent and no-override public/private verification"
+    ],
+    "test_counts_per_python": {
+      "itamae": 309,
+      "sashimi-c": 95,
+      "sashimi-si": 49,
+      "sashimi-w": 87,
+      "sashimi-f": 94
+    },
+    "supported_python": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "private_family_ci_merge": "3a34188347ccc6e795e6fb640f9db1870ff4383b",
+    "core_artifact_merge": "6d8ee62b65793df9b799977cbf1859b5233d4059"
+  },
+  "final_v3_candidate_2026_09_11": {
+    "status": "candidate validated; atomic recording and exact-parent CI",
+    "user_decisions_pending": [],
+    "artifact_summary": "validation/artifacts/final-v3-candidate-20260911/summary.json",
+    "fdm_specification": "sashimi-f:fdm:2026-09-11:v3",
+    "fdm_migration_source": "98e1f91d3d0b55c8652518b507c0fec8044c2aff",
+    "fdm_full_catalog_controls": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "fdm_convergence_catalogs": 60,
+    "test_counts_per_python": {
+      "itamae": 309,
+      "sashimi-c": 95,
+      "sashimi-si": 49,
+      "sashimi-w": 87,
+      "sashimi-f": 104
+    },
+    "regression_reuse": "unchanged public artifacts verified by SHA-256; F rerun on all three Python versions",
+    "candidate_private_ci": 34549662699
+  },
+  "recorded_family_2026_09_11": {
+    "status": "release preparation complete; peer review pending",
+    "parent_sha": "8184e572c37af051011b85f1b797bfda6d7dfb7d",
+    "public_run": 34550691401,
+    "private_run": 34550711351,
+    "private_mode": "promoted",
+    "overrides": {},
+    "summary": "validation/artifacts/recorded-family-20260911/summary.json",
+    "parent_draft_pr": 34,
+    "main_integration": false,
+    "publication": false
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "variant": "sashimi-c",
+  "source_revisions": {
+    "sashimi-c": "3fefa3426c33945ce4af63a472812ac6f9e4517c",
+    "itamae": "c2d7b9afb9773bc8cb5b2ee142d70d95cc3afe3b"
+  },
+  "script_sha256": "05a580faf27239087b7c22c1711799abd913fac875f896b16441b49fd8cb1817",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sashimi-itamae": "0.1.0a4"
+  },
+  "interpretation": "One variable at a time; finite-grid sensitivity, not a continuum truth or recalibration.",
+  "rows": [
+    {
+      "label": "baseline",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.41643885301891714,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9744.067724642005,
+            "bound_mass_fraction": 0.029520206580550826,
+            "count_above_1e7": 242.707815795274,
+            "NFW_luminosity_sum": 9.357769563977593e+25
+          },
+          "nodes": 576,
+          "file": "baseline-default.npz",
+          "sha256": "af27f0eb5ae7f068a6be61096cc17a7c985aebed8f8008482f5babb1059fe3a3"
+        }
+      }
+    },
+    {
+      "label": "N_ma-32",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 32,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.5491966699482873,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9739.810550635744,
+            "bound_mass_fraction": 0.0320655769521397,
+            "count_above_1e7": 288.6941243781321,
+            "NFW_luminosity_sum": 1.0235922216841925e+26
+          },
+          "nodes": 1152,
+          "file": "N_ma-32-default.npz",
+          "sha256": "7dadef6885346a138e12f94cd901e1d64330d472b00d258ba56db5f87dc4a03c"
+        }
+      }
+    },
+    {
+      "label": "N_ma-64",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 64,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.005897432914935,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9739.571066317516,
+            "bound_mass_fraction": 0.03342105341045945,
+            "count_above_1e7": 307.1948527087705,
+            "NFW_luminosity_sum": 1.0704170492325201e+26
+          },
+          "nodes": 2304,
+          "file": "N_ma-64-default.npz",
+          "sha256": "2b56416b320bb5fd4cd1e959111389692e194d85edb81cda4dc4b446f88730aa"
+        }
+      }
+    },
+    {
+      "label": "N_ma-128",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 128,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 2.122697200975381,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9739.556954214964,
+            "bound_mass_fraction": 0.03411841362627862,
+            "count_above_1e7": 318.99917794955604,
+            "NFW_luminosity_sum": 1.0945273392187885e+26
+          },
+          "nodes": 4608,
+          "file": "N_ma-128-default.npz",
+          "sha256": "90b4a50ac335a9412f367a6aa5e49a47014e354c66e0634ab43d410ca54c3f2d"
+        }
+      }
+    },
+    {
+      "label": "dz-0.125",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.125,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 2.2675592629238963,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 10427.21629741133,
+            "bound_mass_fraction": 0.03590925762057174,
+            "count_above_1e7": 286.47271274684647,
+            "NFW_luminosity_sum": 1.023088561835904e+26
+          },
+          "nodes": 1152,
+          "file": "dz-0.125-default.npz",
+          "sha256": "df6e57b1a9f1de129b0411a3939ba2131290469b7906e1ad4b18bdeae66d893f"
+        }
+      }
+    },
+    {
+      "label": "dz-0.0625",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.0625,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 1.1305043970933184,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 10777.778315540578,
+            "bound_mass_fraction": 0.03952835262907483,
+            "count_above_1e7": 320.18068093624896,
+            "NFW_luminosity_sum": 1.0683688492877205e+26
+          },
+          "nodes": 2304,
+          "file": "dz-0.0625-default.npz",
+          "sha256": "d23d40b7b2c3b338dce6672d99123dfe47276ab5e55017a0f232006c703d1eb4"
+        }
+      }
+    },
+    {
+      "label": "dz-0.03125",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.03125,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 2.130496278987266,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 10955.537203350603,
+            "bound_mass_fraction": 0.041449863040147035,
+            "count_above_1e7": 337.6431909201069,
+            "NFW_luminosity_sum": 1.0914228244190768e+26
+          },
+          "nodes": 4608,
+          "file": "dz-0.03125-default.npz",
+          "sha256": "4c7470080affce55d02429adc4a26b0e93048f8f94eb33f7b7a0777643319248"
+        }
+      }
+    },
+    {
+      "label": "N_herm-5",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 5,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.5008654999546707,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9744.067724642005,
+            "bound_mass_fraction": 0.029520206580550823,
+            "count_above_1e7": 242.70781579527397,
+            "NFW_luminosity_sum": 9.364083146312758e+25
+          },
+          "nodes": 960,
+          "file": "N_herm-5-default.npz",
+          "sha256": "32870a970a30e1e724568acdd80f53c8be725773ec404f27a1059b4929247fa8"
+        }
+      }
+    },
+    {
+      "label": "N_herm-7",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 7,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.6957615709397942,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9744.067724642005,
+            "bound_mass_fraction": 0.02952020658055082,
+            "count_above_1e7": 242.70781579527397,
+            "NFW_luminosity_sum": 9.364091498264088e+25
+          },
+          "nodes": 1344,
+          "file": "N_herm-7-default.npz",
+          "sha256": "a47e08f7ba4049b9e9b80eca0a8892ac7d8d4f744016bbff4053eaa15e4eb72f"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-16",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 16,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.3265418279916048,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9737.635436375427,
+            "bound_mass_fraction": 0.029497731471799588,
+            "count_above_1e7": 242.50870357027762,
+            "NFW_luminosity_sum": 9.350747983522531e+25
+          },
+          "nodes": 576,
+          "file": "N_hermNa-16-default.npz",
+          "sha256": "220ef362263ce15e7a4e679b397ce5d6dc2e99f8641a4c03b4d487b2d8e97a7c"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-32",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 32,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.34652368107344955,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9741.335222242455,
+            "bound_mass_fraction": 0.029503785176184974,
+            "count_above_1e7": 242.6014670788137,
+            "NFW_luminosity_sum": 9.35394041750403e+25
+          },
+          "nodes": 576,
+          "file": "N_hermNa-32-default.npz",
+          "sha256": "893eed13236e12054bb018bd7408f545a86a1085770979a6739b9cc59e4e9227"
+        }
+      }
+    },
+    {
+      "label": "N_hermNa-64",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 64,
+        "ct_th": 0.77,
+        "method": "pert2_shanks"
+      },
+      "seconds": 0.3483584279892966,
+      "warnings": [
+        "invalid value encountered in divide"
+      ],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9742.538249716057,
+            "bound_mass_fraction": 0.029512775350427258,
+            "count_above_1e7": 242.66023490121086,
+            "NFW_luminosity_sum": 9.35592403268065e+25
+          },
+          "nodes": 576,
+          "file": "N_hermNa-64-default.npz",
+          "sha256": "0b310e97a4499bdbe797e34d10b2649634cabab94b6ad2fb1c7d095bdebc1230"
+        }
+      }
+    },
+    {
+      "label": "odeint",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "odeint"
+      },
+      "seconds": 1.5259316400624812,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9744.067724642005,
+            "bound_mass_fraction": 0.028392355091460604,
+            "count_above_1e7": 234.9099135554139,
+            "NFW_luminosity_sum": 9.1714036665567e+25
+          },
+          "nodes": 576,
+          "file": "odeint-default.npz",
+          "sha256": "c96b649d38466a7a41ca05988603e5ef0ed5eafaeba8bea235095caacebd9ee0"
+        }
+      }
+    },
+    {
+      "label": "odeint-tight",
+      "parameters": {
+        "M0": 1000000000000.0,
+        "redshift": 0.0,
+        "dz": 0.25,
+        "zmax": 3.0,
+        "N_ma": 16,
+        "logmamin": 6.0,
+        "logmamax": 10.0,
+        "N_herm": 3,
+        "N_hermNa": 8,
+        "ct_th": 0.77,
+        "method": "odeint",
+        "rtol": 1e-10,
+        "atol": 1e-08
+      },
+      "seconds": 2.011475764098577,
+      "warnings": [],
+      "states": {
+        "default": {
+          "metrics": {
+            "count": 9744.067724642005,
+            "bound_mass_fraction": 0.028392354666201873,
+            "count_above_1e7": 234.9099135554139,
+            "NFW_luminosity_sum": 9.17140354379016e+25
+          },
+          "nodes": 576,
+          "file": "odeint-tight-default.npz",
+          "sha256": "0404bf8767d3413f864eb470df65f614ca70fc0e0718bf692bab620ed7a538a1"
+        }
+      }
+    }
+  ]
+}

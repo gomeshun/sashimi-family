@@ -1,0 +1,22 @@
+{
+  "manifest_sha256": "92d971805c1eb748a6dce27ee34b7916c70eba3cc3bcc9d7c23dd6ed591278c4",
+  "script_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+  "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+  "revision_environment_injected": false,
+  "source_revisions": [
+    {
+      "package": "itamae",
+      "source_revision": "6d8ee62b65793df9b799977cbf1859b5233d4059"
+    }
+  ],
+  "artifacts": {
+    "sashimi_itamae-0.2.0rc1-py3-none-any.whl": {
+      "sha256": "c952c840521d149b3657cf0a5ccb83fcfaa31bc9a00a5058561dcabb1fd7321c",
+      "bytes": 63200
+    },
+    "sashimi_itamae-0.2.0rc1.tar.gz": {
+      "sha256": "6840e970553d340ee93358d06ffebf9a6603eb24f1a2d505e6affa8b2d700d3c",
+      "bytes": 187556
+    }
+  }
+}

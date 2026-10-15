@@ -1,6 +1,16 @@
 # SASHIMI migration・リリース準備の開発 goal
 
+CI重複整理完了（2026-10-07）：通常の配布物ビルド・sdist再構築を各1回へまとめ、同じwheelをPython 3.11–3.13へ渡す構成にした。全5者の変更はCI用の2ファイルに限定し、検証済み子PRをmigrationへ統合した。親 `c35fa1d60639ff6ec6a21c36021bdbc92a9c6bf7` にmanifest・gitlinksを記録し、同一親・overrideなしの公開standard/private full検証を監査済み。[CI方針](docs/ci-validation.md)と[実行記録](validation/artifacts/ci-dedup-20261007/README.md)を参照。以下の科学的検証記録は元のSHAの証拠として保持する。main統合・公開は引き続きピアレビュー後の別工程とする。
+
+互換性集合更新完了（2026-10-07）：C/W/Fのmigration統合済み修正（Picard表の状態保護、EPS安定化とz=1散乱基準、保存物identity保護）を親 `39d793064836e0e36a9912d8a129f4bc03911f82` のmanifest・gitlinksへ記録した。ITAMAE/SIは不変。全5者の新しい配布物でPython 3.11–3.13それぞれ718件、元/再構築wheelの実計算・保存読込、同一親に対する公開/private CIがoverrideなしで成功した。[最新引き渡し](docs/HANDOFF_20261007.md) にF旧保存物の再生成条件とWの数値変化を明記した。native APIの4件のPRは今回の集合に含めず、main統合・公開前のピアレビュー待ちを維持する。以下の9月11日の記録は当時のSHAと結果として保存する。
+
+レビュー修正完了（2026-09-11）：各 `usage_walkthrough.ipynb` を旧 `sample.ipynb` 相当の物理量・図を得られるITAMAE版へ改訂し、各repoを `src/`、`notebooks/`、`tests/`、`docs/` を中心とする構成へ整理した。C/SI/W/FのすべてでVmax–rmaxとsubhalo mass functionを表示し、5冊35コードセル・24図の実行と保存、全ノートブックCIの成功を確認した。最終wheel/sdistからPython 3.11–3.13それぞれ668件の回帰試験と全5者の実計算・再構築を検証し、親 `b6a22141faf2d191a49885d127464789514fd775` に対する公開・private CIが同じmanifest・overrideなしで成功した。検証済みの子変更は各migrationブランチへ統合済みで、再びピアレビュー待ちとする。[引き渡し](docs/HANDOFF_20260911.md) にソース・図・検証の対応を記録した。WMAP7でのVogel係数採用はユーザー判断により保留し、現行Viel係数・q10を維持する。以前のCI成功は当時のSHAに対する証拠として保存する。
+
+更新（2026-09-11）：ユーザーから受領した独立調査に基づき、現行Viel係数の熱的WDMはq10へ統一し、q5を通常APIから廃止する。以下に残るq5/q10両選択肢の維持要件は、この追加判断で置き換える。旧q5の固定参照は保持し、旧指定・キャッシュを黙ってq10へ読み替えない。係数・宇宙論・他の処方や観測制限は同時変更しない。[採用記録](docs/adoption-2026-09-10.md)を参照。
+
 合意日：2026-09-10。以下は実装担当の agent に渡す開発プロンプトである。
+
+追加採用（2026-09-11）：Fの降着率・対数質量積分で最後の赤方偏移のvirial-mass配列を再利用する既知のミスについて、ユーザーが各降着赤方偏移への修正を明示承認した。独立B patch、仕様識別、全カタログ比較、F収束試験を更新する。既存の式・係数・宇宙論・solverは同時変更しない。
 
 この文書は、旧実装計画と開発プロンプトを統合した、migration・リリース準備の唯一の実行計画である。README、[golden fixture policy](docs/golden-fixture-policy.md)、関連 Issue/PR に残る旧方針と矛盾する場合は、この文書を優先して関連記述を更新する。互換性確認済みの revision 集合は引き続き [compatibility.toml](compatibility.toml) を正とし、計画内に別の恒久的な revision 集合を作らない。[2026-09-04 の監査](docs/migration-status-2026-09-04.md) は歴史的記録、[科学開発ロードマップ](docs/scientific-roadmap.md) は今回の対象外の新機能を扱う。
 
@@ -237,6 +247,8 @@ content-addressed cache key には power 内容・filter・質量 grid・宇宙�
 認証・公開権限・インデックス上の依存解決など、実際の公開操作に依存する検証は、未実施項目として正確に記録する。main 統合後と公開後の検証手順は引き渡し資料に残す。
 
 ### CI と完了前の必須検証
+
+2026-10-07の追加指示により、重複する実行を整理する。[CI実行方針](docs/ci-validation.md)に従い、通常のfamily検証では配布物を一度だけ作り、同じwheelをPython 3.11–3.13で実行する。sdist再構築・単独環境の確認は代表Pythonで行い、リリース候補・大きなpackaging変更は手動のfull検証で全Pythonの配布物回帰まで確認する。関連変更のない文書更新や、成功済みPRとGit treeが一致するmergeで重い確認を繰り返さない。過去の出力SHAを新しいcommitへ付け替えず、互換性集合を更新するときの同一親・overrideなしの公開/private確認は維持する。
 
 - ITAMAE：Ruff、format check、mypy、pytest/coverage、最小依存、Astropy/Colossus backend、Python matrix、build と clean artifact smoke。
 - 各 variant：migration lint、A/B/C と製品 golden、invariant、固定 ITAMAE 入力、build、clean install、最小数値計算。新 API と形式変換を検証し、旧 runtime import の共存を完了条件として残さない。

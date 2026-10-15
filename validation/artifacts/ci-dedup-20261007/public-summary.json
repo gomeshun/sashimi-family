@@ -1,0 +1,585 @@
+{
+  "schema": "sashimi-family:ci-dedup-public:v1",
+  "status": "passed",
+  "recorded_parent": "c35fa1d60639ff6ec6a21c36021bdbc92a9c6bf7",
+  "public_family": {
+    "layout": "single-build",
+    "profile": "standard",
+    "run_id": 37582865239,
+    "url": "https://github.com/gomeshun/sashimi-family/actions/runs/37582865239",
+    "event": "pull_request",
+    "workflow_head": "c35fa1d60639ff6ec6a21c36021bdbc92a9c6bf7",
+    "conclusion": "success",
+    "run_record_sha256": "5dd35ccd2c7ba6e06b0fd59e7fba541759995864ac0268bce1970abb133059df",
+    "validation_report_sha256": "9eceb98e6c6f268a42be4fd821f40cf9b4df89c061e15ea05c4143590fb488fb",
+    "effective": {
+      "family_base_ref": "c35fa1d60639ff6ec6a21c36021bdbc92a9c6bf7",
+      "overrides": {}
+    },
+    "jobs": [
+      {
+        "name": "public-coinstall",
+        "conclusion": "success"
+      }
+    ],
+    "original_artifacts_sha256": {
+      "sashimi_c-2.0.0rc1-py3-none-any.whl": "c052ab35fa1af66567d68857c805fcce0bf5e0375cb3864e21b9495fd9cdaa1a",
+      "sashimi_c-2.0.0rc1.tar.gz": "0da455c878c4e23821b861bd1a32ae838a171c177af07aa16adc459b9a15edb9",
+      "sashimi_itamae-0.2.0rc1-py3-none-any.whl": "e9b745e08c8f0de2545d25840cf6ed2b991d2cbcea8b91a28ceef3b74f07d0f7",
+      "sashimi_itamae-0.2.0rc1.tar.gz": "e4652cb89d46eef827a776b8cf50498a46b99b3bed819a17360abf5c9ae2dc15",
+      "sashimi_si-0.2.0rc1-py3-none-any.whl": "90ceceed6489892be45718fbc85c92860de44716fa6a2f7c0c6581088a961278",
+      "sashimi_si-0.2.0rc1.tar.gz": "530ca2b4c8f330ee56d8a17694b830f2771b2a9ce46c72a6bd13ca30e272ace0",
+      "sashimi_w-0.2.0rc1-py3-none-any.whl": "4846d86bf7ecacbbf3771e7fffeadbc1913eefeef0da13f5bdc1643b5ba05ba7",
+      "sashimi_w-0.2.0rc1.tar.gz": "b1b0ef4eb427b1b568cb5dbcbcdc3414596727b90f69e356ff1000ca9857e3ba"
+    },
+    "build_python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "rebuilds": {
+      "itamae": {
+        "package": "itamae",
+        "source_revision": "c4591659e211b7b5675b857dceb25b33030621f4",
+        "unrelated_parent_revision": "df194d82d5cdc19b94bf6e00181bb6a69b5edc78",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "e4652cb89d46eef827a776b8cf50498a46b99b3bed819a17360abf5c9ae2dc15",
+        "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "e9b745e08c8f0de2545d25840cf6ed2b991d2cbcea8b91a28ceef3b74f07d0f7",
+        "result": "source identity preserved",
+        "runtime_data_metadata_equal": true,
+        "original_wheel_sha256": "e9b745e08c8f0de2545d25840cf6ed2b991d2cbcea8b91a28ceef3b74f07d0f7"
+      },
+      "sashimi-c": {
+        "package": "sashimi-c",
+        "source_revision": "73e9b80f0ac098de9fba77628a34d5abe3a99beb",
+        "unrelated_parent_revision": "a97c1ddb8b529a6caf17ad7ff7ee81c004b040df",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "0da455c878c4e23821b861bd1a32ae838a171c177af07aa16adc459b9a15edb9",
+        "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+        "wheel_sha256": "12f3a55dfe945ca03900661c4b92e3abef510dadc4cdc1fe181889850e33b448",
+        "result": "source identity preserved",
+        "runtime_data_metadata_equal": true,
+        "original_wheel_sha256": "c052ab35fa1af66567d68857c805fcce0bf5e0375cb3864e21b9495fd9cdaa1a"
+      },
+      "sashimi-si": {
+        "package": "sashimi-si",
+        "source_revision": "94a7cf5e524eb723b4b8e6428641a3d791133c5e",
+        "unrelated_parent_revision": "65392f8b1193e58ba708cf4dea81690c0d8c1732",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "530ca2b4c8f330ee56d8a17694b830f2771b2a9ce46c72a6bd13ca30e272ace0",
+        "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "2960dcee4a00d7bfff751687405d13abcec9401fb30a7c490f0bcd25017fca4a",
+        "result": "source identity preserved",
+        "runtime_data_metadata_equal": true,
+        "original_wheel_sha256": "90ceceed6489892be45718fbc85c92860de44716fa6a2f7c0c6581088a961278"
+      },
+      "sashimi-w": {
+        "package": "sashimi-w",
+        "source_revision": "62b923f81c690c369a97cca567bbe32f1e32d6ba",
+        "unrelated_parent_revision": "65392f8b1193e58ba708cf4dea81690c0d8c1732",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "b1b0ef4eb427b1b568cb5dbcbcdc3414596727b90f69e356ff1000ca9857e3ba",
+        "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "4846d86bf7ecacbbf3771e7fffeadbc1913eefeef0da13f5bdc1643b5ba05ba7",
+        "result": "source identity preserved",
+        "runtime_data_metadata_equal": true,
+        "original_wheel_sha256": "4846d86bf7ecacbbf3771e7fffeadbc1913eefeef0da13f5bdc1643b5ba05ba7"
+      }
+    },
+    "python": {
+      "3.11": {
+        "original": {
+          "report_sha256": "85c16a70fbd60d1755b28aac7877167c54f0351666c0568c5329c84a264ef75b"
+        },
+        "rebuilt": {
+          "report_sha256": "271ebf5f149fde241d6b4423c1b0189488dbaa0c2577f68b9b8b94d2c64c0841",
+          "original_rebuilt_quantities_equal": true
+        }
+      },
+      "3.12": {
+        "original": {
+          "report_sha256": "43ceeb947bdc00620cd17d48e62acbe0b27444f4427d93ea28e17677a0d920e3"
+        },
+        "rebuilt": null
+      },
+      "3.13": {
+        "original": {
+          "report_sha256": "aa015c7d8646498572587807acb799a6b0c44d9a670d87f2d36db9a260429923"
+        },
+        "rebuilt": null
+      }
+    },
+    "standalone": {
+      "itamae": {
+        "report_sha256": "8ac1f4b7f7904bb3b2559ff28920b462a05eff1a1deeec889a39baa6ae299a38"
+      },
+      "sashimi-c": {
+        "report_sha256": "764781b97e77078ac0d95fd08c23cd229811cc7f4d2cbe8deb2489a6d3b4ee1d"
+      },
+      "sashimi-si": {
+        "report_sha256": "6256764393b9ad72bd0648a2ed4b232d850c3e0c696f7546672f0afb8c951a94"
+      },
+      "sashimi-w": {
+        "report_sha256": "85d6614ea0b957ac7e593f3728ecd035a13497a43984c09bc83deafa77a93893"
+      }
+    }
+  },
+  "public_components": [
+    {
+      "repo": "itamae",
+      "pr": "https://github.com/gomeshun/itamae/pull/30",
+      "tested_head": "b3ab98d5cb48bca7447b953e19b6be2722d721c5",
+      "merged_revision": "c4591659e211b7b5675b857dceb25b33030621f4",
+      "tree": "e4b247810707a2a9d4ef8261d389a9ccdb3193b6",
+      "changed_paths": [
+        ".github/workflows/test.yml",
+        ".github/workflows/usage-walkthrough.yml"
+      ],
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:41Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360748/job/112661544370",
+          "name": "walkthrough",
+          "startedAt": "2026-10-07T06:24:56Z",
+          "status": "COMPLETED",
+          "workflowName": "Usage walkthrough"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661543901",
+          "name": "changes",
+          "startedAt": "2026-10-07T06:24:56Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584119",
+          "name": "quality",
+          "startedAt": "2026-10-07T06:25:04Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584361",
+          "name": "tests (3.11)",
+          "startedAt": "2026-10-07T06:25:04Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:15Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584329",
+          "name": "tests (3.11, astropy)",
+          "startedAt": "2026-10-07T06:25:04Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584353",
+          "name": "tests (3.11, colossus)",
+          "startedAt": "2026-10-07T06:25:05Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:34Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584376",
+          "name": "tests (3.11, full)",
+          "startedAt": "2026-10-07T06:25:21Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584292",
+          "name": "tests (3.12)",
+          "startedAt": "2026-10-07T06:25:04Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:32Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584394",
+          "name": "tests (3.12, astropy)",
+          "startedAt": "2026-10-07T06:25:20Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:25Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584362",
+          "name": "tests (3.12, colossus)",
+          "startedAt": "2026-10-07T06:25:14Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584388",
+          "name": "tests (3.12, full)",
+          "startedAt": "2026-10-07T06:25:21Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584455",
+          "name": "tests (3.13)",
+          "startedAt": "2026-10-07T06:25:08Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584319",
+          "name": "tests (3.13, astropy)",
+          "startedAt": "2026-10-07T06:25:04Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584299",
+          "name": "tests (3.13, colossus)",
+          "startedAt": "2026-10-07T06:25:04Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584311",
+          "name": "tests (3.13, full)",
+          "startedAt": "2026-10-07T06:25:05Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/itamae/actions/runs/37581360698/job/112661584101",
+          "name": "build-and-smoke-test",
+          "startedAt": "2026-10-07T06:25:05Z",
+          "status": "COMPLETED",
+          "workflowName": "test"
+        }
+      ],
+      "merge_push_reuse": [
+        {
+          "run_id": 37581607956,
+          "sha256": "0f7321b29919180a38513c7c966b1d47a4f877ce33b58e9d0c84d0f0513a846c"
+        },
+        {
+          "run_id": 37581607948,
+          "sha256": "afb20e182bc1465be4d44a8b9828b3f0e9f6ed6372a7b65236ffc3d954643cc1"
+        }
+      ]
+    },
+    {
+      "repo": "sashimi-c",
+      "pr": "https://github.com/gomeshun/sashimi-c/pull/26",
+      "tested_head": "3b22d4e6f79ed6adcf42cb7d58e9a98dbb640b6a",
+      "merged_revision": "73e9b80f0ac098de9fba77628a34d5abe3a99beb",
+      "tree": "cbc95fd8c941a91c846652f4096ceb8a4aa9b600",
+      "changed_paths": [
+        ".github/workflows/itamae-migration.yml",
+        ".github/workflows/usage-walkthrough.yml"
+      ],
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:30:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364815/job/112661557058",
+          "name": "walkthrough",
+          "startedAt": "2026-10-07T06:24:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Usage walkthrough"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364964/job/112661557558",
+          "name": "changes",
+          "startedAt": "2026-10-07T06:24:59Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:24Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364794/job/112661556485",
+          "name": "standalone-picard",
+          "startedAt": "2026-10-07T06:24:58Z",
+          "status": "COMPLETED",
+          "workflowName": "picard-sync"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364964/job/112661604728",
+          "name": "package",
+          "startedAt": "2026-10-07T06:25:13Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364794/job/112661556672",
+          "name": "migration-comparison",
+          "startedAt": "2026-10-07T06:25:00Z",
+          "status": "COMPLETED",
+          "workflowName": "picard-sync"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:26:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364964/job/112661715887",
+          "name": "regression (3.11)",
+          "startedAt": "2026-10-07T06:25:32Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364964/job/112661715767",
+          "name": "regression (3.12)",
+          "startedAt": "2026-10-07T06:25:32Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:53Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-c/actions/runs/37581364964/job/112661715801",
+          "name": "regression (3.13)",
+          "startedAt": "2026-10-07T06:25:31Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        }
+      ],
+      "merge_push_reuse": [
+        {
+          "run_id": 37582077447,
+          "sha256": "ba9eed3e3ba0216f5319715b7d95aa45b5aa1d3cb0badac7cbbd43180ae411eb"
+        },
+        {
+          "run_id": 37582077364,
+          "sha256": "3b957b6293e7aca0e2f16a0bae837ea4cce480cc1c3f9c23f59a94139825fdd8"
+        }
+      ]
+    },
+    {
+      "repo": "sashimi-si",
+      "pr": "https://github.com/gomeshun/sashimi-si/pull/20",
+      "tested_head": "455a0fc5c5bb4f0943c752a981deaaf8391c204a",
+      "merged_revision": "94a7cf5e524eb723b4b8e6428641a3d791133c5e",
+      "tree": "fc2255c6745b917d38028f754108710b5b24132c",
+      "changed_paths": [
+        ".github/workflows/itamae-migration.yml",
+        ".github/workflows/usage-walkthrough.yml"
+      ],
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:27:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/37581370127/job/112661573326",
+          "name": "walkthrough",
+          "startedAt": "2026-10-07T06:25:02Z",
+          "status": "COMPLETED",
+          "workflowName": "Usage walkthrough"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/37581370131/job/112661572948",
+          "name": "changes",
+          "startedAt": "2026-10-07T06:25:03Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:32Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/37581370131/job/112661632472",
+          "name": "package",
+          "startedAt": "2026-10-07T06:25:18Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:53Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/37581370131/job/112661731784",
+          "name": "Python 3.11",
+          "startedAt": "2026-10-07T06:25:34Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:51Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/37581370131/job/112661731839",
+          "name": "Python 3.12",
+          "startedAt": "2026-10-07T06:25:34Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:55Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-si/actions/runs/37581370131/job/112661731867",
+          "name": "Python 3.13",
+          "startedAt": "2026-10-07T06:25:35Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        }
+      ],
+      "merge_push_reuse": [
+        {
+          "run_id": 37581752203,
+          "sha256": "963fd9d923e6e711636fa612387420868a71828f98d0d1a2adb1b3bc550dd552"
+        },
+        {
+          "run_id": 37581752144,
+          "sha256": "b937facd162d3728312aadb420e3ce78fde2ca081b1dd935ede43e62cd2045d9"
+        }
+      ]
+    },
+    {
+      "repo": "sashimi-w",
+      "pr": "https://github.com/gomeshun/sashimi-w/pull/20",
+      "tested_head": "50bae8867bbd7c020e4ad2ff2c6165e7b7834d73",
+      "merged_revision": "62b923f81c690c369a97cca567bbe32f1e32d6ba",
+      "tree": "406e6f48f87f8be30a47798b2ceefb3fc444e43f",
+      "changed_paths": [
+        ".github/workflows/itamae-migration.yml",
+        ".github/workflows/usage-walkthrough.yml"
+      ],
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:38:24Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/37581373754/job/112661585412",
+          "name": "walkthrough",
+          "startedAt": "2026-10-07T06:25:19Z",
+          "status": "COMPLETED",
+          "workflowName": "Usage walkthrough"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/37581373748/job/112661584903",
+          "name": "changes",
+          "startedAt": "2026-10-07T06:25:20Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:25:46Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/37581373748/job/112661714433",
+          "name": "package",
+          "startedAt": "2026-10-07T06:25:31Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:26:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/37581373748/job/112661803536",
+          "name": "regression (3.11)",
+          "startedAt": "2026-10-07T06:25:49Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:26:13Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/37581373748/job/112661803485",
+          "name": "regression (3.12)",
+          "startedAt": "2026-10-07T06:25:49Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-07T06:26:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/gomeshun/sashimi-w/actions/runs/37581373748/job/112661803452",
+          "name": "regression (3.13)",
+          "startedAt": "2026-10-07T06:25:49Z",
+          "status": "COMPLETED",
+          "workflowName": "itamae-migration"
+        }
+      ],
+      "merge_push_reuse": [
+        {
+          "run_id": 37582719126,
+          "sha256": "51643c6707512b8b9d3a8127acc1b9bd2fd2af24e70d3e0e53466faaa67ba7c5"
+        },
+        {
+          "run_id": 37582719132,
+          "sha256": "1c4c5b189a25d65f79ee669fb1f727a1d872db24f1a5ab12bf190c16fa771a25"
+        }
+      ]
+    }
+  ],
+  "shared_helper_tests": 14,
+  "combined_audit_location": "sashimi-f/artifacts/ci-dedup-20261007/recorded-ci-audit.json",
+  "private_evidence_included": false
+}

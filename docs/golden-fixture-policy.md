@@ -11,7 +11,7 @@ Golden fixtures are compact, versioned regression records for the SASHIMI
 migration boundary. They protect published legacy behavior and reviewed
 corrected behavior without making a physics correction implicit.
 
-## Provenance schema
+## Historical provenance schema (v1)
 
 Every full-catalog fixture must contain a top-level `provenance` object, or a
 same-name JSON sidecar when the regression values remain inline in a test. The
@@ -36,13 +36,39 @@ Variant-specific provenance is allowed. For example, WDM fixtures also record
 the explicit power convention, while FDM fixtures can distinguish the
 historical generation revision from a later validation revision.
 
-## Mode policy
+## Historical mode records
 
 A `legacy` entry reproduces the historical public result, including documented
 numerical quirks. A `consistent` entry is a separately named reviewed result.
 The two entries must not be merged or selected implicitly by a default change.
 If their outputs differ, keep separate expected values and explain the reason
 in `mode_policy`.
+
+## New calculation specifications and independent references
+
+New product fixtures use an explicit calculation-specification version and
+comparison role rather than a production `physics_mode` selector. Include:
+
+- immutable source revisions for A and C, and ITAMAE for C;
+- role `A`, `B` or `C`, all B patch identifiers and hashes, source-export hashes;
+- exact numerical environments, input-file hashes and worker/controller hashes;
+- physical prescriptions, cosmology, units, mass definitions, grids, solver and
+  random seed when applicable;
+- full named columns, independent weight factors and state-specific masks;
+- comparison tolerances with analytical, convergence or numerical justification;
+- separate generation and revalidation records.
+
+An independent A/B process must not import the evolving product or ITAMAE.
+The [reference workflow](../validation/references/README.md) exports immutable
+sources, verifies inputs and applies reviewable B patches before execution.
+Reference-specific older Python environments are allowed; they do not change
+the product's required Python 3.11–3.13 support.
+
+An agreement between B and C establishes migration consistency under that
+specification. Scientific validity additionally requires independent equations,
+limits, derivatives/integrals, convergence and observables. Do not hide failures
+by relaxing tolerances, overwriting historical expected values, clipping signed
+weights or projecting a noisy physical relation onto a desired shape.
 
 ## Regeneration procedure
 

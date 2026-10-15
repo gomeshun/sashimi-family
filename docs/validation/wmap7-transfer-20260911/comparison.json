@@ -1,0 +1,714 @@
+{
+  "schema": "sashimi-w:wmap7-transfer-comparison:v1",
+  "source": {
+    "assumptions": {
+      "WDM": "pure thermal Fermi-Dirac, two internal states, zero chemical potential",
+      "active_neutrinos": "massless, N_ur=3.046",
+      "normalization": "CDM sigma8 target once; identical A_s for all WDM masses and precisions",
+      "stored_CAMB_table": "background header matched; original radiation/reionization settings unavailable"
+    },
+    "class_executable": "/home/gomesu/workspace/sashimi-w-power-review-20260910/sources/class_public-e85808324f51fc694d12e3ed7439552a3c3f9540/class",
+    "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+    "class_source": {
+      "archive_sha256": "4d4476323100e092dcfc714717bf054cb1b5c1ddfb6fcab39b7f67dce293b1de",
+      "path": "/home/gomesu/workspace/sashimi-w-power-review-20260910/sources/class_public-e85808324f51fc694d12e3ed7439552a3c3f9540",
+      "revision": "e85808324f51fc694d12e3ed7439552a3c3f9540",
+      "url": "https://codeload.github.com/lesgourg/class_public/tar.gz/e85808324f51fc694d12e3ed7439552a3c3f9540",
+      "version": "v3.3.4"
+    },
+    "cosmology": {
+      "Omega_b": 0.0469,
+      "Omega_m": 0.27,
+      "h": 0.7,
+      "n_s": 0.95,
+      "omega_b": 0.022980999999999994,
+      "omega_dm": 0.109319,
+      "sigma8_cdm_target": 0.82
+    },
+    "family_revision": "907da3683844d4a899a5444f466bf4c09b2821f2",
+    "numpy": "2.5.1",
+    "python": "3.14.3 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+    "runner_sha256": "5d35c8590414b34fcd58fae0cc14d56b7c20598e124a6e4ba5f2767a1b1775c6",
+    "schema": "sashimi-w:wmap7-class-validation:v1",
+    "spectrum_header_source": "/home/gomesu/workspace/sashimi-family/sashimi-w/WMAP7_camb_matterpower_z0_extrapolated.dat",
+    "spectrum_sha256": "417a0e8e9feafae8c6afb4b89e63aef80718c9641ae95994d25a6cd97438f8c9",
+    "w_revision": "0b3146678e68ea71735173e4effb313f872fb9b9"
+  },
+  "analysis_sha256": "2b76caa8834943341ecdc20b2f2b9f65fe267a110f51926ffae264e208cb8f7f",
+  "dependencies": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0"
+  },
+  "normalization": {
+    "A_s": 2.3637375865030362e-09,
+    "initial_A_s": 2.1e-09,
+    "method": "Linear-power amplitude scaling from CDM only; CLASS log has six significant digits",
+    "sigma8_pilot_log": 0.772901,
+    "sigma8_target": 0.82
+  },
+  "summaries": [
+    {
+      "mass_keV": 1,
+      "redshift": 0,
+      "CLASS_k_power_half_h_per_Mpc": 6.780344336642625,
+      "CLASS_Q_at_k_min": 1.0000405991036452,
+      "CLASS_Q_at_k_max": 5.217039206553675e-07,
+      "full_transition_005_to_095_covered": true,
+      "transition_k_range": [
+        2.1725767606167237,
+        14.262136731922029
+      ],
+      "transition_sample_count": 336,
+      "Vogel_mass_within_calibration": false,
+      "max_absolute_interpolator_difference": 6.11972225787252e-05,
+      "fits": {
+        "Viel2005_q10": {
+          "power_ratio_at_CLASS_half": 0.4931865329296263,
+          "max_absolute_Q_error": 0.01379953126761499,
+          "fit_k_power_half_h_per_Mpc": 6.718935942755041,
+          "fractional_k_power_half_error": -0.009056825264126767
+        },
+        "Vogel2023_q10": {
+          "power_ratio_at_CLASS_half": 0.4500937781594428,
+          "max_absolute_Q_error": 0.05122595307577171,
+          "fit_k_power_half_h_per_Mpc": 6.322046415739335,
+          "fractional_k_power_half_error": -0.06759213074571113
+        },
+        "historical_q5": {
+          "power_ratio_at_CLASS_half": 0.7022724064988074,
+          "max_absolute_Q_error": 0.23833377282007534,
+          "fit_k_power_half_h_per_Mpc": 9.31881447129257,
+          "fractional_k_power_half_error": 0.3743866105636311
+        }
+      }
+    },
+    {
+      "mass_keV": 1,
+      "redshift": 99,
+      "CLASS_k_power_half_h_per_Mpc": 6.793867984299183,
+      "CLASS_Q_at_k_min": 1.000036381941619,
+      "CLASS_Q_at_k_max": 7.134352368629658e-07,
+      "full_transition_005_to_095_covered": true,
+      "transition_k_range": [
+        2.1725767606167237,
+        14.262136731922029
+      ],
+      "transition_sample_count": 336,
+      "Vogel_mass_within_calibration": false,
+      "max_absolute_interpolator_difference": 6.65284297458058e-05,
+      "fits": {
+        "Viel2005_q10": {
+          "power_ratio_at_CLASS_half": 0.49168973013413647,
+          "max_absolute_Q_error": 0.014932920724781584,
+          "fit_k_power_half_h_per_Mpc": 6.718935942755041,
+          "fractional_k_power_half_error": -0.011029363790599378
+        },
+        "Vogel2023_q10": {
+          "power_ratio_at_CLASS_half": 0.4486524431193503,
+          "max_absolute_Q_error": 0.052570474424251334,
+          "fit_k_power_half_h_per_Mpc": 6.322046415739335,
+          "fractional_k_power_half_error": -0.0694481508398811
+        },
+        "historical_q5": {
+          "power_ratio_at_CLASS_half": 0.7012059113656534,
+          "max_absolute_Q_error": 0.23688344301048408,
+          "fit_k_power_half_h_per_Mpc": 9.31881447129257,
+          "fractional_k_power_half_error": 0.37165080228650416
+        }
+      }
+    },
+    {
+      "mass_keV": 2,
+      "redshift": 0,
+      "CLASS_k_power_half_h_per_Mpc": 15.068315649486445,
+      "CLASS_Q_at_k_min": 1.0000406666812967,
+      "CLASS_Q_at_k_max": 2.349510768756745e-06,
+      "full_transition_005_to_095_covered": true,
+      "transition_k_range": [
+        4.743032192191706,
+        31.843680903373674
+      ],
+      "transition_sample_count": 340,
+      "Vogel_mass_within_calibration": true,
+      "max_absolute_interpolator_difference": 1.3213207546049557e-05,
+      "fits": {
+        "Viel2005_q10": {
+          "power_ratio_at_CLASS_half": 0.47111911826708686,
+          "max_absolute_Q_error": 0.035010664271246716,
+          "fit_k_power_half_h_per_Mpc": 14.502530777369886,
+          "fractional_k_power_half_error": -0.03754798381435831
+        },
+        "Vogel2023_q10": {
+          "power_ratio_at_CLASS_half": 0.4680159188822908,
+          "max_absolute_Q_error": 0.033880236194784086,
+          "fit_k_power_half_h_per_Mpc": 14.403940373673803,
+          "fractional_k_power_half_error": -0.044090878587035975
+        },
+        "historical_q5": {
+          "power_ratio_at_CLASS_half": 0.68638117563573,
+          "max_absolute_Q_error": 0.21511345354301553,
+          "fit_k_power_half_h_per_Mpc": 20.11425541633007,
+          "fractional_k_power_half_error": 0.3348708564527316
+        }
+      }
+    },
+    {
+      "mass_keV": 2,
+      "redshift": 99,
+      "CLASS_k_power_half_h_per_Mpc": 15.09204231869507,
+      "CLASS_Q_at_k_min": 1.000036447343127,
+      "CLASS_Q_at_k_max": 2.5268038962887805e-06,
+      "full_transition_005_to_095_covered": true,
+      "transition_k_range": [
+        4.743032192191706,
+        32.023050082291384
+      ],
+      "transition_sample_count": 341,
+      "Vogel_mass_within_calibration": true,
+      "max_absolute_interpolator_difference": 1.4092743536006527e-05,
+      "fits": {
+        "Viel2005_q10": {
+          "power_ratio_at_CLASS_half": 0.4699202452507918,
+          "max_absolute_Q_error": 0.03613948995064825,
+          "fit_k_power_half_h_per_Mpc": 14.502530777369886,
+          "fractional_k_power_half_error": -0.03906108456871571
+        },
+        "Vogel2023_q10": {
+          "power_ratio_at_CLASS_half": 0.4668880953645829,
+          "max_absolute_Q_error": 0.034853088167382085,
+          "fit_k_power_half_h_per_Mpc": 14.403940373673803,
+          "fractional_k_power_half_error": -0.04559369305298655
+        },
+        "historical_q5": {
+          "power_ratio_at_CLASS_half": 0.6855072904432102,
+          "max_absolute_Q_error": 0.21395588384733455,
+          "fit_k_power_half_h_per_Mpc": 20.11425541633007,
+          "fractional_k_power_half_error": 0.33277226445448016
+        }
+      }
+    },
+    {
+      "mass_keV": 5,
+      "redshift": 0,
+      "CLASS_k_power_half_h_per_Mpc": 43.98953075310961,
+      "CLASS_Q_at_k_min": 1.0000406743054462,
+      "CLASS_Q_at_k_max": 0.10665488253655232,
+      "full_transition_005_to_095_covered": false,
+      "transition_k_range": [
+        13.635439658234645,
+        80.0
+      ],
+      "transition_sample_count": 316,
+      "Vogel_mass_within_calibration": true,
+      "max_absolute_interpolator_difference": 1.437628187173079e-05,
+      "fits": {
+        "Viel2005_q10": {
+          "power_ratio_at_CLASS_half": 0.42935562679969946,
+          "max_absolute_Q_error": 0.07653532069064967,
+          "fit_k_power_half_h_per_Mpc": 40.10118491776797,
+          "fractional_k_power_half_error": -0.08839252814868404
+        },
+        "Vogel2023_q10": {
+          "power_ratio_at_CLASS_half": 0.48029351602065334,
+          "max_absolute_Q_error": 0.02191927189397369,
+          "fit_k_power_half_h_per_Mpc": 42.77933657389162,
+          "fractional_k_power_half_error": -0.02751095905092016
+        },
+        "historical_q5": {
+          "power_ratio_at_CLASS_half": 0.6552523382634353,
+          "max_absolute_Q_error": 0.17359301399497967,
+          "fit_k_power_half_h_per_Mpc": 55.61825644887551,
+          "fractional_k_power_half_error": 0.2643521196220959
+        }
+      }
+    },
+    {
+      "mass_keV": 5,
+      "redshift": 99,
+      "CLASS_k_power_half_h_per_Mpc": 44.04182942658512,
+      "CLASS_Q_at_k_min": 1.0000364600452254,
+      "CLASS_Q_at_k_max": 0.10724837714577962,
+      "full_transition_005_to_095_covered": false,
+      "transition_k_range": [
+        13.635439658234645,
+        80.0
+      ],
+      "transition_sample_count": 316,
+      "Vogel_mass_within_calibration": true,
+      "max_absolute_interpolator_difference": 1.4564566359620557e-05,
+      "fits": {
+        "Viel2005_q10": {
+          "power_ratio_at_CLASS_half": 0.428433680433921,
+          "max_absolute_Q_error": 0.07742982771269358,
+          "fit_k_power_half_h_per_Mpc": 40.10118491776797,
+          "fractional_k_power_half_error": -0.08947504134418283
+        },
+        "Vogel2023_q10": {
+          "power_ratio_at_CLASS_half": 0.4794481740994035,
+          "max_absolute_Q_error": 0.02256023561509768,
+          "fit_k_power_half_h_per_Mpc": 42.77933657389162,
+          "fractional_k_power_half_error": -0.02866576772879048
+        },
+        "historical_q5": {
+          "power_ratio_at_CLASS_half": 0.6545484553750937,
+          "max_absolute_Q_error": 0.17270595848208647,
+          "fit_k_power_half_h_per_Mpc": 55.61825644887551,
+          "fractional_k_power_half_error": 0.262850730158418
+        }
+      }
+    }
+  ],
+  "precision_checks": [
+    {
+      "mass_keV": 2,
+      "redshift": 0,
+      "max_absolute_Q_change": 0.0002873739504303417,
+      "max_relative_Q_change_transition": 0.0012310081131721162,
+      "k_power_half_baseline": 15.068315649486445,
+      "k_power_half_fine": 15.065412387983402,
+      "fractional_k_power_half_change": -0.00019267326027527787,
+      "passed_frozen_thresholds": true
+    },
+    {
+      "mass_keV": 2,
+      "redshift": 99,
+      "max_absolute_Q_change": 0.0002960481114048098,
+      "max_relative_Q_change_transition": 0.0012284838746235982,
+      "k_power_half_baseline": 15.09204231869507,
+      "k_power_half_fine": 15.089211278120265,
+      "fractional_k_power_half_change": -0.0001875849878381075,
+      "passed_frozen_thresholds": true
+    }
+  ],
+  "run_metadata": {
+    "wdm_m1": {
+      "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+      "config": {
+        "A_s": 2.3637375865030362e-09,
+        "N_ncdm": 1,
+        "N_ur": 3.046,
+        "Omega_k": 0,
+        "P_k_max_h/Mpc": 80,
+        "T_cmb": 2.7255,
+        "T_ncdm": "0.1552132846861645",
+        "background_verbose": 2,
+        "deg_ncdm": 1,
+        "fourier_verbose": 1,
+        "h": 0.7,
+        "k_per_decade_for_pk": 30,
+        "ksi_ncdm": 0,
+        "l_max_ncdm": 24,
+        "m_ncdm": 1000.0,
+        "n_s": 0.95,
+        "ncdm_fluid_approximation": 3,
+        "omega_b": 0.022980999999999994,
+        "omega_cdm": 0,
+        "output": "mPk",
+        "perturbations_verbose": 1,
+        "root": "/home/gomesu/workspace/sashimi-family/review-artifacts/wmap7-transfer-20260911/wdm_m1/spectrum_",
+        "tau_reio": 0.0544,
+        "tol_ncdm_bg": 1e-07,
+        "tol_ncdm_synchronous": 0.0001,
+        "tol_perturbations_integration": 1e-06,
+        "write_background": "yes",
+        "write_parameters": "yes",
+        "write_warnings": "yes",
+        "z_pk": "0, 99"
+      },
+      "elapsed_seconds": 22.385733755887486,
+      "sha256": {
+        "input.ini": "a4091e89dbb7444cead97c67e8c8a96f91d30aabbf23c3d4f4f3f6c590b5d839",
+        "run.log": "6e032c8c6592992e321b8f8666ceb1f6641a6df983dc35f3cef1cd7f8f083cf6",
+        "spectrum_00_background.dat": "1907211e92c7793c78ea9c8bdc9ce7e50ce2bdb3564bb65934aaffc0bfde4cbc",
+        "spectrum_00_parameters.ini": "488affff376ad3f6484750f1969332196f3f79a38cec07c72d428537939802a4",
+        "spectrum_00_unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
+        "spectrum_00_z1_pk.dat": "f9e233a63d38dc0aacecff835ee634fb00c0aca7fff8d0a39dbc4f35186e225c",
+        "spectrum_00_z1_pk_cb.dat": "8a9bb98ff4cfbe26ceee01a915ad28f8da76acb39e5ebf3e7ef918e19d67a3f4",
+        "spectrum_00_z2_pk.dat": "945db8984d2914268d63a4173ca000cd5136dde2137c2fa11f3f23196e2f91ad",
+        "spectrum_00_z2_pk_cb.dat": "0d134dafbe7443b260d38e0b7423ecf075e45bf62a7a39f2cdcc8ba529cf44f0"
+      }
+    },
+    "cdm": {
+      "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+      "config": {
+        "A_s": 2.3637375865030362e-09,
+        "N_ncdm": 0,
+        "N_ur": 3.046,
+        "Omega_k": 0,
+        "P_k_max_h/Mpc": 80,
+        "T_cmb": 2.7255,
+        "background_verbose": 2,
+        "fourier_verbose": 1,
+        "h": 0.7,
+        "k_per_decade_for_pk": 30,
+        "l_max_ncdm": 24,
+        "n_s": 0.95,
+        "ncdm_fluid_approximation": 3,
+        "omega_b": 0.022980999999999994,
+        "omega_cdm": 0.109319,
+        "output": "mPk",
+        "perturbations_verbose": 1,
+        "root": "/home/gomesu/workspace/sashimi-family/review-artifacts/wmap7-transfer-20260911/cdm/spectrum_",
+        "tau_reio": 0.0544,
+        "tol_ncdm_bg": 1e-07,
+        "tol_ncdm_synchronous": 0.0001,
+        "tol_perturbations_integration": 1e-06,
+        "write_background": "yes",
+        "write_parameters": "yes",
+        "write_warnings": "yes",
+        "z_pk": "0, 99"
+      },
+      "elapsed_seconds": 4.341834258055314,
+      "sha256": {
+        "input.ini": "34f32b59ac83a34e3b147e9e32b03a131c5ad3e21f82072475f3dd030154d9b7",
+        "run.log": "3e5b10b052bfc26b1503f76dc3b5f57c0e52b4797370119d9187956255746832",
+        "spectrum_00_background.dat": "ac137ca4ae0deae82e6f9d15ec72159774f880adea68bfab001933cf6a336384",
+        "spectrum_00_parameters.ini": "784230512424072c4f4cff46d8c756cd66884612c68dccd33550e295bbd2311c",
+        "spectrum_00_unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
+        "spectrum_00_z1_pk.dat": "e4c481e262bb88294abf8805fdcaa13347fa75714ceb461f57c2b1e3f0df583e",
+        "spectrum_00_z2_pk.dat": "22d12c6e381cfbb8588a20c18fe391666bb8a13b031e54f28fc3b1899658eceb"
+      }
+    },
+    "wdm_m2": {
+      "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+      "config": {
+        "A_s": 2.3637375865030362e-09,
+        "N_ncdm": 1,
+        "N_ur": 3.046,
+        "Omega_k": 0,
+        "P_k_max_h/Mpc": 80,
+        "T_cmb": 2.7255,
+        "T_ncdm": "0.1231928656951286",
+        "background_verbose": 2,
+        "deg_ncdm": 1,
+        "fourier_verbose": 1,
+        "h": 0.7,
+        "k_per_decade_for_pk": 30,
+        "ksi_ncdm": 0,
+        "l_max_ncdm": 24,
+        "m_ncdm": 2000.0,
+        "n_s": 0.95,
+        "ncdm_fluid_approximation": 3,
+        "omega_b": 0.022980999999999994,
+        "omega_cdm": 0,
+        "output": "mPk",
+        "perturbations_verbose": 1,
+        "root": "/home/gomesu/workspace/sashimi-family/review-artifacts/wmap7-transfer-20260911/wdm_m2/spectrum_",
+        "tau_reio": 0.0544,
+        "tol_ncdm_bg": 1e-07,
+        "tol_ncdm_synchronous": 0.0001,
+        "tol_perturbations_integration": 1e-06,
+        "write_background": "yes",
+        "write_parameters": "yes",
+        "write_warnings": "yes",
+        "z_pk": "0, 99"
+      },
+      "elapsed_seconds": 24.016592823085375,
+      "sha256": {
+        "input.ini": "4cbff1888077d0cb909741313ba81faec4c2e198545132ab421e384c2204a78e",
+        "run.log": "dbe7189c6def1d10d64e85546e4bbf4d0d465e59c488ef9e153d23a270d170ce",
+        "spectrum_00_background.dat": "dcdeb41beacbd07fc377d0adacd58b102d6323dc6525ff0e2e620f0a34ad6b04",
+        "spectrum_00_parameters.ini": "4b2c8019967e9cf2906fed270bb8f6a80753fad59b91b6f5c449087fef5b9147",
+        "spectrum_00_unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
+        "spectrum_00_z1_pk.dat": "9f013e299be40a3e465f8a862f81f6e42fb2fa4ac6f6384ad5d3c00d53d40955",
+        "spectrum_00_z1_pk_cb.dat": "0b5892f345edd04a49d86f6e3720151a7481d36f8fd44c872d94bf46b4e826cf",
+        "spectrum_00_z2_pk.dat": "1cd316cfad8dbcb161b3e8e460504e0e03d1b3638e32981c3179fa59e0f2145e",
+        "spectrum_00_z2_pk_cb.dat": "7920514561e973819832277d112860a45f48cd3185a1de2763576e8b3da80039"
+      }
+    },
+    "wdm_m5": {
+      "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+      "config": {
+        "A_s": 2.3637375865030362e-09,
+        "N_ncdm": 1,
+        "N_ur": 3.046,
+        "Omega_k": 0,
+        "P_k_max_h/Mpc": 80,
+        "T_cmb": 2.7255,
+        "T_ncdm": "0.09076927952572571",
+        "background_verbose": 2,
+        "deg_ncdm": 1,
+        "fourier_verbose": 1,
+        "h": 0.7,
+        "k_per_decade_for_pk": 30,
+        "ksi_ncdm": 0,
+        "l_max_ncdm": 24,
+        "m_ncdm": 5000.0,
+        "n_s": 0.95,
+        "ncdm_fluid_approximation": 3,
+        "omega_b": 0.022980999999999994,
+        "omega_cdm": 0,
+        "output": "mPk",
+        "perturbations_verbose": 1,
+        "root": "/home/gomesu/workspace/sashimi-family/review-artifacts/wmap7-transfer-20260911/wdm_m5/spectrum_",
+        "tau_reio": 0.0544,
+        "tol_ncdm_bg": 1e-07,
+        "tol_ncdm_synchronous": 0.0001,
+        "tol_perturbations_integration": 1e-06,
+        "write_background": "yes",
+        "write_parameters": "yes",
+        "write_warnings": "yes",
+        "z_pk": "0, 99"
+      },
+      "elapsed_seconds": 25.449300396023318,
+      "sha256": {
+        "input.ini": "a0d28f81231254e47c4d4d7b66d0403a11981ed34c653ad29ded37f4661d64b3",
+        "run.log": "c5ad8ddc2426278de3a9d90060bdd7ad8cf5134229906ebf1d8d613e12e89bc0",
+        "spectrum_00_background.dat": "4b799389e569aabdc94e7a7ee7268e4f8c79db098b3245a9d36842f3f2a8d3d8",
+        "spectrum_00_parameters.ini": "9996706f72a41f1d9e91115d13649f9bbdb14152e693cdcc8023a50465c5b6c0",
+        "spectrum_00_unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
+        "spectrum_00_z1_pk.dat": "03d540b46e1a21ef2469eff2ee18b973536eadfaae8465bf5eaa3e9de1b937b6",
+        "spectrum_00_z1_pk_cb.dat": "52573126d9a3d229025a8d84372c3053ed1bea99d2cf2c9a375f34255d648ec0",
+        "spectrum_00_z2_pk.dat": "5be1e0eabb9d4555128d66558032fcb243e9a5278da9ea359994269d2bfb1dc7",
+        "spectrum_00_z2_pk_cb.dat": "c1a30d0434712a2fdc9aba7898fc1a790d56fff3b632d8be9a60a87da86f3632"
+      }
+    },
+    "wdm_m2_fine": {
+      "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+      "config": {
+        "A_s": 2.3637375865030362e-09,
+        "N_ncdm": 1,
+        "N_ur": 3.046,
+        "Omega_k": 0,
+        "P_k_max_h/Mpc": 80,
+        "T_cmb": 2.7255,
+        "T_ncdm": "0.1231928656951286",
+        "background_verbose": 2,
+        "deg_ncdm": 1,
+        "fourier_verbose": 1,
+        "h": 0.7,
+        "k_per_decade_for_pk": 60,
+        "ksi_ncdm": 0,
+        "l_max_ncdm": 40,
+        "m_ncdm": 2000.0,
+        "n_s": 0.95,
+        "ncdm_fluid_approximation": 3,
+        "omega_b": 0.022980999999999994,
+        "omega_cdm": 0,
+        "output": "mPk",
+        "perturbations_verbose": 1,
+        "root": "/home/gomesu/workspace/sashimi-family/review-artifacts/wmap7-transfer-20260911/wdm_m2_fine/spectrum_",
+        "tau_reio": 0.0544,
+        "tol_ncdm_bg": 1e-07,
+        "tol_ncdm_synchronous": 1e-05,
+        "tol_perturbations_integration": 2e-07,
+        "write_background": "yes",
+        "write_parameters": "yes",
+        "write_warnings": "yes",
+        "z_pk": "0, 99"
+      },
+      "elapsed_seconds": 120.87766023806762,
+      "sha256": {
+        "input.ini": "3e5370d37f1589df706319c82fd564fc952c556b2191c0657831f24bc5e5c479",
+        "run.log": "a45604324ddd2d9c5fbed09466735996a705e7bbe227a49b3200f980a9f6f4f8",
+        "spectrum_00_background.dat": "dcdeb41beacbd07fc377d0adacd58b102d6323dc6525ff0e2e620f0a34ad6b04",
+        "spectrum_00_parameters.ini": "e2277f01e1d5af5a79f1190bb1bf85e680d1bea60856cd9a048d9d448a9efc9b",
+        "spectrum_00_unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
+        "spectrum_00_z1_pk.dat": "50a92a8ea0be5d43286d8fd5af9747dcafd83483e6f9649e7d3491a3bdae2f87",
+        "spectrum_00_z1_pk_cb.dat": "0ca3f45a08342a351fd841315c8884874c2039b16abe42382731207c2c9083ec",
+        "spectrum_00_z2_pk.dat": "a31b3cf57ba8349dfa00f57a20597a45954959b32845bfc4075f0a72018ec1c8",
+        "spectrum_00_z2_pk_cb.dat": "1678e95af1b31304977c12abf2c4a2376b859157ffa178ab60b524688a021c33"
+      }
+    },
+    "cdm_fine": {
+      "class_executable_sha256": "cd36163f2ca2887b3a7a0a7cd31575ccb387ee517e322ad1c744514c6bfb5a76",
+      "config": {
+        "A_s": 2.3637375865030362e-09,
+        "N_ncdm": 0,
+        "N_ur": 3.046,
+        "Omega_k": 0,
+        "P_k_max_h/Mpc": 80,
+        "T_cmb": 2.7255,
+        "background_verbose": 2,
+        "fourier_verbose": 1,
+        "h": 0.7,
+        "k_per_decade_for_pk": 60,
+        "l_max_ncdm": 40,
+        "n_s": 0.95,
+        "ncdm_fluid_approximation": 3,
+        "omega_b": 0.022980999999999994,
+        "omega_cdm": 0.109319,
+        "output": "mPk",
+        "perturbations_verbose": 1,
+        "root": "/home/gomesu/workspace/sashimi-family/review-artifacts/wmap7-transfer-20260911/cdm_fine/spectrum_",
+        "tau_reio": 0.0544,
+        "tol_ncdm_bg": 1e-07,
+        "tol_ncdm_synchronous": 1e-05,
+        "tol_perturbations_integration": 2e-07,
+        "write_background": "yes",
+        "write_parameters": "yes",
+        "write_warnings": "yes",
+        "z_pk": "0, 99"
+      },
+      "elapsed_seconds": 9.710923686041497,
+      "sha256": {
+        "input.ini": "deeb19f4a5c51c6a311a0cf6eeac97e8ada366170300a5a1a3113df6f82d4456",
+        "run.log": "00c50561d0666d975fe1505f6732a9a78c0035329fd1d75d0d68161656a10ce6",
+        "spectrum_00_background.dat": "ac137ca4ae0deae82e6f9d15ec72159774f880adea68bfab001933cf6a336384",
+        "spectrum_00_parameters.ini": "824b153daeeec730ddd01f0431a6b688a1ac51b0ea59b22a4038389760deb2fd",
+        "spectrum_00_unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
+        "spectrum_00_z1_pk.dat": "b669902d0abe16e5450fad3edfdc390c1d97ebe4ff9dc6ff154a2433fb109919",
+        "spectrum_00_z2_pk.dat": "1ebe2fd8baa4b40a55c6a4742349a444acf1cb314944e9f3a8624e20a3565ff1"
+      }
+    }
+  },
+  "common_A_s": 2.3637375865030362e-09,
+  "interpolation": "CubicSpline(log P versus log k) for each spectrum, no extrapolation; PCHIP cross-check",
+  "units": {
+    "k": "h/Mpc",
+    "P": "(Mpc/h)^3",
+    "Q": "dimensionless power ratio, not transfer amplitude"
+  },
+  "references": {
+    "Viel2005": "https://arxiv.org/abs/astro-ph/0501562",
+    "Vogel2023": "https://doi.org/10.1103/PhysRevD.108.043520"
+  },
+  "previous_Planck_like": {
+    "source": "/home/gomesu/workspace/sashimi-w-power-review-20260910/results/class-comparison.json",
+    "sha256": "9b9b08619c3b7bce2332bad993554c0842f260f23c0ee22ecd39fc93cdb0c7ca",
+    "cosmology": {
+      "h": 0.6736,
+      "omega_b": 0.02237,
+      "omega_dm": 0.12,
+      "N_ur": 3.046,
+      "A_s": 2.1e-09,
+      "n_s": 0.9649
+    },
+    "summaries": [
+      {
+        "mass_keV": 1,
+        "redshift": 0,
+        "CLASS_k_power_half_h_per_Mpc": 6.944299037288853,
+        "CLASS_k_power_quarter_h_per_Mpc": 9.702461443821997,
+        "CLASS_ratio_at_k001": 1.000040025492302,
+        "fits_at_CLASS_power_half": {
+          "Viel2005_q5": 0.7045625413053455,
+          "Viel2005_q10": 0.4964083746106467,
+          "Vogel2023_q10": 0.4720263224788857,
+          "Decant2022_q10": 0.4964083746106467
+        },
+        "max_absolute_power_ratio_error_005_to_095": {
+          "Viel2005_q5": 0.2417117965770762,
+          "Viel2005_q10": 0.011250757240675438,
+          "Vogel2023_q10": 0.032993195873806,
+          "Decant2022_q10": 0.011250757240675438
+        }
+      },
+      {
+        "mass_keV": 1,
+        "redshift": 99,
+        "CLASS_k_power_half_h_per_Mpc": 6.9577733455256014,
+        "CLASS_k_power_quarter_h_per_Mpc": 9.721809507885496,
+        "CLASS_ratio_at_k001": 1.0000362111537653,
+        "fits_at_CLASS_power_half": {
+          "Viel2005_q5": 0.7035308593787583,
+          "Viel2005_q10": 0.4949556700982142,
+          "Vogel2023_q10": 0.4706398966915995,
+          "Decant2022_q10": 0.4949556700982142
+        },
+        "max_absolute_power_ratio_error_005_to_095": {
+          "Viel2005_q5": 0.24029807544070314,
+          "Viel2005_q10": 0.012266186164237719,
+          "Vogel2023_q10": 0.03406063444763974,
+          "Decant2022_q10": 0.012266186164237719
+        }
+      },
+      {
+        "mass_keV": 2,
+        "redshift": 0,
+        "CLASS_k_power_half_h_per_Mpc": 15.412502495034392,
+        "CLASS_k_power_quarter_h_per_Mpc": 21.61912669845562,
+        "CLASS_ratio_at_k001": 1.0000400795092936,
+        "fits_at_CLASS_power_half": {
+          "Viel2005_q5": 0.689480197783194,
+          "Viel2005_q10": 0.4753829431351523,
+          "Vogel2023_q10": 0.49064742077726803,
+          "Decant2022_q10": 0.4753829431351523
+        },
+        "max_absolute_power_ratio_error_005_to_095": {
+          "Viel2005_q5": 0.21936097236337937,
+          "Viel2005_q10": 0.03090136321706302,
+          "Vogel2023_q10": 0.018640824779743825,
+          "Decant2022_q10": 0.03090136321706302
+        }
+      },
+      {
+        "mass_keV": 2,
+        "redshift": 99,
+        "CLASS_k_power_half_h_per_Mpc": 15.436080643693813,
+        "CLASS_k_power_quarter_h_per_Mpc": 21.65341990853563,
+        "CLASS_ratio_at_k001": 1.0000362613258231,
+        "fits_at_CLASS_power_half": {
+          "Viel2005_q5": 0.6886371299527881,
+          "Viel2005_q10": 0.47422109674961316,
+          "Vogel2023_q10": 0.48956741187901875,
+          "Decant2022_q10": 0.47422109674961316
+        },
+        "max_absolute_power_ratio_error_005_to_095": {
+          "Viel2005_q5": 0.21823937961817952,
+          "Viel2005_q10": 0.03197857538043769,
+          "Vogel2023_q10": 0.019249131932908115,
+          "Decant2022_q10": 0.03197857538043769
+        }
+      },
+      {
+        "mass_keV": 5,
+        "redshift": 0,
+        "CLASS_k_power_half_h_per_Mpc": 44.92448926253926,
+        "CLASS_k_power_quarter_h_per_Mpc": 63.30469246211578,
+        "CLASS_ratio_at_k001": 1.0000400917917447,
+        "fits_at_CLASS_power_half": {
+          "Viel2005_q5": 0.6594727316548603,
+          "Viel2005_q10": 0.4349042837963234,
+          "Vogel2023_q10": 0.5038238656098376,
+          "Decant2022_q10": 0.49982828680757785
+        },
+        "max_absolute_power_ratio_error_005_to_095": {
+          "Viel2005_q5": 0.17887855229257127,
+          "Viel2005_q10": 0.0712928191543149,
+          "Vogel2023_q10": 0.009939934581768117,
+          "Decant2022_q10": 0.01571812917159092
+        }
+      },
+      {
+        "mass_keV": 5,
+        "redshift": 99,
+        "CLASS_k_power_half_h_per_Mpc": 44.97616024944919,
+        "CLASS_k_power_quarter_h_per_Mpc": 63.38162070732422,
+        "CLASS_ratio_at_k001": 1.0000362737951474,
+        "fits_at_CLASS_power_half": {
+          "Viel2005_q5": 0.658797310204538,
+          "Viel2005_q10": 0.43401389593273426,
+          "Vogel2023_q10": 0.5030198906901086,
+          "Decant2022_q10": 0.49896925248367996
+        },
+        "max_absolute_power_ratio_error_005_to_095": {
+          "Viel2005_q5": 0.17802161753860613,
+          "Viel2005_q10": 0.07215751908733004,
+          "Vogel2023_q10": 0.010236304684691389,
+          "Decant2022_q10": 0.016316816611241874
+        }
+      }
+    ],
+    "precision_checks": [
+      {
+        "mass_keV": 2,
+        "redshift": 0,
+        "max_absolute_ratio_change_all_k": 0.000296473192428737,
+        "max_relative_ratio_change_transition": 0.0012150882719325073,
+        "k_power_half_coarse": 15.412502495034392,
+        "k_power_half_fine": 15.409954330082659
+      },
+      {
+        "mass_keV": 2,
+        "redshift": 99,
+        "max_absolute_ratio_change_all_k": 0.0003057049459267568,
+        "max_relative_ratio_change_transition": 0.0012125183225664138,
+        "k_power_half_coarse": 15.436080643693813,
+        "k_power_half_fine": 15.433581044524136
+      }
+    ],
+    "note": "Immutable previous run; different cosmology, no claim of original CAMB reproduction"
+  },
+  "spectra_sha256": "978b3dc27fc6bec0a03fbf1364ea81b0f53657215742ccd57fc7c70e3e9c712e"
+}

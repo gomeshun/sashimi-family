@@ -1,0 +1,230 @@
+{
+  "A__B-gravity": {
+    "tuple_0": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_1": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_2": {
+      "max_relative": 0.0001079814984546558,
+      "max_absolute": 9.484976552370794e-07
+    },
+    "tuple_3": {
+      "max_relative": 0.00032387454792835274,
+      "max_absolute": 120140787189056.0
+    },
+    "tuple_4": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_5": {
+      "max_relative": 0.00010798149845477638,
+      "max_absolute": 6.813536201095288e-07
+    },
+    "tuple_6": {
+      "max_relative": 0.00032387454792832195,
+      "max_absolute": 516648283381248.0
+    },
+    "tuple_7": {
+      "max_relative": 3.368357996827225e-15,
+      "max_absolute": 8.881784197001252e-14
+    },
+    "tuple_8": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_9": {
+      "changed": 0
+    },
+    "probe_growth": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_growth_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    }
+  },
+  "A__B-inverse": {
+    "tuple_0": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_1": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_2": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_3": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_4": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_5": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_6": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_7": {
+      "max_relative": 0.00010212915240544181,
+      "max_absolute": 0.00021471469728551185
+    },
+    "tuple_8": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_9": {
+      "changed": 0
+    },
+    "probe_growth": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_growth_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    }
+  },
+  "A__B-all": {
+    "tuple_0": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_1": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_2": {
+      "max_relative": 0.0001079814984546558,
+      "max_absolute": 9.484976552370794e-07
+    },
+    "tuple_3": {
+      "max_relative": 0.00032387454792835274,
+      "max_absolute": 120140787189056.0
+    },
+    "tuple_4": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_5": {
+      "max_relative": 0.00010798149845477638,
+      "max_absolute": 6.813536201095288e-07
+    },
+    "tuple_6": {
+      "max_relative": 0.00032387454792832195,
+      "max_absolute": 516648283381248.0
+    },
+    "tuple_7": {
+      "max_relative": 0.00010212915240565793,
+      "max_absolute": 0.0002147146972837355
+    },
+    "tuple_8": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_9": {
+      "changed": 0
+    },
+    "probe_growth": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_growth_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    }
+  },
+  "B-all__C": {
+    "tuple_0": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_1": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "tuple_2": {
+      "max_relative": 1.1067878187562146e-15,
+      "max_absolute": 5.204170427930421e-18
+    },
+    "tuple_3": {
+      "max_relative": 2.909895177934936e-15,
+      "max_absolute": 704.0
+    },
+    "tuple_4": {
+      "max_relative": 5.692745611943829e-16,
+      "max_absolute": 2.384185791015625e-07
+    },
+    "tuple_5": {
+      "max_relative": 1.185209425179316e-15,
+      "max_absolute": 2.6020852139652106e-18
+    },
+    "tuple_6": {
+      "max_relative": 3.4211787433085082e-15,
+      "max_absolute": 3584.0
+    },
+    "tuple_7": {
+      "max_relative": 5.762169364102447e-14,
+      "max_absolute": 2.2115642650533118e-13
+    },
+    "tuple_8": {
+      "max_relative": 2.1611577739929037e-15,
+      "max_absolute": 6.821210263296962e-13
+    },
+    "tuple_9": {
+      "changed": 0
+    },
+    "probe_growth": {
+      "max_relative": 2.2204460492503136e-16,
+      "max_absolute": 2.220446049250313e-16
+    },
+    "probe_growth_derivative": {
+      "max_relative": 0.0,
+      "max_absolute": 0.0
+    },
+    "probe_variance": {
+      "max_relative": 1.485354598396969e-16,
+      "max_absolute": 4.440892098500626e-16
+    },
+    "probe_variance_derivative": {
+      "max_relative": 3.2664197617926226e-16,
+      "max_absolute": 5.293955920339377e-23
+    }
+  }
+}

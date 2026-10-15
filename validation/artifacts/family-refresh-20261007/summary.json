@@ -1,0 +1,467 @@
+{
+  "schema": "sashimi-family:artifact-refresh:v1",
+  "date": "2026-10-07",
+  "status": "passed",
+  "baseline_parent": "7ce00a72f7da4b113261cd255eb85eda0fb6c453",
+  "recorded_parent": "39d793064836e0e36a9912d8a129f4bc03911f82",
+  "source_revisions": {
+    "itamae": "23d01e8758a88b061b87de9e488c38ec89fd8e4f",
+    "sashimi-c": "969b69319608b56aed77a18d6789fbdb92e0da72",
+    "sashimi-si": "ce5a3c11518a609ac056bb136653268b05b1ecd7",
+    "sashimi-w": "65f25390f7d745d671818ba904c59b133ce1aa29",
+    "sashimi-f": "59d98989e7e558b2fabc14d4cebac645295248c2"
+  },
+  "manifest_sha256": "bd30ab8780b929b908a22c14ef4dba7f584cf4d746dcdf6dbcbc8f520389aac9",
+  "local_verification_driver_sha256": "ec2c6b596d62423a0726d1aae120e3266f9218b3b59b4eb59e78de5a364abc3e",
+  "build": {
+    "manifest_sha256": "bd30ab8780b929b908a22c14ef4dba7f584cf4d746dcdf6dbcbc8f520389aac9",
+    "script_sha256": "ec9a7c725e912a5e7ac04905842ee0dff721527bfbb33ad4fc69269b7f41adbc",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "revision_environment_injected": false,
+    "source_revisions": [
+      {
+        "package": "itamae",
+        "source_revision": "23d01e8758a88b061b87de9e488c38ec89fd8e4f"
+      },
+      {
+        "package": "sashimi-c",
+        "source_revision": "969b69319608b56aed77a18d6789fbdb92e0da72"
+      },
+      {
+        "package": "sashimi-si",
+        "source_revision": "ce5a3c11518a609ac056bb136653268b05b1ecd7"
+      },
+      {
+        "package": "sashimi-w",
+        "source_revision": "65f25390f7d745d671818ba904c59b133ce1aa29"
+      },
+      {
+        "package": "sashimi-f",
+        "source_revision": "59d98989e7e558b2fabc14d4cebac645295248c2"
+      }
+    ],
+    "artifacts": {
+      "sashimi_c-2.0.0rc1-py3-none-any.whl": {
+        "sha256": "9a24d1994dcf4a3a507e16335c933cd5971a925e77f5e28098da444ea39fe3d1",
+        "bytes": 51108
+      },
+      "sashimi_c-2.0.0rc1.tar.gz": {
+        "sha256": "e44297f7f1ad798f81f5ddfff715e55588b661a10d0e8cca51874c7e5c0032f0",
+        "bytes": 1760474
+      },
+      "sashimi_f-0.2.0rc1-py3-none-any.whl": {
+        "sha256": "b3f5a3beebc5da4cff66cbbe43d9b4fc5c2674843507f6cd788632b5a1c9187c",
+        "bytes": 74269
+      },
+      "sashimi_f-0.2.0rc1.tar.gz": {
+        "sha256": "cf0cb4e5a3dc947aa436fb01c57631c6e03946e2dd14c8e25f588cd0d5d8c49f",
+        "bytes": 15912398
+      },
+      "sashimi_itamae-0.2.0rc1-py3-none-any.whl": {
+        "sha256": "6c877754a31ade984281c56745861c902093e10ccbefafa1fa270ce03577e52c",
+        "bytes": 63270
+      },
+      "sashimi_itamae-0.2.0rc1.tar.gz": {
+        "sha256": "e61608c04a6c8983af95e5fe336f152eae748078323807f03ba00a0833c85828",
+        "bytes": 518973
+      },
+      "sashimi_si-0.2.0rc1-py3-none-any.whl": {
+        "sha256": "03ee4d92a1226f96abfd041ac6d9e25c8580b12c7bc936ae43773857a34857c7",
+        "bytes": 28617
+      },
+      "sashimi_si-0.2.0rc1.tar.gz": {
+        "sha256": "f8270a4377ab2e1700aeed66696283e71962a0696f56bad26be57699d9a92b34",
+        "bytes": 675060
+      },
+      "sashimi_w-0.2.0rc1-py3-none-any.whl": {
+        "sha256": "43a9c3a43e467aa6f34a3b2290ca8587f1ab40c1549d5830ad34f3d2cc16c0b2",
+        "bytes": 58749
+      },
+      "sashimi_w-0.2.0rc1.tar.gz": {
+        "sha256": "a6ce0a3ef1f2b74dd2e76348ae3f422d0d84dd867e06d2a077c0c8857033c4c1",
+        "bytes": 616421
+      }
+    }
+  },
+  "source_archive_rebuilds": {
+    "itamae": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "6c877754a31ade984281c56745861c902093e10ccbefafa1fa270ce03577e52c",
+      "rebuilt_sha256": "6c877754a31ade984281c56745861c902093e10ccbefafa1fa270ce03577e52c",
+      "verification": {
+        "package": "itamae",
+        "source_revision": "23d01e8758a88b061b87de9e488c38ec89fd8e4f",
+        "unrelated_parent_revision": "4a157bb1eb1ffc0906b3bb2623ef1ee4d5560be1",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "e61608c04a6c8983af95e5fe336f152eae748078323807f03ba00a0833c85828",
+        "wheel": "sashimi_itamae-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "6c877754a31ade984281c56745861c902093e10ccbefafa1fa270ce03577e52c",
+        "result": "source identity preserved"
+      }
+    },
+    "sashimi-c": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "9a24d1994dcf4a3a507e16335c933cd5971a925e77f5e28098da444ea39fe3d1",
+      "rebuilt_sha256": "5f03d7d0cb33e52046a97dce3c8f4bc7522836f29125754e895f57caf7d3e088",
+      "verification": {
+        "package": "sashimi-c",
+        "source_revision": "969b69319608b56aed77a18d6789fbdb92e0da72",
+        "unrelated_parent_revision": "4a157bb1eb1ffc0906b3bb2623ef1ee4d5560be1",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "e44297f7f1ad798f81f5ddfff715e55588b661a10d0e8cca51874c7e5c0032f0",
+        "wheel": "sashimi_c-2.0.0rc1-py3-none-any.whl",
+        "wheel_sha256": "5f03d7d0cb33e52046a97dce3c8f4bc7522836f29125754e895f57caf7d3e088",
+        "result": "source identity preserved"
+      }
+    },
+    "sashimi-si": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "03ee4d92a1226f96abfd041ac6d9e25c8580b12c7bc936ae43773857a34857c7",
+      "rebuilt_sha256": "84bbab6ec5f68e2dc805c624bbe214286b245d938a899365a000e7cd3a6aad6e",
+      "verification": {
+        "package": "sashimi-si",
+        "source_revision": "ce5a3c11518a609ac056bb136653268b05b1ecd7",
+        "unrelated_parent_revision": "c2f543833ef9a7567db45f9d95604b36d3570851",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "f8270a4377ab2e1700aeed66696283e71962a0696f56bad26be57699d9a92b34",
+        "wheel": "sashimi_si-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "84bbab6ec5f68e2dc805c624bbe214286b245d938a899365a000e7cd3a6aad6e",
+        "result": "source identity preserved"
+      }
+    },
+    "sashimi-w": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "43a9c3a43e467aa6f34a3b2290ca8587f1ab40c1549d5830ad34f3d2cc16c0b2",
+      "rebuilt_sha256": "43a9c3a43e467aa6f34a3b2290ca8587f1ab40c1549d5830ad34f3d2cc16c0b2",
+      "verification": {
+        "package": "sashimi-w",
+        "source_revision": "65f25390f7d745d671818ba904c59b133ce1aa29",
+        "unrelated_parent_revision": "48df0cd4785f198888b61305422655e1d855dda5",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "a6ce0a3ef1f2b74dd2e76348ae3f422d0d84dd867e06d2a077c0c8857033c4c1",
+        "wheel": "sashimi_w-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "43a9c3a43e467aa6f34a3b2290ca8587f1ab40c1549d5830ad34f3d2cc16c0b2",
+        "result": "source identity preserved"
+      }
+    },
+    "sashimi-f": {
+      "runtime_bitwise_identical": true,
+      "distribution_metadata_identical": true,
+      "original_sha256": "b3f5a3beebc5da4cff66cbbe43d9b4fc5c2674843507f6cd788632b5a1c9187c",
+      "rebuilt_sha256": "b3f5a3beebc5da4cff66cbbe43d9b4fc5c2674843507f6cd788632b5a1c9187c",
+      "verification": {
+        "package": "sashimi-f",
+        "source_revision": "59d98989e7e558b2fabc14d4cebac645295248c2",
+        "unrelated_parent_revision": "48df0cd4785f198888b61305422655e1d855dda5",
+        "revision_environment_injected": false,
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "archive_sha256": "cf0cb4e5a3dc947aa436fb01c57631c6e03946e2dd14c8e25f588cd0d5d8c49f",
+        "wheel": "sashimi_f-0.2.0rc1-py3-none-any.whl",
+        "wheel_sha256": "b3f5a3beebc5da4cff66cbbe43d9b4fc5c2674843507f6cd788632b5a1c9187c",
+        "result": "source identity preserved"
+      }
+    }
+  },
+  "installed_regression": {
+    "3.11": {
+      "counts": {
+        "itamae": 313,
+        "sashimi-c": 103,
+        "sashimi-si": 69,
+        "sashimi-w": 123,
+        "sashimi-f": 110
+      },
+      "total": 718,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "dependencies": {
+        "sashimi-si": "0.2.0rc1",
+        "h5py": "3.16.0",
+        "pytest-cov": "7.1.0",
+        "sortedcontainers": "2.4.0",
+        "hatchling": "1.32.4",
+        "mpmath": "1.4.1",
+        "numexpr": "2.14.2",
+        "pandas": "3.0.6",
+        "Pygments": "2.21.0",
+        "pathspec": "1.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "tqdm": "4.70.1",
+        "hypothesis": "6.168.5",
+        "pytest": "9.1.1",
+        "packaging": "26.3",
+        "sashimi-w": "0.2.0rc1",
+        "numpy": "2.4.6",
+        "sashimi-c": "2.0.0rc1",
+        "astropy-iers-data": "0.2026.10.5.1.0.7",
+        "tomlkit": "0.15.1",
+        "pyerfa": "2.0.1.5",
+        "iniconfig": "2.3.1",
+        "six": "1.17.0",
+        "setuptools": "84.0.0",
+        "colossus": "1.4.0",
+        "PyYAML": "6.0.3",
+        "coverage": "7.16.2",
+        "pluggy": "1.6.0",
+        "sashimi-f": "0.2.0rc1",
+        "sashimi-itamae": "0.2.0rc1",
+        "trove-classifiers": "2026.9.21.13",
+        "scipy": "1.17.1",
+        "astropy": "8.0.1"
+      },
+      "report_sha256": "6d52d01dbb596664ded93c1e38ef6a88d3a8f9b9b89f1c754d1da94b101132f2"
+    },
+    "3.12": {
+      "counts": {
+        "itamae": 313,
+        "sashimi-c": 103,
+        "sashimi-si": 69,
+        "sashimi-w": 123,
+        "sashimi-f": 110
+      },
+      "total": 718,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]",
+      "dependencies": {
+        "sashimi-si": "0.2.0rc1",
+        "h5py": "3.16.0",
+        "pytest-cov": "7.1.0",
+        "sortedcontainers": "2.4.0",
+        "hatchling": "1.32.4",
+        "mpmath": "1.4.1",
+        "numexpr": "2.14.2",
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "Pygments": "2.21.0",
+        "scipy": "1.18.1",
+        "pathspec": "1.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "tqdm": "4.70.1",
+        "hypothesis": "6.168.5",
+        "pytest": "9.1.1",
+        "packaging": "26.3",
+        "sashimi-w": "0.2.0rc1",
+        "sashimi-c": "2.0.0rc1",
+        "astropy-iers-data": "0.2026.10.5.1.0.7",
+        "tomlkit": "0.15.1",
+        "pyerfa": "2.0.1.5",
+        "iniconfig": "2.3.1",
+        "six": "1.17.0",
+        "setuptools": "84.0.0",
+        "colossus": "1.4.0",
+        "PyYAML": "6.0.3",
+        "coverage": "7.16.2",
+        "pluggy": "1.6.0",
+        "sashimi-f": "0.2.0rc1",
+        "sashimi-itamae": "0.2.0rc1",
+        "trove-classifiers": "2026.9.21.13",
+        "astropy": "8.0.1"
+      },
+      "report_sha256": "4630c2822d1666eb7e1258fea2adbfaa99d7f15cc3249b085306e4865c0c28ff"
+    },
+    "3.13": {
+      "counts": {
+        "itamae": 313,
+        "sashimi-c": 103,
+        "sashimi-si": 69,
+        "sashimi-w": 123,
+        "sashimi-f": 110
+      },
+      "total": 718,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "python": "3.13.12 (main, Mar  3 2026, 15:01:51) [Clang 21.1.4 ]",
+      "dependencies": {
+        "sashimi-si": "0.2.0rc1",
+        "h5py": "3.16.0",
+        "pytest-cov": "7.1.0",
+        "sortedcontainers": "2.4.0",
+        "hatchling": "1.32.4",
+        "mpmath": "1.4.1",
+        "numexpr": "2.14.2",
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "Pygments": "2.21.0",
+        "scipy": "1.18.1",
+        "pathspec": "1.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "tqdm": "4.70.1",
+        "hypothesis": "6.168.5",
+        "pytest": "9.1.1",
+        "packaging": "26.3",
+        "sashimi-w": "0.2.0rc1",
+        "sashimi-c": "2.0.0rc1",
+        "astropy-iers-data": "0.2026.10.5.1.0.7",
+        "tomlkit": "0.15.1",
+        "pyerfa": "2.0.1.5",
+        "iniconfig": "2.3.1",
+        "six": "1.17.0",
+        "setuptools": "84.0.0",
+        "colossus": "1.4.0",
+        "PyYAML": "6.0.3",
+        "coverage": "7.16.2",
+        "pluggy": "1.6.0",
+        "sashimi-f": "0.2.0rc1",
+        "sashimi-itamae": "0.2.0rc1",
+        "trove-classifiers": "2026.9.21.13",
+        "astropy": "8.0.1"
+      },
+      "report_sha256": "378699b210a6b303e2af6bc6149e95f954ec53767d5b126b67f48dd5ea96f405"
+    }
+  },
+  "family_smoke": {
+    "3.11": {
+      "original": {
+        "status": "passed",
+        "warnings": [],
+        "report_sha256": "551bb8f1a131a2eb83780e944440ddb7879c0bea473a0a5b606be1ef14eba0d4"
+      },
+      "rebuilt": {
+        "status": "passed",
+        "warnings": [],
+        "report_sha256": "e20371fa269b6828d66f5e3a4639f25dacf68512f76df53968c59987d303b490"
+      },
+      "original_rebuilt_quantities_equal": true
+    },
+    "3.12": {
+      "original": {
+        "status": "passed",
+        "warnings": [],
+        "report_sha256": "c2f380e832e91bee20b8cd1104f97c6b499122147e8078c62a894ab1f468e278"
+      },
+      "rebuilt": {
+        "status": "passed",
+        "warnings": [],
+        "report_sha256": "9260bd2031ec08c82c66da961f71f91e3f3888258b0ecb88b5a7424fddc3264e"
+      },
+      "original_rebuilt_quantities_equal": true
+    },
+    "3.13": {
+      "original": {
+        "status": "passed",
+        "warnings": [],
+        "report_sha256": "27ebad72cdbca0ffaaf54ac1df77d7e9767177cf98a6c5347b98039531af4576"
+      },
+      "rebuilt": {
+        "status": "passed",
+        "warnings": [],
+        "report_sha256": "7e12b6d138a9978003dab0fc28b1f6931c4b3aa0eaa3cf9d1cbf0df39f55ad1e"
+      },
+      "original_rebuilt_quantities_equal": true
+    }
+  },
+  "standalone": {
+    "itamae": {
+      "status": "passed",
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "report_sha256": "4fdbc514cd2710fc0c5cf9863075f5b602e2e45cbfc78c6e679e0115600ee9c6"
+    },
+    "sashimi-c": {
+      "status": "passed",
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "report_sha256": "7f135120e1e5021a1e8af2f5118700aa8e04e359482e8581d4c1f1f9587f8ebb"
+    },
+    "sashimi-si": {
+      "status": "passed",
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "report_sha256": "d8bab1323aeeb20cd46874e4d2dcae14ff6df876040bfb67eb25c4968c72bd6e"
+    },
+    "sashimi-w": {
+      "status": "passed",
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "report_sha256": "3dfcc3fde55c3a8e4f0c850dbedbb39e07ee517e3dcfff279f875c882443a0a8"
+    },
+    "sashimi-f": {
+      "status": "passed",
+      "python": "3.11.15 (main, Mar  3 2026, 14:59:53) [Clang 21.1.4 ]",
+      "report_sha256": "de96b177a474849cb83ad4fddf29d9d71e9addb7f559cc122dddf826b0bc20cc"
+    }
+  },
+  "notebooks": {
+    "current_revision_ci_audited": {
+      "sashimi-c": {
+        "run_id": 36724394891,
+        "url": "https://github.com/gomeshun/sashimi-c/actions/runs/36724394891",
+        "created_at": "2026-09-30T13:48:49Z",
+        "event": "push",
+        "head_sha": "969b69319608b56aed77a18d6789fbdb92e0da72",
+        "recorded_execution_revisions": [
+          "23d01e8758a88b061b87de9e488c38ec89fd8e4f",
+          "969b69319608b56aed77a18d6789fbdb92e0da72"
+        ],
+        "source_cells_match": true,
+        "code_cells": 8,
+        "figures": 5,
+        "notebook_sha256": "93e08f59808322ee20b071e05a8fe3fd5821fc96fa3b7e36b73a5f800a477676",
+        "status": "passed",
+        "checked_at": "2026-10-07",
+        "execution_repeated_for_refresh": false
+      },
+      "sashimi-w": {
+        "run_id": 36786829124,
+        "url": "https://github.com/gomeshun/sashimi-w/actions/runs/36786829124",
+        "created_at": "2026-09-30T22:39:34Z",
+        "event": "push",
+        "head_sha": "65f25390f7d745d671818ba904c59b133ce1aa29",
+        "recorded_execution_revisions": [
+          "23d01e8758a88b061b87de9e488c38ec89fd8e4f",
+          "65f25390f7d745d671818ba904c59b133ce1aa29"
+        ],
+        "source_cells_match": true,
+        "code_cells": 7,
+        "figures": 5,
+        "notebook_sha256": "5e6a9ebf27c7d7ad583e17e2bf85dabd88a0d2066166c74ebd9068ae8466b58f",
+        "status": "passed",
+        "checked_at": "2026-10-07",
+        "execution_repeated_for_refresh": false
+      },
+      "sashimi-f": {
+        "run_id": 36725005636,
+        "url": "https://github.com/gomeshun/sashimi-f/actions/runs/36725005636",
+        "created_at": "2026-09-30T13:53:49Z",
+        "event": "push",
+        "head_sha": "59d98989e7e558b2fabc14d4cebac645295248c2",
+        "recorded_execution_revisions": [
+          "23d01e8758a88b061b87de9e488c38ec89fd8e4f",
+          "59d98989e7e558b2fabc14d4cebac645295248c2"
+        ],
+        "source_cells_match": true,
+        "code_cells": 7,
+        "figures": 5,
+        "notebook_sha256": "d39bf6112e2dcfffe882cd0c188da5af2c9a0fa994d48855a60307bd84743b7b",
+        "status": "passed",
+        "checked_at": "2026-10-07",
+        "execution_repeated_for_refresh": false
+      }
+    },
+    "execution_repeated_for_refresh": false,
+    "unchanged_sources": [
+      "itamae",
+      "sashimi-si"
+    ],
+    "inherited_evidence": "../layout-physical-20260911/summary.json",
+    "inherited_notebook_ci": {
+      "itamae": 34559482056,
+      "sashimi-si": 34559561101
+    }
+  },
+  "recorded_ci_audit_sha256": "9a5538cbcb80588693c1108db016a0fe725a0a806b1ac95ee4c5d67ecaeb4ce1",
+  "evidence_locations": {
+    "public": "review-artifacts/20261007-family-refresh",
+    "private": "sashimi-f/artifacts/family-refresh-20261007"
+  },
+  "scope": "Artifact, numerical-regression and integration verification; not new simulation calibration or observational constraints."
+}

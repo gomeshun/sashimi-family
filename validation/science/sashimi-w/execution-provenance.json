@@ -1,0 +1,7 @@
+{
+  "source_revision_is_authoritative": true,
+  "core_source_revision": "dfa083d0d46181c376947ac7b2da829facaf2e8b",
+  "core_runtime_version": "0.2.0rc1",
+  "old_installed_core_distribution_metadata": "0.1.0a4",
+  "explanation": "Both control runs used the same editable core source at the recorded clean revision. Its installed distribution metadata predates the source version update. The environment was reinstalled only after this matched comparison, before final notebooks/artifact validation."
+}

@@ -1,0 +1,834 @@
+{
+  "cosmology": {
+    "omega_b": 0.0469,
+    "omega_m": 0.27,
+    "h": 0.7,
+    "ns": 0.95,
+    "sigma8": 0.82
+  },
+  "spectrum_sha256": "417a0e8e9feafae8c6afb4b89e63aef80718c9641ae95994d25a6cd97438f8c9",
+  "scope": "Independent integrals of fixed input recipe, not SASHIMI catalogs or halo-abundance calibration",
+  "k_power_half_q5_over_q10": 1.3869479558503426,
+  "M_power_half_q5_over_q10": 0.3748171944149114,
+  "particle_mass_q10_matching_q5_at_power_half": 1.3427097126948047,
+  "viel2012_1keV": {
+    "q5": {
+      "k_power_half": 9.25716068303686,
+      "ratio_at_k6": 0.7594098160828967
+    },
+    "q10": {
+      "k_power_half": 6.674483093607693,
+      "ratio_at_k6": 0.576703268763059
+    }
+  },
+  "refinement_max_relative_change": 6.14001771648276e-09,
+  "scales": [
+    {
+      "particle_mass_keV": 1,
+      "q": 5,
+      "alpha_Mpc_over_h": 0.048390223925184356,
+      "k_power_half_h_per_Mpc": 9.318814471292479,
+      "k_power_quarter_h_per_Mpc": 13.163889038984038
+    },
+    {
+      "particle_mass_keV": 1,
+      "q": 10,
+      "alpha_Mpc_over_h": 0.048390223925184356,
+      "k_power_half_h_per_Mpc": 6.718935942754306,
+      "k_power_quarter_h_per_Mpc": 9.318814471292479
+    },
+    {
+      "particle_mass_keV": 2,
+      "q": 5,
+      "alpha_Mpc_over_h": 0.02241890190063881,
+      "k_power_half_h_per_Mpc": 20.11425541632984,
+      "k_power_quarter_h_per_Mpc": 28.413681506165407
+    },
+    {
+      "particle_mass_keV": 2,
+      "q": 10,
+      "alpha_Mpc_over_h": 0.02241890190063881,
+      "k_power_half_h_per_Mpc": 14.502530777369882,
+      "k_power_quarter_h_per_Mpc": 20.11425541632984
+    },
+    {
+      "particle_mass_keV": 5,
+      "q": 5,
+      "alpha_Mpc_over_h": 0.008107760792494501,
+      "k_power_half_h_per_Mpc": 55.6182564488748,
+      "k_power_quarter_h_per_Mpc": 78.56713519624347
+    },
+    {
+      "particle_mass_keV": 5,
+      "q": 10,
+      "alpha_Mpc_over_h": 0.008107760792494501,
+      "k_power_half_h_per_Mpc": 40.10118491776792,
+      "k_power_quarter_h_per_Mpc": 55.6182564488748
+    },
+    {
+      "particle_mass_keV": 4.4,
+      "q": 5,
+      "alpha_Mpc_over_h": 0.00934383500316368,
+      "k_power_half_h_per_Mpc": 48.26064660071698,
+      "k_power_quarter_h_per_Mpc": 68.17367152855736
+    },
+    {
+      "particle_mass_keV": 4.4,
+      "q": 10,
+      "alpha_Mpc_over_h": 0.00934383500316368,
+      "k_power_half_h_per_Mpc": 34.796292389448894,
+      "k_power_quarter_h_per_Mpc": 48.26064660071698
+    }
+  ],
+  "variance": [
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 1000000.0,
+      "S_q5_normalized": 4.327335594273237,
+      "S_q10_normalized": 3.5645974614993197,
+      "S_q5_over_q10": 1.213975951285422,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 1584893.1924611141,
+      "S_q5_normalized": 4.327335585645331,
+      "S_q10_normalized": 3.564597453845172,
+      "S_q5_over_q10": 1.213975951471711,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 2511886.4315095823,
+      "S_q5_normalized": 4.327335581036269,
+      "S_q10_normalized": 3.564597450409194,
+      "S_q5_over_q10": 1.213975951348873,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 3981071.7055349695,
+      "S_q5_normalized": 4.327335589997725,
+      "S_q10_normalized": 3.5645974566437775,
+      "S_q5_over_q10": 1.2139759517396105,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 6309573.44480193,
+      "S_q5_normalized": 4.327335591076016,
+      "S_q10_normalized": 3.564597458975833,
+      "S_q5_over_q10": 1.2139759512478951,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 10000000.0,
+      "S_q5_normalized": 4.327335591325095,
+      "S_q10_normalized": 3.564597460277196,
+      "S_q5_over_q10": 1.2139759508745724,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 15848931.924611142,
+      "S_q5_normalized": 4.327335600164469,
+      "S_q10_normalized": 3.5645974679028694,
+      "S_q5_over_q10": 1.2139759507573054,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 25118864.315095823,
+      "S_q5_normalized": 4.327335583568468,
+      "S_q10_normalized": 3.564597454649017,
+      "S_q5_over_q10": 1.2139759506153136,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 39810717.05534969,
+      "S_q5_normalized": 4.327335590139832,
+      "S_q10_normalized": 3.5645974613449343,
+      "S_q5_over_q10": 1.2139759501784289,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 63095734.448019296,
+      "S_q5_normalized": 4.327335573268823,
+      "S_q10_normalized": 3.5645974564092016,
+      "S_q5_over_q10": 1.2139759471264298,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 100000000.0,
+      "S_q5_normalized": 4.327335526224386,
+      "S_q10_normalized": 3.5645974576291444,
+      "S_q5_over_q10": 1.2139759335132747,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 158489319.2461111,
+      "S_q5_normalized": 4.327335317374346,
+      "S_q10_normalized": 3.564597464786544,
+      "S_q5_over_q10": 1.2139758724856402,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 251188643.1509582,
+      "S_q5_normalized": 4.327334409528033,
+      "S_q10_normalized": 3.5645974625714034,
+      "S_q5_over_q10": 1.2139756185559343,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 398107170.5534969,
+      "S_q5_normalized": 4.327330694511842,
+      "S_q10_normalized": 3.564597453445508,
+      "S_q5_over_q10": 1.2139745794659318,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 630957344.4801943,
+      "S_q5_normalized": 4.327316074112915,
+      "S_q10_normalized": 3.5645974580766033,
+      "S_q5_over_q10": 1.2139704763319505,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 1000000000.0,
+      "S_q5_normalized": 4.327260602065947,
+      "S_q10_normalized": 3.5645973518361576,
+      "S_q5_over_q10": 1.2139549505744134,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 1584893192.4611108,
+      "S_q5_normalized": 4.327063851190412,
+      "S_q10_normalized": 3.5645973905380073,
+      "S_q5_over_q10": 1.2138997415742723,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 2511886431.509582,
+      "S_q5_normalized": 4.326413040017501,
+      "S_q10_normalized": 3.564596559827969,
+      "S_q5_over_q10": 1.213717448076732,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 3981071705.5349693,
+      "S_q5_normalized": 4.324451017490333,
+      "S_q10_normalized": 3.5645889305754817,
+      "S_q5_over_q10": 1.21316962536608,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 6309573444.801943,
+      "S_q5_normalized": 4.319141388624392,
+      "S_q10_normalized": 3.5645315757219787,
+      "S_q5_over_q10": 1.2116995731057794,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 10000000000.0,
+      "S_q5_normalized": 4.306412566251764,
+      "S_q10_normalized": 3.56419246661191,
+      "S_q5_over_q10": 1.2082435521068822,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 15848931924.611109,
+      "S_q5_normalized": 4.27960376497507,
+      "S_q10_normalized": 3.5626405673989914,
+      "S_q5_over_q10": 1.2012448867665362,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 25118864315.09582,
+      "S_q5_normalized": 4.230061268938883,
+      "S_q10_normalized": 3.557150354778753,
+      "S_q5_over_q10": 1.1891713442070635,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 39810717055.34985,
+      "S_q5_normalized": 4.149276821036611,
+      "S_q10_normalized": 3.541956295396216,
+      "S_q5_over_q10": 1.171464714691647,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 63095734448.019424,
+      "S_q5_normalized": 4.0317061030611985,
+      "S_q10_normalized": 3.5082984802157293,
+      "S_q5_over_q10": 1.1491913033617607,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 100000000000.0,
+      "S_q5_normalized": 3.876623671675664,
+      "S_q10_normalized": 3.446789882314876,
+      "S_q5_over_q10": 1.1247055387873282,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 1000000.0,
+      "S_q5_normalized": 6.434693843704104,
+      "S_q10_normalized": 5.434092322466592,
+      "S_q5_over_q10": 1.1841340672665144,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 1584893.1924611141,
+      "S_q5_normalized": 6.434693837415606,
+      "S_q10_normalized": 5.434092314418986,
+      "S_q5_over_q10": 1.1841340678629242,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 2511886.4315095823,
+      "S_q5_normalized": 6.434693822424679,
+      "S_q10_normalized": 5.434092305654572,
+      "S_q5_over_q10": 1.184134067014082,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 3981071.7055349695,
+      "S_q5_normalized": 6.434693824595064,
+      "S_q10_normalized": 5.434092310962202,
+      "S_q5_over_q10": 1.1841340662569066,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 6309573.44480193,
+      "S_q5_normalized": 6.434693817124592,
+      "S_q10_normalized": 5.434092316679409,
+      "S_q5_over_q10": 1.1841340636363384,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 10000000.0,
+      "S_q5_normalized": 6.434693756098914,
+      "S_q10_normalized": 5.434092316227876,
+      "S_q5_over_q10": 1.18413405250458,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 15848931.924611142,
+      "S_q5_normalized": 6.434693506141614,
+      "S_q10_normalized": 5.434092324920176,
+      "S_q5_over_q10": 1.1841340046124698,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 25118864.315095823,
+      "S_q5_normalized": 6.434692392320081,
+      "S_q10_normalized": 5.434092307343915,
+      "S_q5_over_q10": 1.1841338034732871,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 39810717.05534969,
+      "S_q5_normalized": 6.434687909781471,
+      "S_q10_normalized": 5.434092319729833,
+      "S_q5_over_q10": 1.1841329758824164,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 63095734.448019296,
+      "S_q5_normalized": 6.434670060143389,
+      "S_q10_normalized": 5.43409231443668,
+      "S_q5_over_q10": 1.1841296922852207,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 100000000.0,
+      "S_q5_normalized": 6.434602384429541,
+      "S_q10_normalized": 5.4340923137561985,
+      "S_q5_over_q10": 1.18411723852033,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 158489319.2461111,
+      "S_q5_normalized": 6.434360400149477,
+      "S_q10_normalized": 5.434092228494886,
+      "S_q5_over_q10": 1.184072726334945,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 251188643.1509582,
+      "S_q5_normalized": 6.433557536790241,
+      "S_q10_normalized": 5.434091202293778,
+      "S_q5_over_q10": 1.1839252042870718,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 398107170.5534969,
+      "S_q5_normalized": 6.431126735721054,
+      "S_q10_normalized": 5.434081621160756,
+      "S_q5_over_q10": 1.1834799666382858,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 630957344.4801943,
+      "S_q5_normalized": 6.42451796131199,
+      "S_q10_normalized": 5.434009403585485,
+      "S_q5_over_q10": 1.1822795074798629,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 1000000000.0,
+      "S_q5_normalized": 6.408586800790286,
+      "S_q10_normalized": 5.4335806239516735,
+      "S_q5_over_q10": 1.1794408226024484,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 1584893192.4611108,
+      "S_q5_normalized": 6.374836980337236,
+      "S_q10_normalized": 5.431610670749346,
+      "S_q5_over_q10": 1.173654992370387,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 2511886431.509582,
+      "S_q5_normalized": 6.312099019422196,
+      "S_q10_normalized": 5.4246108503547,
+      "S_q5_over_q10": 1.1636040249798685,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 3981071705.5349693,
+      "S_q5_normalized": 6.209167942293,
+      "S_q10_normalized": 5.405148159275682,
+      "S_q5_over_q10": 1.1487507389853049,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 6309573444.801943,
+      "S_q5_normalized": 6.058376044299319,
+      "S_q10_normalized": 5.361806107863223,
+      "S_q5_over_q10": 1.129913302052187,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 10000000000.0,
+      "S_q5_normalized": 5.858064262227248,
+      "S_q10_normalized": 5.282125700886087,
+      "S_q5_over_q10": 1.1090353758988631,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 15848931924.611109,
+      "S_q5_normalized": 5.612730606983681,
+      "S_q10_normalized": 5.15717904177833,
+      "S_q5_over_q10": 1.0883334787322538,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 25118864315.09582,
+      "S_q5_normalized": 5.331170764773405,
+      "S_q10_normalized": 4.984668061027293,
+      "S_q5_over_q10": 1.0695136967003378,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 39810717055.34985,
+      "S_q5_normalized": 5.024039302065078,
+      "S_q10_normalized": 4.768981335866713,
+      "S_q5_over_q10": 1.0534826933123258,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 63095734448.019424,
+      "S_q5_normalized": 4.701820876616598,
+      "S_q10_normalized": 4.518988085493515,
+      "S_q5_over_q10": 1.0404587902566058,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 100000000000.0,
+      "S_q5_normalized": 4.373577119746073,
+      "S_q10_normalized": 4.245250484605019,
+      "S_q5_over_q10": 1.0302282834914966,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 1000000.0,
+      "S_q5_normalized": 10.110811804868177,
+      "S_q10_normalized": 8.76627247537762,
+      "S_q5_over_q10": 1.1533764018021397,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 1584893.1924611141,
+      "S_q5_normalized": 10.110808557981516,
+      "S_q10_normalized": 8.766272478143296,
+      "S_q5_over_q10": 1.1533760310543066,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 2511886.4315095823,
+      "S_q5_normalized": 10.110795365834026,
+      "S_q10_normalized": 8.766272451515732,
+      "S_q5_over_q10": 1.1533745296823188,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 3981071.7055349695,
+      "S_q5_normalized": 10.110744264267934,
+      "S_q10_normalized": 8.76627245601485,
+      "S_q5_over_q10": 1.153368699752264,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 6309573.44480193,
+      "S_q5_normalized": 10.110556147244763,
+      "S_q10_normalized": 8.766272417501394,
+      "S_q5_over_q10": 1.1533472456388165,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 10000000.0,
+      "S_q5_normalized": 10.109909475709356,
+      "S_q10_normalized": 8.76627188851355,
+      "S_q5_over_q10": 1.1532735471000364,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 15848931.924611142,
+      "S_q5_normalized": 10.107867743718836,
+      "S_q10_normalized": 8.766266566465198,
+      "S_q5_over_q10": 1.153041339443846,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 25118864.315095823,
+      "S_q5_normalized": 10.102044052708836,
+      "S_q10_normalized": 8.766222512868843,
+      "S_q5_over_q10": 1.152382800901871,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 39810717.05534969,
+      "S_q5_normalized": 10.087255888428116,
+      "S_q10_normalized": 8.765934277181424,
+      "S_q5_over_q10": 1.1507336890131858,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 63095734.448019296,
+      "S_q5_normalized": 10.054168596990838,
+      "S_q10_normalized": 8.7644667688351,
+      "S_q5_over_q10": 1.1471512029393154,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 100000000.0,
+      "S_q5_normalized": 9.989192915869419,
+      "S_q10_normalized": 8.758693696065961,
+      "S_q5_over_q10": 1.1404888973747473,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 158489319.2461111,
+      "S_q5_normalized": 9.87684392678288,
+      "S_q10_normalized": 8.741017778483842,
+      "S_q5_over_q10": 1.129942093367536,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 251188643.1509582,
+      "S_q5_normalized": 9.704150296344976,
+      "S_q10_normalized": 8.69807170495578,
+      "S_q5_over_q10": 1.1156668541621675,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 398107170.5534969,
+      "S_q5_normalized": 9.464776010526139,
+      "S_q10_normalized": 8.612905526616212,
+      "S_q5_over_q10": 1.098906284444595,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 630957344.4801943,
+      "S_q5_normalized": 9.160595410965225,
+      "S_q10_normalized": 8.470522157342609,
+      "S_q5_over_q10": 1.081467616848677,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 1000000000.0,
+      "S_q5_normalized": 8.80011733326228,
+      "S_q10_normalized": 8.263104501054913,
+      "S_q5_over_q10": 1.064989234026849,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 1584893192.4611108,
+      "S_q5_normalized": 8.395956862814797,
+      "S_q10_normalized": 7.9920969727206455,
+      "S_q5_over_q10": 1.050532406134791,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 2511886431.509582,
+      "S_q5_normalized": 7.961846035429011,
+      "S_q10_normalized": 7.666450927609385,
+      "S_q5_over_q10": 1.0385308809263765,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 3981071705.5349693,
+      "S_q5_normalized": 7.510458586449195,
+      "S_q10_normalized": 7.299090224314271,
+      "S_q5_over_q10": 1.0289581791208482,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 6309573444.801943,
+      "S_q5_normalized": 7.052384249479356,
+      "S_q10_normalized": 6.903698368710895,
+      "S_q5_over_q10": 1.0215371345657769,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 10000000000.0,
+      "S_q5_normalized": 6.595884022988331,
+      "S_q10_normalized": 6.492659937953401,
+      "S_q5_over_q10": 1.0158985817864146,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 15848931924.611109,
+      "S_q5_normalized": 6.147113121180547,
+      "S_q10_normalized": 6.076176701147681,
+      "S_q5_over_q10": 1.0116745156571019,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 25118864315.09582,
+      "S_q5_normalized": 5.710413873375135,
+      "S_q10_normalized": 5.66205515366235,
+      "S_q5_over_q10": 1.00854084222078,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 39810717055.34985,
+      "S_q5_normalized": 5.288778472927376,
+      "S_q10_normalized": 5.2560236890569225,
+      "S_q5_over_q10": 1.0062318562107415,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 63095734448.019424,
+      "S_q5_normalized": 4.88419947577637,
+      "S_q10_normalized": 4.862132333078251,
+      "S_q5_over_q10": 1.0045385730347138,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 100000000000.0,
+      "S_q5_normalized": 4.497884027846291,
+      "S_q10_normalized": 4.483086601456818,
+      "S_q5_over_q10": 1.0033007228512303,
+      "window": "SASHIMI-W sharp-k",
+      "normalization": "same sigma8 at historical normalization mass"
+    }
+  ],
+  "refinement": [
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 1000000.0,
+      "max_relative_change": 5.653418622131312e-09
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 100000000.0,
+      "max_relative_change": 4.551672039276866e-09
+    },
+    {
+      "particle_mass_keV": 1,
+      "halo_mass_Msun": 10000000000.0,
+      "max_relative_change": 4.506696238415486e-09
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 1000000.0,
+      "max_relative_change": 6.000778318693278e-09
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 100000000.0,
+      "max_relative_change": 5.496043731234579e-09
+    },
+    {
+      "particle_mass_keV": 2,
+      "halo_mass_Msun": 10000000000.0,
+      "max_relative_change": 3.6129691460828894e-09
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 1000000.0,
+      "max_relative_change": 5.814540626758458e-09
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 100000000.0,
+      "max_relative_change": 6.14001771648276e-09
+    },
+    {
+      "particle_mass_keV": 5,
+      "halo_mass_Msun": 10000000000.0,
+      "max_relative_change": 1.3879503102387503e-09
+    }
+  ]
+}
